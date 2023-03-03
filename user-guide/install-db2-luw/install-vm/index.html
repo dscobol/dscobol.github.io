@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://dscobol.github.io/user-guide/install-db2-luw/install-vm/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Install VM - DSCOBOL</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Install VM";
+        var mkdocs_page_input_path = "user-guide/install-db2-luw/install-vm.md";
+        var mkdocs_page_url = "/user-guide/install-db2-luw/install-vm/";
+      </script>
+    
+    <script src="../../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> DSCOBOL
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../about/">About</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">User Guide</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Install IBM DB2 LUW</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../overview/">Overview</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">Install VM</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#download-the-operating-system-iso">Download the Operating System iso</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#install-popos">Install Pop!OS</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#or-use-ubuntu-instead">Or use Ubuntu instead</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#three-steps-to-create-a-vm">Three steps to create a VM.</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#create-the-vm">Create the VM</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#install-the-os-into-the-vm">Install the OS into the VM</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#a-word-of-caution-about-the-userid-you-create-as-you-install-the-os">A word of caution about the userid you create as you install the OS</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#run-the-vm-and-update">Run the VM and update</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../install-db2/">Install DB2 LUW</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../install-sampledb/">Install Sample DB and db2profile</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../install-gnucobol/">Install GnuCobol</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../install-basic-dev-env/">Install Basic Dev Env</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">DSCOBOL</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>User Guide &raquo;</li>
+          <li>Install IBM DB2 LUW &raquo;</li>
+      <li>Install VM</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="install-a-virtual-machine">Install a Virtual Machine</h1>
+<p>There are a number of virtualization products available to create a Virtual Machine on your computer: Oracle VM VirtualBox, VMWare, QEMU etc.</p>
+<p>You may already have one of these installed; if so, go to the next step.</p>
+<p>If not, pick one of them, and follow the installation instructions for your computer.</p>
+<p>I use QEMU now but in the past I have used VirtualBox and VMWare. They all work fairly well.</p>
+<h2 id="download-the-operating-system-iso">Download the Operating System iso</h2>
+<h3 id="install-popos">Install Pop!OS</h3>
+<p>Go to the <a href="https://pop.system76.com">Pop!OS website</a> press the "Download" button.</p>
+<p>I am using the Pop!OS 22.04 LTS version.</p>
+<h3 id="or-use-ubuntu-instead">Or use Ubuntu instead</h3>
+<p>As I stated in the overview, Ubuntu is "offically supported" so if you want to use that instead:</p>
+<p>Go to the <a href="https://ubuntu.com/download/desktop">Ubuntu Desktop website</a> and download the Ubuntu 22.04 LTS version.</p>
+<h2 id="three-steps-to-create-a-vm">Three steps to create a VM.</h2>
+<h3 id="create-the-vm">Create the VM</h3>
+<p>Follow the instructions for the virtualization product you have installed on your computer to create a VM.</p>
+<ul>
+<li>Create the "Harddrive" that the OS will run on and how big the drive will be.</li>
+<li>Decide how much memory the VM will allocated.</li>
+<li>
+<p>Other parameters required by the virtualization product.</p>
+<ul>
+<li>For this project, the parameters I used are:<ul>
+<li>100GB HD</li>
+<li>4GB Ram</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="install-the-os-into-the-vm">Install the OS into the VM</h3>
+<p>Follow the instructions for the virtualization product you have installed on your computer to actually install the OS onto the VM harddrive.</p>
+<h3 id="a-word-of-caution-about-the-userid-you-create-as-you-install-the-os">A word of caution about the userid you create as you install the OS</h3>
+<p>You create a userid when you install the OS and will probably use that userid to run db2 commands. </p>
+<p>Make sure your userid meets the criteria below:</p>
+<pre><code>User IDs have the following restrictions and requirements:
+
+Must have a primary group other than guests, admins, users, and local.
+Can include lowercase letters (a-z), numbers (0-9), and the underscore character (_).
+Cannot be longer than eight characters
+Cannot begin with IBM, SYS, SQL, or a number.
+Cannot be a DB2 reserved word (USERS, ADMINS, GUESTS, PUBLIC, or LOCAL), or an SQL reserved word.
+Cannot use any user IDs with root privilege for the DB2 instance ID, DAS ID, or fenced ID.
+Cannot include accented characters.
+</code></pre>
+<p>This threw me for awhile because I wanted to use "sysop" as the userid and the install kept failing.</p>
+<p>When done with this step, you usually need to shutdown the VM and then run it so it starts the new installed system and not the iso used to install the system.</p>
+<h3 id="run-the-vm-and-update">Run the VM and update</h3>
+<p>Follow the instructions for the virtualization product you have installed on your computer to run the VM.</p>
+<p>A new window should display with a login screen.</p>
+<p>Login using the userid you setup when installing the OS.</p>
+<p>Open the Pop!_Shop application. </p>
+<p>Click on the "Installed" button in the titlebar and then click "Update All" in the window listing all the updates that can be done.</p>
+<p>To be "safe", after all the updates are done, reboot the system.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../overview/" class="btn btn-neutral float-left" title="Overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../install-db2/" class="btn btn-neutral float-right" title="Install DB2 LUW">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../overview/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../install-db2/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme_extra.js" defer></script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
