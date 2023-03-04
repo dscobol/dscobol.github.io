@@ -64,6 +64,34 @@
                 </li>
                 <li class="toctree-l2 current"><a class="reference internal current" href="./">Install Basic Dev Env</a>
     <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#build-essential">Build-Essential</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#zsh">Zsh</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#prezto">Prezto</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#git">Git</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#vim">Vim</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#vs-codium">VS Codium</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#java-jdk">Java JDK</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#vs-codium-extensions">VS Codium Extensions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#midnight-commander-aka-mc">Midnight Commander (aka: mc)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ssh-key">SSH-Key</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#tree-optional">Tree - Optional</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#lazygit-optional">LazyGit - Optional</a>
+    </li>
     </ul>
                 </li>
     </ul>
@@ -97,6 +125,103 @@
                 <h1 id="create-a-basic-develoment-environment">Create a Basic Develoment Environment.</h1>
 <p><strong>Make sure you are running these steps in the VM you created running as the normal user.</strong></p>
 <p><strong>These instructions are for Pop!OS, they should be similar for Ubuntu.</strong></p>
+<h2 id="overview">Overview</h2>
+<p>As I stated in the main overview, the host system already has a dev environment installed.</p>
+<p>As this is a new installation and you need something to code with, I am recommending the following tools to be productive:</p>
+<p>This is highly opinionated.</p>
+<p>If you have your own envionment, create that instead.</p>
+<ul>
+<li>build-essential : a collection of tools used to build software</li>
+<li>zsh : a different shell then bash</li>
+<li>prezto : a zsh framework</li>
+<li>Git : Source Code Management</li>
+<li>Vim : for quick edits</li>
+<li>VS Codium : Not an editor, Not an IDE, Something in the middle</li>
+<li>Java JDK : Need for Code4Z extension</li>
+<li>Some VS Codium extensions</li>
+<li>Midnight Commander (aka: mc) : A terminal based file manager</li>
+<li>An SSH key : to push code to a GitHub or GitLab or Bitbucket repository</li>
+<li>tree : Optional: a quick way to see the structure of a directory</li>
+<li>LazyGit : Optional: A terminal based Git UI : This one is really optional. You can use GitLens within VS Codium to do the same, I just like it.</li>
+</ul>
+<h3 id="build-essential">Build-Essential</h3>
+<pre><code>sudo apt install build-essential
+</code></pre>
+<p>This might be installed already or there might be some components that are missing. Better safe then sorry.</p>
+<h3 id="zsh">Zsh</h3>
+<pre><code>sudo apt install zsh
+</code></pre>
+<h3 id="prezto">Prezto</h3>
+<p>Visit <a href="https://github.com/sorin-ionescu/prezto">Github: Prezto</a> and follow the instructions.</p>
+<p>You can use it as it is out of the box but I will suggest one change of two additions:</p>
+<p>Edit .zpreztorc and add git and syntax-highlighting in the zstyle ':prezto:load' pmodule \ section:</p>
+<p>Old version:</p>
+<pre><code>zstyle ':prezto:load' pmodule \
+  'environment' \
+  'terminal' \
+  'editor' \
+  'history' \
+  'directory' \
+  'spectrum' \
+  'utility' \
+  'completion' \
+  'history-substring-search' \
+  'prompt'
+</code></pre>
+<p>New Version:</p>
+<pre><code>zstyle ':prezto:load' pmodule \
+  'environment' \
+  'terminal' \
+  'editor' \
+  'history' \
+  'directory' \
+  'spectrum' \
+  'utility' \
+  'completion' \
+  'git' \
+  'syntax-highlighting' \
+  'history-substring-search' \
+  'prompt'
+</code></pre>
+<p>Save it, close the Terminal and re-open Terminal.</p>
+<h2 id="git">Git</h2>
+<p>Actually, Git is already installed on PopOS but if you went the Ubuntu route, you might have to install it.</p>
+<pre><code>sudo apt install git
+</code></pre>
+<h2 id="vim">Vim</h2>
+<pre><code>sudo apt install vim
+</code></pre>
+<p>An dependable editor. Useful for quick edits or as your main editor.</p>
+<h2 id="vs-codium">VS Codium</h2>
+<p>Because... why not.</p>
+<p>Go to <a href="https://vscodium.com/">VS Codium website</a>.</p>
+<p>Follow the instructions:
+- Add GPG key
+- Add the repository
+- Update and Install codium</p>
+<h2 id="java-jdk">Java JDK</h2>
+<pre><code>sudo apt install default-jdk
+</code></pre>
+<h2 id="vs-codium-extensions">VS Codium Extensions</h2>
+<p>Open VSCodium, Open the Extensions Browser and install:</p>
+<ul>
+<li>Code4Z</li>
+<li>GitLens</li>
+</ul>
+<p>You could also go with IBM Z Open Editor instead. BUT don't have both installed at the same time.</p>
+<h2 id="midnight-commander-aka-mc">Midnight Commander (aka: mc)</h2>
+<pre><code>sudo apt install mc
+</code></pre>
+<p>This is a nice terminal based file manager that I use to transfer files to/from the host/vm.</p>
+<p>QEMU networking can be a pain to setup. If I remember correctly it was easier with VirtualBox and VMware but...</p>
+<p>Just make sure you can ssh into the host. (SSH Server is up and running?)</p>
+<h2 id="ssh-key">SSH-Key</h2>
+<p>For instructions: Look at <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh">GitHub - Connect with SSH</a>.</p>
+<h2 id="tree-optional">Tree - Optional</h2>
+<pre><code>sudo apt install tree
+</code></pre>
+<h2 id="lazygit-optional">LazyGit - Optional</h2>
+<p>Follow the instructions on the <a href="https://github.com/jesseduffield/lazygit#ubuntu">LazyGit - Github</a> website.</p>
               
             </div>
           </div><footer>
