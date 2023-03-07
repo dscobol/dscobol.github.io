@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://dscobol.github.io/guides/gnu-vs-zos-cobol/db2/enhanced-db2-gnu-cobol/" />
+      <link rel="shortcut icon" href="../../../../img/favicon.ico" />
+    <title>An enhanced GnuCOBOL pgm - DSCOBOL</title>
+    <link rel="stylesheet" href="../../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "An enhanced GnuCOBOL pgm";
+        var mkdocs_page_input_path = "guides/gnu-vs-zos-cobol/db2/enhanced-db2-gnu-cobol.md";
+        var mkdocs_page_url = "/guides/gnu-vs-zos-cobol/db2/enhanced-db2-gnu-cobol/";
+      </script>
+    
+    <script src="../../../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../../.." class="icon icon-home"> DSCOBOL
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../../about/">About</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Guides</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="#">Install IBM DB2 LUW</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../install-db2-luw/overview/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../install-db2-luw/install-vm/">Install VM</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../install-db2-luw/install-db2/">Install DB2 LUW</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../install-db2-luw/install-sampledb/">Install Sample DB and db2profile</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../install-db2-luw/install-gnucobol/">Install GnuCOBOL</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../install-db2-luw/install-basic-dev-env/">Install Basic Dev Env</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Create and Administer DB2 DBs</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../create-db2-db/create-db2-db/">Create a DB2 DB</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">GnuCOBOL VS ZOS COBOL</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../../overview-gnu-vs-zos-cobol/">Overview of the differences</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Batch Processing</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../batch/overview-batch-zos-vs-gnu-cobol/">Overview</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../batch/normal-batch-zos-cobol/">A normal ZOS COBOL batch pgm</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../batch/normal-batch-gnu-cobol/">A normal GnuCOBOL batch pgm</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">DB2 Processing</a>
+    <ul class="current">
+                <li class="toctree-l3"><a class="reference internal" href="../overview-db2-zos-vs-gnu-cobol/">Overview</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../normal-db2-zos-cobol/">A normal ZOS COBOL DB2 pgm</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../converted-to-gnu-db2-cobol/">A converted to GnuCOBOL pgm</a>
+                </li>
+                <li class="toctree-l3 current"><a class="reference internal current" href="./">An enhanced GnuCOBOL pgm</a>
+    <ul class="current">
+    <li class="toctree-l4"><a class="reference internal" href="#code-getdbidcbl">Code: GETDBID.cbl</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#change-to-custinq">Change to CUSTINQ</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#change-to-compile-script">Change to Compile script</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../my-version-of-custinq/">My version of CUSTINQ</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../..">DSCOBOL</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Guides &raquo;</li>
+          <li>GnuCOBOL VS ZOS COBOL &raquo;</li>
+          <li>DB2 Processing &raquo;</li>
+      <li>An enhanced GnuCOBOL pgm</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="an-example-of-an-enhanced-db2-gnucobol-program-using-getdbid">An example of an enhanced DB2 GnuCOBOL program using GETDBID.</h1>
+<h2 id="code-getdbidcbl">Code: GETDBID.cbl</h2>
+<p>This is a simple COBOL pgm that can be called by GnuCOBOL programs.</p>
+<p>It has the userid and password embedded within it.</p>
+<p>Calling this bypasses the ACCEPT of the userid and password.</p>
+<p>Copy the text to tcbl/GETDBID.cbl</p>
+<p>Change the userid and password to the ones on your system.</p>
+<p>NOTE: Just replace the text, make sure the ' surrounding the text is present.</p>
+<pre><code>      **********************************************************
+      * Program name:    GETDBID
+      * Original author: David Stagowski
+      *
+      *    Description: This is a called module to supply the 
+      *       the userid and password for the database.
+      *    This was written because I got tired of typing them in 
+      *    everytime I ran the program.
+      *
+      * Maintenence Log
+      * Date       Author        Maintenance Requirement
+      * ---------  ------------  -------------------------------
+      * 2020-08-18 dastagg       
+      *                          
+      *
+      **********************************************************
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. GETDBID.
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       LINKAGE SECTION.
+       01 DB-User-ID              PIC X(10).
+       01 DB-Passwd-Name          PIC X(18).
+
+       PROCEDURE DIVISION USING DB-User-ID, DB-Passwd-Name.
+
+
+           MOVE 'userid' TO DB-User-ID.
+           MOVE 'password' TO DB-Passwd-Name.
+
+           GOBACK.
+</code></pre>
+<h2 id="change-to-custinq">Change to CUSTINQ</h2>
+<p>Then replace this code:</p>
+<pre><code>       9811-Get-Credentials.
+           DISPLAY &quot;CUSTINQ: Need userid and password&quot;.
+
+           DISPLAY &quot;Enter your user id (default none): &quot;
+                WITH NO ADVANCING.
+           ACCEPT DB-User-ID.
+
+           DISPLAY &quot;Enter your password : &quot; WITH NO ADVANCING
+           ACCEPT DB-Passwd-Name.
+</code></pre>
+<p>With this code:</p>
+<pre><code>       9811-Get-Credentials.
+           CALL 'GETDBID' USING DB-User-ID, DB-Passwd-Name.
+</code></pre>
+<h2 id="change-to-compile-script">Change to Compile script</h2>
+<p>In order to use this, the Compile script has to be changed to add this to the compile step.</p>
+<h3 id="previous-version">Previous version:</h3>
+<pre><code>#!/bin/bash
+
+# Program parms
+PGM=CUSTINQ
+
+# DB2 Load Libraries
+export LOADLIB=&quot;$DB2_HOME/lib64&quot;
+
+# COBOL and SQL Copy Libraries
+export COBCOPY=&quot;../cpy&quot;
+export SQLCOPY=&quot;$DB2_HOME/include/cobol_mf&quot;
+
+# Clean up
+rm ../cbl/$PGM.bnd
+rm ../tcbl/$PGM.cbl
+rm ../bin/$PGM
+
+# DB2 Prep and Bind
+db2 -tvf ../sql/$PGM.sql
+
+read -p &quot;Press any key to resume&quot;
+
+# Compile
+cobc -std=default -x -o ../bin/$PGM ../tcbl/$PGM.cbl \
+     -static \
+     -I $SQLCOPY \
+     -I $COBCOPY \
+     -L $LOADLIB \
+     -l db2 \
+     -Wall \
+     -O
+
+# Check return code
+if [ &quot;$?&quot; -eq 0 ]; then
+    echo &quot;Complier Return code was ZERO.&quot;
+else
+    echo &quot;Complier Return code not ZERO.&quot;
+fi
+</code></pre>
+<h3 id="new-version">New version</h3>
+<pre><code>#!/bin/bash
+
+# Program parms
+RPGM=CUSTINQ
+PGM=CUSTINQ
+LLM=GETDBID
+
+# DB2 Load Libraries
+export LOADLIB=&quot;$DB2_HOME/lib64&quot;
+
+# COBOL and SQL Copy Libraries
+export COBCOPY=&quot;../cpy&quot;
+export SQLCOPY=&quot;$DB2_HOME/include/cobol_mf&quot;
+
+# Clean up
+rm ../cbl/$PGM.bnd
+rm ../tcbl/$PGM.cbl
+rm ../bin/$RPGM
+
+# DB2 Prep and Bind
+db2 -tvf ../sql/$PGM.sql
+
+read -p &quot;Press any key to resume&quot;
+
+# Compile
+cobc -std=default -x -o ../bin/$RPGM ../tcbl/$PGM.cbl ../tcbl/$LLM.cbl \
+     -static \
+     -I $SQLCOPY \
+     -I $COBCOPY \
+     -L $LOADLIB \
+     -l db2 \
+     -Wall \
+     -O
+
+# Check return code
+if [ &quot;$?&quot; -eq 0 ]; then
+    echo &quot;Complier Return code was ZERO.&quot;
+else
+    echo &quot;Complier Return code not ZERO.&quot;
+fi
+
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../converted-to-gnu-db2-cobol/" class="btn btn-neutral float-left" title="A converted to GnuCOBOL pgm"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../my-version-of-custinq/" class="btn btn-neutral float-right" title="My version of CUSTINQ">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../converted-to-gnu-db2-cobol/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../my-version-of-custinq/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../../../..';</script>
+    <script src="../../../../js/theme_extra.js" defer></script>
+    <script src="../../../../js/theme.js" defer></script>
+      <script src="../../../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

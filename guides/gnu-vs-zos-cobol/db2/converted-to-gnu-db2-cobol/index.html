@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://dscobol.github.io/guides/gnu-vs-zos-cobol/db2/converted-to-gnu-db2-cobol/" />
+      <link rel="shortcut icon" href="../../../../img/favicon.ico" />
+    <title>A converted to GnuCOBOL pgm - DSCOBOL</title>
+    <link rel="stylesheet" href="../../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "A converted to GnuCOBOL pgm";
+        var mkdocs_page_input_path = "guides/gnu-vs-zos-cobol/db2/converted-to-gnu-db2-cobol.md";
+        var mkdocs_page_url = "/guides/gnu-vs-zos-cobol/db2/converted-to-gnu-db2-cobol/";
+      </script>
+    
+    <script src="../../../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../../.." class="icon icon-home"> DSCOBOL
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../../about/">About</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Guides</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="#">Install IBM DB2 LUW</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../install-db2-luw/overview/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../install-db2-luw/install-vm/">Install VM</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../install-db2-luw/install-db2/">Install DB2 LUW</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../install-db2-luw/install-sampledb/">Install Sample DB and db2profile</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../install-db2-luw/install-gnucobol/">Install GnuCOBOL</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../install-db2-luw/install-basic-dev-env/">Install Basic Dev Env</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Create and Administer DB2 DBs</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../create-db2-db/create-db2-db/">Create a DB2 DB</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">GnuCOBOL VS ZOS COBOL</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../../overview-gnu-vs-zos-cobol/">Overview of the differences</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Batch Processing</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../batch/overview-batch-zos-vs-gnu-cobol/">Overview</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../batch/normal-batch-zos-cobol/">A normal ZOS COBOL batch pgm</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../batch/normal-batch-gnu-cobol/">A normal GnuCOBOL batch pgm</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">DB2 Processing</a>
+    <ul class="current">
+                <li class="toctree-l3"><a class="reference internal" href="../overview-db2-zos-vs-gnu-cobol/">Overview</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../normal-db2-zos-cobol/">A normal ZOS COBOL DB2 pgm</a>
+                </li>
+                <li class="toctree-l3 current"><a class="reference internal current" href="./">A converted to GnuCOBOL pgm</a>
+    <ul class="current">
+    <li class="toctree-l4"><a class="reference internal" href="#this-is-the-murach-custinq-program-with-just-enough-code-added-to-make-it-work-with-gnucobol-and-ibm-db2-luw">This is the Murach CUSTINQ program with just enough code added to make it work with GnuCOBOL and IBM DB2 LUW.</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../enhanced-db2-gnu-cobol/">An enhanced GnuCOBOL pgm</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../my-version-of-custinq/">My version of CUSTINQ</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../..">DSCOBOL</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Guides &raquo;</li>
+          <li>GnuCOBOL VS ZOS COBOL &raquo;</li>
+          <li>DB2 Processing &raquo;</li>
+      <li>A converted to GnuCOBOL pgm</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="an-example-of-a-converted-from-zosdb2-to-gnucoboldb2-program">An example of a converted from ZOS/DB2 to GnuCOBOL/DB2 program</h1>
+<h2 id="this-is-the-murach-custinq-program-with-just-enough-code-added-to-make-it-work-with-gnucobol-and-ibm-db2-luw">This is the Murach CUSTINQ program with just enough code added to make it work with GnuCOBOL and IBM DB2 LUW.</h2>
+<p><a href="../specific-changes-for-gnucobol/">Breakdown of Changes</a> program.</p>
+<pre><code>       IDENTIFICATION DIVISION.
+      *
+       PROGRAM-ID.    CUSTINQ.
+      *
+       ENVIRONMENT DIVISION.
+      *
+       INPUT-OUTPUT SECTION.
+      *
+       FILE-CONTROL.
+      *
+       DATA DIVISION.
+      *
+       FILE SECTION.
+      *
+       WORKING-STORAGE SECTION.
+      *
+       01  SWITCHES.
+      *
+           05  END-OF-INQUIRIES-SW     PIC X   VALUE 'N'.
+               88  END-OF-INQUIRIES            VALUE 'Y'.
+           05  CUSTOMER-FOUND-SW       PIC X.
+               88  CUSTOMER-FOUND              VALUE 'Y'.
+           EXEC SQL
+               INCLUDE SQLCA
+           END-EXEC.
+      *
+      ***** Convert to GnuCOBOL
+      ***** Start of Step 1
+      *     No DCLGEN member to INCLUDE
+      *     Comment this INCLUDE out
+      *    EXEC SQL
+      *        INCLUDE CUSTOMER
+      *    END-EXEC.
+      *
+      *     Add DECLARE TABLE
+           EXEC SQL
+           DECLARE CUSTOMERS TABLE
+           (
+            CUSTNO        CHAR(6) not null,
+               FNAME         CHAR(20) not null,
+               LNAME         CHAR(30) not null,
+               ADDR          CHAR(30) not null,
+               CITY          CHAR(20) not null,
+               STATE         CHAR(2) not null,
+               ZIPCODE       CHAR(10) not null)
+           END-EXEC.
+
+      *     Add DECLARE SECTION
+           EXEC SQL BEGIN DECLARE SECTION END-EXEC.
+       01  Customer-Row.
+           12 CUSTNO     PIC X(06).
+           12 FNAME      PIC X(20).
+           12 LNAME      PIC X(30).
+           12 ADDR       PIC X(30).
+           12 CITY       PIC X(20).
+           12 STATE      PIC X(02).
+           12 ZIPCODE    PIC X(10).
+
+      *    This is hardcoded for the MURACH DB.
+      *    You might need to update this for your DB.
+       01  DB-Connection-Info.
+           12 DB-Alias                PIC X(8) VALUE 'MURACH'.
+           12 DB-User-ID              PIC X(10).
+           12 DB-Password.
+              15 DB-Passwd-Length     PIC S9(4) COMP-5  VALUE 0.
+              15 DB-Passwd-Name       PIC X(18).
+           EXEC SQL END DECLARE SECTION END-EXEC.
+
+      *     Add status check for connection info.
+       01  WS-SQL-STATUS                PIC S9(9) COMP-5.
+           88 SQL-STATUS-OK             VALUE    0.
+           88 SQL-STATUS-NOT-FOUND      VALUE  100.
+           88 SQL-STATUS-DUP            VALUE -803.
+
+      ***** End of Step 1
+
+       PROCEDURE DIVISION.
+      *
+       000-DISPLAY-CUSTOMER-ROWS.
+      *     Step 2
+      *     Add Paragraph to connect to the DB
+           PERFORM 9800-Connect-to-DB1.
+      *
+           PERFORM 100-DISPLAY-CUSTOMER-ROW
+               UNTIL END-OF-INQUIRIES.
+           STOP RUN.
+      *
+       100-DISPLAY-CUSTOMER-ROW.
+      *
+           PERFORM 110-ACCEPT-CUSTOMER-NUMBER.
+           IF NOT END-OF-INQUIRIES
+               MOVE 'Y' TO CUSTOMER-FOUND-SW
+               PERFORM 120-GET-CUSTOMER-ROW
+               IF CUSTOMER-FOUND
+                   PERFORM 130-DISPLAY-CUSTOMER-LINES
+               ELSE
+                   PERFORM 140-DISPLAY-ERROR-LINES.
+      *
+       110-ACCEPT-CUSTOMER-NUMBER.
+      *
+           DISPLAY '------------------------------------------------'.
+           DISPLAY 'KEY IN THE NEXT CUSTOMER NUMBER AND PRESS ENTER,'.
+           DISPLAY 'OR KEY IN 999999 AND PRESS ENTER TO QUIT.'.
+           ACCEPT CUSTNO.
+           IF CUSTNO = '999999'
+               MOVE 'Y' TO END-OF-INQUIRIES-SW.
+      *
+       120-GET-CUSTOMER-ROW.
+      *
+           EXEC SQL
+               SELECT CUSTNO,    FNAME,       LNAME,
+                      ADDR,      CITY,        STATE,
+                      ZIPCODE
+               INTO  :CUSTNO,       :FNAME,          :LNAME,
+                     :ADDR,         :CITY,           :STATE,
+                     :ZIPCODE
+               FROM   CUSTOMERS
+                   WHERE  CUSTNO = :CUSTNO
+           END-EXEC.
+      *
+           IF SQLCODE NOT = 0
+               MOVE 'N' TO CUSTOMER-FOUND-SW.
+      *
+       130-DISPLAY-CUSTOMER-LINES.
+      *
+           DISPLAY '------------------------------------------------'.
+           DISPLAY '   CUSTOMER ' CUSTNO.
+           DISPLAY '   NAME     ' FNAME ' ' LNAME.
+           DISPLAY '   ADDRESS  ' ADDR.
+           DISPLAY '            ' CITY ' ' STATE ' '
+                                  ZIPCODE.
+      *
+       140-DISPLAY-ERROR-LINES.
+      *
+           DISPLAY '------------------------------------------------'.
+           DISPLAY '   CUSTOMER NUMBER ' CUSTNO ' NOT FOUND.'.
+      *
+      *     Step 2 - the actual connection.
+       9800-Connect-to-DB1.
+           PERFORM 9810-Setup-DB1-Connection.
+           IF SQL-STATUS-OK
+              CONTINUE
+           ELSE
+              DISPLAY &quot;*** The DB connection is not valid!***&quot;
+              DISPLAY &quot;Exiting the program.!&quot;
+              GOBACK
+           END-IF.
+
+       9810-Setup-DB1-Connection.
+           PERFORM 9811-Get-Credentials.
+           PERFORM 9812-Create-Connection-To-DB1.
+
+       9811-Get-Credentials.
+           DISPLAY &quot;CUSTINQ: Need userid and password&quot;.
+
+           DISPLAY &quot;Enter your user id (default none): &quot;
+                WITH NO ADVANCING.
+           ACCEPT DB-User-ID.
+
+           DISPLAY &quot;Enter your password : &quot; WITH NO ADVANCING
+           ACCEPT DB-Passwd-Name.
+
+      * Passwords in a CONNECT statement must be entered in a VARCHAR
+      * format with the length of the input string.
+           INSPECT DB-Passwd-Name
+              TALLYING DB-Passwd-Length
+              FOR CHARACTERS BEFORE INITIAL &quot; &quot;.
+
+       9812-Create-Connection-To-DB1.
+           PERFORM 9814-Connect-To-DB1
+           IF SQL-STATUS-OK
+              CONTINUE
+           ELSE
+              DISPLAY &quot;CUSTINQ: userid and/or password invalid&quot;
+              DISPLAY &quot;CUSTINQ: Can not connect, exiting&quot;
+              GOBACK
+           END-IF.
+
+       9814-Connect-To-DB1.
+           EXEC SQL CONNECT TO :DB-Alias
+                USER :DB-User-ID
+                USING :DB-Passwd-Name
+              END-EXEC.
+           MOVE SQLCODE TO WS-SQL-STATUS.
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../normal-db2-zos-cobol/" class="btn btn-neutral float-left" title="A normal ZOS COBOL DB2 pgm"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../enhanced-db2-gnu-cobol/" class="btn btn-neutral float-right" title="An enhanced GnuCOBOL pgm">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../normal-db2-zos-cobol/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../enhanced-db2-gnu-cobol/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../../../..';</script>
+    <script src="../../../../js/theme_extra.js" defer></script>
+    <script src="../../../../js/theme.js" defer></script>
+      <script src="../../../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

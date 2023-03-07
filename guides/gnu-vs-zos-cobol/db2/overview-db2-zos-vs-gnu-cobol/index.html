@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://dscobol.github.io/guides/gnu-vs-zos-cobol/db2/overview-db2-zos-vs-gnu-cobol/" />
+      <link rel="shortcut icon" href="../../../../img/favicon.ico" />
+    <title>Overview - DSCOBOL</title>
+    <link rel="stylesheet" href="../../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Overview";
+        var mkdocs_page_input_path = "guides/gnu-vs-zos-cobol/db2/overview-db2-zos-vs-gnu-cobol.md";
+        var mkdocs_page_url = "/guides/gnu-vs-zos-cobol/db2/overview-db2-zos-vs-gnu-cobol/";
+      </script>
+    
+    <script src="../../../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../../.." class="icon icon-home"> DSCOBOL
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../../about/">About</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Guides</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="#">Install IBM DB2 LUW</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../install-db2-luw/overview/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../install-db2-luw/install-vm/">Install VM</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../install-db2-luw/install-db2/">Install DB2 LUW</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../install-db2-luw/install-sampledb/">Install Sample DB and db2profile</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../install-db2-luw/install-gnucobol/">Install GnuCOBOL</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../install-db2-luw/install-basic-dev-env/">Install Basic Dev Env</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Create and Administer DB2 DBs</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../create-db2-db/create-db2-db/">Create a DB2 DB</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">GnuCOBOL VS ZOS COBOL</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../../overview-gnu-vs-zos-cobol/">Overview of the differences</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Batch Processing</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../batch/overview-batch-zos-vs-gnu-cobol/">Overview</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../batch/normal-batch-zos-cobol/">A normal ZOS COBOL batch pgm</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../batch/normal-batch-gnu-cobol/">A normal GnuCOBOL batch pgm</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">DB2 Processing</a>
+    <ul class="current">
+                <li class="toctree-l3 current"><a class="reference internal current" href="./">Overview</a>
+    <ul class="current">
+    <li class="toctree-l4"><a class="reference internal" href="#zos-coboldb2">ZOS COBOL/DB2</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#gnucobol-coboldb2-luw">GnuCOBOL COBOL/DB2 LUW</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../normal-db2-zos-cobol/">A normal ZOS COBOL DB2 pgm</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../converted-to-gnu-db2-cobol/">A converted to GnuCOBOL pgm</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../enhanced-db2-gnu-cobol/">An enhanced GnuCOBOL pgm</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../my-version-of-custinq/">My version of CUSTINQ</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../..">DSCOBOL</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Guides &raquo;</li>
+          <li>GnuCOBOL VS ZOS COBOL &raquo;</li>
+          <li>DB2 Processing &raquo;</li>
+      <li>Overview</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="zos-coboldb2-vs-gnucobol-coboldb2-luw">ZOS COBOL/DB2 vs GnuCOBOL COBOL/DB2 LUW</h1>
+<h2 id="zos-coboldb2">ZOS COBOL/DB2</h2>
+<ol>
+<li>RACF - the security system</li>
+<li>DCLGEN - Create an INCLUDE copybook member that defines the table and adds host variables.</li>
+</ol>
+<h2 id="gnucobol-coboldb2-luw">GnuCOBOL COBOL/DB2 LUW</h2>
+<ol>
+<li>No RACF. Since there is no RACF, the DB name, the userid, and the password must be supplied to the program for it to connect to the DB.</li>
+<li>There is a db2dclgn command included with IBM DB2 LUW but it does not generate the table definition within a "EXEC SQL DECLARE" statement. It only defines the COBOL host variables.</li>
+</ol>
+<p>So, you have to create the EXEC SQL DECLARE "xxxxx" TABLE statement, the host variables, and the DB Connect variables within the program itself.</p>
+<p>There may be a way to create that as a copybook but I haven't figured out how to do that yet.</p>
+<p>Look at the examples to see the differences:</p>
+<h3 id="original-code-from-murach-book">Original Code from Murach book</h3>
+<ul>
+<li>This is an example of a <a href="../normal-db2-zos-cobol/">Normal ZOS COBOL</a> program.</li>
+</ul>
+<p>In the repository on GitHub, this is cbl/CUSTINQ.cbl</p>
+<p>It will not compile with GnuCOBOL.</p>
+<p>Also, as I'm not sure about the copyright and my ability to "re-distribute" the code included in the book, this will the only time I will include the exact original code from the book. I will be using it 2 more times (Version 1 and Version 2) but those have changes to run using GnuCOBOL.</p>
+<p>As you will see in Version 3, I have my own program structure and style and while the results will be the same as the original, the code will be quite different.</p>
+<h3 id="version-1">Version 1</h3>
+<ul>
+<li>This is an example of a <a href="../converted-to-gnu-db2-cobol/">Converted from ZOS to GnuCOBOL</a> program.</li>
+</ul>
+<p>In the repository on GitHub, this is cbl/CUSTIN1.sqb</p>
+<p>I took the example program above:</p>
+<ul>
+<li>
+<p>removed the INCLUDE CUSTOMER statement</p>
+</li>
+<li>
+<p>added the EXEC SQL DECLARE TABLE statement</p>
+</li>
+<li>
+<p>added the host variables and the DB Connect variables</p>
+</li>
+<li>
+<p>added Procedure code to use ACCEPT to get the userid and password from the user when the program is run.</p>
+</li>
+</ul>
+<h3 id="version-2">Version 2</h3>
+<ul>
+<li>This is an example of an <a href="../enhanced-db2-gnu-cobol/">Enhanced GNU COBOL</a> program.</li>
+</ul>
+<p>In the repository on GitHub, this is cbl/CUSTIN2.sqb</p>
+<p>I started with the converted GnuCOBOL program above.</p>
+<p>Created GETDBID program to "hardcode" the userid and password.</p>
+<p>Updated CUSTIN2 to call GETDBID and removed the ACCEPT code.</p>
+<p>Now the program will run without needing to ask the user for that information.</p>
+<h3 id="version-3">Version 3</h3>
+<ul>
+<li>This is an example of an <a href="../my-version-of-custinq/">My version of CUSTINQ</a> program.</li>
+</ul>
+<p>In the repository on GitHub, this is cbl/CUSTINQ.sqb</p>
+<p>As I alluded to in Version 1, this is that completely re-written program.</p>
+<p>Here's the thing, when I went to school, I completed all the programming assignments, got very good grades and all the professors said I was prepared to get a job as a programmer.</p>
+<p>At the first job, I was told what I would be doing and was given the name of the program I would work on.</p>
+<p>I logon to TSO/ISPF, go to the PDS, open the member, start reading it and thought, "What is this? It looks similar to what I created in school but it is really, really different."</p>
+<p>Every company has a standard and/or style that all(most?) code adheres to.</p>
+<p>At some shops, it is kind of loose, at others, it is VERY rigid.</p>
+<p>This is an example of getting the same result; just doing it a different way by applying a different structure to the program.</p>
+<p>As I continue to add programs to the repository, they will "follow along with the Murach book" but will be using this structure.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../batch/normal-batch-gnu-cobol/" class="btn btn-neutral float-left" title="A normal GnuCOBOL batch pgm"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../normal-db2-zos-cobol/" class="btn btn-neutral float-right" title="A normal ZOS COBOL DB2 pgm">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../batch/normal-batch-gnu-cobol/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../normal-db2-zos-cobol/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../../../..';</script>
+    <script src="../../../../js/theme_extra.js" defer></script>
+    <script src="../../../../js/theme.js" defer></script>
+      <script src="../../../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
