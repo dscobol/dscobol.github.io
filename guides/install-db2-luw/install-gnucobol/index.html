@@ -146,16 +146,16 @@
               
                 <h1 id="install-gnucobol">Install GnuCOBOL</h1>
 <p><strong>Make sure you are running these steps in the VM you created running as the normal user.</strong></p>
-<p><strong>These instructions are for Pop!OS, they should be similar for Ubuntu.</strong></p>
+<p><strong>These instructions are for Pop!_OS, they should be similar for Ubuntu.</strong></p>
 <h2 id="get-gnucobol">Get GnuCOBOL</h2>
 <p>Download the source code from <a href="https://gnucobol.sourceforge.io/">GnuCOBOL</a></p>
 <p>As of March 1, 2023, the current version is 3.1.2.</p>
 <p>For that version, download: gnucobol-3.1.2.tar.xz.</p>
 <p>If you haven't made any changes, it will be downloaded to the Downloads directory.</p>
 <h2 id="extract-into-builds">Extract into builds</h2>
-<p>Open the Files application, double-click on gnucobol-3.1.2.tar.xz to extract it into the ~/builds directory.</p>
+<p>Open Files, double-click on gnucobol-3.1.2.tar.xz and extract it into the ~/builds directory.</p>
 <h2 id="install-additional-software">Install additional software</h2>
-<p>Open a terminal window install the following:</p>
+<p>Open Terminal to install the following:</p>
 <pre><code>sudo apt install libgmp-dev
 sudo apt install libdb5.3-dev
 sudo apt install libncurses-dev
@@ -195,19 +195,22 @@ JSON library             : json-c
 <p>You should get an error message:</p>
 <pre><code>cobc: error: no input files
 </code></pre>
-<p>For a better test of the install:
-1. Create a new directory
-2. Create a simple COBOL program
-3. Run it.</p>
+<p>For a better test of the install:</p>
+<ol>
+<li>Create a new directory</li>
+<li>Create a simple COBOL program</li>
+<li>Run it.</li>
+</ol>
 <h3 id="1-create-a-new-directory">1: Create a new directory</h3>
-<p>For this test:</p>
-<pre><code>mkdir -p ~/dev/cobol/test-cobol
+<p>In Terminal, Run:</p>
+<pre><code>cd
+mkdir -p ~/dev/cobol/test-cobol
 cd ~/dev/cobol/test-cobol
 touch hello.cbl
 </code></pre>
 <h3 id="2-create-a-simple-cobol-program">2: Create a simple COBOL program</h3>
-<p>Open the Files application, go to dev/cobol/test-cobol folder.</p>
-<p>Double-click on hello.cbl. This will open it in the Text Editor application.</p>
+<p>Open Files, go to the dev/cobol/test-cobol folder.</p>
+<p>Double-click on hello.cbl. This will open it in Text Editor.</p>
 <p>Copy the following code and paste it into hello.cbl:</p>
 <pre><code>       IDENTIFICATION DIVISION.
        PROGRAM-ID. SmallestProgram.
@@ -221,14 +224,14 @@ touch hello.cbl
        END PROGRAM SmallestProgram.
 </code></pre>
 <p>and save it.</p>
-<p>Go to the Terminal window and run:</p>
+<p>Go to Terminal, Run:</p>
 <pre><code>pwd
 </code></pre>
 <p>To make sure you are in the ~/dev/cobol/test-cobol directory.</p>
 <p>Run:</p>
 <pre><code>cobc -x hello.cbl
 </code></pre>
-<p>If it complies correctly:</p>
+<p>If it complies correctly, Run:</p>
 <pre><code>./hello
 </code></pre>
 <p>It should return:</p>

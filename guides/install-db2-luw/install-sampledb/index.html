@@ -138,27 +138,28 @@
               
                 <h1 id="install-the-sample-db">Install the Sample DB.</h1>
 <p><strong>Make sure you are running these steps in the VM you created running as the normal user.</strong></p>
-<p><strong>These instructions are for Pop!OS, they should be similar for Ubuntu.</strong></p>
+<p><strong>These instructions are for Pop!_OS, they should be similar for Ubuntu.</strong></p>
 <h2 id="check-the-installation">Check the installation</h2>
-<p>In the terminal window:</p>
+<p>In Terminal, Run:</p>
 <pre><code>su - db2inst1
 ksh
 </code></pre>
 <p>You will need to enter the password for db2inst1 after the su command.</p>
 <p>Use ksh for a "more useable" command line.       </p>
-<p>A quick check: </p>
+<p>A quick check, Run:</p>
 <pre><code>db2 list database directory
 </code></pre>
 <p>returns no DBs.</p>
 <h2 id="install-sample-db">Install Sample DB</h2>
+<p>Run:</p>
 <pre><code>cd sqllib/bin
 </code></pre>
-<p>Run</p>
+<p>Run:</p>
 <pre><code>./dbsampl
 </code></pre>
 <p>to create the Sample DB.</p>
 <p>Not sure why but this takes a LLLLOOOONNNNGGGG time to complete.</p>
-<p>To check success:</p>
+<p>To check success, Run:</p>
 <pre><code>db2 list database directory
 </code></pre>
 <p>This should return:</p>
@@ -178,11 +179,11 @@ Database 1 entry:
  Alternate server hostname            =
  Alternate server port number         =
 </code></pre>
-<p>Now run:     </p>
+<p>Now Run:</p>
 <pre><code>db2
 </code></pre>
 <p>This will take you inside DB2 and provide the DB2 prompt.</p>
-<p>Then run:</p>
+<p>Then Run:</p>
 <pre><code>connect to sample
 </code></pre>
 <p>This will return:</p>
@@ -192,18 +193,20 @@ Database 1 entry:
  SQL authorization ID   = DB2INST1
  Local database alias   = SAMPLE
 </code></pre>
-<p>Then run:</p>
+<p>Then Run:</p>
 <pre><code>select * from employee
 </code></pre>
 <p>This will return a listing of 42 employees</p>
-<p>type:</p>
+<p>Run:</p>
 <pre><code>quit
 </code></pre>
 <p>to exit DB2 and return to the command prompt.</p>
-<p>Type exit, to exit the ksh shell.</p>
-<p>Type exit again to exit db2inst1 and become the "normal" user again.</p>
+<p>Then Run twice:</p>
+<pre><code>exit
+</code></pre>
+<p>to exit the ksh shell and exit db2inst1 and become the "normal" user again.</p>
 <h2 id="install-db2profile-in-bashrc">Install db2profile in .bashrc</h2>
-<p>As the "normal" user, you will need to run some DB2 commands in the terminal window. </p>
+<p>As the "normal" user, you will need to run some DB2 commands in Terminal.</p>
 <p>To make this possible, add the following 4 lines to the bottom of the .bashrc file which is found in home directory.</p>
 <pre><code># The following three lines have been added by UDB DB2.
 if [ -f /home/db2inst1/sqllib/db2profile ]; then
@@ -211,7 +214,7 @@ if [ -f /home/db2inst1/sqllib/db2profile ]; then
 fi
 </code></pre>
 <p>This will also export some very useful environment variables.</p>
-<p>You will need to exit and re-open the terminal window for them to be activated.</p>
+<p>You will need to exit and re-open Terminal for them to be activated.</p>
               
             </div>
           </div><footer>

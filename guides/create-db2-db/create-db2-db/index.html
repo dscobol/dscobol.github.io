@@ -70,6 +70,12 @@
     <ul class="current">
                 <li class="toctree-l2 current"><a class="reference internal current" href="./">Create a DB2 DB</a>
     <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#become-instance-owner">Become Instance Owner</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#create-a-new-database-and-call-it-murach">Create a new database and call it MURACH.</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#create-a-new-database-and-call-it-books">Create a new database and call it BOOKS.</a>
+    </li>
     </ul>
                 </li>
     </ul>
@@ -130,34 +136,37 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h2 id="create-a-db2-database">Create a DB2 database</h2>
-<p>su into db2inst1</p>
+                <h1 id="create-a-new-db2-database">Create a new DB2 database</h1>
+<h2 id="become-instance-owner">Become Instance Owner</h2>
+<p>During the install of IBM DB2 LUW, if you accepted the defaults, the Instance Owner's userid is "db2inst1". If you changed that, use that userid instead.</p>
+<p>To create new databases, you have to become the Instance Owner and get into the DB2 system.</p>
+<p>Run:</p>
 <pre><code>su - db2inst1
 </code></pre>
 <p>Enter the password.</p>
-<p>This made me user "db2inst1" and displayed a very bare prompt</p>
-<p>Ran:</p>
+<p>This will make you "db2inst1" and display a very bare prompt</p>
+<p>Run:</p>
 <pre><code>ksh
 </code></pre>
-<p>and got a more useable environment.</p>
-<p>Ran:</p>
+<p>to get a more useable environment.</p>
+<p>Run:</p>
 <pre><code>db2
 </code></pre>
-<p>This got me "into the db2 system".</p>
+<p>This gets you "into the DB2 system".</p>
 <h2 id="create-a-new-database-and-call-it-murach">Create a new database and call it MURACH.</h2>
-<p>Because there are tables used in this book that have the same names as the Sample DB, let's create the MURACH DB.</p>
+<p>Because there are tables used in Murach books that have the same names as the Sample DB, create the MURACH DB.</p>
 <p>Follow the instructions above to "get into the db2 system", then:</p>
-<p>At the db2&gt; prompt, Ran</p>
+<p>At the db2&gt; prompt, Run</p>
 <pre><code>CREATE DATABASE MURACH
 </code></pre>
-<p>Waited a very long time and it came back with "successfully created database"</p>
+<p>You might wait a very long time but it should come back with "successfully created database"</p>
 <h2 id="create-a-new-database-and-call-it-books">Create a new database and call it BOOKS.</h2>
-<p>Let's create the BOOKS DB.</p>
+<p>Create the BOOKS DB.</p>
 <p>Follow the instructions above to "get into the db2 system", then:</p>
-<p>At the db2&gt; prompt, Ran</p>
+<p>At the db2&gt; prompt, Run</p>
 <pre><code>CREATE DATABASE BOOKS
 </code></pre>
-<p>Waited a very long time and it came back with "successfully created database"</p>
+<p>You might wait a very long time but it should come back with "successfully created database"</p>
               
             </div>
           </div><footer>

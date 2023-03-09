@@ -47,8 +47,6 @@
               <ul class="current">
                 <li class="toctree-l1 current"><a class="reference internal current" href="./">About</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#areas-that-are-covered">Areas that are covered</a>
-    </li>
     </ul>
                 </li>
               </ul>
@@ -131,12 +129,62 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="about-dscobol">About DSCOBOL</h1>
-<h2 id="areas-that-are-covered">Areas that are covered</h2>
+<h1 id="what-is-in-this-repository-and-why-are-they-named-the-way-they-are">What is in this repository, and why are they named the way they are.</h1>
+<h2 id="what-is-here">What is here</h2>
+<p>There are multiple repositories which cover a range of topics and technologies.</p>
 <ul>
-<li>GnuCOBOL - COBOL accessing DB2, Postgresql, Indexed data files, and text data files.</li>
-<li>ZOS - JCL, COBOL accessing DB2, VSAM, and QSAM</li>
-<li>MVS - COBOL and KICKS</li>
-<li>Zowe - JCL, COBOL, accessing VSAM and QSAM</li>
+<li>GnuCOBOL - Gnu/Linux (Pop!_OS) - COBOL accessing Text files, Indexed data files, DB2, and Postgresql.</li>
+<li>ZOS - IBM z/OS - COBOL and JCL accessing QSAM, VSAM, DB2, and maybe CICS</li>
+<li>MVS - TK4- Mainframe emulator - COBOL and KICKS</li>
+<li>Zowe Framework (A modern interface to interact with z/OS) - COBOL and JCL accessing QSAM, VSAM, and maybe DB2</li>
+</ul>
+<p>Within the repositories:</p>
+<ul>
+<li>COBOL is the primary programming language</li>
+</ul>
+<p>For programs that run on Gnu/Linux:</p>
+<ul>
+<li>Bash is the primary scripting language</li>
+</ul>
+<p>For programs that run on ZOS or MVS:</p>
+<ul>
+<li>JCL is the, well, Job Control Language</li>
+</ul>
+<p>For Zowe:</p>
+<ul>
+<li>It is a combination of bash scripts and JCL.</li>
+</ul>
+<h2 id="naming-convention">Naming Convention</h2>
+<p>The ideas or concepts for the programs may have originated somewhere else(books, tutorials, other websites, etc.) but I try to "make it my own" by rewriting it using a different structure and style.</p>
+<h3 id="first-designation">First designation</h3>
+<ul>
+<li>dsc - The code was written by dscobol(aka: me)</li>
+<li>ibm - Code from books, documentation or instruction from IBM.</li>
+<li>gem - Curtis Garvin, Steve Eckols. <strong>DB2 for the COBOL Programmer, Part 1 and 2</strong>. Murach 1991.</li>
+<li>mca - Michael Coughlan. <strong>Beginning COBOL for Programmers</strong> Apress 2014.</li>
+<li>xxx - Code from a website, blog or other source. This will be changed to reflect the source.</li>
+</ul>
+<h3 id="second-designation">Second designation</h3>
+<ul>
+<li>gnu - GnuCOBOL</li>
+<li>zos - IBM Enterprise COBOL</li>
+<li>mvs - MVS COBOL</li>
+<li>zow - Zowe Framework</li>
+</ul>
+<h3 id="third-and-further-designation">Third and further designation</h3>
+<p>A description of the focus of the programs.</p>
+<h3 id="examples">Examples:</h3>
+<p>dsc-gnu-Indexed</p>
+<ul>
+<li>dsc - programs by dscobol.</li>
+<li>gnu - uses the GnuCOBOL compiler</li>
+<li>Indexed - programs that read and write to Indexed files.</li>
+</ul>
+<p>gem-gnu-DB2</p>
+<ul>
+<li>gem - programs from the "DB2 for the COBOL Programmer" book</li>
+<li>gnu - uses the GnuCOBOL compiler</li>
+<li>DB2 - connects to the IBM DB2 RDBMS</li>
 </ul>
               
             </div>

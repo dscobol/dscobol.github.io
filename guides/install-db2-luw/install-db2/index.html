@@ -150,7 +150,7 @@
               
                 <h1 id="install-ibm-db2-luw-rdbms">Install IBM DB2 LUW RDBMS</h1>
 <p><strong>Make sure you are running these steps in the VM you created running as the normal user.</strong></p>
-<p><strong>These instructions are for Pop!OS, they should be similar for Ubuntu.</strong></p>
+<p><strong>These instructions are for Pop!_OS, they should be similar for Ubuntu.</strong></p>
 <h2 id="get-the-software">Get the software</h2>
 <p>Open Firefox and visit <a href="https://www.ibm.com/products/db2/pricing">IBM DB2 Products page</a>. </p>
 <p>Click on the "Download IBM Db2 Software Community Edition" link.</p>
@@ -175,35 +175,35 @@
 ├── Templates
 └── Videos
 </code></pre>
-<p>Add three more directories by opening the terminal window and enter:</p>
+<p>Open Terminal and add three more directories, Run:</p>
 <pre><code>cd
 mkdir bin builds dev
 </code></pre>
-<p>The bin and dev directories will be useful later but now we will focus on the builds directory.</p>
+<p>The bin and dev directories will be useful later but for now we will focus on the builds directory.</p>
 <h2 id="extract-the-downloaded-file">Extract the downloaded file</h2>
-<p>Open the Files app and go to the Downloads folder.</p>
+<p>Open Files and go to the Downloads folder.</p>
 <p>Double click on the v11.5.8_linuxx64_server_dec.tar.gz file.</p>
-<p>This will open the Archive Manager application.</p>
+<p>This will open Archive Manager.</p>
 <p>After a little while, within that, you will see "server_dec". Click on the "Extract" button in the upper left hand corner.</p>
 <p>A dialog box will open to select where to extract the file to. Extract the file to the ~/builds directory.</p>
 <p>When it is done, close the dialog box and close Archive Manager.</p>
 <h2 id="rename-the-directory">Rename the directory</h2>
-<p>In the terminal:</p>
+<p>In Terminal, Run:</p>
 <pre><code>cd
 cd builds
 </code></pre>
 <p>to go to the builds directory.</p>
-<p>Make sure the server_dec directory is present with:</p>
+<p>Make sure the server_dec directory is present, Run:</p>
 <pre><code>ls
 </code></pre>
-<p>Rename server_dec to ibm-db2 with:</p>
+<p>Rename server_dec to ibm-db2, Run:</p>
 <pre><code>mv server_dec ibm-db2
 </code></pre>
-<p>Enter the ibm-db2 directory with:</p>
+<p>Enter the ibm-db2 directory, Run:</p>
 <pre><code>cd ibm-db2
 </code></pre>
 <h2 id="install-additional-software">Install additional software</h2>
-<p>In the terminal, run the following commands to install additional software needed to run IBM DB2 LUW:</p>
+<p>In Terminal, Run the following commands to install additional software needed to run IBM DB2 LUW:</p>
 <pre><code>sudo apt install build-essential
 sudo apt install libaio1
 sudo dpkg --add-architecture i386
@@ -215,13 +215,13 @@ sudo apt install ksh
 <p>Run:</p>
 <pre><code>./db2prereqcheck
 </code></pre>
-<p>If you went with PopOS, this will fail with a message about "couldn't recognize the distribution". Don't worry, it will work.</p>
-<p>If you installed Ubuntu instead of PopOS, you will see a long list of information and at the bottom it will say that all requrements are met.</p>
+<p>If you went with Pop!_OS, this will fail with a message about "couldn't recognize the distribution". Don't worry, it will work.</p>
+<p>If you installed Ubuntu instead of Pop!_OS, you will see a long list of information and at the bottom it will say that all requrements are met.</p>
 <h2 id="installing-ibm-db2-luw-as-a-root-or-system-install">Installing IBM DB2 LUW as a "root" or "system" install</h2>
 <p>Run:</p>
 <pre><code>sudo ./db2setup -f sysreq
 </code></pre>
-<p>If you installed Ubuntu instead of PopOS, Run</p>
+<p>If you installed Ubuntu instead, Run</p>
 <pre><code>sudo ./db2setup
 </code></pre>
 <p>This will open a small dialog window.</p>
@@ -264,7 +264,7 @@ sudo apt install ksh
 </ul>
 <p>To be on the safe side, I rebooted after the install was finished.</p>
 <p>When it came back up, there were three users to select from on the login window. The "normal" userid (the one created when the OS was installed), and the db2inst1 and db2fenc1 userids.</p>
-<p>Log in with the "normal" userid and open a terminal window:</p>
+<p>Log in with the "normal" userid and open Terminal and Run:</p>
 <pre><code>cd /opt/ibm/db2/V11.5/
 </code></pre>
 <p>Check out the include and samples directories and make sure all the COBOL stuff is present.</p>
