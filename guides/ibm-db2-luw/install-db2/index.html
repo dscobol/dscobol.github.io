@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://dscobol.github.io/guides/install-db2-luw/install-db2/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://dscobol.github.io/guides/ibm-db2-luw/install-db2/" />
       <link rel="shortcut icon" href="../../../img/favicon.ico" />
     <title>Install DB2 LUW - dscobol</title>
     <link rel="stylesheet" href="../../../css/theme.css" />
@@ -13,8 +13,8 @@
       <script>
         // Current page data
         var mkdocs_page_name = "Install DB2 LUW";
-        var mkdocs_page_input_path = "guides/install-db2-luw/install-db2.md";
-        var mkdocs_page_url = "/guides/install-db2-luw/install-db2/";
+        var mkdocs_page_input_path = "guides/ibm-db2-luw/install-db2.md";
+        var mkdocs_page_url = "/guides/ibm-db2-luw/install-db2/";
       </script>
     
     <script src="../../../js/jquery-3.6.0.min.js" defer></script>
@@ -80,7 +80,7 @@
                 </li>
     </ul>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Install IBM DB2 LUW</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">IBM DB2 LUW on Pop!_OS</a>
     <ul class="current">
                 <li class="toctree-l2"><a class="reference internal" href="../overview/">Overview</a>
                 </li>
@@ -110,21 +110,31 @@
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../install-sampledb/">Install Sample DB and db2profile</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../install-gnucobol/">Install GnuCOBOL</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../install-basic-dev-env/">Install Basic Dev Env</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../install-dbeaver/">Install DBeaver</a>
+                <li class="toctree-l2"><a class="reference internal" href="../create-db2-db/">Create a DB2 DB</a>
                 </li>
     </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="#">Create and Administer DB2 DBs</a>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Dev Tools on Pop!_OS</a>
     <ul>
-                <li class="toctree-l2"><a class="reference internal" href="../../create-db2-db/create-db2-db/">Create a DB2 DB</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../dev-tools/overview/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../dev-tools/install-gnucobol/">Install GnuCOBOL</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../dev-tools/install-basic-dev-env/">Install Basic Dev Env</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../dev-tools/install-dbeaver/">Install DBeaver</a>
                 </li>
     </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="#">Zowe</a>
+                  <li class="toctree-l1"><a class="reference internal" href="#">PostgreSQL on Pop!_OS</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../postgresql/overview/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../postgresql/install-postgresql/">Install PostgreSQL</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Zowe on Pop!_OS</a>
     <ul>
                 <li class="toctree-l2"><a class="reference internal" href="../../zowe-info/install-zowe/">Install Zowe</a>
                 </li>
@@ -148,7 +158,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
           <li>Guides &raquo;</li>
-          <li>Install IBM DB2 LUW &raquo;</li>
+          <li>IBM DB2 LUW on Pop!_OS &raquo;</li>
       <li>Install DB2 LUW</li>
     <li class="wy-breadcrumbs-aside">
     </li>
@@ -159,13 +169,13 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="install-ibm-db2-luw-rdbms">Install IBM DB2 LUW RDBMS</h1>
-<p><strong>Make sure you are running these steps in the VM you created running as the normal user.</strong></p>
+<p><strong>If you created a VM, make sure you are running these steps as the normal user in that VM; not on the host system.</strong></p>
 <p><strong>These instructions are for Pop!_OS, they should be similar for Ubuntu.</strong></p>
 <h2 id="get-the-software">Get the software</h2>
-<p>Open Firefox and visit <a href="https://www.ibm.com/products/db2/pricing">IBM DB2 Products page</a>. </p>
+<p>Open Firefox and visit <a href="https://www.ibm.com/products/db2/pricing">IBM DB2 Products page</a>.</p>
 <p>Click on the "Download IBM Db2 Software Community Edition" link.</p>
 <p>You will need an IBM account to download the software. There is no cost to create an account and there is no cost to download and run the Db2 Community Edition.</p>
-<p>Enter all the information it needs. </p>
+<p>Enter all the information it needs.</p>
 <p>You might have to log back in with your new IBM ID or it may take you to the next page.</p>
 <p>You will be presented with some marketing stuff. Choose your options and press the Continue button.</p>
 <p>Since this will be installed on a Linux system, click the download link for "Linux (x64)".</p>
@@ -266,7 +276,7 @@ sudo apt install ksh
 </ul>
 </li>
 <li>
-<p>When it finishes, look through the log file. </p>
+<p>When it finishes, look through the log file.</p>
 <ul>
 <li>All should look good except "Installing TSAMP". There is a warning for this.</li>
 </ul>

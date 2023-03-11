@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://dscobol.github.io/guides/install-db2-luw/install-dbeaver/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://dscobol.github.io/guides/ibm-db2-luw/overview/" />
       <link rel="shortcut icon" href="../../../img/favicon.ico" />
-    <title>Install DBeaver - dscobol</title>
+    <title>Overview - dscobol</title>
     <link rel="stylesheet" href="../../../css/theme.css" />
     <link rel="stylesheet" href="../../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Install DBeaver";
-        var mkdocs_page_input_path = "guides/install-db2-luw/install-dbeaver.md";
-        var mkdocs_page_url = "/guides/install-db2-luw/install-dbeaver/";
+        var mkdocs_page_name = "Overview";
+        var mkdocs_page_input_path = "guides/ibm-db2-luw/overview.md";
+        var mkdocs_page_url = "/guides/ibm-db2-luw/overview/";
       </script>
     
     <script src="../../../js/jquery-3.6.0.min.js" defer></script>
@@ -80,9 +80,15 @@
                 </li>
     </ul>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Install IBM DB2 LUW</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">IBM DB2 LUW on Pop!_OS</a>
     <ul class="current">
-                <li class="toctree-l2"><a class="reference internal" href="../overview/">Overview</a>
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">Overview</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#ibm-db2-luw-installation-environment">IBM DB2 LUW Installation Environment</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#can-i-do-this-in-windows-wsl">Can I do this in Windows WSL?</a>
+    </li>
+    </ul>
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../install-vm/">Install VM</a>
                 </li>
@@ -90,25 +96,31 @@
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../install-sampledb/">Install Sample DB and db2profile</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../install-gnucobol/">Install GnuCOBOL</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../install-basic-dev-env/">Install Basic Dev Env</a>
-                </li>
-                <li class="toctree-l2 current"><a class="reference internal current" href="./">Install DBeaver</a>
-    <ul class="current">
-    <li class="toctree-l3"><a class="reference internal" href="#connect-to-ibm-db2-luw">Connect to IBM DB2 LUW</a>
-    </li>
-    </ul>
+                <li class="toctree-l2"><a class="reference internal" href="../create-db2-db/">Create a DB2 DB</a>
                 </li>
     </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="#">Create and Administer DB2 DBs</a>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Dev Tools on Pop!_OS</a>
     <ul>
-                <li class="toctree-l2"><a class="reference internal" href="../../create-db2-db/create-db2-db/">Create a DB2 DB</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../dev-tools/overview/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../dev-tools/install-gnucobol/">Install GnuCOBOL</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../dev-tools/install-basic-dev-env/">Install Basic Dev Env</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../dev-tools/install-dbeaver/">Install DBeaver</a>
                 </li>
     </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="#">Zowe</a>
+                  <li class="toctree-l1"><a class="reference internal" href="#">PostgreSQL on Pop!_OS</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../postgresql/overview/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../postgresql/install-postgresql/">Install PostgreSQL</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Zowe on Pop!_OS</a>
     <ul>
                 <li class="toctree-l2"><a class="reference internal" href="../../zowe-info/install-zowe/">Install Zowe</a>
                 </li>
@@ -132,8 +144,8 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
           <li>Guides &raquo;</li>
-          <li>Install IBM DB2 LUW &raquo;</li>
-      <li>Install DBeaver</li>
+          <li>IBM DB2 LUW on Pop!_OS &raquo;</li>
+      <li>Overview</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -142,52 +154,59 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="install-dbeaver">Install DBeaver</h1>
-<p>There are a couple of ways to install it.</p>
-<p>I went with <a href="https://www.how2shout.com/linux/3-ways-to-install-dbeaver-ubuntu-22-04-lts-jammy-linux/">Linux Shout</a>'s version: <strong>#1st Method Using an APT repository</strong></p>
-<h2 id="connect-to-ibm-db2-luw">Connect to IBM DB2 LUW</h2>
-<p>This part was a little tricky.</p>
-<p>Open the app and click on "New Database Connection".</p>
-<p>Select DB2 for LUW</p>
-<p>Here's the problem:</p>
-<p>All the tutorials, posts, and videos say:</p>
-<blockquote>
-<p>Host=localhost and Port=50000 or Port=50001</p>
-</blockquote>
-<p>But this doesn't work.</p>
-<p>There are 2 issues with this:</p>
+                <h1 id="overview">Overview</h1>
+<p>Let me be blunt.</p>
+<p>This is not the "best" way and it might not be a "good" way.</p>
+<p>It may even be a "bad" way and I'm sure that some people will look at this and say: "Why did you do it "that" way?"</p>
+<p>But, it does run and it does work.</p>
+<p>If you have the desire to be able to write COBOL program with embedded SQL statements that access an IBM DB2 LUW RDBMS in a Linux environment...</p>
+<p>This is "a" way.</p>
+<p>Why this way you ask?</p>
+<p>I run an Archlinux(ArcoLinux to be precise) system.</p>
+<p>I can create, compile and run GnuCOBOL programs on that system that run just fine.</p>
+<p>I haven't installed DB2 on that system, nor do I want to.</p>
+<p>I have downloaded the Docker DB2 image and can run it but there are problems which I haven't solved yet which prevent me from using that.</p>
+<p>Lazy of me? Maybe</p>
+<p>My goal was to learn how to create, compile and run COBOL/DB2 program in a Linux environment.</p>
+<p>I had a choice of which path to I want to go down first: Fix the problems with Docker or create an Ubuntu VM.</p>
+<p>I chose the "Create a VM" path.</p>
+<h2 id="ibm-db2-luw-installation-environment">IBM DB2 LUW Installation Environment</h2>
+<p>According to the documentation, the only supported Linux environments are RedHat and Ubuntu.</p>
+<p>Personally, I like the UI for Pop!_OS (by System 76) better and it is based on Ubuntu so I am using that.</p>
+<p>All the commands work on Ubuntu as well so if you want to use that instead, go for it.</p>
+<p>You will need to do five things:</p>
 <ol>
-<li>Wrong Host</li>
-<li>Wrong Port</li>
+<li>
+<p><a href="../install-vm/">Create a VM</a></p>
+</li>
+<li>
+<p><a href="../install-db2/">Install IBM DB2 LUW</a></p>
+</li>
+<li>
+<p><a href="../install-sampledb/">Create the Sample DB</a></p>
+</li>
 </ol>
-<p>Cat the /etc/hosts file. In this VM, it looks like:</p>
-<pre><code>~ ❯❯❯ cat /etc/hosts
-127.0.0.1   localhost
-::1         localhost
-127.0.1.1   pop-os.localdomain  pop-os
-~ ❯❯❯ 
-</code></pre>
-<p>And, in the DB2 install log, it says: Port 25000.</p>
-<p>So, in this VM, the correct parameters are:</p>
-<ul>
-<li>Host: pop-os</li>
-<li>Port: 25000</li>
-</ul>
-<p>Fill in the other parameters:</p>
-<ul>
-<li>Database (probably: sample)</li>
-<li>Username (probably: db2inst1)</li>
-<li>Password (whatever it is)</li>
-</ul>
-<p>and press the "Test Connection" button.</p>
-<p>If this is the first time you are making a connection, you will have to download the drivers.</p>
-<p>After that, you should see a dialog box pop up stating: <strong>Connected</strong>.</p>
+<p>Then go to the Dev Tools guide:</p>
+<ol>
+<li>
+<p><a href="../../dev-tools/install-gnucobol/">Install GnuCOBOL</a></p>
+</li>
+<li>
+<p><a href="../../dev-tools/install-basic-dev-env/">Install a Basic Develoment Environment</a></p>
+</li>
+</ol>
+<h2 id="can-i-do-this-in-windows-wsl">Can I do this in Windows WSL?</h2>
+<p>You may be asking, "Windows has the WSL that can install an Ubuntu distribution, can I do this within that?"</p>
+<p>I have no idea.</p>
+<p>I have never used WSL so I don't know what it can or cannot do.</p>
+<p>I do have a Windows 10 system and I have installed IBM DB2 LUW on that, but I use MingGW for DB2 programs and Cygwin for batch programs.</p>
+<p>Do a search on the GnuCOBOL discussion board for instructions on how to set that up if you want to go that route.</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../install-basic-dev-env/" class="btn btn-neutral float-left" title="Install Basic Dev Env"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../../create-db2-db/create-db2-db/" class="btn btn-neutral float-right" title="Create a DB2 DB">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../gnu-vs-zos-cobol/db2/my-version-of-custinq/" class="btn btn-neutral float-left" title="My version of CUSTINQ"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../install-vm/" class="btn btn-neutral float-right" title="Install VM">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -210,10 +229,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../install-basic-dev-env/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../../gnu-vs-zos-cobol/db2/my-version-of-custinq/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../../create-db2-db/create-db2-db/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../install-vm/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

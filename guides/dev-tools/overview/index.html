@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://dscobol.github.io/guides/install-db2-luw/install-gnucobol/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://dscobol.github.io/guides/dev-tools/overview/" />
       <link rel="shortcut icon" href="../../../img/favicon.ico" />
-    <title>Install GnuCOBOL - dscobol</title>
+    <title>Overview - dscobol</title>
     <link rel="stylesheet" href="../../../css/theme.css" />
     <link rel="stylesheet" href="../../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Install GnuCOBOL";
-        var mkdocs_page_input_path = "guides/install-db2-luw/install-gnucobol.md";
-        var mkdocs_page_url = "/guides/install-db2-luw/install-gnucobol/";
+        var mkdocs_page_name = "Overview";
+        var mkdocs_page_input_path = "guides/dev-tools/overview.md";
+        var mkdocs_page_url = "/guides/dev-tools/overview/";
       </script>
     
     <script src="../../../js/jquery-3.6.0.min.js" defer></script>
@@ -80,33 +80,33 @@
                 </li>
     </ul>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Install IBM DB2 LUW</a>
+                  <li class="toctree-l1"><a class="reference internal" href="#">IBM DB2 LUW on Pop!_OS</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../ibm-db2-luw/overview/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ibm-db2-luw/install-vm/">Install VM</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ibm-db2-luw/install-db2/">Install DB2 LUW</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ibm-db2-luw/install-sampledb/">Install Sample DB and db2profile</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ibm-db2-luw/create-db2-db/">Create a DB2 DB</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Dev Tools on Pop!_OS</a>
     <ul class="current">
-                <li class="toctree-l2"><a class="reference internal" href="../overview/">Overview</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../install-vm/">Install VM</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../install-db2/">Install DB2 LUW</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../install-sampledb/">Install Sample DB and db2profile</a>
-                </li>
-                <li class="toctree-l2 current"><a class="reference internal current" href="./">Install GnuCOBOL</a>
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">Overview</a>
     <ul class="current">
-    <li class="toctree-l3"><a class="reference internal" href="#get-gnucobol">Get GnuCOBOL</a>
+    <li class="toctree-l3"><a class="reference internal" href="#install-gnucobol">Install GnuCOBOL</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#extract-into-builds">Extract into builds</a>
+    <li class="toctree-l3"><a class="reference internal" href="#install-a-basic-development-environment">Install a Basic Development Environment</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#install-additional-software">Install additional software</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#configure-make-and-install">Configure, Make and Install</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#1-create-a-new-directory">1: Create a new directory</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#2-create-a-simple-cobol-program">2: Create a simple COBOL program</a>
-    </li>
-        </ul>
+    <li class="toctree-l3"><a class="reference internal" href="#install-dbeaver">Install DBeaver</a>
     </li>
     </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../install-gnucobol/">Install GnuCOBOL</a>
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../install-basic-dev-env/">Install Basic Dev Env</a>
                 </li>
@@ -114,13 +114,15 @@
                 </li>
     </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="#">Create and Administer DB2 DBs</a>
+                  <li class="toctree-l1"><a class="reference internal" href="#">PostgreSQL on Pop!_OS</a>
     <ul>
-                <li class="toctree-l2"><a class="reference internal" href="../../create-db2-db/create-db2-db/">Create a DB2 DB</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../postgresql/overview/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../postgresql/install-postgresql/">Install PostgreSQL</a>
                 </li>
     </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="#">Zowe</a>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Zowe on Pop!_OS</a>
     <ul>
                 <li class="toctree-l2"><a class="reference internal" href="../../zowe-info/install-zowe/">Install Zowe</a>
                 </li>
@@ -144,8 +146,8 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
           <li>Guides &raquo;</li>
-          <li>Install IBM DB2 LUW &raquo;</li>
-      <li>Install GnuCOBOL</li>
+          <li>Dev Tools on Pop!_OS &raquo;</li>
+      <li>Overview</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -154,105 +156,21 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="install-gnucobol">Install GnuCOBOL</h1>
-<p><strong>Make sure you are running these steps in the VM you created running as the normal user.</strong></p>
+                <h1 id="overview">Overview</h1>
+<p><strong>If you created a VM, make sure you are running these steps as the normal user in that VM; not on the host system.</strong></p>
 <p><strong>These instructions are for Pop!_OS, they should be similar for Ubuntu.</strong></p>
-<h2 id="get-gnucobol">Get GnuCOBOL</h2>
-<p>Download the source code from <a href="https://gnucobol.sourceforge.io/">GnuCOBOL</a></p>
-<p>As of March 1, 2023, the current version is 3.1.2.</p>
-<p>For that version, download: gnucobol-3.1.2.tar.xz.</p>
-<p>If you haven't made any changes, it will be downloaded to the Downloads directory.</p>
-<h2 id="extract-into-builds">Extract into builds</h2>
-<p>Open Files, double-click on gnucobol-3.1.2.tar.xz and extract it into the ~/builds directory.</p>
-<h2 id="install-additional-software">Install additional software</h2>
-<p>Open Terminal to install the following:</p>
-<pre><code>sudo apt install libgmp-dev
-sudo apt install libdb5.3-dev
-sudo apt install libncurses-dev
-sudo apt install libxml2-dev
-sudo apt install libcjson-dev
-</code></pre>
-<h2 id="configure-make-and-install">Configure, Make and Install</h2>
-<p>Run:</p>
-<pre><code>cd builds/gnucobol-3.1.2
-</code></pre>
-<p>This will take you into the gnucobol-3.1.2 directory.</p>
-<p>Run:</p>
-<pre><code>./configure
-</code></pre>
-<p>A whole bunch of messages will print on the screen </p>
-<p>At the end, there should be some messages that look like:</p>
-<pre><code>extended screen I/O      : ncursesw
-variable file format     : 0
-sequential file handler  : built-in
-indexed file handler     : BDB
-mathematical library     : GMP
-XML library              : libxml2
-JSON library             : json-c
-</code></pre>
-<p>If there are no errors, Run:</p>
-<pre><code>make
-</code></pre>
-<p>More messages will display, if there are no errors, Run:</p>
-<pre><code>sudo make install
-</code></pre>
-<p>Then Run:</p>
-<pre><code>sudo ldconfig
-</code></pre>
-<p>As a quick test, Run:</p>
-<pre><code>cobc
-</code></pre>
-<p>You should get an error message:</p>
-<pre><code>cobc: error: no input files
-</code></pre>
-<p>For a better test of the install:</p>
-<ol>
-<li>Create a new directory</li>
-<li>Create a simple COBOL program</li>
-<li>Run it.</li>
-</ol>
-<h3 id="1-create-a-new-directory">1: Create a new directory</h3>
-<p>In Terminal, Run:</p>
-<pre><code>cd
-mkdir -p ~/dev/cobol/test-cobol
-cd ~/dev/cobol/test-cobol
-touch hello.cbl
-</code></pre>
-<h3 id="2-create-a-simple-cobol-program">2: Create a simple COBOL program</h3>
-<p>Open Files, go to the dev/cobol/test-cobol folder.</p>
-<p>Double-click on hello.cbl. This will open it in Text Editor.</p>
-<p>Copy the following code and paste it into hello.cbl:</p>
-<pre><code>       IDENTIFICATION DIVISION.
-       PROGRAM-ID. SmallestProgram.
-       DATA DIVISION.
-       FILE SECTION.
-       WORKING-STORAGE SECTION.
-       PROCEDURE DIVISION.
-       MAIN-PROCEDURE.
-            DISPLAY &quot;Hello world&quot;
-            STOP RUN.
-       END PROGRAM SmallestProgram.
-</code></pre>
-<p>and save it.</p>
-<p>Go to Terminal, Run:</p>
-<pre><code>pwd
-</code></pre>
-<p>To make sure you are in the ~/dev/cobol/test-cobol directory.</p>
-<p>Run:</p>
-<pre><code>cobc -x hello.cbl
-</code></pre>
-<p>If it complies correctly, Run:</p>
-<pre><code>./hello
-</code></pre>
-<p>It should return:</p>
-<pre><code>Hello world
-</code></pre>
+<h2 id="install-gnucobol">Install GnuCOBOL</h2>
+<p><a href="../install-gnucobol/">Install GnuCOBOL</a></p>
+<h2 id="install-a-basic-development-environment">Install a Basic Development Environment</h2>
+<p><a href="../install-basic-dev-env/">Install Dev Env</a></p>
+<h2 id="install-dbeaver">Install DBeaver</h2>
+<p><a href="../install-dbeaver/">Install DBeaver</a></p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../install-sampledb/" class="btn btn-neutral float-left" title="Install Sample DB and db2profile"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../install-basic-dev-env/" class="btn btn-neutral float-right" title="Install Basic Dev Env">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../ibm-db2-luw/create-db2-db/" class="btn btn-neutral float-left" title="Create a DB2 DB"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../install-gnucobol/" class="btn btn-neutral float-right" title="Install GnuCOBOL">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -275,10 +193,10 @@ touch hello.cbl
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../install-sampledb/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../../ibm-db2-luw/create-db2-db/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../install-basic-dev-env/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../install-gnucobol/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://dscobol.github.io/guides/install-db2-luw/install-vm/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://dscobol.github.io/guides/dev-tools/install-dbeaver/" />
       <link rel="shortcut icon" href="../../../img/favicon.ico" />
-    <title>Install VM - dscobol</title>
+    <title>Install DBeaver - dscobol</title>
     <link rel="stylesheet" href="../../../css/theme.css" />
     <link rel="stylesheet" href="../../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Install VM";
-        var mkdocs_page_input_path = "guides/install-db2-luw/install-vm.md";
-        var mkdocs_page_url = "/guides/install-db2-luw/install-vm/";
+        var mkdocs_page_name = "Install DBeaver";
+        var mkdocs_page_input_path = "guides/dev-tools/install-dbeaver.md";
+        var mkdocs_page_url = "/guides/dev-tools/install-dbeaver/";
       </script>
     
     <script src="../../../js/jquery-3.6.0.min.js" defer></script>
@@ -80,53 +80,45 @@
                 </li>
     </ul>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Install IBM DB2 LUW</a>
+                  <li class="toctree-l1"><a class="reference internal" href="#">IBM DB2 LUW on Pop!_OS</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../ibm-db2-luw/overview/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ibm-db2-luw/install-vm/">Install VM</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ibm-db2-luw/install-db2/">Install DB2 LUW</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ibm-db2-luw/install-sampledb/">Install Sample DB and db2profile</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ibm-db2-luw/create-db2-db/">Create a DB2 DB</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Dev Tools on Pop!_OS</a>
     <ul class="current">
                 <li class="toctree-l2"><a class="reference internal" href="../overview/">Overview</a>
-                </li>
-                <li class="toctree-l2 current"><a class="reference internal current" href="./">Install VM</a>
-    <ul class="current">
-    <li class="toctree-l3"><a class="reference internal" href="#download-the-operating-system-iso">Download the Operating System iso</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#install-pop_os">Install Pop!_OS</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#or-use-ubuntu-instead">Or use Ubuntu instead</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#three-steps-to-create-a-vm">Three steps to create a VM.</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#create-the-vm">Create the VM</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#install-the-os-into-the-vm">Install the OS into the VM</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#a-word-of-caution-about-the-userid-you-create-as-you-install-the-os">A word of caution about the userid you create as you install the OS</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#run-the-vm-and-update">Run the VM and update</a>
-    </li>
-        </ul>
-    </li>
-    </ul>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../install-db2/">Install DB2 LUW</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../install-sampledb/">Install Sample DB and db2profile</a>
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../install-gnucobol/">Install GnuCOBOL</a>
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../install-basic-dev-env/">Install Basic Dev Env</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../install-dbeaver/">Install DBeaver</a>
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">Install DBeaver</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#connect-to-ibm-db2-luw">Connect to IBM DB2 LUW</a>
+    </li>
+    </ul>
                 </li>
     </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="#">Create and Administer DB2 DBs</a>
+                  <li class="toctree-l1"><a class="reference internal" href="#">PostgreSQL on Pop!_OS</a>
     <ul>
-                <li class="toctree-l2"><a class="reference internal" href="../../create-db2-db/create-db2-db/">Create a DB2 DB</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../postgresql/overview/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../postgresql/install-postgresql/">Install PostgreSQL</a>
                 </li>
     </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="#">Zowe</a>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Zowe on Pop!_OS</a>
     <ul>
                 <li class="toctree-l2"><a class="reference internal" href="../../zowe-info/install-zowe/">Install Zowe</a>
                 </li>
@@ -150,8 +142,8 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
           <li>Guides &raquo;</li>
-          <li>Install IBM DB2 LUW &raquo;</li>
-      <li>Install VM</li>
+          <li>Dev Tools on Pop!_OS &raquo;</li>
+      <li>Install DBeaver</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -160,65 +152,54 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="install-a-virtual-machine">Install a Virtual Machine</h1>
-<p>There are a number of virtualization products available to create a Virtual Machine on your computer: Oracle VM VirtualBox, VMWare, QEMU etc.</p>
-<p>You may already have one of these installed; if so, go to the next step.</p>
-<p>If not, pick one of them, and follow the installation instructions for your computer.</p>
-<p>I use QEMU now but in the past I have used VirtualBox and VMWare. They all work fairly well.</p>
-<h2 id="download-the-operating-system-iso">Download the Operating System iso</h2>
-<h3 id="install-pop_os">Install Pop!_OS</h3>
-<p>Go to the <a href="https://pop.system76.com">Pop!_OS website</a> press the "Download" button.</p>
-<p>I am using the Pop!_OS 22.04 LTS version.</p>
-<h3 id="or-use-ubuntu-instead">Or use Ubuntu instead</h3>
-<p>As I stated in the overview, Ubuntu is "offically supported" so if you want to use that instead:</p>
-<p>Go to the <a href="https://ubuntu.com/download/desktop">Ubuntu Desktop website</a> and download the Ubuntu 22.04 LTS version.</p>
-<h2 id="three-steps-to-create-a-vm">Three steps to create a VM.</h2>
-<h3 id="create-the-vm">Create the VM</h3>
-<p>Follow the instructions for the virtualization product you have installed on your computer to create a VM.</p>
-<ul>
-<li>Create the "Harddrive" that the OS will run on and how big the drive will be.</li>
-<li>Decide how much memory the VM will be allocated.</li>
-<li>
-<p>Other parameters required by the virtualization product.</p>
-<ul>
-<li>For this project, the parameters I used are:<ul>
-<li>100GB HD</li>
-<li>4GB Ram</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="install-the-os-into-the-vm">Install the OS into the VM</h3>
-<p>Follow the instructions for the virtualization product you have installed on your computer to actually install the OS onto the VM harddrive.</p>
-<h3 id="a-word-of-caution-about-the-userid-you-create-as-you-install-the-os">A word of caution about the userid you create as you install the OS</h3>
-<p>You create a userid when you install the OS and will probably use that userid to run db2 commands. </p>
-<p>Make sure your userid meets the criteria below:</p>
-<pre><code>User IDs have the following restrictions and requirements:
-
-Must have a primary group other than guests, admins, users, and local.
-Can include lowercase letters (a-z), numbers (0-9), and the underscore character (_).
-Cannot be longer than eight characters
-Cannot begin with IBM, SYS, SQL, or a number.
-Cannot be a DB2 reserved word (USERS, ADMINS, GUESTS, PUBLIC, or LOCAL), or an SQL reserved word.
-Cannot use any user IDs with root privilege for the DB2 instance ID, DAS ID, or fenced ID.
-Cannot include accented characters.
+                <h1 id="install-dbeaver">Install DBeaver</h1>
+<p><strong>If you created a VM, make sure you are running these steps as the normal user in that VM; not on the host system.</strong></p>
+<p><strong>These instructions are for Pop!_OS, they should be similar for Ubuntu.</strong></p>
+<p>There are a couple of ways to install it.</p>
+<p>I went with <a href="https://www.how2shout.com/linux/3-ways-to-install-dbeaver-ubuntu-22-04-lts-jammy-linux/">Linux Shout</a>'s version: <strong>#1st Method Using an APT repository</strong></p>
+<h2 id="connect-to-ibm-db2-luw">Connect to IBM DB2 LUW</h2>
+<p>This part was a little tricky.</p>
+<p>Open the app and click on "New Database Connection".</p>
+<p>Select DB2 for LUW</p>
+<p>Here's the problem:</p>
+<p>All the tutorials, posts, and videos say:</p>
+<blockquote>
+<p>Host=localhost and Port=50000 or Port=50001</p>
+</blockquote>
+<p>But this doesn't work.</p>
+<p>There are 2 issues with this:</p>
+<ol>
+<li>Wrong Host</li>
+<li>Wrong Port</li>
+</ol>
+<p>Cat the /etc/hosts file. In this VM, it looks like:</p>
+<pre><code>~ ❯❯❯ cat /etc/hosts
+127.0.0.1   localhost
+::1         localhost
+127.0.1.1   pop-os.localdomain  pop-os
+~ ❯❯❯
 </code></pre>
-<p>This threw me for awhile because I wanted to use "sysop" as the userid and the install kept failing.</p>
-<p>When done with this step, you usually need to shutdown the VM and then run it so it starts up the installed system and not the iso used to install the system.</p>
-<h3 id="run-the-vm-and-update">Run the VM and update</h3>
-<p>Follow the instructions for the virtualization product you have installed on your computer to run the VM.</p>
-<p>A new window should display with a login screen.</p>
-<p>Login using the userid you setup when installing the OS.</p>
-<p>Open the Pop!_Shop application. </p>
-<p>Click on the "Installed" button in the titlebar and then click "Update All" in the window listing all the updates that can be done.</p>
-<p>To be "safe", after all the updates are done, reboot the system.</p>
+<p>And, in the DB2 install log, it says: Port 25000.</p>
+<p>So, in this VM, the correct parameters are:</p>
+<ul>
+<li>Host: pop-os</li>
+<li>Port: 25000</li>
+</ul>
+<p>Fill in the other parameters:</p>
+<ul>
+<li>Database (probably: sample)</li>
+<li>Username (probably: db2inst1)</li>
+<li>Password (whatever it is)</li>
+</ul>
+<p>and press the "Test Connection" button.</p>
+<p>If this is the first time you are making a connection, you will have to download the drivers.</p>
+<p>After that, you should see a dialog box pop up stating: <strong>Connected</strong>.</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../overview/" class="btn btn-neutral float-left" title="Overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../install-db2/" class="btn btn-neutral float-right" title="Install DB2 LUW">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../install-basic-dev-env/" class="btn btn-neutral float-left" title="Install Basic Dev Env"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../postgresql/overview/" class="btn btn-neutral float-right" title="Overview">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -241,10 +222,10 @@ Cannot include accented characters.
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../overview/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../install-basic-dev-env/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../install-db2/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../../postgresql/overview/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
