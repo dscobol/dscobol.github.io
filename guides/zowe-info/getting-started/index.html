@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://dscobol.github.io/guides/install-db2-luw/install-sampledb/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://dscobol.github.io/guides/zowe-info/getting-started/" />
       <link rel="shortcut icon" href="../../../img/favicon.ico" />
-    <title>Install Sample DB and db2profile - dscobol</title>
+    <title>Get Started with Zowe - dscobol</title>
     <link rel="stylesheet" href="../../../css/theme.css" />
     <link rel="stylesheet" href="../../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Install Sample DB and db2profile";
-        var mkdocs_page_input_path = "guides/install-db2-luw/install-sampledb.md";
-        var mkdocs_page_url = "/guides/install-db2-luw/install-sampledb/";
+        var mkdocs_page_name = "Get Started with Zowe";
+        var mkdocs_page_input_path = "guides/zowe-info/getting-started.md";
+        var mkdocs_page_url = "/guides/zowe-info/getting-started/";
       </script>
     
     <script src="../../../js/jquery-3.6.0.min.js" defer></script>
@@ -80,27 +80,19 @@
                 </li>
     </ul>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Install IBM DB2 LUW</a>
-    <ul class="current">
-                <li class="toctree-l2"><a class="reference internal" href="../overview/">Overview</a>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Install IBM DB2 LUW</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../install-db2-luw/overview/">Overview</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../install-vm/">Install VM</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../install-db2-luw/install-vm/">Install VM</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../install-db2/">Install DB2 LUW</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../install-db2-luw/install-db2/">Install DB2 LUW</a>
                 </li>
-                <li class="toctree-l2 current"><a class="reference internal current" href="./">Install Sample DB and db2profile</a>
-    <ul class="current">
-    <li class="toctree-l3"><a class="reference internal" href="#check-the-installation">Check the installation</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#install-sample-db">Install Sample DB</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#install-db2profile-in-bashrc">Install db2profile in .bashrc</a>
-    </li>
-    </ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../install-db2-luw/install-sampledb/">Install Sample DB and db2profile</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../install-gnucobol/">Install GnuCOBOL</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../install-db2-luw/install-gnucobol/">Install GnuCOBOL</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../install-basic-dev-env/">Install Basic Dev Env</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../install-db2-luw/install-basic-dev-env/">Install Basic Dev Env</a>
                 </li>
     </ul>
                   </li>
@@ -110,11 +102,23 @@
                 </li>
     </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="#">Zowe</a>
-    <ul>
-                <li class="toctree-l2"><a class="reference internal" href="../../zowe-info/install-zowe/">Install Zowe</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Zowe</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../install-zowe/">Install Zowe</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../../zowe-info/getting-started/">Get Started with Zowe</a>
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">Get Started with Zowe</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#the-3-directories">The 3 directories</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#create-test-dataset">Create Test Dataset</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#intialize-a-project">Intialize a Project</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#simple-report">Simple Report</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
                 </li>
     </ul>
                   </li>
@@ -134,8 +138,8 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
           <li>Guides &raquo;</li>
-          <li>Install IBM DB2 LUW &raquo;</li>
-      <li>Install Sample DB and db2profile</li>
+          <li>Zowe &raquo;</li>
+      <li>Get Started with Zowe</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -144,91 +148,44 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="install-the-sample-db">Install the Sample DB.</h1>
-<p><strong>Make sure you are running these steps in the VM you created running as the normal user.</strong></p>
-<p><strong>These instructions are for Pop!_OS, they should be similar for Ubuntu.</strong></p>
-<h2 id="check-the-installation">Check the installation</h2>
-<p>In Terminal, Run:</p>
-<pre><code>su - db2inst1
-ksh
-</code></pre>
-<p>You will need to enter the password for db2inst1 after the su command.</p>
-<p>Use ksh for a "more useable" command line.       </p>
-<p>A quick check, Run:</p>
-<pre><code>db2 list database directory
-</code></pre>
-<p>returns no DBs.</p>
-<h2 id="install-sample-db">Install Sample DB</h2>
-<p>Run:</p>
-<pre><code>cd sqllib/bin
-</code></pre>
-<p>Run:</p>
-<pre><code>./dbsampl
-</code></pre>
-<p>to create the Sample DB.</p>
-<p>Not sure why but this takes a LLLLOOOONNNNGGGG time to complete.</p>
-<p>To check success, Run:</p>
-<pre><code>db2 list database directory
-</code></pre>
-<p>This should return:</p>
-<pre><code>System Database Directory
-
- Number of entries in the directory = 1
-
-Database 1 entry:
-
- Database alias                       = SAMPLE
- Database name                        = SAMPLE
- Local database directory             = /home/db2inst1
- Database release level               = 15.00
- Comment                              =
- Directory entry type                 = Indirect
- Catalog database partition number    = 0
- Alternate server hostname            =
- Alternate server port number         =
-</code></pre>
-<p>Now Run:</p>
-<pre><code>db2
-</code></pre>
-<p>This will take you inside DB2 and provide the DB2 prompt.</p>
-<p>Then Run:</p>
-<pre><code>connect to sample
-</code></pre>
-<p>This will return:</p>
-<pre><code>  Database Connection Information
-
- Database server        = DB2/LINUXX8664 11.5.8.0
- SQL authorization ID   = DB2INST1
- Local database alias   = SAMPLE
-</code></pre>
-<p>Then Run:</p>
-<pre><code>select * from employee
-</code></pre>
-<p>This will return a listing of 42 employees</p>
-<p>Run:</p>
-<pre><code>quit
-</code></pre>
-<p>to exit DB2 and return to the command prompt.</p>
-<p>Then Run twice:</p>
-<pre><code>exit
-</code></pre>
-<p>to exit the ksh shell and exit db2inst1 and become the "normal" user again.</p>
-<h2 id="install-db2profile-in-bashrc">Install db2profile in .bashrc</h2>
-<p>As the "normal" user, you will need to run some DB2 commands in Terminal.</p>
-<p>To make this possible, add the following 4 lines to the bottom of the .bashrc file which is found in home directory.</p>
-<pre><code># The following three lines have been added by UDB DB2.
-if [ -f /home/db2inst1/sqllib/db2profile ]; then
-    . /home/db2inst1/sqllib/db2profile
-fi
-</code></pre>
-<p>This will also export some very useful environment variables.</p>
-<p>You will need to exit and re-open Terminal for them to be activated.</p>
+                <h1 id="dsc-zow-get-started-get-started-using-zowe">dsc-zow-Get-Started: Get Started using Zowe</h1>
+<p><strong>Important NOTE 1</strong></p>
+<p>A HLQ of ZAAAAA is used in all the example JCL and scripts.</p>
+<p>You must change that to your TSO userid for these to work.</p>
+<p><strong>Important NOTE 2</strong></p>
+<p>The JCL contained in these examples is written for the system it was run on.</p>
+<p>You must verify that the parameters used are valid for the system you are running on.</p>
+<h2 id="the-3-directories">The 3 directories</h2>
+<ul>
+<li>Create Test Dataset</li>
+<li>Initialize A Project</li>
+<li>Simple Report</li>
+</ul>
+<h3 id="create-test-dataset">Create Test Dataset</h3>
+<p>This demonstrates 3 different ways to create a dataset and then upload the data to that dataset and then cleanup after.</p>
+<ol>
+<li>Hybrid Create QSAM</li>
+<li>Hybrid Create VSAM</li>
+<li>Zowe Only QSAM</li>
+</ol>
+<p>The Hybrid methods use a combination of JCL and Zowe commands to create, upload into and delete datasets.</p>
+<p>The Zowe Only method uses only Zowe commands to create, upload into and delete datasets.</p>
+<h3 id="intialize-a-project">Intialize a Project</h3>
+<p>This demonstrates a method to create and delete a series of PDSs that could be used for a new Project.</p>
+<h3 id="simple-report">Simple Report</h3>
+<p>This demonstrates a possible workflow to create a Project.</p>
+<ul>
+<li>Create a series of PDSs</li>
+<li>Upload COBOL and copylib Members and test data Datasets</li>
+<li>Compile, Link and Run the program</li>
+<li>Run the program</li>
+<li>Delete the Project</li>
+</ul>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../install-db2/" class="btn btn-neutral float-left" title="Install DB2 LUW"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../install-gnucobol/" class="btn btn-neutral float-right" title="Install GnuCOBOL">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../install-zowe/" class="btn btn-neutral float-left" title="Install Zowe"><span class="icon icon-circle-arrow-left"></span> Previous</a>
     </div>
 
   <hr/>
@@ -251,10 +208,8 @@ fi
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../install-db2/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../install-zowe/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
-    
-      <span><a href="../install-gnucobol/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

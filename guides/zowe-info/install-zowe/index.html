@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://dscobol.github.io/guides/install-db2-luw/install-sampledb/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://dscobol.github.io/guides/zowe-info/install-zowe/" />
       <link rel="shortcut icon" href="../../../img/favicon.ico" />
-    <title>Install Sample DB and db2profile - dscobol</title>
+    <title>Install Zowe - dscobol</title>
     <link rel="stylesheet" href="../../../css/theme.css" />
     <link rel="stylesheet" href="../../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Install Sample DB and db2profile";
-        var mkdocs_page_input_path = "guides/install-db2-luw/install-sampledb.md";
-        var mkdocs_page_url = "/guides/install-db2-luw/install-sampledb/";
+        var mkdocs_page_name = "Install Zowe";
+        var mkdocs_page_input_path = "guides/zowe-info/install-zowe.md";
+        var mkdocs_page_url = "/guides/zowe-info/install-zowe/";
       </script>
     
     <script src="../../../js/jquery-3.6.0.min.js" defer></script>
@@ -80,27 +80,19 @@
                 </li>
     </ul>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Install IBM DB2 LUW</a>
-    <ul class="current">
-                <li class="toctree-l2"><a class="reference internal" href="../overview/">Overview</a>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Install IBM DB2 LUW</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../install-db2-luw/overview/">Overview</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../install-vm/">Install VM</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../install-db2-luw/install-vm/">Install VM</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../install-db2/">Install DB2 LUW</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../install-db2-luw/install-db2/">Install DB2 LUW</a>
                 </li>
-                <li class="toctree-l2 current"><a class="reference internal current" href="./">Install Sample DB and db2profile</a>
-    <ul class="current">
-    <li class="toctree-l3"><a class="reference internal" href="#check-the-installation">Check the installation</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#install-sample-db">Install Sample DB</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#install-db2profile-in-bashrc">Install db2profile in .bashrc</a>
-    </li>
-    </ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../install-db2-luw/install-sampledb/">Install Sample DB and db2profile</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../install-gnucobol/">Install GnuCOBOL</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../install-db2-luw/install-gnucobol/">Install GnuCOBOL</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../install-basic-dev-env/">Install Basic Dev Env</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../install-db2-luw/install-basic-dev-env/">Install Basic Dev Env</a>
                 </li>
     </ul>
                   </li>
@@ -110,11 +102,27 @@
                 </li>
     </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="#">Zowe</a>
-    <ul>
-                <li class="toctree-l2"><a class="reference internal" href="../../zowe-info/install-zowe/">Install Zowe</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Zowe</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">Install Zowe</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#accessing-a-mainframe">Accessing a Mainframe</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#installing-zowe-components">Installing Zowe components</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#zowe-explorer-extension-for-vscodium-or-vscode">Zowe Explorer extension for VSCodium (or VSCode)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#zowe-cli">Zowe CLI</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#shortcut">shortcut</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#setup-a-profile">Setup a Profile</a>
+    </li>
+    </ul>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../../zowe-info/getting-started/">Get Started with Zowe</a>
+                <li class="toctree-l2"><a class="reference internal" href="../getting-started/">Get Started with Zowe</a>
                 </li>
     </ul>
                   </li>
@@ -134,8 +142,8 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
           <li>Guides &raquo;</li>
-          <li>Install IBM DB2 LUW &raquo;</li>
-      <li>Install Sample DB and db2profile</li>
+          <li>Zowe &raquo;</li>
+      <li>Install Zowe</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -144,91 +152,54 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="install-the-sample-db">Install the Sample DB.</h1>
-<p><strong>Make sure you are running these steps in the VM you created running as the normal user.</strong></p>
-<p><strong>These instructions are for Pop!_OS, they should be similar for Ubuntu.</strong></p>
-<h2 id="check-the-installation">Check the installation</h2>
-<p>In Terminal, Run:</p>
-<pre><code>su - db2inst1
-ksh
+                <h1 id="using-the-zowe-components">Using the Zowe components</h1>
+<h2 id="accessing-a-mainframe">Accessing a Mainframe</h2>
+<p>The Mainframe you are accessing must be setup to allow Zowe to connect to it.</p>
+<p>This is typically done with Z/OSMF.</p>
+<p>Then RACF permissions need to be granted to your userid to access Z/OSMF.</p>
+<p>Talk to the Mainframe System Administrator to find out if this is setup and if you have permission.</p>
+<h2 id="installing-zowe-components">Installing Zowe components</h2>
+<p>As a "base", there are two components that should be installed:</p>
+<ul>
+<li>Zowe Explorer extension for VSCodium (or VSCode)</li>
+<li>Zowe CLI</li>
+</ul>
+<h2 id="zowe-explorer-extension-for-vscodium-or-vscode">Zowe Explorer extension for VSCodium (or VSCode)</h2>
+<p>This is a two for one deal.</p>
+<p>Chose either IBM Z Open Editor or Code4Z (but do not have both enabled at the same time. It might be "safer" to only have one installed.)</p>
+<p>When you install your choice, it will also install Zowe Explorer.</p>
+<p>For either choice, a Java JDK will also need to be installed.</p>
+<p>For Pop!_OS:</p>
+<pre><code>sudo apt install default-jdk
 </code></pre>
-<p>You will need to enter the password for db2inst1 after the su command.</p>
-<p>Use ksh for a "more useable" command line.       </p>
-<p>A quick check, Run:</p>
-<pre><code>db2 list database directory
+<h2 id="zowe-cli">Zowe CLI</h2>
+<p>You must have NodeJS and NPM installed.</p>
+<p>There are numerous ways to install this. Search the Web.</p>
+<p>Within this VM, I installed <a href="https://github.com/nvm-sh/nvm">NVM</a>, then used that to install the latest LTS:</p>
+<pre><code>nvm install --lts
 </code></pre>
-<p>returns no DBs.</p>
-<h2 id="install-sample-db">Install Sample DB</h2>
-<p>Run:</p>
-<pre><code>cd sqllib/bin
+<p>To install Zowe CLI, follow the <a href="https://docs.zowe.org/stable/user-guide/cli-installcli/">Installing Zowe CLI</a> instructions.</p>
+<h3 id="shortcut">shortcut</h3>
+<p>For Pop!_OS:</p>
+<pre><code>npm install -g prebuild-install
+npm install -g @zowe/cli@zowe-v2-lts
 </code></pre>
-<p>Run:</p>
-<pre><code>./dbsampl
-</code></pre>
-<p>to create the Sample DB.</p>
-<p>Not sure why but this takes a LLLLOOOONNNNGGGG time to complete.</p>
-<p>To check success, Run:</p>
-<pre><code>db2 list database directory
-</code></pre>
-<p>This should return:</p>
-<pre><code>System Database Directory
-
- Number of entries in the directory = 1
-
-Database 1 entry:
-
- Database alias                       = SAMPLE
- Database name                        = SAMPLE
- Local database directory             = /home/db2inst1
- Database release level               = 15.00
- Comment                              =
- Directory entry type                 = Indirect
- Catalog database partition number    = 0
- Alternate server hostname            =
- Alternate server port number         =
-</code></pre>
-<p>Now Run:</p>
-<pre><code>db2
-</code></pre>
-<p>This will take you inside DB2 and provide the DB2 prompt.</p>
-<p>Then Run:</p>
-<pre><code>connect to sample
-</code></pre>
-<p>This will return:</p>
-<pre><code>  Database Connection Information
-
- Database server        = DB2/LINUXX8664 11.5.8.0
- SQL authorization ID   = DB2INST1
- Local database alias   = SAMPLE
-</code></pre>
-<p>Then Run:</p>
-<pre><code>select * from employee
-</code></pre>
-<p>This will return a listing of 42 employees</p>
-<p>Run:</p>
-<pre><code>quit
-</code></pre>
-<p>to exit DB2 and return to the command prompt.</p>
-<p>Then Run twice:</p>
-<pre><code>exit
-</code></pre>
-<p>to exit the ksh shell and exit db2inst1 and become the "normal" user again.</p>
-<h2 id="install-db2profile-in-bashrc">Install db2profile in .bashrc</h2>
-<p>As the "normal" user, you will need to run some DB2 commands in Terminal.</p>
-<p>To make this possible, add the following 4 lines to the bottom of the .bashrc file which is found in home directory.</p>
-<pre><code># The following three lines have been added by UDB DB2.
-if [ -f /home/db2inst1/sqllib/db2profile ]; then
-    . /home/db2inst1/sqllib/db2profile
-fi
-</code></pre>
-<p>This will also export some very useful environment variables.</p>
-<p>You will need to exit and re-open Terminal for them to be activated.</p>
+<h2 id="setup-a-profile">Setup a Profile</h2>
+<p>You will need information from the System Administrator for the parameters you need to connect to the Mainframe.</p>
+<p>These include:</p>
+<ul>
+<li>IP Address and Port</li>
+<li>Accept or Reject self-signed certificates</li>
+<li>protocol used</li>
+<li>and maybe other parameters</li>
+</ul>
+<p>The Profile can be created either through the Zowe Explorer interface or through the Zowe CLI interface. The information you get from the System Administrator should contain the instructions on how to do this.</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../install-db2/" class="btn btn-neutral float-left" title="Install DB2 LUW"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../install-gnucobol/" class="btn btn-neutral float-right" title="Install GnuCOBOL">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../create-db2-db/create-db2-db/" class="btn btn-neutral float-left" title="Create a DB2 DB"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../getting-started/" class="btn btn-neutral float-right" title="Get Started with Zowe">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -251,10 +222,10 @@ fi
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../install-db2/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../../create-db2-db/create-db2-db/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../install-gnucobol/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../getting-started/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
