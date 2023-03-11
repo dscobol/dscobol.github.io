@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://dscobol.github.io/guides/install-db2-luw/install-gnucobol/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://dscobol.github.io/guides/install-db2-luw/install-dbeaver/" />
       <link rel="shortcut icon" href="../../../img/favicon.ico" />
-    <title>Install GnuCOBOL - dscobol</title>
+    <title>Install DBeaver - dscobol</title>
     <link rel="stylesheet" href="../../../css/theme.css" />
     <link rel="stylesheet" href="../../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Install GnuCOBOL";
-        var mkdocs_page_input_path = "guides/install-db2-luw/install-gnucobol.md";
-        var mkdocs_page_url = "/guides/install-db2-luw/install-gnucobol/";
+        var mkdocs_page_name = "Install DBeaver";
+        var mkdocs_page_input_path = "guides/install-db2-luw/install-dbeaver.md";
+        var mkdocs_page_url = "/guides/install-db2-luw/install-dbeaver/";
       </script>
     
     <script src="../../../js/jquery-3.6.0.min.js" defer></script>
@@ -90,27 +90,15 @@
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../install-sampledb/">Install Sample DB and db2profile</a>
                 </li>
-                <li class="toctree-l2 current"><a class="reference internal current" href="./">Install GnuCOBOL</a>
-    <ul class="current">
-    <li class="toctree-l3"><a class="reference internal" href="#get-gnucobol">Get GnuCOBOL</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#extract-into-builds">Extract into builds</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#install-additional-software">Install additional software</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#configure-make-and-install">Configure, Make and Install</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#1-create-a-new-directory">1: Create a new directory</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#2-create-a-simple-cobol-program">2: Create a simple COBOL program</a>
-    </li>
-        </ul>
-    </li>
-    </ul>
+                <li class="toctree-l2"><a class="reference internal" href="../install-gnucobol/">Install GnuCOBOL</a>
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../install-basic-dev-env/">Install Basic Dev Env</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../install-dbeaver/">Install DBeaver</a>
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">Install DBeaver</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#connect-to-ibm-db2-luw">Connect to IBM DB2 LUW</a>
+    </li>
+    </ul>
                 </li>
     </ul>
                   </li>
@@ -145,7 +133,7 @@
     <li><a href="../../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
           <li>Guides &raquo;</li>
           <li>Install IBM DB2 LUW &raquo;</li>
-      <li>Install GnuCOBOL</li>
+      <li>Install DBeaver</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -154,105 +142,52 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="install-gnucobol">Install GnuCOBOL</h1>
-<p><strong>Make sure you are running these steps in the VM you created running as the normal user.</strong></p>
-<p><strong>These instructions are for Pop!_OS, they should be similar for Ubuntu.</strong></p>
-<h2 id="get-gnucobol">Get GnuCOBOL</h2>
-<p>Download the source code from <a href="https://gnucobol.sourceforge.io/">GnuCOBOL</a></p>
-<p>As of March 1, 2023, the current version is 3.1.2.</p>
-<p>For that version, download: gnucobol-3.1.2.tar.xz.</p>
-<p>If you haven't made any changes, it will be downloaded to the Downloads directory.</p>
-<h2 id="extract-into-builds">Extract into builds</h2>
-<p>Open Files, double-click on gnucobol-3.1.2.tar.xz and extract it into the ~/builds directory.</p>
-<h2 id="install-additional-software">Install additional software</h2>
-<p>Open Terminal to install the following:</p>
-<pre><code>sudo apt install libgmp-dev
-sudo apt install libdb5.3-dev
-sudo apt install libncurses-dev
-sudo apt install libxml2-dev
-sudo apt install libcjson-dev
-</code></pre>
-<h2 id="configure-make-and-install">Configure, Make and Install</h2>
-<p>Run:</p>
-<pre><code>cd builds/gnucobol-3.1.2
-</code></pre>
-<p>This will take you into the gnucobol-3.1.2 directory.</p>
-<p>Run:</p>
-<pre><code>./configure
-</code></pre>
-<p>A whole bunch of messages will print on the screen </p>
-<p>At the end, there should be some messages that look like:</p>
-<pre><code>extended screen I/O      : ncursesw
-variable file format     : 0
-sequential file handler  : built-in
-indexed file handler     : BDB
-mathematical library     : GMP
-XML library              : libxml2
-JSON library             : json-c
-</code></pre>
-<p>If there are no errors, Run:</p>
-<pre><code>make
-</code></pre>
-<p>More messages will display, if there are no errors, Run:</p>
-<pre><code>sudo make install
-</code></pre>
-<p>Then Run:</p>
-<pre><code>sudo ldconfig
-</code></pre>
-<p>As a quick test, Run:</p>
-<pre><code>cobc
-</code></pre>
-<p>You should get an error message:</p>
-<pre><code>cobc: error: no input files
-</code></pre>
-<p>For a better test of the install:</p>
+                <h1 id="install-dbeaver">Install DBeaver</h1>
+<p>There are a couple of ways to install it.</p>
+<p>I went with <a href="https://www.how2shout.com/linux/3-ways-to-install-dbeaver-ubuntu-22-04-lts-jammy-linux/">Linux Shout</a>'s version: <strong>#1st Method Using an APT repository</strong></p>
+<h2 id="connect-to-ibm-db2-luw">Connect to IBM DB2 LUW</h2>
+<p>This part was a little tricky.</p>
+<p>Open the app and click on "New Database Connection".</p>
+<p>Select DB2 for LUW</p>
+<p>Here's the problem:</p>
+<p>All the tutorials, posts, and videos say:</p>
+<blockquote>
+<p>Host=localhost and Port=50000 or Port=50001</p>
+</blockquote>
+<p>But this doesn't work.</p>
+<p>There are 2 issues with this:</p>
 <ol>
-<li>Create a new directory</li>
-<li>Create a simple COBOL program</li>
-<li>Run it.</li>
+<li>Wrong Host</li>
+<li>Wrong Port</li>
 </ol>
-<h3 id="1-create-a-new-directory">1: Create a new directory</h3>
-<p>In Terminal, Run:</p>
-<pre><code>cd
-mkdir -p ~/dev/cobol/test-cobol
-cd ~/dev/cobol/test-cobol
-touch hello.cbl
+<p>Cat the /etc/hosts file. In this VM, it looks like:</p>
+<pre><code>~ ❯❯❯ cat /etc/hosts
+127.0.0.1   localhost
+::1         localhost
+127.0.1.1   pop-os.localdomain  pop-os
+~ ❯❯❯ 
 </code></pre>
-<h3 id="2-create-a-simple-cobol-program">2: Create a simple COBOL program</h3>
-<p>Open Files, go to the dev/cobol/test-cobol folder.</p>
-<p>Double-click on hello.cbl. This will open it in Text Editor.</p>
-<p>Copy the following code and paste it into hello.cbl:</p>
-<pre><code>       IDENTIFICATION DIVISION.
-       PROGRAM-ID. SmallestProgram.
-       DATA DIVISION.
-       FILE SECTION.
-       WORKING-STORAGE SECTION.
-       PROCEDURE DIVISION.
-       MAIN-PROCEDURE.
-            DISPLAY &quot;Hello world&quot;
-            STOP RUN.
-       END PROGRAM SmallestProgram.
-</code></pre>
-<p>and save it.</p>
-<p>Go to Terminal, Run:</p>
-<pre><code>pwd
-</code></pre>
-<p>To make sure you are in the ~/dev/cobol/test-cobol directory.</p>
-<p>Run:</p>
-<pre><code>cobc -x hello.cbl
-</code></pre>
-<p>If it complies correctly, Run:</p>
-<pre><code>./hello
-</code></pre>
-<p>It should return:</p>
-<pre><code>Hello world
-</code></pre>
+<p>And, in the DB2 install log, it says: Port 25000.</p>
+<p>So, in this VM, the correct parameters are:</p>
+<ul>
+<li>Host: pop-os</li>
+<li>Port: 25000</li>
+</ul>
+<p>Fill in the other parameters:</p>
+<ul>
+<li>Database (probably: sample)</li>
+<li>Username (probably: db2inst1)</li>
+<li>Password (whatever it is)</li>
+</ul>
+<p>and press the "Test Connection" button.</p>
+<p>If this is the first time you are making a connection, you will have to download the drivers.</p>
+<p>After that, you should see a dialog box pop up stating: <strong>Connected</strong>.</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../install-sampledb/" class="btn btn-neutral float-left" title="Install Sample DB and db2profile"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../install-basic-dev-env/" class="btn btn-neutral float-right" title="Install Basic Dev Env">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../install-basic-dev-env/" class="btn btn-neutral float-left" title="Install Basic Dev Env"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../create-db2-db/create-db2-db/" class="btn btn-neutral float-right" title="Create a DB2 DB">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -275,10 +210,10 @@ touch hello.cbl
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../install-sampledb/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../install-basic-dev-env/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../install-basic-dev-env/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../../create-db2-db/create-db2-db/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

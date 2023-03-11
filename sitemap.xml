@@ -76,6 +76,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://dscobol.github.io/guides/install-db2-luw/install-dbeaver/</loc>
+         <lastmod>2023-03-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://dscobol.github.io/guides/install-db2-luw/install-gnucobol/</loc>
          <lastmod>2023-03-11</lastmod>
          <changefreq>daily</changefreq>
