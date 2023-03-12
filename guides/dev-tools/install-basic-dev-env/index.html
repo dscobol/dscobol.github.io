@@ -200,18 +200,18 @@
 <li>LazyGit : Optional: A terminal based Git UI : This one is really optional. You can use GitLens within VS Codium to do the same, I just like it.</li>
 </ul>
 <h3 id="build-essential">Build-Essential</h3>
-<pre><code>sudo apt install build-essential
+<pre><code class="language-bash">sudo apt install build-essential
 </code></pre>
 <p>This might be installed already or there might be some components that are missing. Better safe then sorry.</p>
 <h3 id="zsh">Zsh</h3>
-<pre><code>sudo apt install zsh
+<pre><code class="language-bash">sudo apt install zsh
 </code></pre>
 <h3 id="prezto">Prezto</h3>
 <p>Visit <a href="https://github.com/sorin-ionescu/prezto">Github: Prezto</a> and follow the instructions.</p>
 <p>You can use it as it is out of the box but I will suggest one change of two additions:</p>
 <p>Edit .zpreztorc and add git and syntax-highlighting in the zstyle ':prezto:load' pmodule \ section:</p>
 <p>Old version:</p>
-<pre><code>zstyle ':prezto:load' pmodule \
+<pre><code class="language-bash">zstyle ':prezto:load' pmodule \
   'environment' \
   'terminal' \
   'editor' \
@@ -224,7 +224,7 @@
   'prompt'
 </code></pre>
 <p>New Version:</p>
-<pre><code>zstyle ':prezto:load' pmodule \
+<pre><code class="language-bash">zstyle ':prezto:load' pmodule \
   'environment' \
   'terminal' \
   'editor' \
@@ -241,10 +241,10 @@
 <p>Save it, close Terminal then open Terminal.</p>
 <h2 id="git">Git</h2>
 <p>Actually, Git is already installed on Pop!_OS but if you went the Ubuntu route, you might have to install it.</p>
-<pre><code>sudo apt install git
+<pre><code class="language-bash">sudo apt install git
 </code></pre>
 <h2 id="vim">Vim</h2>
-<pre><code>sudo apt install vim
+<pre><code class="language-bash">sudo apt install vim
 </code></pre>
 <p>A very dependable editor. Useful for quick edits or as your main editor.</p>
 <h2 id="vs-codium">VS Codium</h2>
@@ -255,7 +255,7 @@
 - Add the repository
 - Update and Install codium</p>
 <h2 id="java-jdk">Java JDK</h2>
-<pre><code>sudo apt install default-jdk
+<pre><code class="language-bash">sudo apt install default-jdk
 </code></pre>
 <h2 id="vs-codium-extensions">VS Codium Extensions</h2>
 <p>Open VSCodium, Open the Extensions Browser and install:</p>
@@ -265,13 +265,13 @@
 </ul>
 <p>You could also install Code4Z instead. BUT don't have both installed at the same time.</p>
 <h2 id="midnight-commander-aka-mc">Midnight Commander (aka: mc)</h2>
-<pre><code>sudo apt install mc
+<pre><code class="language-bash">sudo apt install mc
 </code></pre>
 <p>This is a nice terminal based file manager that I use to transfer files to/from the host/vm and move stuff around in general.</p>
 <h2 id="ssh-key">SSH-Key</h2>
 <p>For instructions: Look at <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh">GitHub - Connect with SSH</a>.</p>
 <h2 id="tree-optional">Tree - Optional</h2>
-<pre><code>sudo apt install tree
+<pre><code class="language-bash">sudo apt install tree
 </code></pre>
 <h2 id="lazygit-optional">LazyGit - Optional</h2>
 <p>Follow the instructions on the <a href="https://github.com/jesseduffield/lazygit#ubuntu">LazyGit - Github</a> website.</p>

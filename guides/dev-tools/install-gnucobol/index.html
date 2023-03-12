@@ -171,7 +171,7 @@
 <p><strong>These instructions are for Pop!_OS, they should be similar for Ubuntu.</strong></p>
 <h2 id="install-build-essential-first">Install Build-Essential first</h2>
 <p>In Terminal, Run:</p>
-<pre><code>sudo apt install build-essential
+<pre><code class="language-bash">sudo apt install build-essential
 </code></pre>
 <p>This might be installed already or there might be some components that are missing. Better safe then sorry.</p>
 <h2 id="get-gnucobol">Get GnuCOBOL</h2>
@@ -183,7 +183,7 @@
 <p>Open Files, double-click on gnucobol-3.1.2.tar.xz and extract it into the ~/builds directory.</p>
 <h2 id="install-additional-software">Install additional software</h2>
 <p>Open Terminal to install the following:</p>
-<pre><code>sudo apt install libgmp-dev
+<pre><code class="language-bash">sudo apt install libgmp-dev
 sudo apt install libdb5.3-dev
 sudo apt install libncurses-dev
 sudo apt install libxml2-dev
@@ -191,15 +191,15 @@ sudo apt install libcjson-dev
 </code></pre>
 <h2 id="configure-make-and-install">Configure, Make and Install</h2>
 <p>Run:</p>
-<pre><code>cd builds/gnucobol-3.1.2
+<pre><code class="language-bash">cd builds/gnucobol-3.1.2
 </code></pre>
 <p>This will take you into the gnucobol-3.1.2 directory.</p>
 <p>Run:</p>
-<pre><code>./configure
+<pre><code class="language-bash">./configure
 </code></pre>
 <p>A whole bunch of messages will print on the screen</p>
 <p>At the end, there should be some messages that look like:</p>
-<pre><code>extended screen I/O      : ncursesw
+<pre><code class="language-bash">extended screen I/O      : ncursesw
 variable file format     : 0
 sequential file handler  : built-in
 indexed file handler     : BDB
@@ -208,19 +208,19 @@ XML library              : libxml2
 JSON library             : json-c
 </code></pre>
 <p>If there are no errors, Run:</p>
-<pre><code>make
+<pre><code class="language-bash">make
 </code></pre>
 <p>More messages will display, if there are no errors, Run:</p>
-<pre><code>sudo make install
+<pre><code class="language-bash">sudo make install
 </code></pre>
 <p>Then Run:</p>
-<pre><code>sudo ldconfig
+<pre><code class="language-bash">sudo ldconfig
 </code></pre>
 <p>As a quick test, Run:</p>
-<pre><code>cobc
+<pre><code class="language-bash">cobc
 </code></pre>
 <p>You should get an error message:</p>
-<pre><code>cobc: error: no input files
+<pre><code class="language-bash">cobc: error: no input files
 </code></pre>
 <p>For a better test of the install:</p>
 <ol>
@@ -230,7 +230,7 @@ JSON library             : json-c
 </ol>
 <h3 id="1-create-a-new-directory">1: Create a new directory</h3>
 <p>In Terminal, Run:</p>
-<pre><code>cd
+<pre><code class="language-bash">cd
 mkdir -p ~/dev/cobol/test-cobol
 cd ~/dev/cobol/test-cobol
 touch hello.cbl
@@ -239,7 +239,7 @@ touch hello.cbl
 <p>Open Files, go to the dev/cobol/test-cobol folder.</p>
 <p>Double-click on hello.cbl. This will open it in Text Editor.</p>
 <p>Copy the following code and paste it into hello.cbl:</p>
-<pre><code>       IDENTIFICATION DIVISION.
+<pre><code class="language-cobol">       IDENTIFICATION DIVISION.
        PROGRAM-ID. SmallestProgram.
        DATA DIVISION.
        FILE SECTION.
@@ -252,17 +252,17 @@ touch hello.cbl
 </code></pre>
 <p>and save it.</p>
 <p>Go to Terminal, Run:</p>
-<pre><code>pwd
+<pre><code class="language-bash">pwd
 </code></pre>
 <p>To make sure you are in the ~/dev/cobol/test-cobol directory.</p>
 <p>Run:</p>
-<pre><code>cobc -x hello.cbl
+<pre><code class="language-bash">cobc -x hello.cbl
 </code></pre>
 <p>If it complies correctly, Run:</p>
-<pre><code>./hello
+<pre><code class="language-bash">./hello
 </code></pre>
 <p>It should return:</p>
-<pre><code>Hello world
+<pre><code class="language-bash">Hello world
 </code></pre>
               
             </div>

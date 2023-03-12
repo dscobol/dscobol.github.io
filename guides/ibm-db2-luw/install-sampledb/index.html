@@ -161,29 +161,29 @@
 <p><strong>These instructions are for Pop!_OS, they should be similar for Ubuntu.</strong></p>
 <h2 id="check-the-installation">Check the installation</h2>
 <p>In Terminal, Run:</p>
-<pre><code>su - db2inst1
+<pre><code class="language-bash">su - db2inst1
 ksh
 </code></pre>
 <p>You will need to enter the password for db2inst1 after the su command.</p>
 <p>Use ksh for a "more useable" command line.</p>
 <p>A quick check, Run:</p>
-<pre><code>db2 list database directory
+<pre><code class="language-bash">db2 list database directory
 </code></pre>
 <p>returns no DBs.</p>
 <h2 id="install-sample-db">Install Sample DB</h2>
 <p>Run:</p>
-<pre><code>cd sqllib/bin
+<pre><code class="language-bash">cd sqllib/bin
 </code></pre>
 <p>Run:</p>
-<pre><code>./dbsampl
+<pre><code class="language-bash">./dbsampl
 </code></pre>
 <p>to create the Sample DB.</p>
 <p>Not sure why but this takes a LLLLOOOONNNNGGGG time to complete.</p>
 <p>To check success, Run:</p>
-<pre><code>db2 list database directory
+<pre><code class="language-bash">db2 list database directory
 </code></pre>
 <p>This should return:</p>
-<pre><code>System Database Directory
+<pre><code class="language-bash">System Database Directory
 
  Number of entries in the directory = 1
 
@@ -200,35 +200,35 @@ Database 1 entry:
  Alternate server port number         =
 </code></pre>
 <p>Now Run:</p>
-<pre><code>db2
+<pre><code class="language-bash">db2
 </code></pre>
 <p>This will take you inside DB2 and provide the DB2 prompt.</p>
 <p>Then Run:</p>
-<pre><code>connect to sample
+<pre><code class="language-bash">connect to sample
 </code></pre>
 <p>This will return:</p>
-<pre><code>  Database Connection Information
+<pre><code class="language-bash">  Database Connection Information
 
  Database server        = DB2/LINUXX8664 11.5.8.0
  SQL authorization ID   = DB2INST1
  Local database alias   = SAMPLE
 </code></pre>
 <p>Then Run:</p>
-<pre><code>select * from employee
+<pre><code class="language-bash">select * from employee
 </code></pre>
 <p>This will return a listing of 42 employees</p>
 <p>Run:</p>
-<pre><code>quit
+<pre><code class="language-bash">quit
 </code></pre>
 <p>to exit DB2 and return to the command prompt.</p>
 <p>Then Run twice:</p>
-<pre><code>exit
+<pre><code class="language-bash">exit
 </code></pre>
 <p>to exit the ksh shell and exit db2inst1 and become the "normal" user again.</p>
 <h2 id="install-db2profile-in-bashrc">Install db2profile in .bashrc</h2>
 <p>As the "normal" user, you will need to run some DB2 commands in Terminal.</p>
 <p>To make this possible, add the following 4 lines to the bottom of the .bashrc file which is found in home directory.</p>
-<pre><code># The following three lines have been added by UDB DB2.
+<pre><code class="language-bash"># The following three lines have been added by UDB DB2.
 if [ -f /home/db2inst1/sqllib/db2profile ]; then
     . /home/db2inst1/sqllib/db2profile
 fi

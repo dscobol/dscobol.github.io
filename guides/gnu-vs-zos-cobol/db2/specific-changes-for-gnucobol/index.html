@@ -148,7 +148,7 @@
               
                 <h1 id="an-overview-of-the-specific-changes-made-to-make-it-run-using-gnucobol">An overview of the specific changes made to make it run using GnuCOBOL</h1>
 <h2 id="since-dclgen-isnt-the-same-on-ibm-db2-luw-create-that">Since DCLGEN isn't the same on IBM DB2 LUW, create that</h2>
-<pre><code>      ***** Convert to GnuCOBOL
+<pre><code class="language-cobol">      ***** Convert to GnuCOBOL
       ***** Start of Step 1
       *     No DCLGEN member to INCLUDE
       *     Comment this INCLUDE out
@@ -199,7 +199,7 @@
       ***** End of Step 1
 </code></pre>
 <h2 id="add-the-perform-paragraph">Add the PERFORM paragraph</h2>
-<pre><code>       000-DISPLAY-CUSTOMER-ROWS.
+<pre><code class="language-cobol">       000-DISPLAY-CUSTOMER-ROWS.
       *     Step 2
       *     Add Paragraph to connect to the DB
            PERFORM 9800-Connect-to-DB1.
@@ -209,7 +209,7 @@
            STOP RUN.
 </code></pre>
 <p>Then add the 9800-Connect-to DB1 and friends paragraphs</p>
-<pre><code>      *     Step 2 - the actual connection.
+<pre><code class="language-cobol">      *     Step 2 - the actual connection.
        9800-Connect-to-DB1.
            PERFORM 9810-Setup-DB1-Connection.
            IF SQL-STATUS-OK
