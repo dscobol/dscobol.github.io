@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://dscobol.github.io/guides/gnu-vs-zos-cobol/batch/normal-batch-gnu-cobol/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://dscobol.github.io/guides/gnu-vs-zos-cobol/db2/different-methods-to-connect/" />
       <link rel="shortcut icon" href="../../../../img/favicon.ico" />
-    <title>A normal GnuCOBOL batch pgm - dscobol</title>
+    <title>Why 3 different methods to pass the connnect parameters? - dscobol</title>
     <link rel="stylesheet" href="../../../../css/theme.css" />
     <link rel="stylesheet" href="../../../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "A normal GnuCOBOL batch pgm";
-        var mkdocs_page_input_path = "guides/gnu-vs-zos-cobol/batch/normal-batch-gnu-cobol.md";
-        var mkdocs_page_url = "/guides/gnu-vs-zos-cobol/batch/normal-batch-gnu-cobol/";
+        var mkdocs_page_name = "Why 3 different methods to pass the connnect parameters?";
+        var mkdocs_page_input_path = "guides/gnu-vs-zos-cobol/db2/different-methods-to-connect.md";
+        var mkdocs_page_url = "/guides/gnu-vs-zos-cobol/db2/different-methods-to-connect/";
       </script>
     
     <script src="../../../../js/jquery-3.6.0.min.js" defer></script>
@@ -49,26 +49,24 @@
                 </li>
               </ul>
               <p class="caption"><span class="caption-text">Guides</span></p>
-              <ul class="current">
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">GnuCOBOL VS ZOS COBOL</a>
-    <ul class="current">
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="#">GnuCOBOL VS ZOS COBOL</a>
+    <ul>
                 <li class="toctree-l2"><a class="reference internal" href="../../overview-gnu-vs-zos-cobol/">Overview of the differences</a>
                 </li>
-                <li class="toctree-l2 current"><a class="reference internal current" href="#">Batch Processing</a>
-    <ul class="current">
-                <li class="toctree-l3"><a class="reference internal" href="../overview-batch-zos-vs-gnucobol/">Overview</a>
+                <li class="toctree-l2"><a class="reference internal" href="#">Batch Processing</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../batch/overview-batch-zos-vs-gnucobol/">Overview</a>
                 </li>
-                <li class="toctree-l3"><a class="reference internal" href="../normal-batch-zos-cobol/">A normal ZOS COBOL batch pgm</a>
+                <li class="toctree-l3"><a class="reference internal" href="../../batch/normal-batch-zos-cobol/">A normal ZOS COBOL batch pgm</a>
                 </li>
-                <li class="toctree-l3 current"><a class="reference internal current" href="./">A normal GnuCOBOL batch pgm</a>
-    <ul class="current">
-    </ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../batch/normal-batch-gnu-cobol/">A normal GnuCOBOL batch pgm</a>
                 </li>
     </ul>
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="#">DB2 Processing</a>
     <ul>
-                <li class="toctree-l3"><a class="reference internal" href="../../db2/overview-db2-zos-vs-gnucobol/">Overview</a>
+                <li class="toctree-l3"><a class="reference internal" href="../overview-db2-zos-vs-gnucobol/">Overview</a>
                 </li>
     </ul>
                 </li>
@@ -131,10 +129,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../../../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-          <li>Guides &raquo;</li>
-          <li>GnuCOBOL VS ZOS COBOL &raquo;</li>
-          <li>Batch Processing &raquo;</li>
-      <li>A normal GnuCOBOL batch pgm</li>
+      <li>Why 3 different methods to pass the connnect parameters?</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -143,15 +138,37 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="normal-batch-gnu-cobol">normal-batch-gnu-cobol</h1>
-<p>To be written</p>
+                <h1 id="why-3-different-methods-to-pass-the-connnect-parameters">Why 3 different methods to pass the connnect parameters?</h1>
+<p><strong>Actually, there are 4 (that I know of, there are probably more).</strong></p>
+<h2 id="brief-history">Brief History</h2>
+<p>My first attempt at writing GnuCOBOL/DB2 programs was on Windows and I followed the instructions found in <a href="https://sourceforge.net/p/gnucobol/contrib/HEAD/tree/trunk/samples/DBsample/DB2/">László Erdős's contrib</a>.</p>
+<p>It worked.</p>
+<p>I learned a lot and Thank You to László Erdős for creating that.</p>
+<p>1 - The method it used was a ScreenIO pgm to prompt the user for the parameters and passed them to the program through the Linkage Section. It works but I wanted something "leaner".</p>
+<p>2 - Then I looked at IBM's examples and that is where I saw the "ACCEPT" from the command line prompt method. It works, it was "leaner", but still required interaction with the user.</p>
+<p>3 - Then I thought, use a CALLed program with the parameters embedded in it. CALL it and pass the parameters to the program to then pass those to the DB. GETDBID was created. It works without user interaction.</p>
+<p>Then, per the "About" of this site and repository, I want to create GnuCOBOL/DB2 programs on Linux. I needed some help, got it, then posted a link to this site and the repository in the GnuCOBOL discussion area.</p>
+<p>Simon Sobisch, who was very helpful fixing the problems I was having getting started, looked at the code I pushed to the repository.</p>
+<p>One repeated "suggestion" (more like: Umm... I think you can do better.): <strong>Use a .env file.</strong></p>
+<p>I've done that before with Python but had no idea how to do that with COBOL. But, he also dropped some hints.</p>
+<p>4 - Create a .env file, add code to the run script to export the parameters to environment variables, replace the "CALL 'GETDBID'" with "ACCEPT FROM ENVIRONMENT".</p>
+<h2 id="which-method-to-use-from-now-on">Which method to use from now on?</h2>
+<p>If the program doesn't require User Interaction, #4.</p>
+<p>If the program needs User Interaction, #1 or #2 depending on the situation.</p>
+<p>Method 3 was a good exercise to learn how to CALL programs but I am "retiring" GETDBID.</p>
+<h2 id="what-about-that-code-in-the-run-script-why-that">What about that code in the run script, why that?</h2>
+<p>There are many ways to <a href="https://stackoverflow.com/questions/19331497/set-environment-variables-from-file-of-key-value-pairs">Set environment variables in Bash</a>.</p>
+<p>Of all the methods listed there, it is a clean, readable method.</p>
+<ul>
+<li>It is mostly understandable by people not that familiar with scripting.</li>
+<li>Within the script, the environment variable are set then unset.</li>
+<li>It only adds/removes the parameters from the .env file.</li>
+<li>It doesn't require installing another application (shdotenv).</li>
+<li>The .env file only contains 3 parameters of very short length and no spaces. Don't need anything too complicated.</li>
+</ul>
               
             </div>
           </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../normal-batch-zos-cobol/" class="btn btn-neutral float-left" title="A normal ZOS COBOL batch pgm"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../../db2/overview-db2-zos-vs-gnucobol/" class="btn btn-neutral float-right" title="Overview">Next <span class="icon icon-circle-arrow-right"></span></a>
-    </div>
 
   <hr/>
 
@@ -173,10 +190,6 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../normal-batch-zos-cobol/" style="color: #fcfcfc">&laquo; Previous</a></span>
-    
-    
-      <span><a href="../../db2/overview-db2-zos-vs-gnucobol/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

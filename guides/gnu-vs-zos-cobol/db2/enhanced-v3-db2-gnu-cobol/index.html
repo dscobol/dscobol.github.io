@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://dscobol.github.io/guides/gnu-vs-zos-cobol/db2/converted-to-gnu-db2-cobol/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://dscobol.github.io/guides/gnu-vs-zos-cobol/db2/enhanced-v3-db2-gnu-cobol/" />
       <link rel="shortcut icon" href="../../../../img/favicon.ico" />
-    <title>An example of a converted from ZOS/DB2 to GnuCOBOL/DB2 program - dscobol</title>
+    <title>An example of an enhanced DB2 GnuCOBOL program using ACCEPT FROM ENVIRONMENT - dscobol</title>
     <link rel="stylesheet" href="../../../../css/theme.css" />
     <link rel="stylesheet" href="../../../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "An example of a converted from ZOS/DB2 to GnuCOBOL/DB2 program";
-        var mkdocs_page_input_path = "guides/gnu-vs-zos-cobol/db2/converted-to-gnu-db2-cobol.md";
-        var mkdocs_page_url = "/guides/gnu-vs-zos-cobol/db2/converted-to-gnu-db2-cobol/";
+        var mkdocs_page_name = "An example of an enhanced DB2 GnuCOBOL program using ACCEPT FROM ENVIRONMENT";
+        var mkdocs_page_input_path = "guides/gnu-vs-zos-cobol/db2/enhanced-v3-db2-gnu-cobol.md";
+        var mkdocs_page_url = "/guides/gnu-vs-zos-cobol/db2/enhanced-v3-db2-gnu-cobol/";
       </script>
     
     <script src="../../../../js/jquery-3.6.0.min.js" defer></script>
@@ -129,7 +129,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../../../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-      <li>An example of a converted from ZOS/DB2 to GnuCOBOL/DB2 program</li>
+      <li>An example of an enhanced DB2 GnuCOBOL program using ACCEPT FROM ENVIRONMENT</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -138,9 +138,74 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="an-example-of-a-converted-from-zosdb2-to-gnucoboldb2-program">An example of a converted from ZOS/DB2 to GnuCOBOL/DB2 program</h1>
-<h2 id="this-is-the-murach-custinq-program-with-just-enough-code-added-to-make-it-work-with-gnucobol-and-ibm-db2-luw">This is the Murach CUSTINQ program with just enough code added to make it work with GnuCOBOL and IBM DB2 LUW.</h2>
-<p><a href="../specific-changes-for-gnucobol/">Breakdown of Changes</a> program.</p>
+                <h1 id="an-example-of-an-enhanced-db2-gnucobol-program-using-accept-from-environment">An example of an enhanced DB2 GnuCOBOL program using ACCEPT FROM ENVIRONMENT</h1>
+<p>From the user's perspective, the result is the same.</p>
+<p>It is only the structure of the program that is different.</p>
+<h3 id="the-env-file">The .env file</h3>
+<pre><code class="language-bash"># DB1 Connection parameters
+db2name=names
+username=userid
+password=passwd
+</code></pre>
+<h3 id="the-compile-script">The compile script</h3>
+<pre><code class="language-bash">#!/bin/bash
+
+# Set Up variables
+
+# Program to run
+PGM=CUSTINQ
+
+# DB2 Load Libraries
+export LOADLIB=&quot;$DB2_HOME/lib64&quot;
+
+# COBOL and SQL Copy Libraries
+export COBCOPY=&quot;../cpy&quot;
+export SQLCOPY=&quot;$DB2_HOME/include/cobol_mf&quot;
+
+# Delete previous versions
+rm ../cbl/$PGM.bnd
+rm ../tcbl/$PGM.cbl
+rm ../bin/$PGM
+
+# DB2 Prep and Bind
+db2 -tvf ../sql/$PGM.sql
+
+read -p &quot;Press any key to resume&quot;
+
+# Compile
+cobc -std=default -x -o ../bin/$PGM ../tcbl/$PGM.cbl \
+     -static \
+     -I $SQLCOPY \
+     -I $COBCOPY \
+     -L $LOADLIB \
+     -l db2 \
+     -Wall \
+     -O
+
+# Check return code
+if [ &quot;$?&quot; -eq 0 ]; then
+    echo &quot;SUCCESS: Compile Return code is ZERO.&quot;
+else
+    echo &quot;FAIL: Compile Return code is NOT ZERO.&quot;
+fi
+</code></pre>
+<h3 id="the-run-script">The run script</h3>
+<pre><code class="language-bash">#!/bin/bash
+
+# Set Up variables
+# Program to run
+PGM=CUSTINQ
+
+# Export the environment variables in the .env file
+export $(grep -v '^#' ../.env | xargs)
+
+# run program
+../bin/$PGM
+
+# Remove the variables in the .env file from the environment
+unset $(grep -v '^#' ../.env | sed -E 's/(.*)=.*/\1/' | xargs)
+</code></pre>
+<h3 id="the-program">The program.</h3>
 <pre><code class="language-cobol">       IDENTIFICATION DIVISION.
       *
        PROGRAM-ID.    CUSTINQ.
@@ -199,14 +264,12 @@
            12 STATE      PIC X(02).
            12 ZIPCODE    PIC X(10).
 
-      *    This is hardcoded for the MURACH DB.
-      *    You might need to update this for your DB.
-       01  DB-Connection-Info.
-           12 DB-Alias                PIC X(8) VALUE 'MURACH'.
-           12 DB-User-ID              PIC X(10).
-           12 DB-Password.
-              15 DB-Passwd-Length     PIC S9(4) COMP-5  VALUE 0.
-              15 DB-Passwd-Name       PIC X(18).
+      *    DB1 connection parameters.
+       01  DB1-DBName                 PIC X(8).
+       01  DB1-User-ID                PIC X(10).
+       01  DB1-Password.
+           49 DB1-Passwd-Length       PIC S9(4) COMP-5  VALUE 0.
+           49 DB1-Passwd-Name         PIC X(18).
            EXEC SQL END DECLARE SECTION END-EXEC.
 
       *     Add status check for connection info.
@@ -294,20 +357,19 @@
            PERFORM 9812-Create-Connection-To-DB1.
 
        9811-Get-Credentials.
-           DISPLAY &quot;CUSTINQ: Need userid and password&quot;.
+           ACCEPT DB1-DBName FROM ENVIRONMENT 'db2name'.
+           ACCEPT DB1-User-ID FROM ENVIRONMENT 'username'.
+           ACCEPT DB1-Passwd-Name FROM ENVIRONMENT 'password'.
 
-           DISPLAY &quot;Enter your user id (default none): &quot;
-                WITH NO ADVANCING.
-           ACCEPT DB-User-ID.
-
-           DISPLAY &quot;Enter your password : &quot; WITH NO ADVANCING
-           ACCEPT DB-Passwd-Name.
-
-      * Passwords in a CONNECT statement must be entered in a VARCHAR
-      * format with the length of the input string.
-           INSPECT DB-Passwd-Name
-              TALLYING DB-Passwd-Length
+      *    Passwords in a CONNECT statement should be entered
+      *    in a VARCHAR format with the length of the input string.
+           INSPECT DB1-Passwd-Name
+              TALLYING DB1-Passwd-Length
               FOR CHARACTERS BEFORE INITIAL &quot; &quot;.
+
+      D    DISPLAY &quot;DB1-DBName &quot; DB1-DBName.
+      D    DISPLAY &quot;DB1-User-ID &quot; DB1-User-ID.
+      D    DISPLAY &quot;DB1-Passwd-Name &quot; DB1-Passwd-Name.
 
        9812-Create-Connection-To-DB1.
            PERFORM 9814-Connect-To-DB1
@@ -320,9 +382,10 @@
            END-IF.
 
        9814-Connect-To-DB1.
-           EXEC SQL CONNECT TO :DB-Alias
-                USER :DB-User-ID
-                USING :DB-Passwd-Name
+           EXEC SQL
+                CONNECT TO :DB1-DBName
+                USER :DB1-User-ID
+                USING :DB1-Password
               END-EXEC.
            MOVE SQLCODE TO WS-SQL-STATUS.
 </code></pre>
