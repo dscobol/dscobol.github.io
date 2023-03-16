@@ -58,10 +58,6 @@
     <ul>
                 <li class="toctree-l3"><a class="reference internal" href="../../batch/overview-batch-zos-vs-gnucobol/">Overview</a>
                 </li>
-                <li class="toctree-l3"><a class="reference internal" href="../../batch/normal-batch-zos-cobol/">A normal ZOS COBOL batch pgm</a>
-                </li>
-                <li class="toctree-l3"><a class="reference internal" href="../../batch/normal-batch-gnu-cobol/">A normal GnuCOBOL batch pgm</a>
-                </li>
     </ul>
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="#">DB2 Processing</a>
@@ -154,18 +150,23 @@
 <p>4 - Create a .env file, add code to the run script to export the parameters to environment variables, replace the "CALL 'GETDBID'" with "ACCEPT FROM ENVIRONMENT".</p>
 <h2 id="which-method-to-use-from-now-on">Which method to use from now on?</h2>
 <p>If the program doesn't require User Interaction, #4.</p>
-<p>If the program needs User Interaction, #1 or #2 depending on the situation.</p>
+<p>If the program needs User Interaction, #1 or #2 depending on the situation or maybe something completely different.</p>
 <p>Method 3 was a good exercise to learn how to CALL programs but I am "retiring" GETDBID.</p>
 <h2 id="what-about-that-code-in-the-run-script-why-that">What about that code in the run script, why that?</h2>
 <p>There are many ways to <a href="https://stackoverflow.com/questions/19331497/set-environment-variables-from-file-of-key-value-pairs">Set environment variables in Bash</a>.</p>
 <p>Of all the methods listed there, it is a clean, readable method.</p>
+<p>The .env file only contains 3 parameters of very short length and no spaces.</p>
+<p>So it doesn't need to be anything too complicated.</p>
 <ul>
 <li>It is mostly understandable by people not that familiar with scripting.</li>
-<li>Within the script, the environment variable are set then unset.</li>
-<li>It only adds/removes the parameters from the .env file.</li>
+<li>It only adds the parameters from the .env file.</li>
 <li>It doesn't require installing another application (shdotenv).</li>
-<li>The .env file only contains 3 parameters of very short length and no spaces. Don't need anything too complicated.</li>
 </ul>
+<p>Some methods suggest to add "export" to each line in the .env file and source it.</p>
+<p>To me, the .env file should be "just parameters, no commands", but if in the future it is required, there are other versions that would work.</p>
+<p>A unset method is also listed but it is not needed.</p>
+<p>The script is run in it's own child shell.</p>
+<p>A child shell can't export variables back up to the parent shell, so the exported variables will disappear as soon as the script finishes and exits the child shell.</p>
               
             </div>
           </div><footer>
