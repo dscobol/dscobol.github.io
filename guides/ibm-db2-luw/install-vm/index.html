@@ -48,6 +48,10 @@
                 <li class="toctree-l1"><a class="reference internal" href="../../../about/">About</a>
                 </li>
               </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../change-log/">Change-Log</a>
+                </li>
+              </ul>
               <p class="caption"><span class="caption-text">Guides</span></p>
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="#">GnuCOBOL VS ZOS COBOL</a>
@@ -181,7 +185,7 @@
 <ul>
 <li>For this project, the parameters I used are:<ul>
 <li>100GB HD</li>
-<li>4GB Ram</li>
+<li>8GB Ram</li>
 </ul>
 </li>
 </ul>
@@ -190,7 +194,7 @@
 <h3 id="install-the-os-into-the-vm">Install the OS into the VM</h3>
 <p>Follow the instructions for the virtualization product you have installed on your computer to actually install the OS onto the VM harddrive.</p>
 <h3 id="a-word-of-caution-about-the-userid-you-create-as-you-install-the-os">A word of caution about the userid you create as you install the OS</h3>
-<p>You create a userid when you install the OS and will probably use that userid to run db2 commands. </p>
+<p>You create a userid when you install the OS and will probably use that userid to run db2 commands.</p>
 <p>Make sure your userid meets the criteria below:</p>
 <pre><code>User IDs have the following restrictions and requirements:
 
@@ -202,15 +206,16 @@ Cannot be a DB2 reserved word (USERS, ADMINS, GUESTS, PUBLIC, or LOCAL), or an S
 Cannot use any user IDs with root privilege for the DB2 instance ID, DAS ID, or fenced ID.
 Cannot include accented characters.
 </code></pre>
-<p>This threw me for awhile because I wanted to use "sysop" as the userid and the install kept failing.</p>
+<p>This threw me for awhile because I wanted to use "sysop" as the userid and then the DB2 LUW install would fail.</p>
 <p>When done with this step, you usually need to shutdown the VM and then run it so it starts up the installed system and not the iso used to install the system.</p>
 <h3 id="run-the-vm-and-update">Run the VM and update</h3>
 <p>Follow the instructions for the virtualization product you have installed on your computer to run the VM.</p>
 <p>A new window should display with a login screen.</p>
 <p>Login using the userid you setup when installing the OS.</p>
-<p>Open the Pop!_Shop application. </p>
+<p>There is a little more Initial Setup, just accept the defaults (or not, your choice) and set the Time Zone.</p>
+<p>Open the Pop!_Shop application.</p>
 <p>Click on the "Installed" button in the titlebar and then click "Update All" in the window listing all the updates that can be done.</p>
-<p>To be "safe", after all the updates are done, reboot the system.</p>
+<p>To be "safe", after all the updates are done, restart the system.</p>
               
             </div>
           </div><footer>

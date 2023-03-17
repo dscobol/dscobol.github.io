@@ -48,6 +48,10 @@
                 <li class="toctree-l1"><a class="reference internal" href="../../../about/">About</a>
                 </li>
               </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../change-log/">Change-Log</a>
+                </li>
+              </ul>
               <p class="caption"><span class="caption-text">Guides</span></p>
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="#">GnuCOBOL VS ZOS COBOL</a>
@@ -194,7 +198,7 @@ mkdir bin builds dev
 <p>This will open Archive Manager.</p>
 <p>After a little while, within that, you will see "server_dec". Click on the "Extract" button in the upper left hand corner.</p>
 <p>A dialog box will open to select where to extract the file to. Extract the file to the ~/builds directory.</p>
-<p>When it is done, close the dialog box and close Archive Manager.</p>
+<p>When it is done, close the dialog box, close Archive Manager, and close Files.</p>
 <h2 id="rename-the-directory">Rename the directory</h2>
 <p>In Terminal, Run:</p>
 <pre><code class="language-bash">cd
@@ -235,47 +239,56 @@ sudo apt install ksh
 <p>This will open a small dialog window.</p>
 <ul>
 <li>Click on New Install</li>
-<li>Make sure DB2 Version 11.5.8.0 Server Edition
+<li>Make sure DB2 Version 11.5.8.0 Server Editions
  is highlighted<ul>
-<li>From what I have read, Purescale is not available on Ubuntu</li>
+<li>Purescale is not available on Ubuntu</li>
 </ul>
 </li>
 <li>Click Next</li>
 <li>When you get to the window that has two buttons: Typical or Custom<ul>
-<li>Select Custom.</li>
+<li>Select Custom</li>
 <li>Check the box that you agree to the Licence</li>
 <li>Click Next</li>
 </ul>
 </li>
 <li>
-<p>When presented with the list of options:</p>
+<p>When presented with "Select Features":</p>
 <ul>
 <li>Within Application development tools:<ul>
 <li>Check "Base application development tools"</li>
 </ul>
 </li>
+<li>Click Next</li>
 </ul>
 </li>
 <li>
-<p>Go through the rest of the windows accepting the defaults until you see Instance Owner.</p>
+<p>Go through the rest of the windows accepting the defaults until you see "Instance Owner".</p>
 <ul>
 <li>The next two windows set the password for new userids: db2inst1 and db2fenc1</li>
 <li>For the remaining windows, accept the defaults.</li>
+<li>Note: Port number is 25000.</li>
 </ul>
 </li>
 <li>
-<p>When it finishes, look through the log file.</p>
+<p>Go through the rest of the windows accepting the defaults until you see "Response File and Summary".</p>
+</li>
+<li>
+<p>Click Finish</p>
+</li>
+<li>
+<p>The install process will start and when it finishes, look through the log file.</p>
 <ul>
 <li>All should look good except "Installing TSAMP". There is a warning for this.</li>
 </ul>
 </li>
+<li>Click Finish</li>
 </ul>
-<p>To be on the safe side, I rebooted after the install was finished.</p>
-<p>When it came back up, there were three users to select from on the login window. The "normal" userid (the one created when the OS was installed), and the db2inst1 and db2fenc1 userids.</p>
+<p>To be on the safe side, restart after the install is finished.</p>
+<p>When it reboots, there should be three users to select from on the login window. The "normal" userid (the one created when the OS was installed), and the db2inst1 and db2fenc1 userids.</p>
 <p>Log in with the "normal" userid and open Terminal and Run:</p>
 <pre><code class="language-bash">cd /opt/ibm/db2/V11.5/
 </code></pre>
-<p>Check out the include and samples directories and make sure all the COBOL stuff is present.</p>
+<p>Look at the include and samples directories and make sure all the COBOL stuff is present.</p>
               
             </div>
           </div><footer>

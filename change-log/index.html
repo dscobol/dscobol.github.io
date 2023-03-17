@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://dscobol.github.io/about/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://dscobol.github.io/change-log/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>About - dscobol</title>
+    <title>Change-Log - dscobol</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "About";
-        var mkdocs_page_input_path = "about.md";
-        var mkdocs_page_url = "/about/";
+        var mkdocs_page_name = "Change-Log";
+        var mkdocs_page_input_path = "change-log.md";
+        var mkdocs_page_url = "/change-log/";
       </script>
     
     <script src="../js/jquery-3.6.0.min.js" defer></script>
@@ -44,14 +44,24 @@
                 <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
                 </li>
               </ul>
-              <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="./">About</a>
-    <ul class="current">
-    </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../about/">About</a>
                 </li>
               </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../change-log/">Change-Log</a>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Change-Log</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#2023-03-17">2023-03-17</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#dscobol-website">dscobol Website</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#dsc-gnu-db2">dsc-gnu-db2</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#gem-gnu-db2">gem-gnu-db2</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
                 </li>
               </ul>
               <p class="caption"><span class="caption-text">Guides</span></p>
@@ -131,7 +141,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-      <li>About</li>
+      <li>Change-Log</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -140,74 +150,24 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="about-dscobol">About dscobol</h1>
-<p>This site and the GitHub repositories were created because I wanted to learn how to write COBOL programs with embedded SQL Statements accessing an IBM DB2 LUW RDBMS using the GnuCOBOL compiler in a Gnu/Linux environment.</p>
-<p>According to the documentation, IBM DB2 LUW can run on Ubuntu.</p>
-<p>I like the Pop!_OS UI better then Ubuntu and it is based on Ubuntu so... why not.</p>
-<p>I created a Virtual Machine with Pop!_OS and off I went.</p>
-<p>That was a success and I was spending alot of time in the VM and I kind of grew to like Pop!_OS.</p>
-<p>So, <strong>the documentation and guides in this site are ALL for running apps and programs on Pop!_OS</strong>.</p>
-<p>Most of it will also apply to Ubuntu but "use at your discretion".</p>
-<h1 id="what-are-these-repositories-and-why-are-they-named-the-way-they-are">What are these repositories, and why are they named the way they are.</h1>
-<h2 id="what-is-here">What is here</h2>
-<p>Within the repositories:</p>
-<ul>
-<li>COBOL is the primary programming language</li>
-</ul>
-<p>For programs that run on Gnu/Linux:</p>
-<ul>
-<li>Bash is the primary scripting language</li>
-</ul>
-<blockquote>
-<p>Note: While all these programs have been run using a Pop!_OS VM, GnuCOBOL is not limited to that OS.
-Using an OS with an Ubuntu base was needed to run IBM DB2 LUW on a Gnu/Linux OS. See the <a href="https://gnucobol.sourceforge.io/">GnuCOBOL site</a> for more information about it's capabilities.</p>
-</blockquote>
-<p>For programs that run on ZOS or MVS:</p>
-<ul>
-<li>JCL is the, well, Job Control Language</li>
-</ul>
-<p>For Zowe:</p>
-<ul>
-<li>It is a combination of bash scripts and JCL.</li>
-</ul>
-<h2 id="naming-convention">Naming Convention</h2>
-<p>The ideas or concepts for the programs may have originated somewhere else(books, tutorials, other websites, etc.) but I try to "make it my own" by rewriting it using a different structure and style.</p>
-<h3 id="first-designation">First designation</h3>
-<ul>
-<li>dsc - The code was written by dscobol(aka: me)</li>
-<li>ibm - Code from books, documentation or instruction from IBM.</li>
-<li>gem - Curtis Garvin, Steve Eckols. <strong>DB2 for the COBOL Programmer, Part 1 and 2</strong>. Murach 1991.</li>
-<li>mca - Michael Coughlan. <strong>Beginning COBOL for Programmers</strong> Apress 2014.</li>
-<li>xxx - Code from a website, blog or other source. This will be changed to reflect the source.</li>
-</ul>
-<h3 id="second-designation">Second designation</h3>
-<ul>
-<li>gnu - GnuCOBOL</li>
-<li>zos - IBM Enterprise COBOL</li>
-<li>mvs - MVS COBOL</li>
-<li>zow - Zowe Framework</li>
-</ul>
-<h3 id="third-and-further-designation">Third and further designation</h3>
-<p>A description of the focus of the programs.</p>
-<h3 id="examples">Examples:</h3>
-<p>dsc-gnu-Indexed</p>
-<ul>
-<li>dsc - programs by dscobol.</li>
-<li>gnu - uses the GnuCOBOL compiler</li>
-<li>Indexed - programs that read and write to Indexed files.</li>
-</ul>
-<p>gem-gnu-DB2</p>
-<ul>
-<li>gem - programs from the "DB2 for the COBOL Programmer" book</li>
-<li>gnu - uses the GnuCOBOL compiler</li>
-<li>DB2 - connects to the IBM DB2 RDBMS</li>
-</ul>
+                <h1 id="change-log-for-dscobol-website-and-the-github-repositories">Change Log for dscobol Website and the GitHub repositories.</h1>
+<p>This will not be an extensive list. If there is a substantial change, it will be documented here.</p>
+<h2 id="2023-03-17">2023-03-17</h2>
+<h3 id="dscobol-website">dscobol Website</h3>
+<p>As a check, I created a new Virtual Machine following the instructions.</p>
+<p>I fixed typos and updated words or phrases to be more accurate.</p>
+<h3 id="dsc-gnu-db2">dsc-gnu-db2</h3>
+<p>I originally used a CALL to GETDBID to pass the DB parameters to the COBOL program which would then use them to connect to the DB2 LUW database. This was replaced by creating a .env file and using an ACCEPT statement instead.</p>
+<p>I added a Tag to the repository of V1.</p>
+<h3 id="gem-gnu-db2">gem-gnu-db2</h3>
+<p>I originally used a CALL to GETDBID to pass the DB parameters to the COBOL program which would then use them to connect to the DB2 LUW database. This was replaced by creating a .env file and using an ACCEPT statement instead.</p>
+<p>I added a Tag to the repository of V1.</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href=".." class="btn btn-neutral float-left" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../change-log/" class="btn btn-neutral float-right" title="Change-Log">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../about/" class="btn btn-neutral float-left" title="About"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../guides/gnu-vs-zos-cobol/overview-gnu-vs-zos-cobol/" class="btn btn-neutral float-right" title="Overview of the differences">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -230,10 +190,10 @@ Using an OS with an Ubuntu base was needed to run IBM DB2 LUW on a Gnu/Linux OS.
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../about/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../change-log/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../guides/gnu-vs-zos-cobol/overview-gnu-vs-zos-cobol/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

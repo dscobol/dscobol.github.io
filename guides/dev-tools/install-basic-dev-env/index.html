@@ -48,6 +48,10 @@
                 <li class="toctree-l1"><a class="reference internal" href="../../../about/">About</a>
                 </li>
               </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../change-log/">Change-Log</a>
+                </li>
+              </ul>
               <p class="caption"><span class="caption-text">Guides</span></p>
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="#">GnuCOBOL VS ZOS COBOL</a>
@@ -94,15 +98,17 @@
         <ul>
     <li class="toctree-l4"><a class="reference internal" href="#build-essential">Build-Essential</a>
     </li>
+    <li class="toctree-l4"><a class="reference internal" href="#git">Git</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#vim">Vim</a>
+    </li>
     <li class="toctree-l4"><a class="reference internal" href="#zsh">Zsh</a>
     </li>
     <li class="toctree-l4"><a class="reference internal" href="#prezto">Prezto</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#git">Git</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#vim">Vim</a>
+    <li class="toctree-l3"><a class="reference internal" href="#add-db2profile-to-zshrc">Add db2profile to .zshrc</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#vs-codium">VS Codium</a>
     </li>
@@ -175,10 +181,10 @@
 <p>If you have your own envionment, create that instead.</p>
 <ul>
 <li>build-essential : a collection of tools used to build software</li>
-<li>zsh : a different shell then bash</li>
-<li>prezto : a zsh framework</li>
 <li>Git : Source Code Management</li>
 <li>Vim : for quick edits</li>
+<li>zsh : a different shell then bash</li>
+<li>prezto : a zsh framework</li>
 <li>VS Codium : Not an editor, Not an IDE, Something in the middle</li>
 <li>Java JDK : Need for IBM Z Open Editor extension</li>
 <li>Some VS Codium extensions</li>
@@ -191,13 +197,22 @@
 <pre><code class="language-bash">sudo apt install build-essential
 </code></pre>
 <p>This might be installed already or there might be some components that are missing. Better safe then sorry.</p>
+<h3 id="git">Git</h3>
+<p>Actually, Git is already installed on Pop!_OS but if you went the Ubuntu route, you might have to install it.</p>
+<pre><code class="language-bash">sudo apt install git
+</code></pre>
+<h3 id="vim">Vim</h3>
+<pre><code class="language-bash">sudo apt install vim
+</code></pre>
+<p>A very dependable editor. Useful for quick edits or as your main editor.</p>
 <h3 id="zsh">Zsh</h3>
 <pre><code class="language-bash">sudo apt install zsh
 </code></pre>
 <h3 id="prezto">Prezto</h3>
 <p>Visit <a href="https://github.com/sorin-ionescu/prezto">Github: Prezto</a> and follow the instructions.</p>
+<p>Just closing/re-opening Terminal doesn't set the shell to zsh. You will probably need to logout of the OS and then log back in to make zsh the default in Terminal.</p>
 <p>You can use it as it is out of the box but I will suggest one change of two additions:</p>
-<p>Edit .zpreztorc and add git and syntax-highlighting in the zstyle ':prezto:load' pmodule \ section:</p>
+<p>In the /home directory, edit .zpreztorc and add git and syntax-highlighting in the zstyle ':prezto:load' pmodule \ section:</p>
 <p>Old version:</p>
 <pre><code class="language-bash">zstyle ':prezto:load' pmodule \
   'environment' \
@@ -227,21 +242,25 @@
   'prompt'
 </code></pre>
 <p>Save it, close Terminal then open Terminal.</p>
-<h2 id="git">Git</h2>
-<p>Actually, Git is already installed on Pop!_OS but if you went the Ubuntu route, you might have to install it.</p>
-<pre><code class="language-bash">sudo apt install git
+<h2 id="add-db2profile-to-zshrc">Add db2profile to .zshrc</h2>
+<p>Similar to adding this to .bashrc:</p>
+<p>Add the following 4 lines to the bottom of the .zshrc file which is found in the home directory.</p>
+<pre><code class="language-bash"># The following three lines have been added by UDB DB2.
+if [ -f /home/db2inst1/sqllib/db2profile ]; then
+    . /home/db2inst1/sqllib/db2profile
+fi
 </code></pre>
-<h2 id="vim">Vim</h2>
-<pre><code class="language-bash">sudo apt install vim
-</code></pre>
-<p>A very dependable editor. Useful for quick edits or as your main editor.</p>
+<p>This will also export some very useful environment variables.</p>
+<p>You will need to exit and re-open Terminal for them to be activated.</p>
 <h2 id="vs-codium">VS Codium</h2>
 <p>Because... why not.</p>
 <p>Go to <a href="https://vscodium.com/">VS Codium website</a>.</p>
-<p>Follow the instructions:
-- Add GPG key
-- Add the repository
-- Update and Install codium</p>
+<p>Follow the instructions for "Install on Debian/Ubuntu(deb package)":</p>
+<ul>
+<li>Add GPG key</li>
+<li>Add the repository</li>
+<li>Update and Install codium</li>
+</ul>
 <h2 id="java-jdk">Java JDK</h2>
 <pre><code class="language-bash">sudo apt install default-jdk
 </code></pre>
@@ -251,7 +270,8 @@
 <li>IBM Z Open Editor (will also install Zowe Explorer)</li>
 <li>GitLens</li>
 </ul>
-<p>You could also install Code4Z instead. BUT don't have both installed at the same time.</p>
+<p>You could also install Code4Z instead of IBM Z Open Editor BUT don't have both installed at the same time.</p>
+<p>Close/Open VSCodium for the extensions to work properly.</p>
 <h2 id="midnight-commander-aka-mc">Midnight Commander (aka: mc)</h2>
 <pre><code class="language-bash">sudo apt install mc
 </code></pre>

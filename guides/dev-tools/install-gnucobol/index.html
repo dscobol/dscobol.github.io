@@ -48,6 +48,10 @@
                 <li class="toctree-l1"><a class="reference internal" href="../../../about/">About</a>
                 </li>
               </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../change-log/">Change-Log</a>
+                </li>
+              </ul>
               <p class="caption"><span class="caption-text">Guides</span></p>
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="#">GnuCOBOL VS ZOS COBOL</a>
@@ -92,7 +96,7 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#get-gnucobol">Get GnuCOBOL</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#extract-into-builds">Extract into builds</a>
+    <li class="toctree-l3"><a class="reference internal" href="#extract-the-downloaded-file">Extract the downloaded file</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#install-additional-software">Install additional software</a>
     </li>
@@ -167,8 +171,13 @@
 <p>As of March 1, 2023, the current version is 3.1.2.</p>
 <p>For that version, download: gnucobol-3.1.2.tar.xz.</p>
 <p>If you haven't made any changes, it will be downloaded to the Downloads directory.</p>
-<h2 id="extract-into-builds">Extract into builds</h2>
-<p>Open Files, double-click on gnucobol-3.1.2.tar.xz and extract it into the ~/builds directory.</p>
+<h2 id="extract-the-downloaded-file">Extract the downloaded file</h2>
+<p>Open Files and go to the Downloads folder.</p>
+<p>Double click on the gnucobol-3.1.2.tar.xz file.</p>
+<p>This will open Archive Manager.</p>
+<p>You will see "gnucobol-3.1.2". Click on the "Extract" button in the upper left hand corner.</p>
+<p>A dialog box will open to select where to extract the file to. Extract the file to the ~/builds directory.</p>
+<p>When it is done, close the dialog box, close Archive Manager, and close Files.</p>
 <h2 id="install-additional-software">Install additional software</h2>
 <p>Open Terminal to install the following:</p>
 <pre><code class="language-bash">sudo apt install libgmp-dev
@@ -199,6 +208,13 @@ JSON library             : json-c
 <pre><code class="language-bash">make
 </code></pre>
 <p>More messages will display, if there are no errors, Run:</p>
+<pre><code class="language-bash">make check
+</code></pre>
+<p>A suite of tests will run, at the end, you should see the results:</p>
+<pre><code>1082 tests behaved as expected.
+4 tests were skipped
+</code></pre>
+<p>Run:</p>
 <pre><code class="language-bash">sudo make install
 </code></pre>
 <p>Then Run:</p>
@@ -246,12 +262,13 @@ touch hello.cbl
 <p>Run:</p>
 <pre><code class="language-bash">cobc -x hello.cbl
 </code></pre>
-<p>If it complies correctly, Run:</p>
+<p>If it complies correctly(no messages), Run:</p>
 <pre><code class="language-bash">./hello
 </code></pre>
 <p>It should return:</p>
 <pre><code class="language-bash">Hello world
 </code></pre>
+<p>If this works, delete the test-cobol directory (or not, your choice).</p>
               
             </div>
           </div><footer>

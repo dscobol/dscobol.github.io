@@ -48,6 +48,10 @@
                 <li class="toctree-l1"><a class="reference internal" href="../../../about/">About</a>
                 </li>
               </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../change-log/">Change-Log</a>
+                </li>
+              </ul>
               <p class="caption"><span class="caption-text">Guides</span></p>
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="#">GnuCOBOL VS ZOS COBOL</a>
@@ -79,6 +83,8 @@
                 <li class="toctree-l2 current"><a class="reference internal current" href="./">Install Sample DB and db2profile</a>
     <ul class="current">
     <li class="toctree-l3"><a class="reference internal" href="#check-the-installation">Check the installation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#validate-the-install">Validate the install</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#install-sample-db">Install Sample DB</a>
     </li>
@@ -158,12 +164,17 @@ ksh
 <pre><code class="language-bash">db2 list database directory
 </code></pre>
 <p>returns no DBs.</p>
-<h2 id="install-sample-db">Install Sample DB</h2>
+<h2 id="validate-the-install">Validate the install</h2>
 <p>Run:</p>
 <pre><code class="language-bash">cd sqllib/bin
 </code></pre>
 <p>Run:</p>
-<pre><code class="language-bash">./dbsampl
+<pre><code class="language-bash">./db2val
+</code></pre>
+<p>This should return: "The instance validation for the instance db2inst1 was successful."</p>
+<h2 id="install-sample-db">Install Sample DB</h2>
+<p>While still in the sqllib/bin directory, Run:</p>
+<pre><code class="language-bash">./db2sampl
 </code></pre>
 <p>to create the Sample DB.</p>
 <p>Not sure why but this takes a LLLLOOOONNNNGGGG time to complete.</p>
@@ -215,7 +226,7 @@ Database 1 entry:
 <p>to exit the ksh shell and exit db2inst1 and become the "normal" user again.</p>
 <h2 id="install-db2profile-in-bashrc">Install db2profile in .bashrc</h2>
 <p>As the "normal" user, you will need to run some DB2 commands in Terminal.</p>
-<p>To make this possible, add the following 4 lines to the bottom of the .bashrc file which is found in home directory.</p>
+<p>To make this possible, add the following 4 lines to the bottom of the .bashrc file which is found in the home directory.</p>
 <pre><code class="language-bash"># The following three lines have been added by UDB DB2.
 if [ -f /home/db2inst1/sqllib/db2profile ]; then
     . /home/db2inst1/sqllib/db2profile
