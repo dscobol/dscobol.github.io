@@ -191,8 +191,10 @@
 <p>However, you cannot name it the same as the SELECT variable as that will be an error.</p>
 <p>On the Mainframe, you can "get around this" by prefixing the ASSIGN variable with "DA-S-" (or other versions of this) and the compiler will parse just the last part and use that for the JCL.</p>
 <h3 id="organization-statement">ORGANIZATION statement</h3>
-<p>The other change that must be made for sequential files using GnuCOBOL is the addition of the keyword "LINE"
-- Mainframe:</p>
+<p>The other change that must be made for sequential files using GnuCOBOL is the addition of the keyword "LINE"</p>
+<ul>
+<li>Mainframe:</li>
+</ul>
 <pre><code>ORGANIZATION IS SEQUENTIAL
 </code></pre>
 <ul>
@@ -200,7 +202,9 @@
 </ul>
 <pre><code>ORGANIZATION IS LINE SEQUENTIAL
 </code></pre>
-<p>This is because on the Mainframe, most files are a fixed length so there isn't a "LF" or "CRLF" at the end of each line. The "LINE" keyword tells GnuCOBOL to examine the record, look for the line ending and strip that off before trying to process the record.</p>
+<p>This is because on the Mainframe, most files are a fixed length so there isn't a "LF" or "CRLF" at the end of each line.</p>
+<p>For sequential input files, the "LINE" keyword tells GnuCOBOL to examine the record, look for the line ending and strip that off before trying to process the record.</p>
+<p>For sequential output files, The "LINE" keyword tells GnuCOBOL to append a line feed character at the end of each record before it writes it out.</p>
               
             </div>
           </div><footer>
