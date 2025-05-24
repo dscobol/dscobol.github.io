@@ -1,0 +1,1975 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="canonical" type="text/html" href="https://dscobol.github.io/docs/concepts/">
+<link rel="alternate" type="application/rss&#43;xml" href="https://dscobol.github.io/docs/concepts/index.xml">
+<meta name="robots" content="noindex, nofollow">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>Concepts | dscobol</title>
+<meta name="description" content="GnuCOBOL vs ZOS COBOL">
+<meta property="og:url" content="https://dscobol.github.io/docs/concepts/">
+  <meta property="og:site_name" content="dscobol">
+  <meta property="og:title" content="Concepts">
+  <meta property="og:description" content="GnuCOBOL vs ZOS COBOL">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
+
+  <meta itemprop="name" content="Concepts">
+  <meta itemprop="description" content="GnuCOBOL vs ZOS COBOL">
+  <meta itemprop="dateModified" content="2025-05-23T23:15:37-04:00">
+  <meta itemprop="wordCount" content="7">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Concepts">
+  <meta name="twitter:description" content="GnuCOBOL vs ZOS COBOL">
+<link rel="preload" href="/scss/main.min.587cc9ab2e7ed4cd045ee4c6e380598d6f8ad5201ff3aa9345c816a513404b85.css" as="style" integrity="sha256-WHzJqy5&#43;1M0EXuTG44BZjW&#43;K1SAf86qTRcgWpRNAS4U=" crossorigin="anonymous">
+<link href="/scss/main.min.587cc9ab2e7ed4cd045ee4c6e380598d6f8ad5201ff3aa9345c816a513404b85.css" rel="stylesheet" integrity="sha256-WHzJqy5&#43;1M0EXuTG44BZjW&#43;K1SAf86qTRcgWpRNAS4U=" crossorigin="anonymous">
+<script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+  crossorigin="anonymous"></script>
+<script defer
+  src="https://unpkg.com/lunr@2.3.9/lunr.min.js"
+  integrity="sha384-203J0SNzyqHby3iU6hzvzltrWi/M41wOP5Gu+BiJMz5nwKykbkUx8Kp7iti0Lpli"
+  crossorigin="anonymous"></script>
+
+  </head>
+  <body class="td-section">
+    <header>
+      <nav class="td-navbar js-navbar-scroll" data-bs-theme="dark">
+<div class="container-fluid flex-column flex-md-row">
+  <a class="navbar-brand" href="/"><span class="navbar-brand__logo navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500"><g><path style="fill:#fff" d="M116.8525 421.9722c-5.7041.0-10.3442-4.3127-10.3442-9.6129V88.183c0-5.3002 4.6401-9.6117 10.3442-9.6117H320.858c3.0347.0 9.3959.5498 11.7506 2.6302l.3545.3442 58.905 63.2912c2.3101 2.491 2.9202 8.4928 2.9202 11.3184v256.2039c0 5.3002-4.6407 9.6129-10.3436 9.6129H116.8525z"/><g><g><g><path style="fill:#767676" d="M384.4445 423.2066H116.852c-6.3839.0-11.5786-4.8658-11.5786-10.8474V88.1831c0-5.9804 5.1947-10.8461 11.5786-10.8461h204.0062c.377.0 9.2786.0329 12.568 2.9389l.3947.3833 58.9508 63.337c3.2135 3.4652 3.2514 11.7924 3.2514 12.1593v256.2036C396.0231 418.3408 390.8284 423.2066 384.4445 423.2066zM116.5079 411.9189c.0848.0278.1999.0531.3441.0531h267.5925c.1442.0.2581-.0253.3441-.0531V156.1556c-.0076-.9033-.3593-3.7347-.7034-5.0037l-57.6527-61.9416c-1.4651-.3176-4.4533-.6389-5.5742-.6389H116.852c-.143.0-.2594.024-.3441.0531V411.9189zm267.4533-261.149zM327.0321 89.371v.0013V89.371z"/></g></g></g><g><g><path style="fill:#5b7fc0" d="M189.0874 210.1754l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032s-11.328-2.2733-15.458-6.4032-6.4032-9.6186-6.4056-15.4628c.0012-6.025 2.454-11.4897 6.4116-15.4473C177.5953 212.627 183.0601 210.1742 189.0874 210.1754zm7.993 21.8576c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403S197.0816 234.1722 197.0804 232.033z"/><path style="opacity:.3;fill:#fff" d="M189.0898 210.176c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 212.6276 183.0612 210.176 189.0898 210.176zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 236.239 197.0839 234.2399 197.0839 232.0372z"/><g><defs><path id="SVGID_1_" d="M194.7376 237.6875c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.999 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 234.2399 196.1861 236.239 194.7376 237.6875z"/></defs><clipPath id="SVGID_2_"><use xlink:href="#SVGID_1_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_2_);fill:#fff" d="M190.0704 225.0237c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 225.7247 191.9774 225.0237 190.0704 225.0237z"/><path style="opacity:.13;clip-path:url(#SVGID_2_);fill:#020202" d="M190.0704 225.0237c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 225.7247 191.9774 225.0237 190.0704 225.0237z"/></g><g><defs><path id="SVGID_3_" d="M189.0898 210.176c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 212.6276 183.0612 210.176 189.0898 210.176zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 236.239 197.0839 234.2399 197.0839 232.0372z"/></defs><clipPath id="SVGID_4_"><use xlink:href="#SVGID_3_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_4_);fill:#5b7fc0" d="M172.6595 215.6045c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8612 12.0547.0024 21.8636-9.797 21.8613-21.8612.0024-3.8475-1.0151-7.6326-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 209.1953 176.6171 211.647 172.6595 215.6045z"/></g></g><rect x="198.8952" y="225.1043" style="fill:#5b7fc0" width="122.6266" height="13.8671"/></g><g><path style="fill:#d95140" d="M189.0874 155.7611l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032s-11.328-2.2733-15.458-6.4032-6.4032-9.6186-6.4056-15.4628c.0012-6.0249 2.454-11.4897 6.4116-15.4473C177.5953 158.2128 183.0601 155.7599 189.0874 155.7611zm7.993 21.8577c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403C196.2508 181.7667 197.0816 179.758 197.0804 177.6188z"/><path style="opacity:.3;fill:#fff" d="M189.0898 155.7617c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 158.2134 183.0612 155.7617 189.0898 155.7617zm7.9941 21.8613c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 181.8248 197.0839 179.8256 197.0839 177.623z"/><g><defs><path id="SVGID_5_" d="M194.7376 183.2733c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.9989 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 179.8256 196.1861 181.8248 194.7376 183.2733z"/></defs><clipPath id="SVGID_6_"><use xlink:href="#SVGID_5_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_6_);fill:#fff" d="M190.0704 170.6095c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 171.3104 191.9774 170.6095 190.0704 170.6095z"/><path style="opacity:.13;clip-path:url(#SVGID_6_);fill:#020202" d="M190.0704 170.6095c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 171.3104 191.9774 170.6095 190.0704 170.6095z"/></g><g><defs><path id="SVGID_7_" d="M189.0898 155.7617c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 158.2134 183.0612 155.7617 189.0898 155.7617zm7.9941 21.8613c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 181.8248 197.0839 179.8256 197.0839 177.623z"/></defs><clipPath id="SVGID_8_"><use xlink:href="#SVGID_7_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_8_);fill:#d95140" d="M172.6595 161.1903c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8613 12.0547.0024 21.8636-9.797 21.8613-21.8613.0024-3.8474-1.0151-7.6326-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 154.7811 176.6171 157.2327 172.6595 161.1903z"/></g><rect x="198.8952" y="170.69" style="fill:#d95140" width="122.6266" height="13.8671"/></g><g><g><path style="fill:#56a55c" d="M189.5379 264.6147l.0012-.0012c7.7751.0012 15.0294 4.1862 18.932 10.9235 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032-5.8394.0-11.3281-2.2733-15.458-6.4032-4.13-4.13-6.4032-9.6186-6.4056-15.4628.0012-6.0249 2.454-11.4897 6.4116-15.4472C178.0458 267.0663 183.5105 264.6135 189.5379 264.6147zm7.993 21.8576c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6538 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403C196.7013 290.6202 197.5321 288.6115 197.5309 286.4723z"/><path style="opacity:.3;fill:#fff" d="M189.5403 264.6153c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8065-21.8612-21.8613.0-6.0285 2.4516-11.492 6.4116-15.452C178.0482 267.0669 183.5117 264.6153 189.5403 264.6153zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.6366 290.6783 197.5344 288.6792 197.5344 286.4765z"/><g><defs><path id="SVGID_9_" d="M195.1881 292.1268c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.9989 7.9942-7.9941 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.5344 288.6792 196.6366 290.6783 195.1881 292.1268z"/></defs><clipPath id="SVGID_10_"><use xlink:href="#SVGID_9_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_10_);fill:#fff" d="M190.5209 279.463c-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7446-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9941 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C194.239 280.164 192.4279 279.463 190.5209 279.463z"/><path style="opacity:.13;clip-path:url(#SVGID_10_);fill:#020202" d="M190.5209 279.463c-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7446-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9941 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C194.239 280.164 192.4279 279.463 190.5209 279.463z"/></g><g><defs><path id="SVGID_11_" d="M189.5403 264.6153c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8065-21.8612-21.8613.0-6.0285 2.4516-11.492 6.4116-15.452C178.0482 267.0669 183.5117 264.6153 189.5403 264.6153zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.6366 290.6783 197.5344 288.6792 197.5344 286.4765z"/></defs><clipPath id="SVGID_12_"><use xlink:href="#SVGID_11_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_12_);fill:#56a55c" d="M173.11 270.0439c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8613 12.0547.0024 21.8636-9.797 21.8613-21.8613.0024-3.8474-1.0151-7.6326-2.9353-10.9462-3.8977-6.7325-11.1497-10.9151-18.926-10.9151C182.5311 263.6346 177.0676 266.0863 173.11 270.0439z"/></g></g><rect x="199.3456" y="279.5436" style="fill:#56a55c" width="122.6266" height="13.8671"/></g><g><g><path style="fill:#f1bc42" d="M189.0874 318.7208l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3305-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032s-11.328-2.2733-15.458-6.4032-6.4032-9.6186-6.4056-15.4628c.0012-6.025 2.454-11.4897 6.4116-15.4472C177.5953 321.1724 183.0601 318.7196 189.0874 318.7208zm7.993 21.8576c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403S197.0816 342.7176 197.0804 340.5784z"/><path style="opacity:.3;fill:#fff" d="M189.0898 318.7214c7.7763.0 15.0283 4.1826 18.926 10.915 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8612-12.0547.0024-21.8636-9.8065-21.8612-21.8612.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 321.173 183.0612 318.7214 189.0898 318.7214zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 344.7844 197.0839 342.7853 197.0839 340.5826z"/><g><defs><path id="SVGID_13_" d="M194.7376 346.2329c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.999 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 342.7853 196.1861 344.7844 194.7376 346.2329z"/></defs><clipPath id="SVGID_14_"><use xlink:href="#SVGID_13_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_14_);fill:#fff" d="M190.0704 333.5691c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0834 6.1218 2.8788C193.7885 334.2701 191.9774 333.5691 190.0704 333.5691z"/><path style="opacity:.13;clip-path:url(#SVGID_14_);fill:#020202" d="M190.0704 333.5691c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0834 6.1218 2.8788C193.7885 334.2701 191.9774 333.5691 190.0704 333.5691z"/></g><g><defs><path id="SVGID_15_" d="M189.0898 318.7214c7.7763.0 15.0283 4.1826 18.926 10.915 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8612-12.0547.0024-21.8636-9.8065-21.8612-21.8612.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 321.173 183.0612 318.7214 189.0898 318.7214zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 344.7844 197.0839 342.7853 197.0839 340.5826z"/></defs><clipPath id="SVGID_16_"><use xlink:href="#SVGID_15_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_16_);fill:#f1bc42" d="M172.6595 324.15c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8612 12.0547.0024 21.8636-9.797 21.8613-21.8612.0024-3.8474-1.0151-7.6327-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 317.7407 176.6171 320.1924 172.6595 324.15z"/></g></g><rect x="198.8952" y="333.6497" style="fill:#f1bc42" width="122.6266" height="13.8671"/></g></g></svg></span><span class="navbar-brand__name">dscobol</span></a>
+  <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="/docs/"><span>Docs</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/blog/"><span>Blog</span></a>
+      </li>
+      </ul>
+  </div>
+  <div class="d-none d-lg-block">
+    <div class="td-search td-search--offline">
+  <div class="td-search__icon"></div>
+  <input
+    type="search"
+    class="td-search__input form-control"
+    placeholder="Search this site…"
+    aria-label="Search this site…"
+    autocomplete="off"
+    
+    data-offline-search-index-json-src="/offline-search-index.0d73336c66f814ce37b0fde43ef74cfd.json"
+    data-offline-search-base-href="/"
+    data-offline-search-max-results="10"
+  >
+</div>
+  </div>
+</div>
+</nav>
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
+            
+
+
+
+
+<div class="td-content">
+<div class="pageinfo pageinfo-primary d-print-none">
+<p>
+This is the multi-page printable view of this section.
+<a href="#" onclick="print();return false;">Click here to print</a>.
+</p><p>
+<a href="/docs/concepts/">Return to the regular view of this page</a>.
+</p>
+</div>
+
+
+
+<h1 class="title">Concepts</h1>
+<div class="lead">GnuCOBOL vs ZOS COBOL</div>
+
+
+
+
+    <ul>
+    
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>1: <a href="#pg-74a68834c5be71d82ccc1403dec786db">Batch Processing</a></li>
+
+
+    
+  
+    
+    
+	
+<li>2: <a href="#pg-e03ab1eaff83d16151803d2e9778b9ca">DB2 Processing</a></li>
+
+
+    
+  
+    
+    
+	
+<li>3: <a href="#pg-ab6de83a4a65cf7537842eebad079176">An example of a normal DB2 ZOS COBOL program</a></li>
+
+
+    
+  
+    
+    
+	
+<li>4: <a href="#pg-6fa8ed33ecd0ed5210386b29a2c84f24">An overview of specific changes.</a></li>
+
+
+    
+  
+    
+    
+	
+<li>5: <a href="#pg-5d0e3bea2dacd1f1c5a8a578f5b59439">Different methods to pass the connnect parameters?</a></li>
+
+
+    
+  
+    
+    
+	
+<li>6: <a href="#pg-3776a5e970c624d5151cce3f8ee6b085">Version 1</a></li>
+
+
+    
+  
+    
+    
+	
+<li>7: <a href="#pg-4fe63ff2bc6099bf38874e43f790cd0b">Version 2</a></li>
+
+
+    
+  
+    
+    
+	
+<li>8: <a href="#pg-5e58b4546e0bf9307f1234af345ddca1">Version 3</a></li>
+
+
+    
+  
+    
+    
+	
+<li>9: <a href="#pg-8f5727da6084a300a281606ee56a82b9">Version 4</a></li>
+
+
+    
+  
+    
+    
+	
+<li>10: <a href="#pg-23491b0465cb710cd189f204d219be85">Version 5</a></li>
+
+
+    
+  
+
+    </ul>
+
+
+<div class="content">
+      <p>This is broken up into two areas:</p>
+
+</div>
+</div>
+
+
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-74a68834c5be71d82ccc1403dec786db">1 - Batch Processing</h1>
+    <div class="lead">Differences when running Batch programs.</div>
+	<p>I can&rsquo;t speak about the efficiency or the scalablity or &ldquo;benchmarking
+performance&rdquo; between zOS COBOL and GnuCOBOL.</p>
+<p>I just don&rsquo;t know.</p>
+<p>From an application programmer&rsquo;s point of view though, these are the differences
+that I know of:</p>
+<h3 id="input-output-section--file-control">INPUT-OUTPUT SECTION : FILE-CONTROL<a class="td-heading-self-link" href="#input-output-section--file-control" aria-label="Heading self-link"></a></h3>
+<p>This is the one place where you probably need to make changes.</p>
+<p>This is a snippet I copied from one of the programs I wrote a while back:</p>
+<pre><code>   INPUT-OUTPUT SECTION.
+   FILE-CONTROL.
+       SELECT PSAPFile
+  *     ASSIGN TO PSAPFILE
+  *     ORGANIZATION IS SEQUENTIAL
+       ASSIGN TO &quot;../data/psap.dat.txt&quot;
+       ORGANIZATION IS LINE SEQUENTIAL
+       FILE STATUS IS WS-PSAPFile-Status.
+</code></pre>
+<p>This would compile and run using GnuCOBOL.</p>
+<p>If I copied this program to a zOS Mainframe, I would uncomment the first ASSIGN
+and ORGANIZATION lines and comment the next two and that would run on the
+Mainframe.</p>
+<p>But, the ASSIGN statement is &ldquo;hardcoded&rdquo;. If the file needed to be changed, the
+program would have to be updated then re-compiled.</p>
+<p><strong>Here is a &ldquo;better, more recent version&rdquo;:</strong></p>
+<pre><code>   INPUT-OUTPUT SECTION.
+   FILE-CONTROL.
+       SELECT PSAPFile
+  *     ASSIGN TO PSAPFILE
+  *     ORGANIZATION IS SEQUENTIAL
+       ASSIGN TO QIPSAPFILE
+       ORGANIZATION IS LINE SEQUENTIAL
+       FILE STATUS IS WS-PSAPFile-Status.
+</code></pre>
+<h3 id="assign-statement">ASSIGN statement<a class="td-heading-self-link" href="#assign-statement" aria-label="Heading self-link"></a></h3>
+<p>From the GnuCOBOL documentation:</p>
+<p>For example, given ASSIGN TO &ldquo;DATAFILE&rdquo;, the actual file name will be</p>
+<ol>
+<li>the value of environment variable &lsquo;DD_DATAFILE&rsquo; or</li>
+<li>the value of environment variable &lsquo;dd_DATAFILE&rsquo; or</li>
+<li>the value of environment variable &lsquo;DATAFILE&rsquo; or</li>
+<li>the literal &ldquo;DATAFILE&rdquo;</li>
+</ol>
+<p>So, under GNU/Linux, bash shell</p>
+<pre tabindex="0"><code>export DD_QIPSAPFILE=&#39;../data/psap.dat.txt&#39;
+
+./myprog
+</code></pre><p>However, you cannot name it the same as the SELECT variable as that will be an
+error.</p>
+<p>On the Mainframe, you can &ldquo;get around this&rdquo; by prefixing the ASSIGN variable
+with &ldquo;DA-S-&rdquo; (or other versions of this) and the compiler will parse just the
+last part and use that for the JCL.</p>
+<h3 id="organization-statement">ORGANIZATION statement<a class="td-heading-self-link" href="#organization-statement" aria-label="Heading self-link"></a></h3>
+<p>The other change that must be made for sequential files using GnuCOBOL is the
+addition of the keyword &ldquo;LINE&rdquo;</p>
+<ul>
+<li>Mainframe:</li>
+</ul>
+<p><code>ORGANIZATION IS SEQUENTIAL</code></p>
+<ul>
+<li>GnuCOBOL</li>
+</ul>
+<p><code>ORGANIZATION IS LINE SEQUENTIAL</code></p>
+<p>This is because on the Mainframe, most files are a fixed length so there isn&rsquo;t a
+&ldquo;LF&rdquo; or &ldquo;CRLF&rdquo; at the end of each line.</p>
+<p>For sequential input files, the &ldquo;LINE&rdquo; keyword tells GnuCOBOL to examine the
+record, look for the line ending and strip that off before trying to process the
+record.</p>
+<p>For sequential output files, The &ldquo;LINE&rdquo; keyword tells GnuCOBOL to append a line
+feed character at the end of each record before it writes it out.</p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-e03ab1eaff83d16151803d2e9778b9ca">2 - DB2 Processing</h1>
+    <div class="lead">Differences when running DB2 programs.</div>
+	<h2 id="zos-coboldb2-vs-gnucoboldb2-luw">zOS COBOL/DB2 vs GnuCOBOL/DB2 LUW<a class="td-heading-self-link" href="#zos-coboldb2-vs-gnucoboldb2-luw" aria-label="Heading self-link"></a></h2>
+<h3 id="zos-coboldb2">zOS COBOL/DB2<a class="td-heading-self-link" href="#zos-coboldb2" aria-label="Heading self-link"></a></h3>
+<ul>
+<li>RACF - the security system</li>
+<li>DCLGEN - Create an INCLUDE copybook member that defines the table and adds
+host variables.</li>
+</ul>
+<h3 id="gnucoboldb2-luw">GnuCOBOL/DB2 LUW<a class="td-heading-self-link" href="#gnucoboldb2-luw" aria-label="Heading self-link"></a></h3>
+<ul>
+<li>No RACF. Since there is no RACF, the DB name, the userid, and the password
+must be supplied to the program for it to connect to the DB.</li>
+<li>There is a db2dclgn command included with IBM DB2 LUW but it does not generate
+the table definition within a &ldquo;EXEC SQL DECLARE&rdquo; statement. It only defines
+the COBOL host variables.</li>
+</ul>
+<p>So, you have to create the EXEC SQL DECLARE &ldquo;xxxxx&rdquo; TABLE statement, the host
+variables, and the DB Connect variables within the program itself.</p>
+<h3 id="different-methods-to-supply-parameters">Different methods to <a href="/docs/concepts/supply-parameters/">supply parameters</a><a class="td-heading-self-link" href="#different-methods-to-supply-parameters" aria-label="Heading self-link"></a></h3>
+<h4 id="a-look-at-the-examples-to-see-the-differences">A look at the examples to see the differences:<a class="td-heading-self-link" href="#a-look-at-the-examples-to-see-the-differences" aria-label="Heading self-link"></a></h4>
+<p>Original Code from Murach book</p>
+<p><strong>This is an example of a <a href="/docs/concepts/orig-code/">Normal ZOS COBOL DB2</a> program.</strong></p>
+<p>In the repository on GitHub, this is cbl/CUSTINQ.cbl</p>
+<p>It will not compile with GnuCOBOL.</p>
+<p>Also, as I&rsquo;m not sure about the copyright and my ability to &ldquo;re-distribute&rdquo; the
+code included in the book, this will the only time I will include the exact
+original code from the book. I will be using it 3 more times (Version 1, 2
+and 3) but those have changes made to them to compile and run using GnuCOBOL.</p>
+<p>As you will see in Versions 4 and 5, I have my own program structure and style
+and while the results will be the same as the original, the code will be quite
+different.</p>
+<h3 id="version-1">Version 1<a class="td-heading-self-link" href="#version-1" aria-label="Heading self-link"></a></h3>
+<p><strong>This is an example of a <a href="/docs/concepts/version1/">Converted from ZOS to GnuCOBOL</a>
+program.</strong></p>
+<p>In the repository on GitHub, this is cbl/CUSTIN1.sqb</p>
+<p>I started with cbl/CUSTINQ.cbl and:</p>
+<ul>
+<li>
+<p>removed the INCLUDE CUSTOMER statement</p>
+</li>
+<li>
+<p>added the EXEC SQL DECLARE TABLE statement</p>
+</li>
+<li>
+<p>added the host variables and the DB Connect variables</p>
+</li>
+<li>
+<p>added Procedure code to use ACCEPT to get the userid and password from the
+user when the program is run.</p>
+</li>
+</ul>
+
+
+<div class="pageinfo pageinfo-primary">
+<p>Version 2 is NOT recommended. Left here for &ldquo;Historical&rdquo;
+purposes.</p>
+
+</div>
+
+<h3 id="version-2">Version 2<a class="td-heading-self-link" href="#version-2" aria-label="Heading self-link"></a></h3>
+<p><strong>This is an example of a <a href="/docs/concepts/version2/">Calling a Module</a> program.</strong></p>
+<p>In the repository on GitHub, this is cbl/CUSTIN2.sqb</p>
+<p>I started with cbl/CUSTIN1.sqb and:</p>
+<ul>
+<li>
+<p>created GETDBID program to &ldquo;hardcode&rdquo; the userid and password.</p>
+</li>
+<li>
+<p>updated to call GETDBID and removed the ACCEPT from User code.</p>
+</li>
+<li>
+<p>updated the Compile script to add GETDBID LLM to the compile step.</p>
+</li>
+</ul>
+<p>Now the program will run without needing to ask the user for that information.</p>
+<h3 id="version-3">Version 3<a class="td-heading-self-link" href="#version-3" aria-label="Heading self-link"></a></h3>
+<p><strong>This is an example of a <a href="/docs/concepts/version3/">Accept from Environment</a> program.</strong></p>
+<p>In the repository on GitHub, this is cbl/CUSTIN3.sqb</p>
+<p>I started with cbl/CUSTIN2.sqb and:</p>
+<ul>
+<li>
+<p>created a .env file with the parameters for the DB.</p>
+</li>
+<li>
+<p>removed GETDBID program.</p>
+</li>
+<li>
+<p>updated to ACCEPT FROM ENVIRONMENT code.</p>
+</li>
+<li>
+<p>updated the Compile script to remove GETDBID LLM from the compile step.</p>
+</li>
+<li>
+<p>updated the Run script to export the parameters from the .env file to the
+Environment Variables.</p>
+</li>
+</ul>
+<p>This program will also run without needing to ask the user for the DB
+parameters.</p>
+
+
+<div class="pageinfo pageinfo-primary">
+<p>Version 4 is NOT recommended. Left here for &ldquo;Historical&rdquo;
+purposes.</p>
+
+</div>
+
+<h3 id="version-4">Version 4<a class="td-heading-self-link" href="#version-4" aria-label="Heading self-link"></a></h3>
+<p><strong>This is an example of <a href="/docs/concepts/version4/">My Version of Calling GETDBID</a>.</strong></p>
+<p>In the repository on GitHub, this is cbl/CUSTIN4.sqb</p>
+<p>As I alluded to in Version 1, this is that completely re-written program.</p>
+<p><strong>Every company has a standard and/or style that all(most?) code adheres to.</strong></p>
+<p>At some shops, it is kind of loose, at others, it is VERY rigid.</p>
+<p>This is an example of getting the same result; just doing it a different way by
+applying a different structure to the program.</p>
+<p>This is the &ldquo;typical&rdquo; structure I use to create new programs.</p>
+<p>As I continue to add programs to the repositories, they will &ldquo;follow along&rdquo; with
+the book or tutorial or website but will be using this structure.</p>
+<h3 id="version-5">Version 5<a class="td-heading-self-link" href="#version-5" aria-label="Heading self-link"></a></h3>
+<p><strong>This is an example of
+<a href="/docs/concepts/version5/">My Version of Accept from Environment</a>.</strong></p>
+<p>In the repository on GitHub, this is cbl/CUSTINQ.sqb</p>
+<p>Just as CUSTIN2 was converted into CUSTIN3 by replacing the &ldquo;CALL to GETDBID&rdquo;
+with &ldquo;ACCEPT FROM ENVIRONMENT&rdquo;, this is CUSTIN4 converted into CUSTINQ the same
+way.</p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-ab6de83a4a65cf7537842eebad079176">3 - An example of a normal DB2 ZOS COBOL program</h1>
+    <div class="lead">This is the CUSTINQ program from the Murach book</div>
+	<pre><code>   IDENTIFICATION DIVISION.
+  *
+   PROGRAM-ID.    CUSTINQ.
+  *
+   ENVIRONMENT DIVISION.
+  *
+   INPUT-OUTPUT SECTION.
+  *
+   FILE-CONTROL.
+  *
+   DATA DIVISION.
+  *
+   FILE SECTION.
+  *
+   WORKING-STORAGE SECTION.
+  *
+   01  SWITCHES.
+  *
+       05  END-OF-INQUIRIES-SW     PIC X   VALUE 'N'.
+           88  END-OF-INQUIRIES            VALUE 'Y'.
+       05  CUSTOMER-FOUND-SW       PIC X.
+           88  CUSTOMER-FOUND              VALUE 'Y'.
+  *
+       EXEC SQL
+           INCLUDE CUSTOMER
+       END-EXEC.
+  *
+       EXEC SQL
+           INCLUDE SQLCA
+       END-EXEC.
+  *
+   PROCEDURE DIVISION.
+  *
+   000-DISPLAY-CUSTOMER-ROWS.
+  *
+       PERFORM 100-DISPLAY-CUSTOMER-ROW
+           UNTIL END-OF-INQUIRIES.
+       STOP RUN.
+  *
+   100-DISPLAY-CUSTOMER-ROW.
+  *
+       PERFORM 110-ACCEPT-CUSTOMER-NUMBER.
+       IF NOT END-OF-INQUIRIES
+           MOVE 'Y' TO CUSTOMER-FOUND-SW
+           PERFORM 120-GET-CUSTOMER-ROW
+           IF CUSTOMER-FOUND
+               PERFORM 130-DISPLAY-CUSTOMER-LINES
+           ELSE
+               PERFORM 140-DISPLAY-ERROR-LINES.
+  *
+   110-ACCEPT-CUSTOMER-NUMBER.
+  *
+       DISPLAY '------------------------------------------------'.
+       DISPLAY 'KEY IN THE NEXT CUSTOMER NUMBER AND PRESS ENTER,'.
+       DISPLAY 'OR KEY IN 999999 AND PRESS ENTER TO QUIT.'.
+       ACCEPT CUSTNO.
+       IF CUSTNO = '999999'
+           MOVE 'Y' TO END-OF-INQUIRIES-SW.
+  *
+   120-GET-CUSTOMER-ROW.
+  *
+       EXEC SQL
+           SELECT CUSTNO,    FNAME,       LNAME,
+                  ADDR,      CITY,        STATE,
+                  ZIPCODE
+           INTO  :CUSTNO,       :FNAME,          :LNAME,
+                 :ADDR,         :CITY,           :STATE,
+                 :ZIPCODE
+           FROM   MM01.CUSTOMER
+               WHERE  CUSTNO = :CUSTNO
+       END-EXEC.
+  *
+       IF SQLCODE NOT = 0
+           MOVE 'N' TO CUSTOMER-FOUND-SW.
+  *
+   130-DISPLAY-CUSTOMER-LINES.
+  *
+       DISPLAY '------------------------------------------------'.
+       DISPLAY '   CUSTOMER ' CUSTNO.
+       DISPLAY '   NAME     ' FNAME ' ' LNAME.
+       DISPLAY '   ADDRESS  ' ADDR.
+       DISPLAY '            ' CITY ' ' STATE ' '
+                              ZIPCODE.
+  *
+   140-DISPLAY-ERROR-LINES.
+  *
+       DISPLAY '------------------------------------------------'.
+       DISPLAY '   CUSTOMER NUMBER ' CUSTNO ' NOT FOUND.'.
+  *
+</code></pre>
+<p>This is the code from the WORKING-STORAGE SECTION.</p>
+<pre><code>       EXEC SQL
+           INCLUDE CUSTOMER
+       END-EXEC.
+  *
+       EXEC SQL
+           INCLUDE SQLCA
+       END-EXEC.
+</code></pre>
+<h3 id="notes-about-this-code">Notes about this code:<a class="td-heading-self-link" href="#notes-about-this-code" aria-label="Heading self-link"></a></h3>
+<p>Within &ldquo;INCLUDE CUSTOMER&rdquo;, CUSTOMER is the DCLGEN generated copybook member</p>
+<p>&ldquo;CUSTOMER&rdquo; has two areas: A &ldquo;EXEC SQL DECLARE CUSTOMER TABLE area which lists
+each column name and data type in the table BUT the data type is a SQL data
+type, not a COBOL data type.</p>
+<p>A COBOL declaration of 01-CUSTOMER-ROW which lists each column name and data
+type in the table BUT the data type is a COBOL data type, not a SQL data type.</p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-6fa8ed33ecd0ed5210386b29a2c84f24">4 - An overview of specific changes.</h1>
+    <div class="lead">This is the Murach CUSTINQ program with just enough code added to make it work with GnuCOBOL and IBM DB2 LUW.</div>
+	<h3 id="since-dclgen-isnt-the-same-on-ibm-db2-luw-create-that">Since DCLGEN isn&rsquo;t the same on IBM DB2 LUW, create that<a class="td-heading-self-link" href="#since-dclgen-isnt-the-same-on-ibm-db2-luw-create-that" aria-label="Heading self-link"></a></h3>
+<pre tabindex="0"><code>      ***** Convert to GnuCOBOL
+      ***** Start of Step 1
+      *     No DCLGEN member to INCLUDE
+      *     Comment this INCLUDE out
+      *    EXEC SQL
+      *        INCLUDE CUSTOMER
+      *    END-EXEC.
+      *
+      *     Add DECLARE TABLE
+           EXEC SQL
+           DECLARE CUSTOMERS TABLE
+           (
+            CUSTNO        CHAR(6) not null,
+               FNAME         CHAR(20) not null,
+               LNAME         CHAR(30) not null,
+               ADDR          CHAR(30) not null,
+               CITY          CHAR(20) not null,
+               STATE         CHAR(2) not null,
+               ZIPCODE       CHAR(10) not null)
+           END-EXEC.
+
+      *     Add DECLARE SECTION
+           EXEC SQL BEGIN DECLARE SECTION END-EXEC.
+       01  Customer-Row.
+           12 CUSTNO     PIC X(06).
+           12 FNAME      PIC X(20).
+           12 LNAME      PIC X(30).
+           12 ADDR       PIC X(30).
+           12 CITY       PIC X(20).
+           12 STATE      PIC X(02).
+           12 ZIPCODE    PIC X(10).
+
+      *    This is hardcoded for the MURACH DB.
+      *    You might need to update this for your DB.
+       01  DB-Connection-Info.
+           12 DB-Alias                PIC X(8) VALUE &#39;MURACH&#39;.
+           12 DB-User-ID              PIC X(10).
+           12 DB-Password.
+              15 DB-Passwd-Length     PIC S9(4) COMP-5  VALUE 0.
+              15 DB-Passwd-Name       PIC X(18).
+           EXEC SQL END DECLARE SECTION END-EXEC.
+
+      *     Add status check for connection info.
+       01  WS-SQL-STATUS                PIC S9(9) COMP-5.
+           88 SQL-STATUS-OK             VALUE    0.
+           88 SQL-STATUS-NOT-FOUND      VALUE  100.
+           88 SQL-STATUS-DUP            VALUE -803.
+
+      ***** End of Step 1
+</code></pre><h3 id="add-the-perform-paragraph">Add the PERFORM paragraph<a class="td-heading-self-link" href="#add-the-perform-paragraph" aria-label="Heading self-link"></a></h3>
+<pre tabindex="0"><code>       000-DISPLAY-CUSTOMER-ROWS.
+      *     Step 2
+      *     Add Paragraph to connect to the DB
+           PERFORM 9800-Connect-to-DB1.
+      *
+           PERFORM 100-DISPLAY-CUSTOMER-ROW
+               UNTIL END-OF-INQUIRIES.
+           STOP RUN.
+</code></pre><h3 id="then-add-the-9800-connect-to-db1-and-friends-paragraphs">Then add the 9800-Connect-to DB1 and friends paragraphs<a class="td-heading-self-link" href="#then-add-the-9800-connect-to-db1-and-friends-paragraphs" aria-label="Heading self-link"></a></h3>
+<pre tabindex="0"><code>      *     Step 2 - the actual connection.
+       9800-Connect-to-DB1.
+           PERFORM 9810-Setup-DB1-Connection.
+           IF SQL-STATUS-OK
+              CONTINUE
+           ELSE
+              DISPLAY &#34;*** The DB connection is not valid!***&#34;
+              DISPLAY &#34;Exiting the program.!&#34;
+              GOBACK
+           END-IF.
+
+       9810-Setup-DB1-Connection.
+           PERFORM 9811-Get-Credentials.
+           PERFORM 9812-Create-Connection-To-DB1.
+
+       9811-Get-Credentials.
+           DISPLAY &#34;CUSTINQ: Need userid and password&#34;.
+
+           DISPLAY &#34;Enter your user id (default none): &#34;
+                WITH NO ADVANCING.
+           ACCEPT DB-User-ID.
+
+           DISPLAY &#34;Enter your password : &#34; WITH NO ADVANCING
+           ACCEPT DB-Passwd-Name.
+
+      * Passwords in a CONNECT statement must be entered in a VARCHAR
+      * format with the length of the input string.
+           INSPECT DB-Passwd-Name
+              TALLYING DB-Passwd-Length
+              FOR CHARACTERS BEFORE INITIAL &#34; &#34;.
+
+       9812-Create-Connection-To-DB1.
+           PERFORM 9814-Connect-To-DB1
+           IF SQL-STATUS-OK
+              CONTINUE
+           ELSE
+              DISPLAY &#34;CUSTINQ: userid and/or password invalid&#34;
+              DISPLAY &#34;CUSTINQ: Can not connect, exiting&#34;
+              GOBACK
+           END-IF.
+
+       9814-Connect-To-DB1.
+           EXEC SQL CONNECT TO :DB-Alias
+                USER :DB-User-ID
+                USING :DB-Passwd-Name
+              END-EXEC.
+           MOVE SQLCODE TO WS-SQL-STATUS.
+</code></pre>
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-5d0e3bea2dacd1f1c5a8a578f5b59439">5 - Different methods to pass the connnect parameters?</h1>
+    <div class="lead">Actually, there are 4 (that I know of, there are probably more).</div>
+	<h1 id="brief-history">Brief History<a class="td-heading-self-link" href="#brief-history" aria-label="Heading self-link"></a></h1>
+<h2 id="creating-gnucoboldb2-programs-on-ms-windows">Creating GnuCOBOL/DB2 programs on MS Windows.<a class="td-heading-self-link" href="#creating-gnucoboldb2-programs-on-ms-windows" aria-label="Heading self-link"></a></h2>
+<p>My first attempt at writing GnuCOBOL/DB2 programs was on MS Windows and I
+followed the instructions found in
+<a href="https://sourceforge.net/p/gnucobol/contrib/HEAD/tree/trunk/samples/DBsample/DB2/">László Erdős&rsquo;s contrib</a>.</p>
+<p>It worked.</p>
+<p>I learned a lot and Thank You to László Erdős for creating that.</p>
+<p>1 - The method it used was a ScreenIO pgm to prompt the user for the parameters
+and passed them to the program through the Linkage Section. It works but I
+wanted something &ldquo;leaner&rdquo;.</p>
+<p>2 - Then I looked at IBM&rsquo;s examples and that is where I saw the &ldquo;ACCEPT&rdquo; from
+the command line prompt method. It works, it was &ldquo;leaner&rdquo;, but still required
+interaction with the user.</p>
+<p>3 - Then I thought, use a CALLed program with the parameters embedded in it.
+CALL it and pass the parameters to the program to then pass those to the DB.
+GETDBID was created. It works without user interaction.</p>
+<h2 id="creating-gnucoboldb2-programs-on-linux">Creating GnuCOBOL/DB2 programs on Linux.<a class="td-heading-self-link" href="#creating-gnucoboldb2-programs-on-linux" aria-label="Heading self-link"></a></h2>
+<p>I needed some help, got it, then posted a link to this site and the repository
+in the GnuCOBOL discussion area.</p>
+<p>Simon Sobisch, who was very helpful fixing the problems I was having getting
+started, looked at the code I pushed to the repository. He suggested I use a
+&ldquo;.env&rdquo; file.</p>
+<p>I&rsquo;ve done that before with Python but had no idea how to do that with COBOL.</p>
+<p>4 - Create a .env file, add code to the run script to export the parameters to
+environment variables, replace the &ldquo;CALL &lsquo;GETDBID&rsquo;&rdquo; with &ldquo;ACCEPT FROM
+ENVIRONMENT&rdquo;.</p>
+<h2 id="which-method-to-use-from-now-on">Which method to use from now on?<a class="td-heading-self-link" href="#which-method-to-use-from-now-on" aria-label="Heading self-link"></a></h2>
+<p>If the program doesn&rsquo;t require User Interaction, <strong>#4</strong>.</p>
+<p>If the program needs User Interaction, <strong>#1</strong> or <strong>#2</strong> depending on the
+situation or maybe something completely different.</p>
+<p>Method 3 was a good exercise to learn how to CALL programs but I am &ldquo;retiring&rdquo;
+GETDBID.</p>
+<h2 id="what-about-that-code-in-the-run-script-why-that">What about that code in the run script, why that?<a class="td-heading-self-link" href="#what-about-that-code-in-the-run-script-why-that" aria-label="Heading self-link"></a></h2>
+<pre tabindex="0"><code># Export the environment variables in the .env file
+export $(grep -v &#39;^#&#39; ../.env | xargs)
+</code></pre><p>There are many ways to
+<a href="https://stackoverflow.com/questions/19331497/set-environment-variables-from-file-of-key-value-pairs">Set environment variables</a>
+in Bash.</p>
+<p>Of all the methods listed there, it is a clean, readable method.</p>
+<p>The .env file only contains 3 parameters of very short length and no spaces.</p>
+<p>So it doesn&rsquo;t need to be anything too complicated.</p>
+<ul>
+<li>It is mostly understandable by people not that familiar with scripting.</li>
+<li>It only adds the parameters from the .env file.</li>
+<li>It doesn&rsquo;t require installing another application (shdotenv).</li>
+</ul>
+<p>Some methods suggest to add &ldquo;export&rdquo; to each line in the .env file and source
+it.</p>
+<p>To me, the .env file should be &ldquo;just parameters, no commands&rdquo;, but if in the
+future it is required, there are other versions that would work.</p>
+<p>A unset method is also listed but it is not needed because the script is run in
+it&rsquo;s own child shell. A child shell can&rsquo;t pass variables back up to the parent
+shell, so the exported variables will disappear as soon as the script finishes
+and exits the child shell.</p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-3776a5e970c624d5151cce3f8ee6b085">6 - Version 1</h1>
+    <div class="lead">An example of a converted from ZOS/DB2 to GnuCOBOL/DB2 program</div>
+	<h1 id="this-is-the-murach-custinq-program-with-just-enough-code-added-to-make-it-work-with-gnucobol-and-ibm-db2-luw">This is the Murach CUSTINQ program with just enough code added to make it work with GnuCOBOL and IBM DB2 LUW.<a class="td-heading-self-link" href="#this-is-the-murach-custinq-program-with-just-enough-code-added-to-make-it-work-with-gnucobol-and-ibm-db2-luw" aria-label="Heading self-link"></a></h1>
+<h2 id="breakdown-of-changes"><a href="/docs/concepts/v1-changes/">Breakdown of Changes</a>.<a class="td-heading-self-link" href="#breakdown-of-changes" aria-label="Heading self-link"></a></h2>
+<pre><code>   IDENTIFICATION DIVISION.
+  *
+   PROGRAM-ID.    CUSTINQ.
+  *
+   ENVIRONMENT DIVISION.
+  *
+   INPUT-OUTPUT SECTION.
+  *
+   FILE-CONTROL.
+  *
+   DATA DIVISION.
+  *
+   FILE SECTION.
+  *
+   WORKING-STORAGE SECTION.
+  *
+   01  SWITCHES.
+  *
+       05  END-OF-INQUIRIES-SW     PIC X   VALUE 'N'.
+           88  END-OF-INQUIRIES            VALUE 'Y'.
+       05  CUSTOMER-FOUND-SW       PIC X.
+           88  CUSTOMER-FOUND              VALUE 'Y'.
+       EXEC SQL
+           INCLUDE SQLCA
+       END-EXEC.
+  *
+  ***** Convert to GnuCOBOL
+  ***** Start of Step 1
+  *     No DCLGEN member to INCLUDE
+  *     Comment this INCLUDE out
+  *    EXEC SQL
+  *        INCLUDE CUSTOMER
+  *    END-EXEC.
+  *
+  *     Add DECLARE TABLE
+       EXEC SQL
+       DECLARE CUSTOMERS TABLE
+       (
+        CUSTNO        CHAR(6) not null,
+           FNAME         CHAR(20) not null,
+           LNAME         CHAR(30) not null,
+           ADDR          CHAR(30) not null,
+           CITY          CHAR(20) not null,
+           STATE         CHAR(2) not null,
+           ZIPCODE       CHAR(10) not null)
+       END-EXEC.
+
+  *     Add DECLARE SECTION
+       EXEC SQL BEGIN DECLARE SECTION END-EXEC.
+   01  Customer-Row.
+       12 CUSTNO     PIC X(06).
+       12 FNAME      PIC X(20).
+       12 LNAME      PIC X(30).
+       12 ADDR       PIC X(30).
+       12 CITY       PIC X(20).
+       12 STATE      PIC X(02).
+       12 ZIPCODE    PIC X(10).
+
+  *    This is hardcoded for the MURACH DB.
+  *    You might need to update this for your DB.
+   01  DB-Connection-Info.
+       12 DB-Alias                PIC X(8) VALUE 'MURACH'.
+       12 DB-User-ID              PIC X(10).
+       12 DB-Password.
+          15 DB-Passwd-Length     PIC S9(4) COMP-5  VALUE 0.
+          15 DB-Passwd-Name       PIC X(18).
+       EXEC SQL END DECLARE SECTION END-EXEC.
+
+  *     Add status check for connection info.
+   01  WS-SQL-STATUS                PIC S9(9) COMP-5.
+       88 SQL-STATUS-OK             VALUE    0.
+       88 SQL-STATUS-NOT-FOUND      VALUE  100.
+       88 SQL-STATUS-DUP            VALUE -803.
+
+  ***** End of Step 1
+
+   PROCEDURE DIVISION.
+  *
+   000-DISPLAY-CUSTOMER-ROWS.
+  *     Step 2
+  *     Add Paragraph to connect to the DB
+       PERFORM 9800-Connect-to-DB1.
+  *
+       PERFORM 100-DISPLAY-CUSTOMER-ROW
+           UNTIL END-OF-INQUIRIES.
+       STOP RUN.
+  *
+   100-DISPLAY-CUSTOMER-ROW.
+  *
+       PERFORM 110-ACCEPT-CUSTOMER-NUMBER.
+       IF NOT END-OF-INQUIRIES
+           MOVE 'Y' TO CUSTOMER-FOUND-SW
+           PERFORM 120-GET-CUSTOMER-ROW
+           IF CUSTOMER-FOUND
+               PERFORM 130-DISPLAY-CUSTOMER-LINES
+           ELSE
+               PERFORM 140-DISPLAY-ERROR-LINES.
+  *
+   110-ACCEPT-CUSTOMER-NUMBER.
+  *
+       DISPLAY '------------------------------------------------'.
+       DISPLAY 'KEY IN THE NEXT CUSTOMER NUMBER AND PRESS ENTER,'.
+       DISPLAY 'OR KEY IN 999999 AND PRESS ENTER TO QUIT.'.
+       ACCEPT CUSTNO.
+       IF CUSTNO = '999999'
+           MOVE 'Y' TO END-OF-INQUIRIES-SW.
+  *
+   120-GET-CUSTOMER-ROW.
+  *
+       EXEC SQL
+           SELECT CUSTNO,    FNAME,       LNAME,
+                  ADDR,      CITY,        STATE,
+                  ZIPCODE
+           INTO  :CUSTNO,       :FNAME,          :LNAME,
+                 :ADDR,         :CITY,           :STATE,
+                 :ZIPCODE
+           FROM   CUSTOMERS
+               WHERE  CUSTNO = :CUSTNO
+       END-EXEC.
+  *
+       IF SQLCODE NOT = 0
+           MOVE 'N' TO CUSTOMER-FOUND-SW.
+  *
+   130-DISPLAY-CUSTOMER-LINES.
+  *
+       DISPLAY '------------------------------------------------'.
+       DISPLAY '   CUSTOMER ' CUSTNO.
+       DISPLAY '   NAME     ' FNAME ' ' LNAME.
+       DISPLAY '   ADDRESS  ' ADDR.
+       DISPLAY '            ' CITY ' ' STATE ' '
+                              ZIPCODE.
+  *
+   140-DISPLAY-ERROR-LINES.
+  *
+       DISPLAY '------------------------------------------------'.
+       DISPLAY '   CUSTOMER NUMBER ' CUSTNO ' NOT FOUND.'.
+  *
+  *     Step 2 - the actual connection.
+   9800-Connect-to-DB1.
+       PERFORM 9810-Setup-DB1-Connection.
+       IF SQL-STATUS-OK
+          CONTINUE
+       ELSE
+          DISPLAY &quot;*** The DB connection is not valid!***&quot;
+          DISPLAY &quot;Exiting the program.!&quot;
+          GOBACK
+       END-IF.
+
+   9810-Setup-DB1-Connection.
+       PERFORM 9811-Get-Credentials.
+       PERFORM 9812-Create-Connection-To-DB1.
+
+   9811-Get-Credentials.
+       DISPLAY &quot;CUSTINQ: Need userid and password&quot;.
+
+       DISPLAY &quot;Enter your user id (default none): &quot;
+            WITH NO ADVANCING.
+       ACCEPT DB-User-ID.
+
+       DISPLAY &quot;Enter your password : &quot; WITH NO ADVANCING
+       ACCEPT DB-Passwd-Name.
+
+  * Passwords in a CONNECT statement must be entered in a VARCHAR
+  * format with the length of the input string.
+       INSPECT DB-Passwd-Name
+          TALLYING DB-Passwd-Length
+          FOR CHARACTERS BEFORE INITIAL &quot; &quot;.
+
+   9812-Create-Connection-To-DB1.
+       PERFORM 9814-Connect-To-DB1
+       IF SQL-STATUS-OK
+          CONTINUE
+       ELSE
+          DISPLAY &quot;CUSTINQ: userid and/or password invalid&quot;
+          DISPLAY &quot;CUSTINQ: Can not connect, exiting&quot;
+          GOBACK
+       END-IF.
+
+   9814-Connect-To-DB1.
+       EXEC SQL CONNECT TO :DB-Alias
+            USER :DB-User-ID
+            USING :DB-Passwd-Name
+          END-EXEC.
+       MOVE SQLCODE TO WS-SQL-STATUS.
+</code></pre>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-4fe63ff2bc6099bf38874e43f790cd0b">7 - Version 2</h1>
+    <div class="lead">An example of an enhanced DB2 GnuCOBOL program using GETDBID.</div>
+	<h1 id="this-is-the-updated-custinq-program-from-the-murach-book">This is the updated CUSTINQ program from the Murach book<a class="td-heading-self-link" href="#this-is-the-updated-custinq-program-from-the-murach-book" aria-label="Heading self-link"></a></h1>
+<h2 id="code-getdbidcbl">Code: GETDBID.cbl<a class="td-heading-self-link" href="#code-getdbidcbl" aria-label="Heading self-link"></a></h2>
+<p>This is a simple COBOL pgm that can be called by GnuCOBOL programs.</p>
+<p>It has the userid and password embedded within it.</p>
+<p>Calling this bypasses the ACCEPT of the userid and password.</p>
+<p>Copy the text to tcbl/GETDBID.cbl</p>
+<p>Change the userid and password to the ones on your system.</p>
+<p>NOTE: Just replace the text, make sure the &rsquo; surrounding the text is present.</p>
+<pre><code>  **********************************************************
+  * Program name:    GETDBID
+  * Original author: David Stagowski
+  *
+  *    Description: This is a called module to supply the
+  *       the userid and password for the database.
+  *    This was written because I got tired of typing them in
+  *    everytime I ran the program.
+  *
+  * Maintenence Log
+  * Date       Author        Maintenance Requirement
+  * ---------  ------------  -------------------------------
+  * 2020-08-18 dastagg
+  *
+  *
+  **********************************************************
+   IDENTIFICATION DIVISION.
+   PROGRAM-ID. GETDBID.
+   DATA DIVISION.
+   WORKING-STORAGE SECTION.
+   LINKAGE SECTION.
+   01 DB-User-ID              PIC X(10).
+   01 DB-Passwd-Name          PIC X(18).
+
+   PROCEDURE DIVISION USING DB-User-ID, DB-Passwd-Name.
+
+
+       MOVE 'userid' TO DB-User-ID.
+       MOVE 'password' TO DB-Passwd-Name.
+
+       GOBACK.
+</code></pre>
+<h2 id="change-to-custinq">Change to CUSTINQ<a class="td-heading-self-link" href="#change-to-custinq" aria-label="Heading self-link"></a></h2>
+<p>Then replace this code:</p>
+<pre><code>   9811-Get-Credentials.
+       DISPLAY &quot;CUSTINQ: Need userid and password&quot;.
+
+       DISPLAY &quot;Enter your user id (default none): &quot;
+            WITH NO ADVANCING.
+       ACCEPT DB-User-ID.
+
+       DISPLAY &quot;Enter your password : &quot; WITH NO ADVANCING
+       ACCEPT DB-Passwd-Name.
+</code></pre>
+<p>With this code:</p>
+<pre><code>   9811-Get-Credentials.
+       CALL 'GETDBID' USING DB-User-ID, DB-Passwd-Name.
+</code></pre>
+<h2 id="change-to-compile-script">Change to Compile script<a class="td-heading-self-link" href="#change-to-compile-script" aria-label="Heading self-link"></a></h2>
+<p>In order to use this, the Compile script has to be changed to add GETDBID to the
+compile step.</p>
+<h3 id="previous-version">Previous version:<a class="td-heading-self-link" href="#previous-version" aria-label="Heading self-link"></a></h3>
+<pre tabindex="0"><code>#!/bin/bash
+
+# Program parms
+PGM=CUSTINQ
+
+# DB2 Load Libraries
+export LOADLIB=&#34;$DB2_HOME/lib64&#34;
+
+# COBOL and SQL Copy Libraries
+export COBCOPY=&#34;../cpy&#34;
+export SQLCOPY=&#34;$DB2_HOME/include/cobol_mf&#34;
+
+# Clean up
+rm ../cbl/$PGM.bnd
+rm ../tcbl/$PGM.cbl
+rm ../bin/$PGM
+
+# DB2 Prep and Bind
+db2 -tvf ../sql/$PGM.sql
+
+read -p &#34;Press any key to resume&#34;
+
+# Compile
+cobc -std=default -x -o ../bin/$PGM ../tcbl/$PGM.cbl \
+     -static \
+     -I $SQLCOPY \
+     -I $COBCOPY \
+     -L $LOADLIB \
+     -l db2 \
+     -Wall \
+     -O
+
+# Check return code
+if [ &#34;$?&#34; -eq 0 ]; then
+    echo &#34;Complier Return code was ZERO.&#34;
+else
+    echo &#34;Complier Return code not ZERO.&#34;
+fi
+</code></pre><h3 id="new-version">New version<a class="td-heading-self-link" href="#new-version" aria-label="Heading self-link"></a></h3>
+<pre tabindex="0"><code>#!/bin/bash
+
+# Program parms
+RPGM=CUSTINQ
+PGM=CUSTINQ
+LLM=GETDBID
+
+# DB2 Load Libraries
+export LOADLIB=&#34;$DB2_HOME/lib64&#34;
+
+# COBOL and SQL Copy Libraries
+export COBCOPY=&#34;../cpy&#34;
+export SQLCOPY=&#34;$DB2_HOME/include/cobol_mf&#34;
+
+# Clean up
+rm ../cbl/$PGM.bnd
+rm ../tcbl/$PGM.cbl
+rm ../bin/$RPGM
+
+# DB2 Prep and Bind
+db2 -tvf ../sql/$PGM.sql
+
+read -p &#34;Press any key to resume&#34;
+
+# Compile
+cobc -std=default -x -o ../bin/$RPGM ../tcbl/$PGM.cbl ../tcbl/$LLM.cbl \
+     -static \
+     -I $SQLCOPY \
+     -I $COBCOPY \
+     -L $LOADLIB \
+     -l db2 \
+     -Wall \
+     -O
+
+# Check return code
+if [ &#34;$?&#34; -eq 0 ]; then
+    echo &#34;Complier Return code was ZERO.&#34;
+else
+    echo &#34;Complier Return code not ZERO.&#34;
+fi
+</code></pre>
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-5e58b4546e0bf9307f1234af345ddca1">8 - Version 3</h1>
+    <div class="lead">An example of an enhanced DB2 GnuCOBOL program using ACCEPT FROM ENVIRONMENT</div>
+	<h1 id="this-is-the-murach-custinq-program-with-just-enough-code-added-to-make-it-work-with-gnucobol-and-ibm-db2-luw">This is the Murach CUSTINQ program with just enough code added to make it work with GnuCOBOL and IBM DB2 LUW.<a class="td-heading-self-link" href="#this-is-the-murach-custinq-program-with-just-enough-code-added-to-make-it-work-with-gnucobol-and-ibm-db2-luw" aria-label="Heading self-link"></a></h1>
+<p>From the user&rsquo;s perspective, the result is the same.</p>
+<p>It is only the structure of the program that is different.</p>
+<h2 id="the-env-file">The .env file<a class="td-heading-self-link" href="#the-env-file" aria-label="Heading self-link"></a></h2>
+<pre tabindex="0"><code># DB1 Connection parameters
+db2name=name
+username=userid
+password=passwd
+</code></pre><p>The compile script</p>
+<pre tabindex="0"><code>#!/bin/bash
+
+# Set Up variables
+
+# Program to run
+PGM=CUSTINQ
+
+# DB2 Load Libraries
+export LOADLIB=&#34;$DB2_HOME/lib64&#34;
+
+# COBOL and SQL Copy Libraries
+export COBCOPY=&#34;../cpy&#34;
+export SQLCOPY=&#34;$DB2_HOME/include/cobol_mf&#34;
+
+# Delete previous versions
+rm ../cbl/$PGM.bnd
+rm ../tcbl/$PGM.cbl
+rm ../bin/$PGM
+
+# DB2 Prep and Bind
+db2 -tvf ../sql/$PGM.sql
+
+read -p &#34;Press any key to resume&#34;
+
+# Compile
+cobc -std=default -x -o ../bin/$PGM ../tcbl/$PGM.cbl \
+     -static \
+     -I $SQLCOPY \
+     -I $COBCOPY \
+     -L $LOADLIB \
+     -l db2 \
+     -Wall \
+     -O
+
+# Check return code
+if [ &#34;$?&#34; -eq 0 ]; then
+    echo &#34;SUCCESS: Compile Return code is ZERO.&#34;
+else
+    echo &#34;FAIL: Compile Return code is NOT ZERO.&#34;
+fi
+</code></pre><p>The run script</p>
+<pre tabindex="0"><code>#!/bin/bash
+
+# Set Up variables
+# Program to run
+PGM=CUSTINQ
+
+# Export the environment variables in the .env file
+export $(grep -v &#39;^#&#39; ../.env | xargs)
+
+# run program
+../bin/$PGM
+</code></pre><p>The program.</p>
+<pre><code>   IDENTIFICATION DIVISION.
+  *
+   PROGRAM-ID.    CUSTINQ.
+  *
+   ENVIRONMENT DIVISION.
+  *
+   INPUT-OUTPUT SECTION.
+  *
+   FILE-CONTROL.
+  *
+   DATA DIVISION.
+  *
+   FILE SECTION.
+  *
+   WORKING-STORAGE SECTION.
+  *
+   01  SWITCHES.
+  *
+       05  END-OF-INQUIRIES-SW     PIC X   VALUE 'N'.
+           88  END-OF-INQUIRIES            VALUE 'Y'.
+       05  CUSTOMER-FOUND-SW       PIC X.
+           88  CUSTOMER-FOUND              VALUE 'Y'.
+       EXEC SQL
+           INCLUDE SQLCA
+       END-EXEC.
+  *
+  ***** Convert to GnuCOBOL
+  ***** Start of Step 1
+  *     No DCLGEN member to INCLUDE
+  *     Comment this INCLUDE out
+  *    EXEC SQL
+  *        INCLUDE CUSTOMER
+  *    END-EXEC.
+  *
+  *     Add DECLARE TABLE
+       EXEC SQL
+       DECLARE CUSTOMERS TABLE
+       (
+        CUSTNO        CHAR(6) not null,
+           FNAME         CHAR(20) not null,
+           LNAME         CHAR(30) not null,
+           ADDR          CHAR(30) not null,
+           CITY          CHAR(20) not null,
+           STATE         CHAR(2) not null,
+           ZIPCODE       CHAR(10) not null)
+       END-EXEC.
+
+  *     Add DECLARE SECTION
+       EXEC SQL BEGIN DECLARE SECTION END-EXEC.
+   01  Customer-Row.
+       12 CUSTNO     PIC X(06).
+       12 FNAME      PIC X(20).
+       12 LNAME      PIC X(30).
+       12 ADDR       PIC X(30).
+       12 CITY       PIC X(20).
+       12 STATE      PIC X(02).
+       12 ZIPCODE    PIC X(10).
+
+  *    DB1 connection parameters.
+   01  DB1-DBName                 PIC X(8).
+   01  DB1-User-ID                PIC X(10).
+   01  DB1-Password.
+       49 DB1-Passwd-Length       PIC S9(4) COMP-5  VALUE 0.
+       49 DB1-Passwd-Name         PIC X(18).
+       EXEC SQL END DECLARE SECTION END-EXEC.
+
+  *     Add status check for connection info.
+   01  WS-SQL-STATUS                PIC S9(9) COMP-5.
+       88 SQL-STATUS-OK             VALUE    0.
+       88 SQL-STATUS-NOT-FOUND      VALUE  100.
+       88 SQL-STATUS-DUP            VALUE -803.
+
+  ***** End of Step 1
+
+   PROCEDURE DIVISION.
+  *
+   000-DISPLAY-CUSTOMER-ROWS.
+  *     Step 2
+  *     Add Paragraph to connect to the DB
+       PERFORM 9800-Connect-to-DB1.
+  *
+       PERFORM 100-DISPLAY-CUSTOMER-ROW
+           UNTIL END-OF-INQUIRIES.
+       STOP RUN.
+  *
+   100-DISPLAY-CUSTOMER-ROW.
+  *
+       PERFORM 110-ACCEPT-CUSTOMER-NUMBER.
+       IF NOT END-OF-INQUIRIES
+           MOVE 'Y' TO CUSTOMER-FOUND-SW
+           PERFORM 120-GET-CUSTOMER-ROW
+           IF CUSTOMER-FOUND
+               PERFORM 130-DISPLAY-CUSTOMER-LINES
+           ELSE
+               PERFORM 140-DISPLAY-ERROR-LINES.
+  *
+   110-ACCEPT-CUSTOMER-NUMBER.
+  *
+       DISPLAY '------------------------------------------------'.
+       DISPLAY 'KEY IN THE NEXT CUSTOMER NUMBER AND PRESS ENTER,'.
+       DISPLAY 'OR KEY IN 999999 AND PRESS ENTER TO QUIT.'.
+       ACCEPT CUSTNO.
+       IF CUSTNO = '999999'
+           MOVE 'Y' TO END-OF-INQUIRIES-SW.
+  *
+   120-GET-CUSTOMER-ROW.
+  *
+       EXEC SQL
+           SELECT CUSTNO,    FNAME,       LNAME,
+                  ADDR,      CITY,        STATE,
+                  ZIPCODE
+           INTO  :CUSTNO,       :FNAME,          :LNAME,
+                 :ADDR,         :CITY,           :STATE,
+                 :ZIPCODE
+           FROM   CUSTOMERS
+               WHERE  CUSTNO = :CUSTNO
+       END-EXEC.
+  *
+       IF SQLCODE NOT = 0
+           MOVE 'N' TO CUSTOMER-FOUND-SW.
+  *
+   130-DISPLAY-CUSTOMER-LINES.
+  *
+       DISPLAY '------------------------------------------------'.
+       DISPLAY '   CUSTOMER ' CUSTNO.
+       DISPLAY '   NAME     ' FNAME ' ' LNAME.
+       DISPLAY '   ADDRESS  ' ADDR.
+       DISPLAY '            ' CITY ' ' STATE ' '
+                              ZIPCODE.
+  *
+   140-DISPLAY-ERROR-LINES.
+  *
+       DISPLAY '------------------------------------------------'.
+       DISPLAY '   CUSTOMER NUMBER ' CUSTNO ' NOT FOUND.'.
+  *
+  *     Step 2 - the actual connection.
+   9800-Connect-to-DB1.
+       PERFORM 9810-Setup-DB1-Connection.
+       IF SQL-STATUS-OK
+          CONTINUE
+       ELSE
+          DISPLAY &quot;*** The DB connection is not valid!***&quot;
+          DISPLAY &quot;Exiting the program.!&quot;
+          GOBACK
+       END-IF.
+
+   9810-Setup-DB1-Connection.
+       PERFORM 9811-Get-Credentials.
+       PERFORM 9812-Create-Connection-To-DB1.
+
+   9811-Get-Credentials.
+       ACCEPT DB1-DBName FROM ENVIRONMENT 'db2name'.
+       ACCEPT DB1-User-ID FROM ENVIRONMENT 'username'.
+       ACCEPT DB1-Passwd-Name FROM ENVIRONMENT 'password'.
+
+  *    Passwords in a CONNECT statement should be entered
+  *    in a VARCHAR format with the length of the input string.
+       INSPECT DB1-Passwd-Name
+          TALLYING DB1-Passwd-Length
+          FOR CHARACTERS BEFORE INITIAL &quot; &quot;.
+
+  D    DISPLAY &quot;DB1-DBName &quot; DB1-DBName.
+  D    DISPLAY &quot;DB1-User-ID &quot; DB1-User-ID.
+  D    DISPLAY &quot;DB1-Passwd-Name &quot; DB1-Passwd-Name.
+
+   9812-Create-Connection-To-DB1.
+       PERFORM 9814-Connect-To-DB1
+       IF SQL-STATUS-OK
+          CONTINUE
+       ELSE
+          DISPLAY &quot;CUSTINQ: userid and/or password invalid&quot;
+          DISPLAY &quot;CUSTINQ: Can not connect, exiting&quot;
+          GOBACK
+       END-IF.
+
+   9814-Connect-To-DB1.
+       EXEC SQL
+            CONNECT TO :DB1-DBName
+            USER :DB1-User-ID
+            USING :DB1-Password
+          END-EXEC.
+       MOVE SQLCODE TO WS-SQL-STATUS.
+</code></pre>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-8f5727da6084a300a281606ee56a82b9">9 - Version 4</h1>
+    <div class="lead">My version of CUSTINQ calling GETDBID</div>
+	<p>From the user&rsquo;s perspective, the result is the same.</p>
+<p>It is only the structure of the program that is different. The program.</p>
+<pre><code>  **********************************************************
+  * Program name:    CUSTINQ
+  * Original author: David Stagowski
+  *
+  *    Description: Query the Customer table.
+  *
+  * Maintenance Log
+  * Date       Author        Maintenance Requirement
+  * ---------- ------------  --------------------------------
+  * 2020-09-03 dastagg       Created to learn.
+  * 20XX-XX-XX               If you change me, change this.
+  *
+  **********************************************************
+   IDENTIFICATION DIVISION.
+   PROGRAM-ID. CUSTINQ.
+
+   ENVIRONMENT DIVISION.
+   CONFIGURATION SECTION.
+  * SOURCE-COMPUTER.   IBM WITH DEBUGGING MODE.
+
+   DATA DIVISION.
+   WORKING-STORAGE SECTION.
+       EXEC SQL
+           INCLUDE SQLCA
+       END-EXEC.
+
+       EXEC SQL
+       DECLARE CUSTOMERS TABLE
+       (
+        CUSTNO        CHAR(6) not null,
+        FNAME         CHAR(20) not null,
+        LNAME         CHAR(30) not null,
+        ADDR          CHAR(30) not null,
+        CITY          CHAR(20) not null,
+        STATE         CHAR(2) not null,
+        ZIPCODE       CHAR(10) not null)
+       END-EXEC.
+
+       EXEC SQL BEGIN DECLARE SECTION END-EXEC.
+   01  HV-Customer-Row.
+       12 HV-Cust-Number          PIC X(06).
+       12 HV-Cust-First-Name      PIC X(20).
+       12 HV-Cust-Last-Name       PIC X(30).
+       12 HV-Cust-Address         PIC X(30).
+       12 HV-Cust-City            PIC X(20).
+       12 HV-Cust-State           PIC X(02).
+       12 HV-Cust-ZipCode         PIC X(10).
+
+  *    This is hardcoded for the MURACH DB.
+  *    You might need to update this for your DB.
+   01  DB-Connection-Info.
+       12 DB-Alias                PIC X(8) VALUE 'MURACH'.
+       12 DB-User-ID              PIC X(10).
+       12 DB-Password.
+          15 DB-Passwd-Length     PIC S9(4) COMP-5  VALUE 0.
+          15 DB-Passwd-Name       PIC X(18).
+       EXEC SQL END DECLARE SECTION END-EXEC.
+  *******************
+
+   01 WS-SQL-STATUS                PIC S9(9) COMP-5.
+      88 SQL-STATUS-OK             VALUE    0.
+      88 SQL-STATUS-NOT-FOUND      VALUE  100.
+      88 SQL-STATUS-DUP            VALUE -803.
+
+   01  WS-Application-Flags.
+       12 WS-Inquiry-Flag          PIC X.
+          88 WS-Keep-Looking       VALUE 'Y'.
+          88 WS-Stop-Looking       VALUE 'N'.
+       12 WS-Find-Customer-Flag    PIC X.
+          88 WS-Customer-Found     VALUE 'Y'.
+          88 WS-Customer-Not-Found VALUE 'N'.
+
+   01  WS-Called-Programs.
+       12 WS-GetDBId               PIC X(8) VALUE SPACES.
+
+   01 EOJ-Display-Messages.
+       12 EOJ-End-Message PIC X(042) VALUE
+          &quot;*** Program CUSTINQ - End of Run Messages&quot;.
+
+   PROCEDURE DIVISION.
+   0000-Mainline.
+       PERFORM 1000-Begin-Job.
+       PERFORM 2000-Process.
+       PERFORM 3000-End-Job.
+       GOBACK.
+
+   1000-Begin-Job.
+       PERFORM 9800-Connect-to-DB1.
+       IF SQL-STATUS-OK
+          SET WS-Keep-Looking TO TRUE
+       END-IF.
+
+   2000-Process.
+       PERFORM 2100-Display-Customer
+          UNTIL WS-Stop-Looking.
+
+   2100-Display-Customer.
+       PERFORM 2110-Accept-Customer-Number.
+       IF WS-Keep-Looking
+          PERFORM 2120-Get-Customer-Row
+          IF WS-Customer-Found
+             PERFORM 2130-Display-Customer-Lines
+          ELSE
+             PERFORM 2140-Display-Error-Lines
+          END-IF
+       END-IF.
+
+   2110-Accept-Customer-Number.
+       DISPLAY '-------------Customer Inquiry--------------------'.
+       DISPLAY '-------------------------------------------------'.
+       DISPLAY 'Key in the next Customer Number and press Enter,'.
+       DISPLAY 'or key in 999999 and press Enter to quit.'.
+       ACCEPT HV-Cust-Number.
+       IF HV-Cust-Number = '999999'
+          SET WS-Stop-Looking TO TRUE
+       END-IF.
+
+   2120-Get-Customer-Row.
+       PERFORM 5000-Read-DB1.
+
+   2130-Display-Customer-Lines.
+       DISPLAY '-------------Customer Inquiry--------------------'.
+       DISPLAY '-------------------------------------------------'.
+       DISPLAY ' Customer: '
+          HV-Cust-Number.
+       DISPLAY '     Name: '
+          FUNCTION TRIM(HV-Cust-First-Name), SPACE,
+          FUNCTION TRIM(HV-Cust-Last-Name).
+       DISPLAY '  Address: '
+          FUNCTION TRIM(HV-Cust-Address).
+       DISPLAY '           '
+          FUNCTION TRIM(HV-Cust-City), SPACE,
+          HV-Cust-State, SPACE, HV-Cust-ZipCode.
+       DISPLAY '-------------------------------------------------'.
+
+   2140-Display-Error-Lines.
+       DISPLAY '-------------Customer Inquiry--------------------'.
+       DISPLAY '-------------------------------------------------'.
+       DISPLAY ' Customer: ' HV-Cust-Number ' was not found.'.
+
+   3000-End-Job.
+       EXEC SQL CONNECT RESET END-EXEC.
+       MOVE SQLCODE TO WS-SQL-STATUS.
+
+   5000-Read-DB1.
+       EXEC SQL
+          SELECT CUSTNO, FNAME, LNAME,
+                 ADDR, CITY, STATE,
+                 ZIPCODE
+          INTO
+             :HV-Cust-Number,
+             :HV-Cust-First-Name,
+             :HV-Cust-Last-Name,
+             :HV-Cust-Address,
+             :HV-Cust-City,
+             :HV-Cust-State,
+             :HV-Cust-ZipCode
+          FROM CUSTOMERS
+             WHERE CUSTNO = :HV-Cust-Number
+       END-EXEC.
+       MOVE SQLCODE TO WS-SQL-STATUS.
+       IF SQL-STATUS-OK
+          SET WS-Customer-Found TO TRUE
+       ELSE
+          IF SQL-STATUS-NOT-FOUND
+             SET WS-Customer-Not-Found TO TRUE
+          ELSE
+             DISPLAY &quot;*** WARNING ***&quot;
+             DISPLAY &quot;There was a problem Fetching the cursor.&quot;
+             DISPLAY &quot;SQLCODE = &quot; SQLCODE
+             PERFORM 3000-End-Job
+             MOVE 8 TO RETURN-CODE
+             GOBACK
+          END-IF
+       END-IF.
+
+   9800-Connect-to-DB1.
+       PERFORM 9810-Setup-DB1-Connection.
+       IF SQL-STATUS-OK
+          CONTINUE
+       ELSE
+          DISPLAY &quot;*** The DB connection is not valid!***&quot;
+          DISPLAY &quot;Exiting the program.!&quot;
+          GOBACK
+       END-IF.
+
+   9810-Setup-DB1-Connection.
+       PERFORM 9811-Get-Credentials.
+       PERFORM 9812-Create-Connection-To-DB1.
+
+   9811-Get-Credentials.
+       MOVE 'GETDBID' TO WS-GetDBId
+       CALL WS-GetDBId USING DB-User-ID, DB-Passwd-Name.
+  * Passwords in a CONNECT statement must be entered in a VARCHAR
+  * format with the length of the input string.
+       INSPECT DB-Passwd-Name
+          TALLYING DB-Passwd-Length
+          FOR CHARACTERS BEFORE INITIAL &quot; &quot;.
+
+   9812-Create-Connection-To-DB1.
+       PERFORM 9814-Connect-To-DB1
+       IF SQL-STATUS-OK
+          PERFORM 9816-Create-Cursor-DB1
+          IF SQL-STATUS-OK
+             PERFORM 9818-Open-Cursor-DB1
+          END-IF
+       END-IF.
+
+   9814-Connect-To-DB1.
+       EXEC SQL CONNECT TO :DB-Alias
+            USER :DB-User-ID
+            USING :DB-Passwd-Name
+          END-EXEC.
+       MOVE SQLCODE TO WS-SQL-STATUS.
+
+   9816-Create-Cursor-DB1.
+  *    Parms for DB1-C1
+  *D     DISPLAY &quot;Nothing to do here.&quot;.
+  *    As an example:
+  *     MOVE &quot;DESIGNER&quot; TO HV-Job-Title.
+
+   9818-Open-Cursor-DB1.
+  *    This would be where you open a cursor.
+  *    Not needed for this program.
+</code></pre>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-23491b0465cb710cd189f204d219be85">10 - Version 5</h1>
+    <div class="lead">My version of CUSTINQ accepting Environment Variable set from a .env file</div>
+	<p>From the user&rsquo;s perspective, the result is the same.</p>
+<p>It is only the structure of the program that is different. The .env file</p>
+<h1 id="db1-connection-parameters">DB1 Connection parameters<a class="td-heading-self-link" href="#db1-connection-parameters" aria-label="Heading self-link"></a></h1>
+<pre tabindex="0"><code>db2name=name
+username=userid
+password=passwd
+</code></pre><p>The compile script</p>
+<pre tabindex="0"><code>#!/bin/bash
+
+# Set Up variables
+
+# Program to run
+PGM=CUSTINQ
+
+# DB2 Load Libraries
+export LOADLIB=&#34;$DB2_HOME/lib64&#34;
+
+# COBOL and SQL Copy Libraries
+export COBCOPY=&#34;../cpy&#34;
+export SQLCOPY=&#34;$DB2_HOME/include/cobol_mf&#34;
+
+# Delete previous versions
+rm ../cbl/$PGM.bnd
+rm ../tcbl/$PGM.cbl
+rm ../bin/$PGM
+
+# DB2 Prep and Bind
+db2 -tvf ../sql/$PGM.sql
+
+read -p &#34;Press any key to resume&#34;
+
+# Compile
+cobc -std=default -x -o ../bin/$PGM ../tcbl/$PGM.cbl \
+     -static \
+     -I $SQLCOPY \
+     -I $COBCOPY \
+     -L $LOADLIB \
+     -l db2 \
+     -Wall \
+     -O
+
+# Check return code
+if [ &#34;$?&#34; -eq 0 ]; then
+    echo &#34;SUCCESS: Compile Return code is ZERO.&#34;
+else
+    echo &#34;FAIL: Compile Return code is NOT ZERO.&#34;
+fi
+</code></pre><p>The run script</p>
+<pre tabindex="0"><code>#!/bin/bash
+
+# Set Up variables
+# Program to run
+PGM=CUSTINQ
+
+# Export the environment variables in the .env file
+export $(grep -v &#39;^#&#39; ../.env | xargs)
+
+# run program
+../bin/$PGM
+
+# Leaving this here as an example but not required.
+# Remove the variables in the .env file from the environment
+# unset $(grep -v &#39;^#&#39; ../.env | sed -E &#39;s/(.*)=.*/\1/&#39; | xargs)
+</code></pre><p>The program.</p>
+<pre><code>  **********************************************************
+  * Program name:    CUSTINQ
+  * Original author: David Stagowski
+  *
+  *    Description: Query the Customer table.
+  *
+  * Maintenance Log
+  * Date       Author        Maintenance Requirement
+  * ---------- ------------  --------------------------------
+  * 2023-03-08 dscobol       Created to learn.
+  * 20XX-XX-XX               If you change me, change this.
+  *
+  **********************************************************
+   IDENTIFICATION DIVISION.
+   PROGRAM-ID. CUSTINQ.
+
+   ENVIRONMENT DIVISION.
+   CONFIGURATION SECTION.
+  * SOURCE-COMPUTER.   IBM WITH DEBUGGING MODE.
+
+   DATA DIVISION.
+   WORKING-STORAGE SECTION.
+       EXEC SQL
+           INCLUDE SQLCA
+       END-EXEC.
+
+       EXEC SQL
+       DECLARE CUSTOMERS TABLE
+       (
+        CUSTNO        CHAR(6) not null,
+        FNAME         CHAR(20) not null,
+        LNAME         CHAR(30) not null,
+        ADDR          CHAR(30) not null,
+        CITY          CHAR(20) not null,
+        STATE         CHAR(2) not null,
+        ZIPCODE       CHAR(10) not null)
+       END-EXEC.
+
+       EXEC SQL BEGIN DECLARE SECTION END-EXEC.
+   01  HV-Customer-Row.
+       12 HV-Cust-Number          PIC X(06).
+       12 HV-Cust-First-Name      PIC X(20).
+       12 HV-Cust-Last-Name       PIC X(30).
+       12 HV-Cust-Address         PIC X(30).
+       12 HV-Cust-City            PIC X(20).
+       12 HV-Cust-State           PIC X(02).
+       12 HV-Cust-ZipCode         PIC X(10).
+
+  *    DB1 connection parameters.
+   01  DB1-DBName                 PIC X(8).
+   01  DB1-User-ID                PIC X(10).
+   01  DB1-Password.
+       49 DB1-Passwd-Length       PIC S9(4) COMP-5  VALUE 0.
+       49 DB1-Passwd-Name         PIC X(18).
+       EXEC SQL END DECLARE SECTION END-EXEC.
+  *******************
+
+   01 WS-SQL-STATUS                PIC S9(9) COMP-5.
+      88 SQL-STATUS-OK             VALUE    0.
+      88 SQL-STATUS-NOT-FOUND      VALUE  100.
+      88 SQL-STATUS-DUP            VALUE -803.
+
+   01  WS-Application-Flags.
+       12 WS-Inquiry-Flag          PIC X.
+          88 WS-Keep-Looking       VALUE 'Y'.
+          88 WS-Stop-Looking       VALUE 'N'.
+       12 WS-Find-Customer-Flag    PIC X.
+          88 WS-Customer-Found     VALUE 'Y'.
+          88 WS-Customer-Not-Found VALUE 'N'.
+
+   01 EOJ-Display-Messages.
+       12 EOJ-End-Message PIC X(042) VALUE
+          &quot;*** Program CUSTINQ - End of Run Messages&quot;.
+
+   PROCEDURE DIVISION.
+   0000-Mainline.
+       PERFORM 1000-Begin-Job.
+       PERFORM 2000-Process.
+       PERFORM 3000-End-Job.
+       GOBACK.
+
+   1000-Begin-Job.
+       PERFORM 9800-Connect-to-DB1.
+       IF SQL-STATUS-OK
+          SET WS-Keep-Looking TO TRUE
+       END-IF.
+
+   2000-Process.
+       PERFORM 2100-Display-Customer
+          UNTIL WS-Stop-Looking.
+
+   2100-Display-Customer.
+       PERFORM 2110-Accept-Customer-Number.
+       IF WS-Keep-Looking
+          PERFORM 2120-Get-Customer-Row
+          IF WS-Customer-Found
+             PERFORM 2130-Display-Customer-Lines
+          ELSE
+             PERFORM 2140-Display-Error-Lines
+          END-IF
+       END-IF.
+
+   2110-Accept-Customer-Number.
+       DISPLAY '-------------Customer Inquiry--------------------'.
+       DISPLAY '-------------------------------------------------'.
+       DISPLAY 'Key in the next Customer Number and press Enter,'.
+       DISPLAY 'or key in 999999 and press Enter to quit.'.
+       ACCEPT HV-Cust-Number.
+       IF HV-Cust-Number = '999999'
+          SET WS-Stop-Looking TO TRUE
+       END-IF.
+
+   2120-Get-Customer-Row.
+       PERFORM 5000-Read-DB1.
+
+   2130-Display-Customer-Lines.
+       DISPLAY '-------------Customer Inquiry--------------------'.
+       DISPLAY '-------------------------------------------------'.
+       DISPLAY ' Customer: '
+          HV-Cust-Number.
+       DISPLAY '     Name: '
+          FUNCTION TRIM(HV-Cust-First-Name), SPACE,
+          FUNCTION TRIM(HV-Cust-Last-Name).
+       DISPLAY '  Address: '
+          FUNCTION TRIM(HV-Cust-Address).
+       DISPLAY '           '
+          FUNCTION TRIM(HV-Cust-City), SPACE,
+          HV-Cust-State, SPACE, HV-Cust-ZipCode.
+       DISPLAY '-------------------------------------------------'.
+
+   2140-Display-Error-Lines.
+       DISPLAY '-------------Customer Inquiry--------------------'.
+       DISPLAY '-------------------------------------------------'.
+       DISPLAY ' Customer: ' HV-Cust-Number ' was not found.'.
+
+   3000-End-Job.
+       EXEC SQL CONNECT RESET END-EXEC.
+       MOVE SQLCODE TO WS-SQL-STATUS.
+
+   5000-Read-DB1.
+       EXEC SQL
+          SELECT CUSTNO, FNAME, LNAME,
+                 ADDR, CITY, STATE,
+                 ZIPCODE
+          INTO
+             :HV-Cust-Number,
+             :HV-Cust-First-Name,
+             :HV-Cust-Last-Name,
+             :HV-Cust-Address,
+             :HV-Cust-City,
+             :HV-Cust-State,
+             :HV-Cust-ZipCode
+          FROM CUSTOMERS
+             WHERE CUSTNO = :HV-Cust-Number
+       END-EXEC.
+       MOVE SQLCODE TO WS-SQL-STATUS.
+       IF SQL-STATUS-OK
+          SET WS-Customer-Found TO TRUE
+       ELSE
+          IF SQL-STATUS-NOT-FOUND
+             SET WS-Customer-Not-Found TO TRUE
+          ELSE
+             DISPLAY &quot;*** WARNING ***&quot;
+             DISPLAY &quot;There was a problem Fetching the cursor.&quot;
+             DISPLAY &quot;SQLCODE = &quot; SQLCODE
+             PERFORM 3000-End-Job
+             MOVE 8 TO RETURN-CODE
+             GOBACK
+          END-IF
+       END-IF.
+
+   9800-Connect-to-DB1.
+       PERFORM 9810-Setup-DB1-Connection.
+       IF SQL-STATUS-OK
+          CONTINUE
+       ELSE
+          DISPLAY &quot;*** The DB connection is not valid!***&quot;
+          DISPLAY &quot;Exiting the program.!&quot;
+          GOBACK
+       END-IF.
+
+   9810-Setup-DB1-Connection.
+       PERFORM 9811-Get-Credentials.
+       PERFORM 9812-Create-Connection-To-DB1.
+
+   9811-Get-Credentials.
+       ACCEPT DB1-DBName FROM ENVIRONMENT 'db2name'.
+       ACCEPT DB1-User-ID FROM ENVIRONMENT 'username'.
+       ACCEPT DB1-Passwd-Name FROM ENVIRONMENT 'password'.
+
+  *    Passwords in a CONNECT statement should be entered
+  *    in a VARCHAR format with the length of the input string.
+       INSPECT DB1-Passwd-Name
+          TALLYING DB1-Passwd-Length
+          FOR CHARACTERS BEFORE INITIAL &quot; &quot;.
+
+  D    DISPLAY &quot;DB1-DBName &quot; DB1-DBName.
+  D    DISPLAY &quot;DB1-User-ID &quot; DB1-User-ID.
+  D    DISPLAY &quot;DB1-Passwd-Name &quot; DB1-Passwd-Name.
+
+   9812-Create-Connection-To-DB1.
+       PERFORM 9814-Connect-To-DB1
+       IF SQL-STATUS-OK
+          PERFORM 9816-Create-Cursor-DB1
+          IF SQL-STATUS-OK
+             PERFORM 9818-Open-Cursor-DB1
+          END-IF
+       END-IF.
+
+   9814-Connect-To-DB1.
+       EXEC SQL
+            CONNECT TO :DB1-DBName
+            USER :DB1-User-ID
+            USING :DB1-Password
+          END-EXEC.
+       MOVE SQLCODE TO WS-SQL-STATUS.
+
+   9816-Create-Cursor-DB1.
+  *    Parms for DB1-C1
+  *D     DISPLAY &quot;Nothing to do here.&quot;.
+  *    As an example:
+  *     MOVE &quot;DESIGNER&quot; TO HV-Job-Title.
+
+   9818-Open-Cursor-DB1.
+  *    This would be where you open a cursor.
+  *    Not needed for this program.
+</code></pre>
+
+</div>
+
+
+
+    
+	
+  
+
+
+
+          </main>
+        </div>
+      </div>
+      <footer class="td-footer row d-print-none">
+  <div class="container-fluid">
+    <div class="row mx-md-2">
+      <div class="td-footer__left col-6 col-sm-4 order-sm-1">
+        
+      </div><div class="td-footer__right col-6 col-sm-4 order-sm-3">
+        <ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="GitHub" aria-label="GitHub">
+    <a target="_blank" rel="noopener" href="https://github.com/dscobol" aria-label="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+</ul>
+
+      </div><div class="td-footer__center col-12 col-sm-4 py-2 order-sm-2">
+        <span class="td-footer__copyright">&copy;
+    2020&ndash;2025
+    <span class="td-footer__authors">dscobol | <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a> |</span></span><span class="td-footer__all_rights_reserved">All Rights Reserved</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <script src="/js/main.min.032ba2ecbd3ce89b96bffcfec71c5da352125ee752e9873c3e0098f7c32a6497.js" integrity="sha256-Ayui7L086JuWv/z&#43;xxxdo1ISXudS6Yc8PgCY98MqZJc=" crossorigin="anonymous"></script>
+<script defer src="/js/click-to-copy.min.73478a7d4807698aed7e355eb23f9890ca18fea3158604c8471746d046702bad.js" integrity="sha256-c0eKfUgHaYrtfjVesj&#43;YkMoY/qMVhgTIRxdG0EZwK60=" crossorigin="anonymous"></script>
+<script src='/js/tabpane-persist.js'></script>
+
+  </body>
+</html>

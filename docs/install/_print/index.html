@@ -1,0 +1,727 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="canonical" type="text/html" href="https://dscobol.github.io/docs/install/">
+<link rel="alternate" type="application/rss&#43;xml" href="https://dscobol.github.io/docs/install/index.xml">
+<meta name="robots" content="noindex, nofollow">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>Install Software | dscobol</title>
+<meta name="description" content="How to install the various components to run COBOL on Pop!_OS.">
+<meta property="og:url" content="https://dscobol.github.io/docs/install/">
+  <meta property="og:site_name" content="dscobol">
+  <meta property="og:title" content="Install Software">
+  <meta property="og:description" content="How to install the various components to run COBOL on Pop!_OS.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
+
+  <meta itemprop="name" content="Install Software">
+  <meta itemprop="description" content="How to install the various components to run COBOL on Pop!_OS.">
+  <meta itemprop="dateModified" content="2025-05-24T09:35:12-04:00">
+  <meta itemprop="wordCount" content="175">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Install Software">
+  <meta name="twitter:description" content="How to install the various components to run COBOL on Pop!_OS.">
+<link rel="preload" href="/scss/main.min.587cc9ab2e7ed4cd045ee4c6e380598d6f8ad5201ff3aa9345c816a513404b85.css" as="style" integrity="sha256-WHzJqy5&#43;1M0EXuTG44BZjW&#43;K1SAf86qTRcgWpRNAS4U=" crossorigin="anonymous">
+<link href="/scss/main.min.587cc9ab2e7ed4cd045ee4c6e380598d6f8ad5201ff3aa9345c816a513404b85.css" rel="stylesheet" integrity="sha256-WHzJqy5&#43;1M0EXuTG44BZjW&#43;K1SAf86qTRcgWpRNAS4U=" crossorigin="anonymous">
+<script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+  crossorigin="anonymous"></script>
+<script defer
+  src="https://unpkg.com/lunr@2.3.9/lunr.min.js"
+  integrity="sha384-203J0SNzyqHby3iU6hzvzltrWi/M41wOP5Gu+BiJMz5nwKykbkUx8Kp7iti0Lpli"
+  crossorigin="anonymous"></script>
+
+  </head>
+  <body class="td-section">
+    <header>
+      <nav class="td-navbar js-navbar-scroll" data-bs-theme="dark">
+<div class="container-fluid flex-column flex-md-row">
+  <a class="navbar-brand" href="/"><span class="navbar-brand__logo navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500"><g><path style="fill:#fff" d="M116.8525 421.9722c-5.7041.0-10.3442-4.3127-10.3442-9.6129V88.183c0-5.3002 4.6401-9.6117 10.3442-9.6117H320.858c3.0347.0 9.3959.5498 11.7506 2.6302l.3545.3442 58.905 63.2912c2.3101 2.491 2.9202 8.4928 2.9202 11.3184v256.2039c0 5.3002-4.6407 9.6129-10.3436 9.6129H116.8525z"/><g><g><g><path style="fill:#767676" d="M384.4445 423.2066H116.852c-6.3839.0-11.5786-4.8658-11.5786-10.8474V88.1831c0-5.9804 5.1947-10.8461 11.5786-10.8461h204.0062c.377.0 9.2786.0329 12.568 2.9389l.3947.3833 58.9508 63.337c3.2135 3.4652 3.2514 11.7924 3.2514 12.1593v256.2036C396.0231 418.3408 390.8284 423.2066 384.4445 423.2066zM116.5079 411.9189c.0848.0278.1999.0531.3441.0531h267.5925c.1442.0.2581-.0253.3441-.0531V156.1556c-.0076-.9033-.3593-3.7347-.7034-5.0037l-57.6527-61.9416c-1.4651-.3176-4.4533-.6389-5.5742-.6389H116.852c-.143.0-.2594.024-.3441.0531V411.9189zm267.4533-261.149zM327.0321 89.371v.0013V89.371z"/></g></g></g><g><g><path style="fill:#5b7fc0" d="M189.0874 210.1754l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032s-11.328-2.2733-15.458-6.4032-6.4032-9.6186-6.4056-15.4628c.0012-6.025 2.454-11.4897 6.4116-15.4473C177.5953 212.627 183.0601 210.1742 189.0874 210.1754zm7.993 21.8576c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403S197.0816 234.1722 197.0804 232.033z"/><path style="opacity:.3;fill:#fff" d="M189.0898 210.176c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 212.6276 183.0612 210.176 189.0898 210.176zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 236.239 197.0839 234.2399 197.0839 232.0372z"/><g><defs><path id="SVGID_1_" d="M194.7376 237.6875c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.999 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 234.2399 196.1861 236.239 194.7376 237.6875z"/></defs><clipPath id="SVGID_2_"><use xlink:href="#SVGID_1_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_2_);fill:#fff" d="M190.0704 225.0237c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 225.7247 191.9774 225.0237 190.0704 225.0237z"/><path style="opacity:.13;clip-path:url(#SVGID_2_);fill:#020202" d="M190.0704 225.0237c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 225.7247 191.9774 225.0237 190.0704 225.0237z"/></g><g><defs><path id="SVGID_3_" d="M189.0898 210.176c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 212.6276 183.0612 210.176 189.0898 210.176zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 236.239 197.0839 234.2399 197.0839 232.0372z"/></defs><clipPath id="SVGID_4_"><use xlink:href="#SVGID_3_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_4_);fill:#5b7fc0" d="M172.6595 215.6045c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8612 12.0547.0024 21.8636-9.797 21.8613-21.8612.0024-3.8475-1.0151-7.6326-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 209.1953 176.6171 211.647 172.6595 215.6045z"/></g></g><rect x="198.8952" y="225.1043" style="fill:#5b7fc0" width="122.6266" height="13.8671"/></g><g><path style="fill:#d95140" d="M189.0874 155.7611l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032s-11.328-2.2733-15.458-6.4032-6.4032-9.6186-6.4056-15.4628c.0012-6.0249 2.454-11.4897 6.4116-15.4473C177.5953 158.2128 183.0601 155.7599 189.0874 155.7611zm7.993 21.8577c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403C196.2508 181.7667 197.0816 179.758 197.0804 177.6188z"/><path style="opacity:.3;fill:#fff" d="M189.0898 155.7617c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 158.2134 183.0612 155.7617 189.0898 155.7617zm7.9941 21.8613c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 181.8248 197.0839 179.8256 197.0839 177.623z"/><g><defs><path id="SVGID_5_" d="M194.7376 183.2733c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.9989 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 179.8256 196.1861 181.8248 194.7376 183.2733z"/></defs><clipPath id="SVGID_6_"><use xlink:href="#SVGID_5_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_6_);fill:#fff" d="M190.0704 170.6095c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 171.3104 191.9774 170.6095 190.0704 170.6095z"/><path style="opacity:.13;clip-path:url(#SVGID_6_);fill:#020202" d="M190.0704 170.6095c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 171.3104 191.9774 170.6095 190.0704 170.6095z"/></g><g><defs><path id="SVGID_7_" d="M189.0898 155.7617c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 158.2134 183.0612 155.7617 189.0898 155.7617zm7.9941 21.8613c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 181.8248 197.0839 179.8256 197.0839 177.623z"/></defs><clipPath id="SVGID_8_"><use xlink:href="#SVGID_7_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_8_);fill:#d95140" d="M172.6595 161.1903c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8613 12.0547.0024 21.8636-9.797 21.8613-21.8613.0024-3.8474-1.0151-7.6326-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 154.7811 176.6171 157.2327 172.6595 161.1903z"/></g><rect x="198.8952" y="170.69" style="fill:#d95140" width="122.6266" height="13.8671"/></g><g><g><path style="fill:#56a55c" d="M189.5379 264.6147l.0012-.0012c7.7751.0012 15.0294 4.1862 18.932 10.9235 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032-5.8394.0-11.3281-2.2733-15.458-6.4032-4.13-4.13-6.4032-9.6186-6.4056-15.4628.0012-6.0249 2.454-11.4897 6.4116-15.4472C178.0458 267.0663 183.5105 264.6135 189.5379 264.6147zm7.993 21.8576c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6538 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403C196.7013 290.6202 197.5321 288.6115 197.5309 286.4723z"/><path style="opacity:.3;fill:#fff" d="M189.5403 264.6153c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8065-21.8612-21.8613.0-6.0285 2.4516-11.492 6.4116-15.452C178.0482 267.0669 183.5117 264.6153 189.5403 264.6153zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.6366 290.6783 197.5344 288.6792 197.5344 286.4765z"/><g><defs><path id="SVGID_9_" d="M195.1881 292.1268c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.9989 7.9942-7.9941 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.5344 288.6792 196.6366 290.6783 195.1881 292.1268z"/></defs><clipPath id="SVGID_10_"><use xlink:href="#SVGID_9_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_10_);fill:#fff" d="M190.5209 279.463c-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7446-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9941 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C194.239 280.164 192.4279 279.463 190.5209 279.463z"/><path style="opacity:.13;clip-path:url(#SVGID_10_);fill:#020202" d="M190.5209 279.463c-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7446-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9941 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C194.239 280.164 192.4279 279.463 190.5209 279.463z"/></g><g><defs><path id="SVGID_11_" d="M189.5403 264.6153c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8065-21.8612-21.8613.0-6.0285 2.4516-11.492 6.4116-15.452C178.0482 267.0669 183.5117 264.6153 189.5403 264.6153zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.6366 290.6783 197.5344 288.6792 197.5344 286.4765z"/></defs><clipPath id="SVGID_12_"><use xlink:href="#SVGID_11_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_12_);fill:#56a55c" d="M173.11 270.0439c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8613 12.0547.0024 21.8636-9.797 21.8613-21.8613.0024-3.8474-1.0151-7.6326-2.9353-10.9462-3.8977-6.7325-11.1497-10.9151-18.926-10.9151C182.5311 263.6346 177.0676 266.0863 173.11 270.0439z"/></g></g><rect x="199.3456" y="279.5436" style="fill:#56a55c" width="122.6266" height="13.8671"/></g><g><g><path style="fill:#f1bc42" d="M189.0874 318.7208l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3305-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032s-11.328-2.2733-15.458-6.4032-6.4032-9.6186-6.4056-15.4628c.0012-6.025 2.454-11.4897 6.4116-15.4472C177.5953 321.1724 183.0601 318.7196 189.0874 318.7208zm7.993 21.8576c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403S197.0816 342.7176 197.0804 340.5784z"/><path style="opacity:.3;fill:#fff" d="M189.0898 318.7214c7.7763.0 15.0283 4.1826 18.926 10.915 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8612-12.0547.0024-21.8636-9.8065-21.8612-21.8612.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 321.173 183.0612 318.7214 189.0898 318.7214zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 344.7844 197.0839 342.7853 197.0839 340.5826z"/><g><defs><path id="SVGID_13_" d="M194.7376 346.2329c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.999 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 342.7853 196.1861 344.7844 194.7376 346.2329z"/></defs><clipPath id="SVGID_14_"><use xlink:href="#SVGID_13_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_14_);fill:#fff" d="M190.0704 333.5691c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0834 6.1218 2.8788C193.7885 334.2701 191.9774 333.5691 190.0704 333.5691z"/><path style="opacity:.13;clip-path:url(#SVGID_14_);fill:#020202" d="M190.0704 333.5691c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0834 6.1218 2.8788C193.7885 334.2701 191.9774 333.5691 190.0704 333.5691z"/></g><g><defs><path id="SVGID_15_" d="M189.0898 318.7214c7.7763.0 15.0283 4.1826 18.926 10.915 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8612-12.0547.0024-21.8636-9.8065-21.8612-21.8612.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 321.173 183.0612 318.7214 189.0898 318.7214zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 344.7844 197.0839 342.7853 197.0839 340.5826z"/></defs><clipPath id="SVGID_16_"><use xlink:href="#SVGID_15_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_16_);fill:#f1bc42" d="M172.6595 324.15c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8612 12.0547.0024 21.8636-9.797 21.8613-21.8612.0024-3.8474-1.0151-7.6327-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 317.7407 176.6171 320.1924 172.6595 324.15z"/></g></g><rect x="198.8952" y="333.6497" style="fill:#f1bc42" width="122.6266" height="13.8671"/></g></g></svg></span><span class="navbar-brand__name">dscobol</span></a>
+  <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="/docs/"><span>Docs</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/blog/"><span>Blog</span></a>
+      </li>
+      </ul>
+  </div>
+  <div class="d-none d-lg-block">
+    <div class="td-search td-search--offline">
+  <div class="td-search__icon"></div>
+  <input
+    type="search"
+    class="td-search__input form-control"
+    placeholder="Search this site…"
+    aria-label="Search this site…"
+    autocomplete="off"
+    
+    data-offline-search-index-json-src="/offline-search-index.0d73336c66f814ce37b0fde43ef74cfd.json"
+    data-offline-search-base-href="/"
+    data-offline-search-max-results="10"
+  >
+</div>
+  </div>
+</div>
+</nav>
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
+            
+
+
+
+
+<div class="td-content">
+<div class="pageinfo pageinfo-primary d-print-none">
+<p>
+This is the multi-page printable view of this section.
+<a href="#" onclick="print();return false;">Click here to print</a>.
+</p><p>
+<a href="/docs/install/">Return to the regular view of this page</a>.
+</p>
+</div>
+
+
+
+<h1 class="title">Install Software</h1>
+<div class="lead">How to install the various components to run COBOL on Pop!_OS.</div>
+
+
+
+
+    <ul>
+    
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>1: <a href="#pg-2c91bb6bcc7fe536887513fde179b1e8">Install IBM DB2-LUW</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>1.1: <a href="#pg-6d37e553eb1c0b1b8a0bf4684791c8b5">Install IBM DB2 LUW RDBMS</a></li>
+
+
+    
+  
+    
+    
+	
+<li>1.2: <a href="#pg-ab20326b2c1cfcfa77bb731bc6fc6b62">Install the Sample DB</a></li>
+
+
+    
+  
+    
+    
+	
+<li>1.3: <a href="#pg-f78f28d2a6f979a668b3df7c42a661fd">Create a DB2 DB</a></li>
+
+
+    
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>2: <a href="#pg-8ac668ef71a81e3bea263feef150addc">Install GnuCOBOL.</a></li>
+
+
+    
+  
+
+    </ul>
+
+
+<div class="content">
+      <h3 id="the-environment">The Environment:<a class="td-heading-self-link" href="#the-environment" aria-label="Heading self-link"></a></h3>
+<ul>
+<li>
+<p>The Operating System was created using the
+<strong>pop-os_22.04_amd64_intel_53.iso</strong>.</p>
+</li>
+<li>
+<p>The version of IBM DB2-LUW is <strong>v12.1.1_linuxx64_server_dec.tar.gz</strong>.</p>
+</li>
+<li>
+<p>The version of GnuCOBOL is <strong>gnucobol-3.2.tar.lz</strong>.</p>
+</li>
+</ul>
+<h3 id="a-word-of-caution-about-the-userid-you-selected-as-you-installed-the-os">A word of caution about the userid you selected as you install(ed) the OS<a class="td-heading-self-link" href="#a-word-of-caution-about-the-userid-you-selected-as-you-installed-the-os" aria-label="Heading self-link"></a></h3>
+<p>You create a userid when you install the OS and will probably use that userid to
+run some db2 commands. IBM DB2 LUW has some restrictions regarding the OS
+userid!</p>
+<p>User IDs have the following restrictions and requirements:</p>
+<ul>
+<li>Must have a primary group other than guests, admins, users, and local.</li>
+<li>Can include lowercase letters (a-z), numbers (0-9), and the underscore
+character (_).</li>
+<li>Cannot be longer than eight characters</li>
+<li>Cannot begin with IBM, SYS, SQL, or a number.</li>
+<li>Cannot be a DB2 reserved word (USERS, ADMINS, GUESTS, PUBLIC, or LOCAL), or an
+SQL reserved word.</li>
+<li>Cannot use any user IDs with root privilege for the DB2 instance ID, DAS ID,
+or fenced ID.</li>
+<li>Cannot include accented characters.</li>
+</ul>
+<p>This threw me for awhile because I wanted to use &ldquo;sysop&rdquo; as the userid and then
+the DB2 LUW install would fail.</p>
+
+</div>
+</div>
+
+
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-2c91bb6bcc7fe536887513fde179b1e8">1 - Install IBM DB2-LUW</h1>
+    <div class="lead">Version v12.1.1</div>
+	<h2 id="this-installation">This installation:<a class="td-heading-self-link" href="#this-installation" aria-label="Heading self-link"></a></h2>
+<p>All the installation instructions were created/ran on a Pop!_OS 22.04 LTS
+GNU/Linux distribution.</p>
+<p>The specific version used here was &ldquo;pop-os_22.04_amd64_intel_53.iso&rdquo;</p>
+<h2 id="will-this-work-with-other-ubuntu-based-distributions">Will this work with other &ldquo;Ubuntu based&rdquo; distributions?<a class="td-heading-self-link" href="#will-this-work-with-other-ubuntu-based-distributions" aria-label="Heading self-link"></a></h2>
+<h3 id="linux-mint">Linux Mint.<a class="td-heading-self-link" href="#linux-mint" aria-label="Heading self-link"></a></h3>
+<h4 id="linux-mint-213-virginia-is-based-on-ubuntu-jammy-2204">Linux Mint 21.3 (Virginia) is based on Ubuntu Jammy (22.04).<a class="td-heading-self-link" href="#linux-mint-213-virginia-is-based-on-ubuntu-jammy-2204" aria-label="Heading self-link"></a></h4>
+<p>This did seem to work but I did not investigate it too deeply.</p>
+<h4 id="linux-mint-221-xia-is-based-on-ubuntu-noble-2404">Linux Mint 22.1 (Xia) is based on Ubuntu Noble (24.04).<a class="td-heading-self-link" href="#linux-mint-221-xia-is-based-on-ubuntu-noble-2404" aria-label="Heading self-link"></a></h4>
+<p>This did not work for me.</p>
+<p>A number of programs have changed names with an appended &ldquo;t64&rdquo;.</p>
+<p>I don&rsquo;t have the time right now to investigate how to update or adapt to the new
+time corrected programs.</p>
+<h3 id="ms-windows-wsl">MS Windows WSL<a class="td-heading-self-link" href="#ms-windows-wsl" aria-label="Heading self-link"></a></h3>
+<p>I have no idea.</p>
+<p>I don&rsquo;t use MS Windows so I don&rsquo;t know what it can or can not do.</p>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-6d37e553eb1c0b1b8a0bf4684791c8b5">1.1 - Install IBM DB2 LUW RDBMS</h1>
+    <div class="lead">Install the Database System</div>
+	<h2 id="get-the-software">Get the software<a class="td-heading-self-link" href="#get-the-software" aria-label="Heading self-link"></a></h2>
+<p>Visit the &ldquo;Download IBM Db2 Software Community Edition&rdquo; at
+<a href="https://www.ibm.com/account/reg/signup?formid=urx-33669">Download DB2</a> link.</p>
+<p>You will need an IBM account to download the software. There is no cost to
+create an account and there is no cost to download and run the Db2 Community
+Edition.</p>
+<p>Enter all the information it needs.</p>
+<p>You might have to log back in with your new IBM ID or it may take you to the
+next page.</p>
+<p>You will be presented with some marketing stuff. Choose your options and press
+the Continue button.</p>
+<p>Since this will be installed on a Linux system, click the download link for
+&ldquo;Linux (x64)&rdquo;.</p>
+<p>This will download the file &ldquo;v12.1.1_linuxx64_server_dec.tar.gz&rdquo;.</p>
+<p>If you didn&rsquo;t change anything, the default location for downloads is
+&ldquo;~/Downloads&rdquo;. This is okay.</p>
+<h2 id="prep-for-building-the-software">Prep for building the software<a class="td-heading-self-link" href="#prep-for-building-the-software" aria-label="Heading self-link"></a></h2>
+<h3 id="setup-the-directory-structure">Setup the directory structure<a class="td-heading-self-link" href="#setup-the-directory-structure" aria-label="Heading self-link"></a></h3>
+<p>People have different ways of setting up the structure of their home directory.</p>
+<p>When the OS was created, by default, the following directories were created:</p>
+<pre tabindex="0"><code>.
+├── Desktop
+├── Documents
+├── Downloads
+├── Music
+├── Pictures
+├── Public
+├── Templates
+└── Videos
+</code></pre><p>Open Terminal and add three more directories, Run:</p>
+<pre tabindex="0"><code>cd
+mkdir bin builds dev
+</code></pre><p>The bin and dev directories will be useful later but for now we will focus on
+the builds directory.</p>
+<h2 id="extract-the-downloaded-file">Extract the downloaded file<a class="td-heading-self-link" href="#extract-the-downloaded-file" aria-label="Heading self-link"></a></h2>
+<p>Open Files and go to the Downloads folder.</p>
+<p>Double click on the v12.1.1_linuxx64_server_dec.tar.gz file.</p>
+<p>This will open Archive Manager.</p>
+<p>After a little while, within that, you will see &ldquo;server_dec&rdquo;. Click on the
+&ldquo;Extract&rdquo; button in the upper left hand corner.</p>
+<p>A dialog box will open to select where to extract the file to. Extract the file
+to the ~/builds directory.</p>
+<p>When it is done, close the dialog box, close Archive Manager, and close Files.</p>
+<h2 id="rename-the-directory">Rename the directory<a class="td-heading-self-link" href="#rename-the-directory" aria-label="Heading self-link"></a></h2>
+<p>In Terminal, Run:</p>
+<pre tabindex="0"><code>cd
+cd builds
+</code></pre><p>to go to the builds directory.</p>
+<p>Make sure the server_dec directory is present, Run:</p>
+<p><code>ls</code></p>
+<p>Rename server_dec to ibm-db2, Run:</p>
+<p><code>mv server_dec ibm-db2</code></p>
+<p>Enter the ibm-db2 directory, Run:</p>
+<p><code>cd ibm-db2</code></p>
+<h2 id="install-additional-software">Install additional software<a class="td-heading-self-link" href="#install-additional-software" aria-label="Heading self-link"></a></h2>
+<p>In Terminal, Run the following commands to install additional software needed to
+run IBM DB2 LUW:</p>
+<pre tabindex="0"><code>sudo apt install build-essential
+sudo apt install libaio1
+sudo dpkg --add-architecture i386
+sudo apt install libstdc++6:i386
+sudo apt install libpam0g:i386
+sudo apt install ksh
+</code></pre><h2 id="checking-prerequisites">Checking Prerequisites<a class="td-heading-self-link" href="#checking-prerequisites" aria-label="Heading self-link"></a></h2>
+<p>Run:</p>
+<p><code>./db2prereqcheck</code></p>
+<p>If you went with Pop!_OS, this will fail with a message about &ldquo;couldn&rsquo;t
+recognize the distribution&rdquo;. Don&rsquo;t worry, it should work.</p>
+<p>Run:</p>
+<p><code>sudo ./db2setup -f sysreq</code></p>
+<p>This will open a small dialog window.</p>
+<ul>
+<li>
+<p>Click on New Install</p>
+</li>
+<li>
+<p>Make sure DB2 Version 12.1.1 Server Editions is highlighted</p>
+<ul>
+<li>Purescale is not available on Ubuntu</li>
+</ul>
+</li>
+<li>
+<p>Click Next</p>
+</li>
+<li>
+<p>When you get to the window that has two buttons: Typical or Custom</p>
+<ul>
+<li>Select Custom</li>
+<li>Check the box that you agree to the Licence</li>
+<li>Click Next</li>
+</ul>
+</li>
+<li>
+<p>When presented with &ldquo;Select Features&rdquo;:</p>
+<ul>
+<li>Within Application development tools:
+<ul>
+<li>Check &ldquo;Base application development tools&rdquo;</li>
+</ul>
+</li>
+<li>Click Next</li>
+</ul>
+</li>
+<li>
+<p>Go through the rest of the windows accepting the defaults until you see
+&ldquo;Instance Owner&rdquo;.</p>
+<ul>
+<li>The next two windows set the password for new userids: db2inst1 and db2fenc1</li>
+<li>For the remaining windows, accept the defaults.</li>
+<li>Note: Port number is 25000.</li>
+</ul>
+</li>
+<li>
+<p>Go through the rest of the windows accepting the defaults until you see
+&ldquo;Response File and Summary&rdquo;.</p>
+</li>
+<li>
+<p>Click Finish</p>
+</li>
+<li>
+<p>The install process will start and when it finishes, look through the log
+file. You might see this message:</p>
+</li>
+</ul>
+<pre tabindex="0"><code>The value &#34;DB2AUTOSTART=YES&#34; was set in the Profile Registry for the &#34;db2inst1&#34;
+instance.
+
+ERROR: An error occurred while trying to start the &#34;db2inst1&#34; instance. The
+return code is &#34;127&#34; and the SQL Message is:   &#34;PROCESS_ERROR&#34;
+
+ERROR: An error occurred while configuring the instance &#34;db2inst1&#34;.
+
+Configuring DB2 instances :.......Failure
+Updating global profile registry :.......Success
+WARNING: A minor error occurred while installing &#34;DB2 Server Edition &#34; on this
+computer. Some features may not function correctly.
+</code></pre><ul>
+<li>Click Finish</li>
+</ul>
+<h2 id="install-additional-files">Install additional files.<a class="td-heading-self-link" href="#install-additional-files" aria-label="Heading self-link"></a></h2>
+<p>Because Pop!_OS is using Ubuntu 22.04 LTS, the following files must be
+sym-linked into the lib64 directory:</p>
+<pre tabindex="0"><code>cd /opt/ibm/db2/V12.1/lib64
+sudo ln -s awssdk/UBUNTU/22.04/libaws-cpp-sdk-core.so libaws-cpp-sdk-core.so
+sudo ln -s awssdk/UBUNTU/22.04/libaws-cpp-sdk-kinesis.so libaws-cpp-sdk-kinesis.so
+sudo ln -s awssdk/UBUNTU/22.04/libaws-cpp-sdk-s3.so libaws-cpp-sdk-s3.so
+sudo ln -s awssdk/UBUNTU/22.04/libaws-cpp-sdk-transfer.so libaws-cpp-sdk-transfer.so
+</code></pre><h2 id="restart-the-system">Restart the system.<a class="td-heading-self-link" href="#restart-the-system" aria-label="Heading self-link"></a></h2>
+<p>When it reboots, there should be three users to select from on the login window.
+The &ldquo;normal&rdquo; userid (the one created when the OS was installed), and the
+db2inst1 and db2fenc1 userids.</p>
+<p>Log in with the &ldquo;normal&rdquo; userid and open Terminal and Run:</p>
+<p>cd /opt/ibm/db2/V12.1/</p>
+<p>Look at the include and samples directories and make sure all the COBOL stuff is
+present.</p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-ab20326b2c1cfcfa77bb731bc6fc6b62">1.2 - Install the Sample DB</h1>
+    <div class="lead">Install the Sample db and db2profile.</div>
+	<h2 id="check-the-installation">Check the installation<a class="td-heading-self-link" href="#check-the-installation" aria-label="Heading self-link"></a></h2>
+<p>In Terminal, Run:</p>
+<pre tabindex="0"><code>su - db2inst1
+ksh
+</code></pre><p>You will need to enter the password for db2inst1 after the su command.</p>
+<p>Use ksh for a &ldquo;more useable&rdquo; command line.</p>
+<p>A quick check, Run:</p>
+<p><code>db2 list database directory</code></p>
+<p>returns no DBs.</p>
+<h2 id="validate-the-install">Validate the install<a class="td-heading-self-link" href="#validate-the-install" aria-label="Heading self-link"></a></h2>
+<p>Run:</p>
+<p><code>cd sqllib/bin</code></p>
+<p>Run:</p>
+<p><code>./db2val</code></p>
+<p>This should return: &ldquo;The instance validation for the instance db2inst1 was
+successful.&rdquo;</p>
+<h2 id="install-sample-db">Install Sample DB<a class="td-heading-self-link" href="#install-sample-db" aria-label="Heading self-link"></a></h2>
+<p>While still in the sqllib/bin directory, Run:</p>
+<p><code>./db2sampl</code></p>
+<p>to create the Sample DB.</p>
+<p>Not sure why but this takes a LLLLOOOONNNNGGGG time to complete.</p>
+<p>To check success, Run:</p>
+<p><code>db2 list database directory</code></p>
+<p>This should return:</p>
+<pre tabindex="0"><code>System Database Directory
+
+ Number of entries in the directory = 1
+
+Database 1 entry:
+
+ Database alias                       = SAMPLE
+ Database name                        = SAMPLE
+ Local database directory             = /home/db2inst1
+ Database release level               = 16.00
+ Comment                              =
+ Directory entry type                 = Indirect
+ Catalog database partition number    = 0
+ Alternate server hostname            =
+ Alternate server port number         =
+</code></pre><p>Now Run:</p>
+<p><code>db2</code></p>
+<p>This will take you inside DB2 and provide the DB2 prompt.</p>
+<p>Then Run:</p>
+<p><code>connect to sample</code></p>
+<p>This will return:</p>
+<pre tabindex="0"><code>  Database Connection Information
+
+ Database server        = DB2/LINUXX8664 12.1.1.0
+ SQL authorization ID   = DB2INST1
+ Local database alias   = SAMPLE
+</code></pre><p>Then Run:</p>
+<p><code>select * from employee</code></p>
+<p>This will return a listing of 42 employees</p>
+<p>Run:</p>
+<p><code>quit</code></p>
+<p>to exit DB2 and return to the command prompt.</p>
+<p>Then Run twice:</p>
+<p><code>exit</code></p>
+<p>to exit the ksh shell and exit db2inst1 and become the &ldquo;normal&rdquo; user again.</p>
+<h2 id="install-db2profile-in-bashrc">Install db2profile in .bashrc<a class="td-heading-self-link" href="#install-db2profile-in-bashrc" aria-label="Heading self-link"></a></h2>
+<p>As the &ldquo;normal&rdquo; user, you will need to run some DB2 commands in Terminal.</p>
+<p>To make this possible, add the following 4 lines to the bottom of the .bashrc
+file which is found in the home directory.</p>
+<pre tabindex="0"><code># The following three lines have been added by UDB DB2.
+if [ -f /home/db2inst1/sqllib/db2profile ]; then
+    . /home/db2inst1/sqllib/db2profile
+fi
+</code></pre><p>This will also export some very useful environment variables.</p>
+<p>You will need to exit and re-open Terminal for them to be activated.</p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-f78f28d2a6f979a668b3df7c42a661fd">1.3 - Create a DB2 DB</h1>
+    <div class="lead">Create some additional DBs to be used later.</div>
+	<h2 id="become-instance-owner">Become Instance Owner<a class="td-heading-self-link" href="#become-instance-owner" aria-label="Heading self-link"></a></h2>
+<p>During the install of IBM DB2 LUW, if you accepted the defaults, the Instance
+Owner&rsquo;s userid is &ldquo;db2inst1&rdquo;. If you changed that, use that userid instead.</p>
+<p>To create new databases, you have to become the Instance Owner and get into the
+DB2 system.</p>
+<p>Run:</p>
+<p><code>su - db2inst1</code></p>
+<p>Enter the password.</p>
+<p>This will make you &ldquo;db2inst1&rdquo; and display a very bare prompt</p>
+<p>Run:</p>
+<p><code>ksh</code></p>
+<p>to get a more useable environment.</p>
+<p>Run:</p>
+<p><code>db2</code></p>
+<p>This gets you &ldquo;into the DB2 system&rdquo;.</p>
+<h2 id="create-a-new-database-and-call-it-murach">Create a new database and call it MURACH.<a class="td-heading-self-link" href="#create-a-new-database-and-call-it-murach" aria-label="Heading self-link"></a></h2>
+<p>Because there are tables used in Murach books that have the same names as the
+Sample DB, create the MURACH DB.</p>
+<p>Follow the instructions above to &ldquo;get into the db2 system&rdquo;, then:</p>
+<p>At the db2&gt; prompt, Run</p>
+<p><code>CREATE DATABASE MURACH</code></p>
+<p>You might wait a very long time but it should come back with &ldquo;successfully
+created database&rdquo;</p>
+<h2 id="create-a-new-database-and-call-it-books">Create a new database and call it BOOKS.<a class="td-heading-self-link" href="#create-a-new-database-and-call-it-books" aria-label="Heading self-link"></a></h2>
+<p>Create the BOOKS DB.</p>
+<p>Follow the instructions above to &ldquo;get into the db2 system&rdquo;, then:</p>
+<p>At the db2&gt; prompt, Run</p>
+<p><code>CREATE DATABASE BOOKS</code></p>
+<p>You might wait a very long time but it should come back with &ldquo;successfully
+created database&rdquo;</p>
+
+</div>
+
+
+
+    
+	
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-8ac668ef71a81e3bea263feef150addc">2 - Install GnuCOBOL.</h1>
+    <div class="lead">Version GnuCOBOL 3.2.0</div>
+	<h1 id="install-gnucobol">Install GnuCOBOL<a class="td-heading-self-link" href="#install-gnucobol" aria-label="Heading self-link"></a></h1>
+<h2 id="install-build-essential-first">Install Build-Essential first<a class="td-heading-self-link" href="#install-build-essential-first" aria-label="Heading self-link"></a></h2>
+<p>In Terminal, Run:</p>
+<p><code>sudo apt install build-essential</code></p>
+<p>This might be installed already or there might be some components that are
+missing. Better safe then sorry.</p>
+<h2 id="get-gnucobol">Get GnuCOBOL<a class="td-heading-self-link" href="#get-gnucobol" aria-label="Heading self-link"></a></h2>
+<p>Download the source code from GnuCOBOL</p>
+<p>As of May 2025, the current version is 3.2</p>
+<p>For that version, download: gnucobol-3.2.tar.lz.</p>
+<p>If you haven&rsquo;t made any changes, it will be downloaded to the Downloads
+directory.</p>
+<h2 id="extract-the-downloaded-file">Extract the downloaded file<a class="td-heading-self-link" href="#extract-the-downloaded-file" aria-label="Heading self-link"></a></h2>
+<p>Open Files and go to the Downloads folder.</p>
+<p>Double click on the gnucobol-3.2.tar.lz file.</p>
+<p>This will open Archive Manager.</p>
+<p>You will see &ldquo;gnucobol-3.2&rdquo;. Click on the &ldquo;Extract&rdquo; button in the upper left
+hand corner.</p>
+<p>A dialog box will open to select where to extract the file to. Extract the file
+to the ~/builds directory.</p>
+<p>When it is done, close the dialog box, close Archive Manager, and close Files.</p>
+<h2 id="install-additional-software">Install additional software<a class="td-heading-self-link" href="#install-additional-software" aria-label="Heading self-link"></a></h2>
+<p>Open Terminal to install the following:</p>
+<pre tabindex="0"><code>sudo apt install libgmp-dev
+sudo apt install libdb5.3-dev
+sudo apt install libncurses-dev
+sudo apt install libxml2-dev
+sudo apt install libcjson-dev
+</code></pre><h2 id="configure-make-and-install">Configure, Make and Install<a class="td-heading-self-link" href="#configure-make-and-install" aria-label="Heading self-link"></a></h2>
+<p>Run:</p>
+<pre tabindex="0"><code>cd
+cd builds/gnucobol-3.2
+</code></pre><p>This will take you into the gnucobol-3.2 directory.</p>
+<p>Run:</p>
+<p><code>./configure</code></p>
+<p>A whole bunch of messages will print on the screen</p>
+<p>At the end, there should be some messages that look like:</p>
+<pre tabindex="0"><code>Dynamic loading: System
+configure: Use gettext for international messages: yes
+configure: Use fcntl for file locking: yes
+configure: Use math multiple precision library: gmp
+configure: Use curses library for screen I/O: ncursesw
+configure: Use Berkeley DB for INDEXED I/O: yes
+configure: Used for XML I/O: libxml2
+configure: Used for JSON I/O: cjson
+</code></pre><p>If there are no errors, Run:</p>
+<p><code>make</code></p>
+<p>More messages will display, if there are no errors, Run:</p>
+<p><code>make check</code></p>
+<p>A suite of tests will run, at the end, you should see the results:</p>
+<pre tabindex="0"><code># -------------
+## Test results.
+## -------------
+
+1273 tests behaved as expected.
+9 tests were skipped.
+</code></pre><p>Run:</p>
+<p><code>sudo make install</code></p>
+<p>Then Run:</p>
+<p><code>sudo ldconfig</code></p>
+<p>As a quick test, Run:</p>
+<p><code>cobc</code></p>
+<p>You should get an error message:</p>
+<p>cobc: error: no input files</p>
+<p>For a better test of the install:</p>
+<ul>
+<li>Create a new directory</li>
+<li>Create a simple COBOL program</li>
+<li>Run it.</li>
+</ul>
+<p>1: Create a new directory</p>
+<p>In Terminal, Run:</p>
+<pre tabindex="0"><code>cd
+mkdir -p ~/dev/cobol/test-cobol
+cd ~/dev/cobol/test-cobol
+touch hello.cbl
+</code></pre><p>2: Create a simple COBOL program</p>
+<p>Open Files, go to the dev/cobol/test-cobol folder.</p>
+<p>Double-click on hello.cbl. This will open it in Text Editor.</p>
+<p>Copy the following code and paste it into hello.cbl:</p>
+<pre><code>   IDENTIFICATION DIVISION.
+   PROGRAM-ID. SmallestProgram.
+   DATA DIVISION.
+   FILE SECTION.
+   WORKING-STORAGE SECTION.
+   PROCEDURE DIVISION.
+   MAIN-PROCEDURE.
+        DISPLAY &quot;Hello world&quot;
+        STOP RUN.
+   END PROGRAM SmallestProgram.
+</code></pre>
+<p>and save it.</p>
+<p>Go to Terminal, Run:</p>
+<p><code>pwd</code></p>
+<p>To make sure you are in the ~/dev/cobol/test-cobol directory.</p>
+<p>Run:</p>
+<p><code>cobc -x hello.cbl</code></p>
+<p>If it complies correctly(no messages), Run:</p>
+<p><code>./hello</code></p>
+<p>It should return:</p>
+<p><code>Hello world</code></p>
+<p>If this works, delete the test-cobol directory (or not, your choice).</p>
+
+</div>
+
+
+
+    
+	
+  
+
+
+
+          </main>
+        </div>
+      </div>
+      <footer class="td-footer row d-print-none">
+  <div class="container-fluid">
+    <div class="row mx-md-2">
+      <div class="td-footer__left col-6 col-sm-4 order-sm-1">
+        
+      </div><div class="td-footer__right col-6 col-sm-4 order-sm-3">
+        <ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="GitHub" aria-label="GitHub">
+    <a target="_blank" rel="noopener" href="https://github.com/dscobol" aria-label="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+</ul>
+
+      </div><div class="td-footer__center col-12 col-sm-4 py-2 order-sm-2">
+        <span class="td-footer__copyright">&copy;
+    2020&ndash;2025
+    <span class="td-footer__authors">dscobol | <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a> |</span></span><span class="td-footer__all_rights_reserved">All Rights Reserved</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <script src="/js/main.min.032ba2ecbd3ce89b96bffcfec71c5da352125ee752e9873c3e0098f7c32a6497.js" integrity="sha256-Ayui7L086JuWv/z&#43;xxxdo1ISXudS6Yc8PgCY98MqZJc=" crossorigin="anonymous"></script>
+<script defer src="/js/click-to-copy.min.73478a7d4807698aed7e355eb23f9890ca18fea3158604c8471746d046702bad.js" integrity="sha256-c0eKfUgHaYrtfjVesj&#43;YkMoY/qMVhgTIRxdG0EZwK60=" crossorigin="anonymous"></script>
+<script src='/js/tabpane-persist.js'></script>
+
+  </body>
+</html>
