@@ -2,95 +2,98 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://dscobol.github.io/docs/install/ibm-db2/install-db2/</loc>
+    <loc>http://localhost:1313/docs/install/ibm-db2/install-db2/</loc>
     <lastmod>2025-05-24T09:35:12-04:00</lastmod>
   </url><url>
-    <loc>https://dscobol.github.io/docs/install/ibm-db2/</loc>
+    <loc>http://localhost:1313/docs/install/ibm-db2/</loc>
     <lastmod>2025-05-24T09:35:12-04:00</lastmod>
   </url><url>
-    <loc>https://dscobol.github.io/docs/overview/</loc>
+    <loc>http://localhost:1313/docs/overview/</loc>
     <lastmod>2025-05-24T09:35:12-04:00</lastmod>
   </url><url>
-    <loc>https://dscobol.github.io/docs/about/</loc>
+    <loc>http://localhost:1313/docs/about/</loc>
     <lastmod>2025-05-24T09:35:12-04:00</lastmod>
   </url><url>
-    <loc>https://dscobol.github.io/docs/install/gnucobol/</loc>
+    <loc>http://localhost:1313/docs/install/gnucobol/</loc>
     <lastmod>2025-05-24T09:35:12-04:00</lastmod>
   </url><url>
-    <loc>https://dscobol.github.io/docs/install/ibm-db2/install-sampledb/</loc>
+    <loc>http://localhost:1313/docs/install/ibm-db2/install-sampledb/</loc>
     <lastmod>2025-05-23T23:15:37-04:00</lastmod>
   </url><url>
-    <loc>https://dscobol.github.io/docs/concepts/</loc>
+    <loc>http://localhost:1313/docs/concepts/</loc>
     <lastmod>2025-05-23T23:15:37-04:00</lastmod>
   </url><url>
-    <loc>https://dscobol.github.io/docs/install/ibm-db2/create-db2-db/</loc>
+    <loc>http://localhost:1313/docs/install/ibm-db2/create-db2-db/</loc>
     <lastmod>2025-05-23T23:15:37-04:00</lastmod>
   </url><url>
-    <loc>https://dscobol.github.io/docs/concepts/batch/</loc>
+    <loc>http://localhost:1313/docs/concepts/batch/</loc>
     <lastmod>2025-05-23T23:15:37-04:00</lastmod>
   </url><url>
-    <loc>https://dscobol.github.io/docs/install/</loc>
+    <loc>http://localhost:1313/docs/install/</loc>
     <lastmod>2025-05-24T09:35:12-04:00</lastmod>
   </url><url>
-    <loc>https://dscobol.github.io/docs/concepts/db2/</loc>
+    <loc>http://localhost:1313/docs/concepts/db2/</loc>
     <lastmod>2025-05-23T23:15:37-04:00</lastmod>
   </url><url>
-    <loc>https://dscobol.github.io/docs/tutorials/</loc>
+    <loc>http://localhost:1313/docs/tutorials/</loc>
     <lastmod>2025-05-23T23:15:37-04:00</lastmod>
   </url><url>
-    <loc>https://dscobol.github.io/blog/news/</loc>
+    <loc>http://localhost:1313/blog/news/</loc>
     <lastmod>2025-05-21T21:13:20-04:00</lastmod>
   </url><url>
-    <loc>https://dscobol.github.io/blog/releases/</loc>
+    <loc>http://localhost:1313/blog/releases/</loc>
     <lastmod>2025-05-21T21:13:20-04:00</lastmod>
   </url><url>
-    <loc>https://dscobol.github.io/docs/concepts/orig-code/</loc>
+    <loc>http://localhost:1313/docs/concepts/orig-code/</loc>
     <lastmod>2025-05-24T09:35:12-04:00</lastmod>
   </url><url>
-    <loc>https://dscobol.github.io/docs/concepts/v1-changes/</loc>
+    <loc>http://localhost:1313/docs/concepts/v1-changes/</loc>
     <lastmod>2025-05-24T09:35:12-04:00</lastmod>
   </url><url>
-    <loc>https://dscobol.github.io/docs/concepts/supply-parameters/</loc>
+    <loc>http://localhost:1313/docs/concepts/supply-parameters/</loc>
     <lastmod>2025-05-24T09:35:12-04:00</lastmod>
   </url><url>
-    <loc>https://dscobol.github.io/docs/concepts/version1/</loc>
+    <loc>http://localhost:1313/docs/concepts/version1/</loc>
     <lastmod>2025-05-24T09:35:12-04:00</lastmod>
   </url><url>
-    <loc>https://dscobol.github.io/docs/concepts/version2/</loc>
+    <loc>http://localhost:1313/docs/concepts/version2/</loc>
     <lastmod>2025-05-24T09:35:12-04:00</lastmod>
   </url><url>
-    <loc>https://dscobol.github.io/docs/concepts/version3/</loc>
+    <loc>http://localhost:1313/docs/concepts/version3/</loc>
     <lastmod>2025-05-24T09:35:12-04:00</lastmod>
   </url><url>
-    <loc>https://dscobol.github.io/docs/concepts/version4/</loc>
+    <loc>http://localhost:1313/docs/concepts/version4/</loc>
     <lastmod>2025-05-24T09:35:12-04:00</lastmod>
   </url><url>
-    <loc>https://dscobol.github.io/docs/concepts/version5/</loc>
+    <loc>http://localhost:1313/docs/concepts/version5/</loc>
     <lastmod>2025-05-24T09:35:12-04:00</lastmod>
   </url><url>
-    <loc>https://dscobol.github.io/blog/2025/05/24/new-version-of-dscobol-website/</loc>
+    <loc>http://localhost:1313/blog/2025/05/24/new-version-of-dscobol-website/</loc>
     <lastmod>2025-05-24T16:43:07-04:00</lastmod>
   </url><url>
-    <loc>https://dscobol.github.io/blog/2025/05/24/version-2-of-dscobol-website/</loc>
+    <loc>http://localhost:1313/blog/2025/05/24/version-2-of-dscobol-website/</loc>
     <lastmod>2025-05-24T16:43:07-04:00</lastmod>
   </url><url>
-    <loc>https://dscobol.github.io/blog/2025/05/23/original-dscobol-website-replaced./</loc>
+    <loc>http://localhost:1313/blog/2025/05/23/original-dscobol-website-replaced./</loc>
     <lastmod>2025-05-24T16:43:07-04:00</lastmod>
   </url><url>
-    <loc>https://dscobol.github.io/blog/</loc>
+    <loc>http://localhost:1313/blog/2025/05/23/verified-db2-repositories-work-with-updated-software./</loc>
+    <lastmod>2025-05-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/</loc>
     <lastmod>2025-05-21T21:13:20-04:00</lastmod>
   </url><url>
-    <loc>https://dscobol.github.io/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
   </url><url>
-    <loc>https://dscobol.github.io/docs/</loc>
+    <loc>http://localhost:1313/docs/</loc>
     <lastmod>2025-05-24T09:35:12-04:00</lastmod>
   </url><url>
-    <loc>https://dscobol.github.io/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2025-05-23T23:15:37-04:00</lastmod>
   </url><url>
-    <loc>https://dscobol.github.io/search/</loc>
+    <loc>http://localhost:1313/search/</loc>
     <lastmod>2025-05-21T21:13:20-04:00</lastmod>
   </url><url>
-    <loc>https://dscobol.github.io/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
   </url>
 </urlset>
