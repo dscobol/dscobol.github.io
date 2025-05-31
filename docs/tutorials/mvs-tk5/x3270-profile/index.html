@@ -17,24 +17,24 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Version 1 | dscobol</title>
-<meta name="description" content="An example of a converted from ZOS/DB2 to GnuCOBOL/DB2 program">
-<meta property="og:url" content="https://dscobol.github.io/docs/concepts/version1/">
+<title>An example x3270 profile | dscobol</title>
+<meta name="description" content="This is what I use.">
+<meta property="og:url" content="https://dscobol.github.io/docs/tutorials/mvs-tk5/x3270-profile/">
   <meta property="og:site_name" content="dscobol">
-  <meta property="og:title" content="Version 1">
-  <meta property="og:description" content="An example of a converted from ZOS/DB2 to GnuCOBOL/DB2 program">
+  <meta property="og:title" content="An example x3270 profile">
+  <meta property="og:description" content="This is what I use.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="docs">
-    <meta property="article:modified_time" content="2025-05-24T09:35:12-04:00">
+    <meta property="article:modified_time" content="2025-05-31T13:15:08-04:00">
 
-  <meta itemprop="name" content="Version 1">
-  <meta itemprop="description" content="An example of a converted from ZOS/DB2 to GnuCOBOL/DB2 program">
-  <meta itemprop="dateModified" content="2025-05-24T09:35:12-04:00">
-  <meta itemprop="wordCount" content="557">
+  <meta itemprop="name" content="An example x3270 profile">
+  <meta itemprop="description" content="This is what I use.">
+  <meta itemprop="dateModified" content="2025-05-31T13:15:08-04:00">
+  <meta itemprop="wordCount" content="879">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Version 1">
-  <meta name="twitter:description" content="An example of a converted from ZOS/DB2 to GnuCOBOL/DB2 program">
+  <meta name="twitter:title" content="An example x3270 profile">
+  <meta name="twitter:description" content="This is what I use.">
 <link rel="preload" href="/scss/main.min.587cc9ab2e7ed4cd045ee4c6e380598d6f8ad5201ff3aa9345c816a513404b85.css" as="style" integrity="sha256-WHzJqy5&#43;1M0EXuTG44BZjW&#43;K1SAf86qTRcgWpRNAS4U=" crossorigin="anonymous">
 <link href="/scss/main.min.587cc9ab2e7ed4cd045ee4c6e380598d6f8ad5201ff3aa9345c816a513404b85.css" rel="stylesheet" integrity="sha256-WHzJqy5&#43;1M0EXuTG44BZjW&#43;K1SAf86qTRcgWpRNAS4U=" crossorigin="anonymous">
 <script
@@ -117,8 +117,8 @@
   <input type="checkbox" id="m-docsabout-check"/>
   <label for="m-docsabout-check"><a href="/docs/about/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsabout"><span class="">About</span></a></label>
   
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docsconcepts-li">
-  <input type="checkbox" id="m-docsconcepts-check" checked/>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsconcepts-li">
+  <input type="checkbox" id="m-docsconcepts-check"/>
   <label for="m-docsconcepts-check"><a href="/docs/concepts/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsconcepts"><span class="">Concepts</span></a></label>
   
   <ul class="ul-2 foldable">
@@ -177,13 +177,13 @@
   </ul>
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docstutorials-li">
-  <input type="checkbox" id="m-docstutorials-check"/>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docstutorials-li">
+  <input type="checkbox" id="m-docstutorials-check" checked/>
   <label for="m-docstutorials-check"><a href="/docs/tutorials/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docstutorials"><span class="">Tutorials</span></a></label>
   
   <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docstutorialsmvs-tk5-li">
-  <input type="checkbox" id="m-docstutorialsmvs-tk5-check"/>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docstutorialsmvs-tk5-li">
+  <input type="checkbox" id="m-docstutorialsmvs-tk5-check" checked/>
   <label for="m-docstutorialsmvs-tk5-check"><a href="/docs/tutorials/mvs-tk5/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docstutorialsmvs-tk5"><span class="">Run a &#34;Mainframe&#34; on Raspberry Pi.</span></a></label>
   
   <ul class="ul-3 foldable">
@@ -209,14 +209,18 @@
           </aside>
           <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
             <div class="td-page-meta ms-2 pb-1 pt-2 mb-0">
-<a id="print" href="/docs/concepts/_print/"><i class="fa-solid fa-print fa-fw"></i> Print entire section</a>
+<a id="print" href="/docs/tutorials/mvs-tk5/_print/"><i class="fa-solid fa-print fa-fw"></i> Print entire section</a>
 
 </div>
 
             <div class="td-toc">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#breakdown-of-changes"><a href="./v1-changes.md">Breakdown of Changes</a>.</a></li>
+    <li>
+      <ul>
+        <li><a href="#save-this-file-as-homex3270pro">Save this file as $HOME/.x3270pro</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
       </div>
@@ -233,205 +237,307 @@
   <li class="breadcrumb-item">
     <a href="/docs/">Docs</a></li>
   <li class="breadcrumb-item">
-    <a href="/docs/concepts/">Concepts</a></li>
+    <a href="/docs/tutorials/">Tutorials</a></li>
+  <li class="breadcrumb-item">
+    <a href="/docs/tutorials/mvs-tk5/">Run a &#34;Mainframe&#34; on Raspberry Pi.</a></li>
   <li class="breadcrumb-item active" aria-current="page">
-    Version 1</li>
+    An example x3270 profile</li>
   </ol>
 </nav>
 <div class="td-content">
-	<h1>Version 1</h1>
-	<div class="lead">An example of a converted from ZOS/DB2 to GnuCOBOL/DB2 program</div>
+	<h1>An example x3270 profile</h1>
+	<div class="lead">This is what I use.</div>
 	<header class="article-meta">
 		
   </header>
-	<h1 id="this-is-the-murach-custinq-program-with-just-enough-code-added-to-make-it-work-with-gnucobol-and-ibm-db2-luw">This is the Murach CUSTINQ program with just enough code added to make it work with GnuCOBOL and IBM DB2 LUW.<a class="td-heading-self-link" href="#this-is-the-murach-custinq-program-with-just-enough-code-added-to-make-it-work-with-gnucobol-and-ibm-db2-luw" aria-label="Heading self-link"></a></h1>
-<h2 id="breakdown-of-changes"><a href="/docs/concepts/v1-changes/">Breakdown of Changes</a>.<a class="td-heading-self-link" href="#breakdown-of-changes" aria-label="Heading self-link"></a></h2>
-<pre><code>   IDENTIFICATION DIVISION.
-  *
-   PROGRAM-ID.    CUSTINQ.
-  *
-   ENVIRONMENT DIVISION.
-  *
-   INPUT-OUTPUT SECTION.
-  *
-   FILE-CONTROL.
-  *
-   DATA DIVISION.
-  *
-   FILE SECTION.
-  *
-   WORKING-STORAGE SECTION.
-  *
-   01  SWITCHES.
-  *
-       05  END-OF-INQUIRIES-SW     PIC X   VALUE 'N'.
-           88  END-OF-INQUIRIES            VALUE 'Y'.
-       05  CUSTOMER-FOUND-SW       PIC X.
-           88  CUSTOMER-FOUND              VALUE 'Y'.
-       EXEC SQL
-           INCLUDE SQLCA
-       END-EXEC.
-  *
-  ***** Convert to GnuCOBOL
-  ***** Start of Step 1
-  *     No DCLGEN member to INCLUDE
-  *     Comment this INCLUDE out
-  *    EXEC SQL
-  *        INCLUDE CUSTOMER
-  *    END-EXEC.
-  *
-  *     Add DECLARE TABLE
-       EXEC SQL
-       DECLARE CUSTOMERS TABLE
-       (
-        CUSTNO        CHAR(6) not null,
-           FNAME         CHAR(20) not null,
-           LNAME         CHAR(30) not null,
-           ADDR          CHAR(30) not null,
-           CITY          CHAR(20) not null,
-           STATE         CHAR(2) not null,
-           ZIPCODE       CHAR(10) not null)
-       END-EXEC.
+	<h3 id="save-this-file-as-homex3270pro">Save this file as $HOME/.x3270pro<a class="td-heading-self-link" href="#save-this-file-as-homex3270pro" aria-label="Heading self-link"></a></h3>
+<h4 id="fyi-this-uses-the-enter-key-as-newline-and-the-right-ctrl-key-as-enter">FYI: This uses the <code>&lt;Enter&gt;</code> key as <strong>Newline</strong> and the <code>&lt;Right Ctrl&gt;</code> key as <strong>Enter</strong>.<a class="td-heading-self-link" href="#fyi-this-uses-the-enter-key-as-newline-and-the-right-ctrl-key-as-enter" aria-label="Heading self-link"></a></h4>
+<pre tabindex="0"><code>! x3270 profile
+! =============
 
-  *     Add DECLARE SECTION
-       EXEC SQL BEGIN DECLARE SECTION END-EXEC.
-   01  Customer-Row.
-       12 CUSTNO     PIC X(06).
-       12 FNAME      PIC X(20).
-       12 LNAME      PIC X(30).
-       12 ADDR       PIC X(30).
-       12 CITY       PIC X(20).
-       12 STATE      PIC X(02).
-       12 ZIPCODE    PIC X(10).
+! Sensible defaults, and Emacs-like keybindings.
+! Chris Poole.
 
-  *    This is hardcoded for the MURACH DB.
-  *    You might need to update this for your DB.
-   01  DB-Connection-Info.
-       12 DB-Alias                PIC X(8) VALUE 'MURACH'.
-       12 DB-User-ID              PIC X(10).
-       12 DB-Password.
-          15 DB-Passwd-Length     PIC S9(4) COMP-5  VALUE 0.
-          15 DB-Passwd-Name       PIC X(18).
-       EXEC SQL END DECLARE SECTION END-EXEC.
 
-  *     Add status check for connection info.
-   01  WS-SQL-STATUS                PIC S9(9) COMP-5.
-       88 SQL-STATUS-OK             VALUE    0.
-       88 SQL-STATUS-NOT-FOUND      VALUE  100.
-       88 SQL-STATUS-DUP            VALUE -803.
+! Keyboard config
+! ---------------
 
-  ***** End of Step 1
+! keypad state  (-keypad)
+x3270.keypadOn: false
+! keymap  (-keymap)
+x3270.keymap: @server
 
-   PROCEDURE DIVISION.
-  *
-   000-DISPLAY-CUSTOMER-ROWS.
-  *     Step 2
-  *     Add Paragraph to connect to the DB
-       PERFORM 9800-Connect-to-DB1.
-  *
-       PERFORM 100-DISPLAY-CUSTOMER-ROW
-           UNTIL END-OF-INQUIRIES.
-       STOP RUN.
-  *
-   100-DISPLAY-CUSTOMER-ROW.
-  *
-       PERFORM 110-ACCEPT-CUSTOMER-NUMBER.
-       IF NOT END-OF-INQUIRIES
-           MOVE 'Y' TO CUSTOMER-FOUND-SW
-           PERFORM 120-GET-CUSTOMER-ROW
-           IF CUSTOMER-FOUND
-               PERFORM 130-DISPLAY-CUSTOMER-LINES
-           ELSE
-               PERFORM 140-DISPLAY-ERROR-LINES.
-  *
-   110-ACCEPT-CUSTOMER-NUMBER.
-  *
-       DISPLAY '------------------------------------------------'.
-       DISPLAY 'KEY IN THE NEXT CUSTOMER NUMBER AND PRESS ENTER,'.
-       DISPLAY 'OR KEY IN 999999 AND PRESS ENTER TO QUIT.'.
-       ACCEPT CUSTNO.
-       IF CUSTNO = '999999'
-           MOVE 'Y' TO END-OF-INQUIRIES-SW.
-  *
-   120-GET-CUSTOMER-ROW.
-  *
-       EXEC SQL
-           SELECT CUSTNO,    FNAME,       LNAME,
-                  ADDR,      CITY,        STATE,
-                  ZIPCODE
-           INTO  :CUSTNO,       :FNAME,          :LNAME,
-                 :ADDR,         :CITY,           :STATE,
-                 :ZIPCODE
-           FROM   CUSTOMERS
-               WHERE  CUSTNO = :CUSTNO
-       END-EXEC.
-  *
-       IF SQLCODE NOT = 0
-           MOVE 'N' TO CUSTOMER-FOUND-SW.
-  *
-   130-DISPLAY-CUSTOMER-LINES.
-  *
-       DISPLAY '------------------------------------------------'.
-       DISPLAY '   CUSTOMER ' CUSTNO.
-       DISPLAY '   NAME     ' FNAME ' ' LNAME.
-       DISPLAY '   ADDRESS  ' ADDR.
-       DISPLAY '            ' CITY ' ' STATE ' '
-                              ZIPCODE.
-  *
-   140-DISPLAY-ERROR-LINES.
-  *
-       DISPLAY '------------------------------------------------'.
-       DISPLAY '   CUSTOMER NUMBER ' CUSTNO ' NOT FOUND.'.
-  *
-  *     Step 2 - the actual connection.
-   9800-Connect-to-DB1.
-       PERFORM 9810-Setup-DB1-Connection.
-       IF SQL-STATUS-OK
-          CONTINUE
-       ELSE
-          DISPLAY &quot;*** The DB connection is not valid!***&quot;
-          DISPLAY &quot;Exiting the program.!&quot;
-          GOBACK
-       END-IF.
+! Use the &#39;mine&#39; keymap, defined below
+x3270.keymap: mine
+! Definition of the &#39;mine&#39; keymap
+! More-specific definitions must come before less-specific definitions.
+! The definition for Shift&lt;Key&gt;Backspace must come before the
+! definition for &lt;Key&gt;BackSpace
+x3270.keymap.mine: #override \
+    &lt;Key&gt;Escape           : Attn()\n\
+    &lt;Key&gt;Return           : Newline()\n\
+    &lt;Key&gt;Control_R        : Enter()\n\
+    &lt;Key&gt;Control_L        : Reset()\n\
+    &lt;Key&gt;ISO_Level3_Shift : Enter()\n\
+    Ctrl Alt Mod2&lt;Key&gt;d   : Disconnect()\n\
+    Ctrl&lt;Key&gt;F9           : PF(21)\n\
+    &lt;Key&gt;Prior            : PF(7)\n\
+    &lt;Key&gt;Next             : PF(8)\n\
+    Shift&lt;Key&gt;Return      : Up()\n\
+    Ctrl&lt;Key&gt;c            : Clear()\n\
+    Ctrl&lt;Key&gt;g            : Redraw()\n\
+    Ctrl&lt;Key&gt;h            : Home()\n\
+    Ctrl&lt;Key&gt;i            : ToggleInsert()\n\
+    Ctrl&lt;Key&gt;r            : Reset()\n\
+    Ctrl&lt;Key&gt;1            : PA(1)\n\
+    Ctrl&lt;Key&gt;2            : PA(2)\n\
+    Ctrl&lt;Key&gt;3            : PA(3)\n\
+    Meta&lt;Key&gt;w            : set-select(CLIPBOARD)\n\
+    Ctrl&lt;Key&gt;y            : insert-selection(CLIPBOARD)\n\
+    Ctrl&lt;Key&gt;a            : BackTab()\n\
+    Ctrl&lt;Key&gt;e            : FieldEnd()\n\
+    Ctrl&lt;Key&gt;p            : Up()\n\
+    Ctrl&lt;Key&gt;n            : Down()\n\
+    Ctrl&lt;Key&gt;b            : Left()\n\
+    Ctrl&lt;Key&gt;f            : Right()\n\
+    Meta&lt;Key&gt;b            : PreviousWord()\n\
+    Meta&lt;Key&gt;f            : NextWord()\n\
+    Ctrl&lt;Key&gt;v            : PF(8)\n\
+    Meta&lt;Key&gt;v            : PF(7)\n\
+    Ctrl&lt;Key&gt;d            : Delete()\n\
+    Ctrl&lt;Key&gt;k            : EraseEOF()\n\
+    Meta&lt;Key&gt;w            : DeleteWord()
 
-   9810-Setup-DB1-Connection.
-       PERFORM 9811-Get-Credentials.
-       PERFORM 9812-Create-Connection-To-DB1.
 
-   9811-Get-Credentials.
-       DISPLAY &quot;CUSTINQ: Need userid and password&quot;.
+! Miscellaneous
+! -------------
 
-       DISPLAY &quot;Enter your user id (default none): &quot;
-            WITH NO ADVANCING.
-       ACCEPT DB-User-ID.
+! Use block cursor
+x3270.altCursor: false
 
-       DISPLAY &quot;Enter your password : &quot; WITH NO ADVANCING
-       ACCEPT DB-Passwd-Name.
+x3270.scrollBar: false
 
-  * Passwords in a CONNECT statement must be entered in a VARCHAR
-  * format with the length of the input string.
-       INSPECT DB-Passwd-Name
-          TALLYING DB-Passwd-Length
-          FOR CHARACTERS BEFORE INITIAL &quot; &quot;.
+! Colors of menus
+x3270.background: black
+x3270.foreground: red
 
-   9812-Create-Connection-To-DB1.
-       PERFORM 9814-Connect-To-DB1
-       IF SQL-STATUS-OK
-          CONTINUE
-       ELSE
-          DISPLAY &quot;CUSTINQ: userid and/or password invalid&quot;
-          DISPLAY &quot;CUSTINQ: Can not connect, exiting&quot;
-          GOBACK
-       END-IF.
+! Silence the bell
+x3270.bellVolume: -100
+x3270.visualBell: true
 
-   9814-Connect-To-DB1.
-       EXEC SQL CONNECT TO :DB-Alias
-            USER :DB-User-ID
-            USING :DB-Passwd-Name
-          END-EXEC.
-       MOVE SQLCODE TO WS-SQL-STATUS.
+! Use a larger font
+x3270.emulatorFont: 3270-20
+
+! Window size; 160x62 is maximum in PCOMM
+x3270.oversize: 160x62
+
+x3270.model: 3279-5-E
+
+! Demo mode:
+!x3270.emulatorFont: 3270gt32
+!x3270.oversize: 96x26
+!x3270.model: 3279-2-E
+
+! Crosshair
+x3270.crosshair: true
+
+! Pull-down menus: Ctrl and each of the mouse buttons
+!x3270.menuBar: false
+
+! Don&#39;t reconnect automatically
+x3270.reconnect: false
+
+! Don&#39;t allow windows to be resized
+x3270.allowResize: false
+
+! When pasting text, treat columns to the left of the cursor as a martin to
+! avoid printing into
+x3270.marginedPaste: true
+
+! Complete list of defaults can be found at:
+! http://stuff.mit.edu/afs/athena/astaff/source/src-8.4/third/x3270/X3270.xad
+! File updated Fri Sep 30 21:24:31 2022 by x3270 v4.2ga5 Wed Sep 21 01:33:39 UTC 2022 dastagg
+
+! Color Scheme
+! ------------
+
+x3270.colorScheme.cjp: \
+	black blue red magenta \
+	green turquoise yellow white \
+	black blue3 orange purple \
+	paleGreen cyan grey white \
+	white black dimGray \
+	4 2 1 15
+
+! x3270.colorScheme: cjp
+
+! Default, for reference
+! x3270.colorScheme.default: \
+! 	black deepSkyBlue red pink \
+! 	green turquoise yellow white \
+! 	black blue3 orange purple \
+! 	paleGreen paleTurquoise2 grey white \
+! 	white black dimGray \
+! 	4 2 1 15
+
+
+! --------------------------------------------------
+! .x3270pro file generated using x3270.nice by Soldier of FORTRAN
+! Original Xresource file: &#39;Argonaut&#39;
+! Copy and paste this output to ~/.x3270pro
+! --------------------------------------------------
+! Original Xresource file:
+! --------------------------------------------------
+! Generated with :
+! XRDB2Xreources.py
+! *.foreground:  #fffaf4
+! *.background:  #0e1019
+! Black
+! *.color0:      #232323
+! *.color8:      #444444
+! Red
+! *.color1:      #ff000f
+! *.color9:      #ff2740
+! Green
+! *.color2:      #8ce10b
+! *.color10:     #abe15b
+! Yellow
+! *.color3:      #ffb900
+! *.color11:     #ffd242
+! Blue
+! *.color4:      #008df8
+! *.color12:     #0092ff
+! Magenta
+! *.color5:      #6d43a6
+! *.color13:     #9a5feb
+! Cyan
+! *.color6:      #00d8eb
+! *.color14:     #67fff0
+! White
+! *.color7:      #ffffff
+! *.color15:     #ffffff
+! Bold, Italic, Underline
+! *.colorIT:
+! *.colorUL:
+! --------------------------------------------------
+! Adding theme to Options -&gt; Color Scheme
+! --------------------------------------------------
+x3270.schemeList: Default 3279: default\n\
+                  Bright: bright\n\
+                  Reverse: reverse\n\
+                  Green Screen: greenScreen\n\
+                  Argonaut: Argonaut
+! --------------------------------------------------
+! Generating Argonaut .x3270pro theme
+! --------------------------------------------------
+! Menu Colors: Foreground
+! --------------------------------------------------
+x3270*dialog*confirmButton.foreground     : #fffaf4
+x3270*dialog*foreground                   : #fffaf4
+x3270.aboutPopup*icon.foreground          : #fffaf4
+x3270.keypadForeground                    : #fffaf4
+x3270*menuBarContainer.foreground         : #fffaf4
+x3270*fileMenuButton*foreground           : #fffaf4
+x3270*optionsMenuButton*foreground        : #fffaf4
+x3270*connectMenuButton*foreground        : #fffaf4
+x3270*reconnectButton*foreground          : #fffaf4
+x3270*macrosMenuButton*foreground         : #fffaf4
+x3270*keypadButton*foreground             : #fffaf4
+x3270*fileMenu*foreground                 : #fffaf4
+x3270*exitMenu*foreground                 : #fffaf4
+x3270*optionsMenu*foreground              : #fffaf4
+x3270*hostMenu*foreground                 : #fffaf4
+x3270*reconnect*foreground                : #fffaf4
+x3270*macrosMenu*foreground               : #fffaf4
+x3270*togglesMenu*foreground              : #fffaf4
+x3270*fontsMenu*foreground                : #fffaf4
+x3270*modelsMenu*foreground               : #fffaf4
+x3270*colorsMenu*foreground               : #fffaf4
+x3270*charsetMenu*foreground              : #fffaf4
+x3270*dialog*value*foreground             : #fffaf4
+x3270*dialog*foreground                   : #fffaf4
+x3270*dialog*confirmButton.foreground     : #fffaf4
+x3270*dialog*confirm2Button.foreground    : #fffaf4
+3270*dialog*cancelButton.foreground       : #fffaf4
+x3270.ftProgressPopup*filename.foreground : #fffaf4
+! --------------------------------------------------
+! Menu Colors: Critical
+! --------------------------------------------------
+x3270.errorPopup*label.foreground         : #ff2740
+x3270*dialog*cancelButton.foreground      : #ff2740
+! --------------------------------------------------
+! Menu Colors: Backgrounds
+! --------------------------------------------------
+x3270.keypadBackground                    : #0e1019
+x3270*menuBarContainer.background         : #0e1019
+x3270*fileMenuButton*background           : #0e1019
+x3270*optionsMenuButton*background        : #0e1019
+x3270*connectMenuButton*background        : #0e1019
+x3270*reconnectButton*background          : #0e1019
+x3270*macrosMenuButton*background         : #0e1019
+x3270*keypadButton*background             : #0e1019
+x3270*fileMenu*background                 : #0e1019
+x3270*exitMenu*background                 : #0e1019
+x3270*optionsMenu*background              : #0e1019
+x3270*hostMenu*background                 : #0e1019
+x3270*reconnect*background                : #0e1019
+x3270*macrosMenu*background               : #0e1019
+x3270*togglesMenu*background              : #0e1019
+x3270*fontsMenu*background                : #0e1019
+x3270*modelsMenu*background               : #0e1019
+x3270*colorsMenu*background               : #0e1019
+x3270*charsetMenu*background              : #0e1019
+x3270*dialog*value*background             : #0e1019
+x3270*dialog*background                   : #0e1019
+x3270*dialog*confirmButton.background     : #0e1019
+x3270*dialog*confirm2Button.background    : #0e1019
+3270*dialog*cancelButton.background       : #0e1019
+x3270.ftProgressPopup*filename.background : #0e1019
+! --------------------------------------------------
+! Menu Colors: Borders
+! --------------------------------------------------
+x3270*reconnectButton*borderColor         : #fffaf4
+x3270*macrosMenuButton*borderColor        : #fffaf4
+x3270*fileMenu.borderColor                : #fffaf4
+x3270*exitMenu.borderColor                : #fffaf4
+x3270*optionsMenu.borderColor             : #fffaf4
+x3270*hostMenu.borderColor                : #fffaf4
+x3270*macrosMenu.borderColor              : #fffaf4
+x3270*togglesMenu.borderColor             : #fffaf4
+x3270*fontsMenu.borderColor               : #fffaf4
+x3270*modelsMenu.borderColor              : #fffaf4
+x3270*colorsMenu.borderColor              : #fffaf4
+x3270*charsetMenu.borderColor             : #fffaf4
+x3270*confirmButton.borderColor           : #fffaf4
+x3270*confirmButton.borderColor           : #fffaf4
+x3270*confirm2Button.borderColor          : #fffaf4
+x3270*cancelButton.borderColor            : #fffaf4
+x3270.ftProgressPopup*filename.borderColor: #fffaf4
+x3270*fileMenuButton*borderColor          : #0e1019
+x3270*optionsMenuButton*borderColor       : #0e1019
+x3270*connectMenuButton*borderColor       : #0e1019
+x3270*menuBarContainer.borderColor        : #0e1019
+x3270*menuBarContainer.borderWidth        : 0
+x3270*value.borderColor                   : #fffaf4
+x3270*value.foreground                    : #fffaf4
+! --------------------------------------------------
+! Default Color Scheme
+! --------------------------------------------------
+x3270.colorScheme: Argonaut
+! --------------------------------------------------
+! Color Scheme definition
+! --------------------------------------------------
+x3270.colorScheme.Argonaut: \
+   #232323 #0092ff #ff2740 #9a5feb \
+   #abe15b #67fff0 #ffd242 #fffaf4 \
+   #232323 #008df8 #ffb900 #6d43a6 \
+   #8ce10b #00d8eb #444444 #ffffff \
+   white #0e1019 #444444 4 \
+   2 1 15
+! --------------------------------------------------
+! x3270.nice done
+! --------------------------------------------------
 </code></pre>
-
 	
 </div>
 

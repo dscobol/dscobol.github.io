@@ -20,21 +20,21 @@
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
 <title>Tutorials | dscobol</title>
-<meta name="description" content="Show your user how to work through some end to end examples.">
+<meta name="description" content="Some things I have learned and will try to pass on.">
 <meta property="og:url" content="https://dscobol.github.io/docs/tutorials/">
   <meta property="og:site_name" content="dscobol">
   <meta property="og:title" content="Tutorials">
-  <meta property="og:description" content="Show your user how to work through some end to end examples.">
+  <meta property="og:description" content="Some things I have learned and will try to pass on.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 
   <meta itemprop="name" content="Tutorials">
-  <meta itemprop="description" content="Show your user how to work through some end to end examples.">
-  <meta itemprop="dateModified" content="2025-05-23T23:15:37-04:00">
-  <meta itemprop="wordCount" content="7">
+  <meta itemprop="description" content="Some things I have learned and will try to pass on.">
+  <meta itemprop="dateModified" content="2025-05-31T13:15:08-04:00">
+  <meta itemprop="wordCount" content="34">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Tutorials">
-  <meta name="twitter:description" content="Show your user how to work through some end to end examples.">
+  <meta name="twitter:description" content="Some things I have learned and will try to pass on.">
 <link rel="preload" href="/scss/main.min.587cc9ab2e7ed4cd045ee4c6e380598d6f8ad5201ff3aa9345c816a513404b85.css" as="style" integrity="sha256-WHzJqy5&#43;1M0EXuTG44BZjW&#43;K1SAf86qTRcgWpRNAS4U=" crossorigin="anonymous">
 <link href="/scss/main.min.587cc9ab2e7ed4cd045ee4c6e380598d6f8ad5201ff3aa9345c816a513404b85.css" rel="stylesheet" integrity="sha256-WHzJqy5&#43;1M0EXuTG44BZjW&#43;K1SAf86qTRcgWpRNAS4U=" crossorigin="anonymous">
 <script
@@ -72,7 +72,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.0cf24be0e44b406a3ff12df67d7b14b2.json"
+    data-offline-search-index-json-src="/offline-search-index.6ecd292d0ccf004ee484c012d16392e2.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -96,7 +96,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.0cf24be0e44b406a3ff12df67d7b14b2.json"
+    data-offline-search-index-json-src="/offline-search-index.6ecd292d0ccf004ee484c012d16392e2.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -177,10 +177,28 @@
   </ul>
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docstutorials-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docstutorials-li">
   <input type="checkbox" id="m-docstutorials-check" checked/>
   <label for="m-docstutorials-check"><a href="/docs/tutorials/" class="align-left ps-0  active td-sidebar-link td-sidebar-link__section" id="m-docstutorials"><span class="td-sidebar-nav-active-item">Tutorials</span></a></label>
   
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docstutorialsmvs-tk5-li">
+  <input type="checkbox" id="m-docstutorialsmvs-tk5-check"/>
+  <label for="m-docstutorialsmvs-tk5-check"><a href="/docs/tutorials/mvs-tk5/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docstutorialsmvs-tk5"><span class="">Run a &#34;Mainframe&#34; on Raspberry Pi.</span></a></label>
+  
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docstutorialsmvs-tk5install-tk5-li">
+  <input type="checkbox" id="m-docstutorialsmvs-tk5install-tk5-check"/>
+  <label for="m-docstutorialsmvs-tk5install-tk5-check"><a href="/docs/tutorials/mvs-tk5/install-tk5/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docstutorialsmvs-tk5install-tk5"><span class="">Install the MVS Turnkey 5 System</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docstutorialsmvs-tk5setup-x3270-li">
+  <input type="checkbox" id="m-docstutorialsmvs-tk5setup-x3270-check"/>
+  <label for="m-docstutorialsmvs-tk5setup-x3270-check"><a href="/docs/tutorials/mvs-tk5/setup-x3270/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docstutorialsmvs-tk5setup-x3270"><span class="">Setup a x3270 Terminal emulator</span></a></label>
+  
+</li>
+  </ul>
+</li>
+  </ul>
 </li>
   </ul>
 </li>
@@ -213,21 +231,32 @@
 </nav>
 <div class="td-content">
 	<h1>Tutorials</h1>
-  <div class="lead">Show your user how to work through some end to end examples.</div>
+  <div class="lead">Some things I have learned and will try to pass on.</div>
 	<header class="article-meta">
 		
   </header>
 	
 
 <div class="pageinfo pageinfo-primary">
-At some time in the near future
+<p>Unless stated otherwise, all these tutorials will be written to
+be executed on a Pop!_OS system.</p>
+<p>Most of the time, the same commands will run on Debian or Ubuntu but your
+mileage may vary.</p>
+
 </div>
 
 
 	<div class="section-index">
     
     
-    </div>
+    <hr class="panel-line">
+        <div class="entry">
+                <h5>
+                    <a href="/docs/tutorials/mvs-tk5/">Run a &#34;Mainframe&#34; on Raspberry Pi.</a>
+                </h5>
+                <p>Install and run the MVS Turnkey 5 System.</p>
+            </div>
+        </div>
 </div>
 
           </main>

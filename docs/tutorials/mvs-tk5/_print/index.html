@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<link rel="canonical" type="text/html" href="https://dscobol.github.io/docs/tutorials/mvs-tk5/">
+<link rel="alternate" type="application/rss&#43;xml" href="https://dscobol.github.io/docs/tutorials/mvs-tk5/index.xml">
+<meta name="robots" content="noindex, nofollow">
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
@@ -17,24 +19,22 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Version 1 | dscobol</title>
-<meta name="description" content="An example of a converted from ZOS/DB2 to GnuCOBOL/DB2 program">
-<meta property="og:url" content="https://dscobol.github.io/docs/concepts/version1/">
+<title>Run a &#34;Mainframe&#34; on Raspberry Pi. | dscobol</title>
+<meta name="description" content="Install and run the MVS Turnkey 5 System.">
+<meta property="og:url" content="https://dscobol.github.io/docs/tutorials/mvs-tk5/">
   <meta property="og:site_name" content="dscobol">
-  <meta property="og:title" content="Version 1">
-  <meta property="og:description" content="An example of a converted from ZOS/DB2 to GnuCOBOL/DB2 program">
+  <meta property="og:title" content="Run a &#34;Mainframe&#34; on Raspberry Pi.">
+  <meta property="og:description" content="Install and run the MVS Turnkey 5 System.">
   <meta property="og:locale" content="en">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="docs">
-    <meta property="article:modified_time" content="2025-05-24T09:35:12-04:00">
+  <meta property="og:type" content="website">
 
-  <meta itemprop="name" content="Version 1">
-  <meta itemprop="description" content="An example of a converted from ZOS/DB2 to GnuCOBOL/DB2 program">
-  <meta itemprop="dateModified" content="2025-05-24T09:35:12-04:00">
-  <meta itemprop="wordCount" content="557">
+  <meta itemprop="name" content="Run a &#34;Mainframe&#34; on Raspberry Pi.">
+  <meta itemprop="description" content="Install and run the MVS Turnkey 5 System.">
+  <meta itemprop="dateModified" content="2025-05-31T13:15:08-04:00">
+  <meta itemprop="wordCount" content="50">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Version 1">
-  <meta name="twitter:description" content="An example of a converted from ZOS/DB2 to GnuCOBOL/DB2 program">
+  <meta name="twitter:title" content="Run a &#34;Mainframe&#34; on Raspberry Pi.">
+  <meta name="twitter:description" content="Install and run the MVS Turnkey 5 System.">
 <link rel="preload" href="/scss/main.min.587cc9ab2e7ed4cd045ee4c6e380598d6f8ad5201ff3aa9345c816a513404b85.css" as="style" integrity="sha256-WHzJqy5&#43;1M0EXuTG44BZjW&#43;K1SAf86qTRcgWpRNAS4U=" crossorigin="anonymous">
 <link href="/scss/main.min.587cc9ab2e7ed4cd045ee4c6e380598d6f8ad5201ff3aa9345c816a513404b85.css" rel="stylesheet" integrity="sha256-WHzJqy5&#43;1M0EXuTG44BZjW&#43;K1SAf86qTRcgWpRNAS4U=" crossorigin="anonymous">
 <script
@@ -47,7 +47,7 @@
   crossorigin="anonymous"></script>
 
   </head>
-  <body class="td-page">
+  <body class="td-section">
     <header>
       <nav class="td-navbar js-navbar-scroll" data-bs-theme="dark">
 <div class="container-fluid flex-column flex-md-row">
@@ -84,356 +84,496 @@
     <div class="container-fluid td-outer">
       <div class="td-main">
         <div class="row flex-xl-nowrap">
-          <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
-            <div id="td-sidebar-menu" class="td-sidebar__inner">
-  <form class="td-sidebar__search d-flex align-items-center">
-    <div class="td-search td-search--offline">
-  <div class="td-search__icon"></div>
-  <input
-    type="search"
-    class="td-search__input form-control"
-    placeholder="Search this site…"
-    aria-label="Search this site…"
-    autocomplete="off"
-    
-    data-offline-search-index-json-src="/offline-search-index.6ecd292d0ccf004ee484c012d16392e2.json"
-    data-offline-search-base-href="/"
-    data-offline-search-max-results="10"
-  >
-</div>
-    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ms-3 fas fa-bars" type="button" data-bs-toggle="collapse" data-bs-target="#td-section-nav" aria-controls="td-section-nav" aria-expanded="false" aria-label="Toggle section navigation">
-    </button>
-  </form>
-  <nav class="td-sidebar-nav collapse foldable-nav" id="td-section-nav">
-    <ul class="td-sidebar-nav__section pe-md-3 ul-0">
-      <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docs-li">
-  <a href="/docs/" title="Documentation" class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-docs"><span class="">Docs</span></a>
-  <ul class="ul-1">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsoverview-li">
-  <input type="checkbox" id="m-docsoverview-check"/>
-  <label for="m-docsoverview-check"><a href="/docs/overview/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsoverview"><span class="">Overview</span></a></label>
-  
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsabout-li">
-  <input type="checkbox" id="m-docsabout-check"/>
-  <label for="m-docsabout-check"><a href="/docs/about/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsabout"><span class="">About</span></a></label>
-  
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docsconcepts-li">
-  <input type="checkbox" id="m-docsconcepts-check" checked/>
-  <label for="m-docsconcepts-check"><a href="/docs/concepts/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsconcepts"><span class="">Concepts</span></a></label>
-  
-  <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsconceptsbatch-li">
-  <input type="checkbox" id="m-docsconceptsbatch-check"/>
-  <label for="m-docsconceptsbatch-check"><a href="/docs/concepts/batch/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsconceptsbatch"><span class="">Batch Processing</span></a></label>
-  
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsconceptsdb2-li">
-  <input type="checkbox" id="m-docsconceptsdb2-check"/>
-  <label for="m-docsconceptsdb2-check"><a href="/docs/concepts/db2/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsconceptsdb2"><span class="">DB2 Processing</span></a></label>
-  
-</li>
-  </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsinstall-li">
-  <input type="checkbox" id="m-docsinstall-check"/>
-  <label for="m-docsinstall-check"><a href="/docs/install/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsinstall"><span class="">Install Software</span></a></label>
-  
-  <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsinstallgnucobol-li">
-  <input type="checkbox" id="m-docsinstallgnucobol-check"/>
-  <label for="m-docsinstallgnucobol-check"><a href="/docs/install/gnucobol/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsinstallgnucobol"><span class="">Install GnuCOBOL.</span></a></label>
-  
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsinstallibm-db2-li">
-  <input type="checkbox" id="m-docsinstallibm-db2-check"/>
-  <label for="m-docsinstallibm-db2-check"><a href="/docs/install/ibm-db2/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsinstallibm-db2"><span class="">Install IBM DB2-LUW</span></a></label>
-  
-  <ul class="ul-3 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsinstallibm-db2install-db2-li">
-  <input type="checkbox" id="m-docsinstallibm-db2install-db2-check"/>
-  <label for="m-docsinstallibm-db2install-db2-check"><a href="/docs/install/ibm-db2/install-db2/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsinstallibm-db2install-db2"><span class="">Install IBM DB2 LUW RDBMS</span></a></label>
-  
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsinstallibm-db2install-sampledb-li">
-  <input type="checkbox" id="m-docsinstallibm-db2install-sampledb-check"/>
-  <label for="m-docsinstallibm-db2install-sampledb-check"><a href="/docs/install/ibm-db2/install-sampledb/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsinstallibm-db2install-sampledb"><span class="">Install the Sample DB</span></a></label>
-  
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsinstallibm-db2create-db2-db-li">
-  <input type="checkbox" id="m-docsinstallibm-db2create-db2-db-check"/>
-  <label for="m-docsinstallibm-db2create-db2-db-check"><a href="/docs/install/ibm-db2/create-db2-db/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsinstallibm-db2create-db2-db"><span class="">Create a DB2 DB</span></a></label>
-  
-</li>
-  </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsinstallpostgresql-li">
-  <input type="checkbox" id="m-docsinstallpostgresql-check"/>
-  <label for="m-docsinstallpostgresql-check"><a href="/docs/install/postgresql/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsinstallpostgresql"><span class="">Install PostgreSQL</span></a></label>
-  
-  <ul class="ul-3 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsinstallpostgresqlinstall-postgresql-li">
-  <input type="checkbox" id="m-docsinstallpostgresqlinstall-postgresql-check"/>
-  <label for="m-docsinstallpostgresqlinstall-postgresql-check"><a href="/docs/install/postgresql/install-postgresql/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsinstallpostgresqlinstall-postgresql"><span class="">Install PostgreSQL</span></a></label>
-  
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsinstallpostgresqlinstall-gixsql-li">
-  <input type="checkbox" id="m-docsinstallpostgresqlinstall-gixsql-check"/>
-  <label for="m-docsinstallpostgresqlinstall-gixsql-check"><a href="/docs/install/postgresql/install-gixsql/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsinstallpostgresqlinstall-gixsql"><span class="">Install GixSQL</span></a></label>
-  
-</li>
-  </ul>
-</li>
-  </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docstutorials-li">
-  <input type="checkbox" id="m-docstutorials-check"/>
-  <label for="m-docstutorials-check"><a href="/docs/tutorials/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docstutorials"><span class="">Tutorials</span></a></label>
-  
-  <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docstutorialsmvs-tk5-li">
-  <input type="checkbox" id="m-docstutorialsmvs-tk5-check"/>
-  <label for="m-docstutorialsmvs-tk5-check"><a href="/docs/tutorials/mvs-tk5/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docstutorialsmvs-tk5"><span class="">Run a &#34;Mainframe&#34; on Raspberry Pi.</span></a></label>
-  
-  <ul class="ul-3 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docstutorialsmvs-tk5install-tk5-li">
-  <input type="checkbox" id="m-docstutorialsmvs-tk5install-tk5-check"/>
-  <label for="m-docstutorialsmvs-tk5install-tk5-check"><a href="/docs/tutorials/mvs-tk5/install-tk5/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docstutorialsmvs-tk5install-tk5"><span class="">Install the MVS Turnkey 5 System</span></a></label>
-  
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docstutorialsmvs-tk5setup-x3270-li">
-  <input type="checkbox" id="m-docstutorialsmvs-tk5setup-x3270-check"/>
-  <label for="m-docstutorialsmvs-tk5setup-x3270-check"><a href="/docs/tutorials/mvs-tk5/setup-x3270/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docstutorialsmvs-tk5setup-x3270"><span class="">Setup a x3270 Terminal emulator</span></a></label>
-  
-</li>
-  </ul>
-</li>
-  </ul>
-</li>
-  </ul>
-</li>
-    </ul>
-  </nav>
-</div>
-
-          </aside>
-          <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
-            <div class="td-page-meta ms-2 pb-1 pt-2 mb-0">
-<a id="print" href="/docs/concepts/_print/"><i class="fa-solid fa-print fa-fw"></i> Print entire section</a>
-
-</div>
-
-            <div class="td-toc">
-        <nav id="TableOfContents">
-  <ul>
-    <li><a href="#breakdown-of-changes"><a href="./v1-changes.md">Breakdown of Changes</a>.</a></li>
-  </ul>
-</nav>
-      </div>
-    
-            
-	
-          </aside>
           <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
             
+
+
+
+
+<div class="td-content">
+<div class="pageinfo pageinfo-primary d-print-none">
+<p>
+This is the multi-page printable view of this section.
+<a href="#" onclick="print();return false;">Click here to print</a>.
+</p><p>
+<a href="/docs/tutorials/mvs-tk5/">Return to the regular view of this page</a>.
+</p>
+</div>
+
+
+
+<h1 class="title">Run a &#34;Mainframe&#34; on Raspberry Pi.</h1>
+<div class="lead">Install and run the MVS Turnkey 5 System.</div>
+
+
+
+
+    <ul>
+    
+  
+  
+  
   
 
-            <nav aria-label="breadcrumb" class="td-breadcrumbs">
-  <ol class="breadcrumb">
-  <li class="breadcrumb-item">
-    <a href="/docs/">Docs</a></li>
-  <li class="breadcrumb-item">
-    <a href="/docs/concepts/">Concepts</a></li>
-  <li class="breadcrumb-item active" aria-current="page">
-    Version 1</li>
-  </ol>
-</nav>
-<div class="td-content">
-	<h1>Version 1</h1>
-	<div class="lead">An example of a converted from ZOS/DB2 to GnuCOBOL/DB2 program</div>
-	<header class="article-meta">
-		
-  </header>
-	<h1 id="this-is-the-murach-custinq-program-with-just-enough-code-added-to-make-it-work-with-gnucobol-and-ibm-db2-luw">This is the Murach CUSTINQ program with just enough code added to make it work with GnuCOBOL and IBM DB2 LUW.<a class="td-heading-self-link" href="#this-is-the-murach-custinq-program-with-just-enough-code-added-to-make-it-work-with-gnucobol-and-ibm-db2-luw" aria-label="Heading self-link"></a></h1>
-<h2 id="breakdown-of-changes"><a href="/docs/concepts/v1-changes/">Breakdown of Changes</a>.<a class="td-heading-self-link" href="#breakdown-of-changes" aria-label="Heading self-link"></a></h2>
-<pre><code>   IDENTIFICATION DIVISION.
-  *
-   PROGRAM-ID.    CUSTINQ.
-  *
-   ENVIRONMENT DIVISION.
-  *
-   INPUT-OUTPUT SECTION.
-  *
-   FILE-CONTROL.
-  *
-   DATA DIVISION.
-  *
-   FILE SECTION.
-  *
-   WORKING-STORAGE SECTION.
-  *
-   01  SWITCHES.
-  *
-       05  END-OF-INQUIRIES-SW     PIC X   VALUE 'N'.
-           88  END-OF-INQUIRIES            VALUE 'Y'.
-       05  CUSTOMER-FOUND-SW       PIC X.
-           88  CUSTOMER-FOUND              VALUE 'Y'.
-       EXEC SQL
-           INCLUDE SQLCA
-       END-EXEC.
-  *
-  ***** Convert to GnuCOBOL
-  ***** Start of Step 1
-  *     No DCLGEN member to INCLUDE
-  *     Comment this INCLUDE out
-  *    EXEC SQL
-  *        INCLUDE CUSTOMER
-  *    END-EXEC.
-  *
-  *     Add DECLARE TABLE
-       EXEC SQL
-       DECLARE CUSTOMERS TABLE
-       (
-        CUSTNO        CHAR(6) not null,
-           FNAME         CHAR(20) not null,
-           LNAME         CHAR(30) not null,
-           ADDR          CHAR(30) not null,
-           CITY          CHAR(20) not null,
-           STATE         CHAR(2) not null,
-           ZIPCODE       CHAR(10) not null)
-       END-EXEC.
-
-  *     Add DECLARE SECTION
-       EXEC SQL BEGIN DECLARE SECTION END-EXEC.
-   01  Customer-Row.
-       12 CUSTNO     PIC X(06).
-       12 FNAME      PIC X(20).
-       12 LNAME      PIC X(30).
-       12 ADDR       PIC X(30).
-       12 CITY       PIC X(20).
-       12 STATE      PIC X(02).
-       12 ZIPCODE    PIC X(10).
-
-  *    This is hardcoded for the MURACH DB.
-  *    You might need to update this for your DB.
-   01  DB-Connection-Info.
-       12 DB-Alias                PIC X(8) VALUE 'MURACH'.
-       12 DB-User-ID              PIC X(10).
-       12 DB-Password.
-          15 DB-Passwd-Length     PIC S9(4) COMP-5  VALUE 0.
-          15 DB-Passwd-Name       PIC X(18).
-       EXEC SQL END DECLARE SECTION END-EXEC.
-
-  *     Add status check for connection info.
-   01  WS-SQL-STATUS                PIC S9(9) COMP-5.
-       88 SQL-STATUS-OK             VALUE    0.
-       88 SQL-STATUS-NOT-FOUND      VALUE  100.
-       88 SQL-STATUS-DUP            VALUE -803.
-
-  ***** End of Step 1
-
-   PROCEDURE DIVISION.
-  *
-   000-DISPLAY-CUSTOMER-ROWS.
-  *     Step 2
-  *     Add Paragraph to connect to the DB
-       PERFORM 9800-Connect-to-DB1.
-  *
-       PERFORM 100-DISPLAY-CUSTOMER-ROW
-           UNTIL END-OF-INQUIRIES.
-       STOP RUN.
-  *
-   100-DISPLAY-CUSTOMER-ROW.
-  *
-       PERFORM 110-ACCEPT-CUSTOMER-NUMBER.
-       IF NOT END-OF-INQUIRIES
-           MOVE 'Y' TO CUSTOMER-FOUND-SW
-           PERFORM 120-GET-CUSTOMER-ROW
-           IF CUSTOMER-FOUND
-               PERFORM 130-DISPLAY-CUSTOMER-LINES
-           ELSE
-               PERFORM 140-DISPLAY-ERROR-LINES.
-  *
-   110-ACCEPT-CUSTOMER-NUMBER.
-  *
-       DISPLAY '------------------------------------------------'.
-       DISPLAY 'KEY IN THE NEXT CUSTOMER NUMBER AND PRESS ENTER,'.
-       DISPLAY 'OR KEY IN 999999 AND PRESS ENTER TO QUIT.'.
-       ACCEPT CUSTNO.
-       IF CUSTNO = '999999'
-           MOVE 'Y' TO END-OF-INQUIRIES-SW.
-  *
-   120-GET-CUSTOMER-ROW.
-  *
-       EXEC SQL
-           SELECT CUSTNO,    FNAME,       LNAME,
-                  ADDR,      CITY,        STATE,
-                  ZIPCODE
-           INTO  :CUSTNO,       :FNAME,          :LNAME,
-                 :ADDR,         :CITY,           :STATE,
-                 :ZIPCODE
-           FROM   CUSTOMERS
-               WHERE  CUSTNO = :CUSTNO
-       END-EXEC.
-  *
-       IF SQLCODE NOT = 0
-           MOVE 'N' TO CUSTOMER-FOUND-SW.
-  *
-   130-DISPLAY-CUSTOMER-LINES.
-  *
-       DISPLAY '------------------------------------------------'.
-       DISPLAY '   CUSTOMER ' CUSTNO.
-       DISPLAY '   NAME     ' FNAME ' ' LNAME.
-       DISPLAY '   ADDRESS  ' ADDR.
-       DISPLAY '            ' CITY ' ' STATE ' '
-                              ZIPCODE.
-  *
-   140-DISPLAY-ERROR-LINES.
-  *
-       DISPLAY '------------------------------------------------'.
-       DISPLAY '   CUSTOMER NUMBER ' CUSTNO ' NOT FOUND.'.
-  *
-  *     Step 2 - the actual connection.
-   9800-Connect-to-DB1.
-       PERFORM 9810-Setup-DB1-Connection.
-       IF SQL-STATUS-OK
-          CONTINUE
-       ELSE
-          DISPLAY &quot;*** The DB connection is not valid!***&quot;
-          DISPLAY &quot;Exiting the program.!&quot;
-          GOBACK
-       END-IF.
-
-   9810-Setup-DB1-Connection.
-       PERFORM 9811-Get-Credentials.
-       PERFORM 9812-Create-Connection-To-DB1.
-
-   9811-Get-Credentials.
-       DISPLAY &quot;CUSTINQ: Need userid and password&quot;.
-
-       DISPLAY &quot;Enter your user id (default none): &quot;
-            WITH NO ADVANCING.
-       ACCEPT DB-User-ID.
-
-       DISPLAY &quot;Enter your password : &quot; WITH NO ADVANCING
-       ACCEPT DB-Passwd-Name.
-
-  * Passwords in a CONNECT statement must be entered in a VARCHAR
-  * format with the length of the input string.
-       INSPECT DB-Passwd-Name
-          TALLYING DB-Passwd-Length
-          FOR CHARACTERS BEFORE INITIAL &quot; &quot;.
-
-   9812-Create-Connection-To-DB1.
-       PERFORM 9814-Connect-To-DB1
-       IF SQL-STATUS-OK
-          CONTINUE
-       ELSE
-          DISPLAY &quot;CUSTINQ: userid and/or password invalid&quot;
-          DISPLAY &quot;CUSTINQ: Can not connect, exiting&quot;
-          GOBACK
-       END-IF.
-
-   9814-Connect-To-DB1.
-       EXEC SQL CONNECT TO :DB-Alias
-            USER :DB-User-ID
-            USING :DB-Passwd-Name
-          END-EXEC.
-       MOVE SQLCODE TO WS-SQL-STATUS.
-</code></pre>
-
+  
+    
+    
 	
+<li>1: <a href="#pg-eb508b7e4bcd7ceb74f9c82ee311d01c">Install the MVS Turnkey 5 System</a></li>
+
+
+    
+  
+    
+    
+	
+<li>2: <a href="#pg-7302460f641752067114008522da24aa">Setup a x3270 Terminal emulator</a></li>
+
+
+    
+  
+    
+    
+	
+<li>3: <a href="#pg-4cf2b00267404b49ba95dd91ff065d18">An example x3270 profile</a></li>
+
+
+    
+  
+
+    </ul>
+
+
+<div class="content">
+      <h2 id="this-is-a-way-to-learn-how-to-write-cobol-programs-for-an-ibm-mainframe-system">This is a way to learn how to write COBOL programs for an IBM Mainframe system.<a class="td-heading-self-link" href="#this-is-a-way-to-learn-how-to-write-cobol-programs-for-an-ibm-mainframe-system" aria-label="Heading self-link"></a></h2>
+
+
+<div class="pageinfo pageinfo-primary">
+<p>This will be more of a &ldquo;cheatsheet&rdquo; than an explict guide. It
+is written for someone with some GNU/Linux command line experience. You may have
+to do some additional research to execute this correctly.</p>
+
 </div>
+
+
+</div>
+</div>
+
+
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-eb508b7e4bcd7ceb74f9c82ee311d01c">1 - Install the MVS Turnkey 5 System</h1>
+    <div class="lead">Get it up and running on a RPi.</div>
+	<h2 id="hardware-used">Hardware used<a class="td-heading-self-link" href="#hardware-used" aria-label="Heading self-link"></a></h2>
+<ul>
+<li>Raspberry Pi 3 B+</li>
+<li>RPi-OS-Lite(64bit)</li>
+<li>TK5 version 4</li>
+</ul>
+<h2 id="initial-setup-and-installation">Initial setup and installation<a class="td-heading-self-link" href="#initial-setup-and-installation" aria-label="Heading self-link"></a></h2>
+<p>Use rpi-imager to create the microsd card</p>
+<p>Insert the SD card into the RPi and turn on.</p>
+<p>I use nmap to determine the IP address of the RPi.</p>
+<p>ssh into the RPi</p>
+<p>run: <code>sudo apt update</code> <code>sudo apt upgrade</code></p>
+<p>and reboot.</p>
+<h2 id="install-some-basics">Install some basics:<a class="td-heading-self-link" href="#install-some-basics" aria-label="Heading self-link"></a></h2>
+<p><code>sudo apt install vim mc bat</code> Note: bat is installed as &ldquo;batcat&rdquo; so cd to
+/usr/bin and <code>sudo ln -s batcat bat</code></p>
+<p>Use nmtui to change to a static IP.</p>
+<h2 id="get-and-install-tk5">Get and install TK5<a class="td-heading-self-link" href="#get-and-install-tk5" aria-label="Heading self-link"></a></h2>
+<p>Visit the <a href="https://www.prince-webdesign.nl/tk5">MVS-TK5 Website</a> for more
+information.</p>
+<h3 id="download-the-zip-file">Download the zip file.<a class="td-heading-self-link" href="#download-the-zip-file" aria-label="Heading self-link"></a></h3>
+<p><code>wget https://www.prince-webdesign.nl/images/downloads/mvs-tk5.zip</code></p>
+<h3 id="unzip-and-set-it-up">Unzip and set it up.<a class="td-heading-self-link" href="#unzip-and-set-it-up" aria-label="Heading self-link"></a></h3>
+<p><code>sudo su -</code> to switch to root user.</p>
+<p><code>cd /</code> to go to the file system root.</p>
+<p><code>unzip &lt;mvs-tk5.zip&gt;</code> from where it was downloaded to.</p>
+<p><code>cd mvs-tk5</code></p>
+<p><code>chmod -R +x *</code> to make all the files executeable. (Note: I&rsquo;m not real happy
+with this, it&rsquo;s too general, but I don&rsquo;t have a list of the specific files that
+<strong>need</strong> to be executeable so this will do.)</p>
+<p><code>./unattached/set_console_mode</code></p>
+<h2 id="create-a-systemd-service">Create a systemd service<a class="td-heading-self-link" href="#create-a-systemd-service" aria-label="Heading self-link"></a></h2>
+<p><code>vim /etc/systemd/system/mvs.service</code></p>
+<p>and paste the text below into that file.</p>
+<pre tabindex="0"><code>[Unit]
+Description=MVS 3.8j
+ConditionPathExists=/mvs-tk5
+
+[Service]
+WorkingDirectory=/mvs-tk5
+ExecStart=/mvs-tk5/mvs
+KillMode=process
+Type=simple
+
+[Install]
+WantedBy=multi-user.target
+</code></pre><h2 id="run-these-to-enable-and-start-it">Run these to enable and start it.<a class="td-heading-self-link" href="#run-these-to-enable-and-start-it" aria-label="Heading self-link"></a></h2>
+<pre tabindex="0"><code>systemctl daemon-reload
+systemctl enable mvs
+systemctl start mvs
+</code></pre>
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-7302460f641752067114008522da24aa">2 - Setup a x3270 Terminal emulator</h1>
+    <div class="lead">Connect to the MVS-TK5 system.</div>
+	<h2 id="install-the-software">Install the software<a class="td-heading-self-link" href="#install-the-software" aria-label="Heading self-link"></a></h2>
+<p><code>sudo apt install x3270</code></p>
+<p>This will also install some fonts but if you use a different profile, more will
+need to be installed:</p>
+<h2 id="install-and-setup-the-fonts">Install and setup the fonts<a class="td-heading-self-link" href="#install-and-setup-the-fonts" aria-label="Heading self-link"></a></h2>
+<p><code>sudo apt install xfonts-100dpi xfonts-75dpi</code></p>
+<p>Then add the new fonts to xset:</p>
+<pre tabindex="0"><code>xset fp+ /usr/share/fonts/X11/100dpi/:unscaled
+xset fp+ /usr/share/fonts/X11/75dpi/:unscaled
+xset fp+ /usr/share/fonts/X11/100dpi
+xset fp+ /usr/share/fonts/X11/75dpi
+</code></pre><p>Update the font cache so the x3270 profile font is recognized.</p>
+<p><code>xset fp rehash</code></p>
+<h2 id="setup-the-x3270-profile">Setup the x3270 profile<a class="td-heading-self-link" href="#setup-the-x3270-profile" aria-label="Heading self-link"></a></h2>
+<p>Search the internet for examples of x3270 profiles.</p>
+<p><a href="/docs/tutorials/mvs-tk5/x3270-profile/">This</a> is the x3270 profile I use.</p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-4cf2b00267404b49ba95dd91ff065d18">3 - An example x3270 profile</h1>
+    <div class="lead">This is what I use.</div>
+	<h3 id="save-this-file-as-homex3270pro">Save this file as $HOME/.x3270pro<a class="td-heading-self-link" href="#save-this-file-as-homex3270pro" aria-label="Heading self-link"></a></h3>
+<h4 id="fyi-this-uses-the-enter-key-as-newline-and-the-right-ctrl-key-as-enter">FYI: This uses the <code>&lt;Enter&gt;</code> key as <strong>Newline</strong> and the <code>&lt;Right Ctrl&gt;</code> key as <strong>Enter</strong>.<a class="td-heading-self-link" href="#fyi-this-uses-the-enter-key-as-newline-and-the-right-ctrl-key-as-enter" aria-label="Heading self-link"></a></h4>
+<pre tabindex="0"><code>! x3270 profile
+! =============
+
+! Sensible defaults, and Emacs-like keybindings.
+! Chris Poole.
+
+
+! Keyboard config
+! ---------------
+
+! keypad state  (-keypad)
+x3270.keypadOn: false
+! keymap  (-keymap)
+x3270.keymap: @server
+
+! Use the &#39;mine&#39; keymap, defined below
+x3270.keymap: mine
+! Definition of the &#39;mine&#39; keymap
+! More-specific definitions must come before less-specific definitions.
+! The definition for Shift&lt;Key&gt;Backspace must come before the
+! definition for &lt;Key&gt;BackSpace
+x3270.keymap.mine: #override \
+    &lt;Key&gt;Escape           : Attn()\n\
+    &lt;Key&gt;Return           : Newline()\n\
+    &lt;Key&gt;Control_R        : Enter()\n\
+    &lt;Key&gt;Control_L        : Reset()\n\
+    &lt;Key&gt;ISO_Level3_Shift : Enter()\n\
+    Ctrl Alt Mod2&lt;Key&gt;d   : Disconnect()\n\
+    Ctrl&lt;Key&gt;F9           : PF(21)\n\
+    &lt;Key&gt;Prior            : PF(7)\n\
+    &lt;Key&gt;Next             : PF(8)\n\
+    Shift&lt;Key&gt;Return      : Up()\n\
+    Ctrl&lt;Key&gt;c            : Clear()\n\
+    Ctrl&lt;Key&gt;g            : Redraw()\n\
+    Ctrl&lt;Key&gt;h            : Home()\n\
+    Ctrl&lt;Key&gt;i            : ToggleInsert()\n\
+    Ctrl&lt;Key&gt;r            : Reset()\n\
+    Ctrl&lt;Key&gt;1            : PA(1)\n\
+    Ctrl&lt;Key&gt;2            : PA(2)\n\
+    Ctrl&lt;Key&gt;3            : PA(3)\n\
+    Meta&lt;Key&gt;w            : set-select(CLIPBOARD)\n\
+    Ctrl&lt;Key&gt;y            : insert-selection(CLIPBOARD)\n\
+    Ctrl&lt;Key&gt;a            : BackTab()\n\
+    Ctrl&lt;Key&gt;e            : FieldEnd()\n\
+    Ctrl&lt;Key&gt;p            : Up()\n\
+    Ctrl&lt;Key&gt;n            : Down()\n\
+    Ctrl&lt;Key&gt;b            : Left()\n\
+    Ctrl&lt;Key&gt;f            : Right()\n\
+    Meta&lt;Key&gt;b            : PreviousWord()\n\
+    Meta&lt;Key&gt;f            : NextWord()\n\
+    Ctrl&lt;Key&gt;v            : PF(8)\n\
+    Meta&lt;Key&gt;v            : PF(7)\n\
+    Ctrl&lt;Key&gt;d            : Delete()\n\
+    Ctrl&lt;Key&gt;k            : EraseEOF()\n\
+    Meta&lt;Key&gt;w            : DeleteWord()
+
+
+! Miscellaneous
+! -------------
+
+! Use block cursor
+x3270.altCursor: false
+
+x3270.scrollBar: false
+
+! Colors of menus
+x3270.background: black
+x3270.foreground: red
+
+! Silence the bell
+x3270.bellVolume: -100
+x3270.visualBell: true
+
+! Use a larger font
+x3270.emulatorFont: 3270-20
+
+! Window size; 160x62 is maximum in PCOMM
+x3270.oversize: 160x62
+
+x3270.model: 3279-5-E
+
+! Demo mode:
+!x3270.emulatorFont: 3270gt32
+!x3270.oversize: 96x26
+!x3270.model: 3279-2-E
+
+! Crosshair
+x3270.crosshair: true
+
+! Pull-down menus: Ctrl and each of the mouse buttons
+!x3270.menuBar: false
+
+! Don&#39;t reconnect automatically
+x3270.reconnect: false
+
+! Don&#39;t allow windows to be resized
+x3270.allowResize: false
+
+! When pasting text, treat columns to the left of the cursor as a martin to
+! avoid printing into
+x3270.marginedPaste: true
+
+! Complete list of defaults can be found at:
+! http://stuff.mit.edu/afs/athena/astaff/source/src-8.4/third/x3270/X3270.xad
+! File updated Fri Sep 30 21:24:31 2022 by x3270 v4.2ga5 Wed Sep 21 01:33:39 UTC 2022 dastagg
+
+! Color Scheme
+! ------------
+
+x3270.colorScheme.cjp: \
+	black blue red magenta \
+	green turquoise yellow white \
+	black blue3 orange purple \
+	paleGreen cyan grey white \
+	white black dimGray \
+	4 2 1 15
+
+! x3270.colorScheme: cjp
+
+! Default, for reference
+! x3270.colorScheme.default: \
+! 	black deepSkyBlue red pink \
+! 	green turquoise yellow white \
+! 	black blue3 orange purple \
+! 	paleGreen paleTurquoise2 grey white \
+! 	white black dimGray \
+! 	4 2 1 15
+
+
+! --------------------------------------------------
+! .x3270pro file generated using x3270.nice by Soldier of FORTRAN
+! Original Xresource file: &#39;Argonaut&#39;
+! Copy and paste this output to ~/.x3270pro
+! --------------------------------------------------
+! Original Xresource file:
+! --------------------------------------------------
+! Generated with :
+! XRDB2Xreources.py
+! *.foreground:  #fffaf4
+! *.background:  #0e1019
+! Black
+! *.color0:      #232323
+! *.color8:      #444444
+! Red
+! *.color1:      #ff000f
+! *.color9:      #ff2740
+! Green
+! *.color2:      #8ce10b
+! *.color10:     #abe15b
+! Yellow
+! *.color3:      #ffb900
+! *.color11:     #ffd242
+! Blue
+! *.color4:      #008df8
+! *.color12:     #0092ff
+! Magenta
+! *.color5:      #6d43a6
+! *.color13:     #9a5feb
+! Cyan
+! *.color6:      #00d8eb
+! *.color14:     #67fff0
+! White
+! *.color7:      #ffffff
+! *.color15:     #ffffff
+! Bold, Italic, Underline
+! *.colorIT:
+! *.colorUL:
+! --------------------------------------------------
+! Adding theme to Options -&gt; Color Scheme
+! --------------------------------------------------
+x3270.schemeList: Default 3279: default\n\
+                  Bright: bright\n\
+                  Reverse: reverse\n\
+                  Green Screen: greenScreen\n\
+                  Argonaut: Argonaut
+! --------------------------------------------------
+! Generating Argonaut .x3270pro theme
+! --------------------------------------------------
+! Menu Colors: Foreground
+! --------------------------------------------------
+x3270*dialog*confirmButton.foreground     : #fffaf4
+x3270*dialog*foreground                   : #fffaf4
+x3270.aboutPopup*icon.foreground          : #fffaf4
+x3270.keypadForeground                    : #fffaf4
+x3270*menuBarContainer.foreground         : #fffaf4
+x3270*fileMenuButton*foreground           : #fffaf4
+x3270*optionsMenuButton*foreground        : #fffaf4
+x3270*connectMenuButton*foreground        : #fffaf4
+x3270*reconnectButton*foreground          : #fffaf4
+x3270*macrosMenuButton*foreground         : #fffaf4
+x3270*keypadButton*foreground             : #fffaf4
+x3270*fileMenu*foreground                 : #fffaf4
+x3270*exitMenu*foreground                 : #fffaf4
+x3270*optionsMenu*foreground              : #fffaf4
+x3270*hostMenu*foreground                 : #fffaf4
+x3270*reconnect*foreground                : #fffaf4
+x3270*macrosMenu*foreground               : #fffaf4
+x3270*togglesMenu*foreground              : #fffaf4
+x3270*fontsMenu*foreground                : #fffaf4
+x3270*modelsMenu*foreground               : #fffaf4
+x3270*colorsMenu*foreground               : #fffaf4
+x3270*charsetMenu*foreground              : #fffaf4
+x3270*dialog*value*foreground             : #fffaf4
+x3270*dialog*foreground                   : #fffaf4
+x3270*dialog*confirmButton.foreground     : #fffaf4
+x3270*dialog*confirm2Button.foreground    : #fffaf4
+3270*dialog*cancelButton.foreground       : #fffaf4
+x3270.ftProgressPopup*filename.foreground : #fffaf4
+! --------------------------------------------------
+! Menu Colors: Critical
+! --------------------------------------------------
+x3270.errorPopup*label.foreground         : #ff2740
+x3270*dialog*cancelButton.foreground      : #ff2740
+! --------------------------------------------------
+! Menu Colors: Backgrounds
+! --------------------------------------------------
+x3270.keypadBackground                    : #0e1019
+x3270*menuBarContainer.background         : #0e1019
+x3270*fileMenuButton*background           : #0e1019
+x3270*optionsMenuButton*background        : #0e1019
+x3270*connectMenuButton*background        : #0e1019
+x3270*reconnectButton*background          : #0e1019
+x3270*macrosMenuButton*background         : #0e1019
+x3270*keypadButton*background             : #0e1019
+x3270*fileMenu*background                 : #0e1019
+x3270*exitMenu*background                 : #0e1019
+x3270*optionsMenu*background              : #0e1019
+x3270*hostMenu*background                 : #0e1019
+x3270*reconnect*background                : #0e1019
+x3270*macrosMenu*background               : #0e1019
+x3270*togglesMenu*background              : #0e1019
+x3270*fontsMenu*background                : #0e1019
+x3270*modelsMenu*background               : #0e1019
+x3270*colorsMenu*background               : #0e1019
+x3270*charsetMenu*background              : #0e1019
+x3270*dialog*value*background             : #0e1019
+x3270*dialog*background                   : #0e1019
+x3270*dialog*confirmButton.background     : #0e1019
+x3270*dialog*confirm2Button.background    : #0e1019
+3270*dialog*cancelButton.background       : #0e1019
+x3270.ftProgressPopup*filename.background : #0e1019
+! --------------------------------------------------
+! Menu Colors: Borders
+! --------------------------------------------------
+x3270*reconnectButton*borderColor         : #fffaf4
+x3270*macrosMenuButton*borderColor        : #fffaf4
+x3270*fileMenu.borderColor                : #fffaf4
+x3270*exitMenu.borderColor                : #fffaf4
+x3270*optionsMenu.borderColor             : #fffaf4
+x3270*hostMenu.borderColor                : #fffaf4
+x3270*macrosMenu.borderColor              : #fffaf4
+x3270*togglesMenu.borderColor             : #fffaf4
+x3270*fontsMenu.borderColor               : #fffaf4
+x3270*modelsMenu.borderColor              : #fffaf4
+x3270*colorsMenu.borderColor              : #fffaf4
+x3270*charsetMenu.borderColor             : #fffaf4
+x3270*confirmButton.borderColor           : #fffaf4
+x3270*confirmButton.borderColor           : #fffaf4
+x3270*confirm2Button.borderColor          : #fffaf4
+x3270*cancelButton.borderColor            : #fffaf4
+x3270.ftProgressPopup*filename.borderColor: #fffaf4
+x3270*fileMenuButton*borderColor          : #0e1019
+x3270*optionsMenuButton*borderColor       : #0e1019
+x3270*connectMenuButton*borderColor       : #0e1019
+x3270*menuBarContainer.borderColor        : #0e1019
+x3270*menuBarContainer.borderWidth        : 0
+x3270*value.borderColor                   : #fffaf4
+x3270*value.foreground                    : #fffaf4
+! --------------------------------------------------
+! Default Color Scheme
+! --------------------------------------------------
+x3270.colorScheme: Argonaut
+! --------------------------------------------------
+! Color Scheme definition
+! --------------------------------------------------
+x3270.colorScheme.Argonaut: \
+   #232323 #0092ff #ff2740 #9a5feb \
+   #abe15b #67fff0 #ffd242 #fffaf4 \
+   #232323 #008df8 #ffb900 #6d43a6 \
+   #8ce10b #00d8eb #444444 #ffffff \
+   white #0e1019 #444444 4 \
+   2 1 15
+! --------------------------------------------------
+! x3270.nice done
+! --------------------------------------------------
+</code></pre>
+</div>
+
+
+
+    
+	
+  
+
 
 
           </main>

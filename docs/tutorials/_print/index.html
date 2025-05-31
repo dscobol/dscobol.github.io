@@ -20,21 +20,21 @@
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
 <title>Tutorials | dscobol</title>
-<meta name="description" content="Show your user how to work through some end to end examples.">
+<meta name="description" content="Some things I have learned and will try to pass on.">
 <meta property="og:url" content="https://dscobol.github.io/docs/tutorials/">
   <meta property="og:site_name" content="dscobol">
   <meta property="og:title" content="Tutorials">
-  <meta property="og:description" content="Show your user how to work through some end to end examples.">
+  <meta property="og:description" content="Some things I have learned and will try to pass on.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 
   <meta itemprop="name" content="Tutorials">
-  <meta itemprop="description" content="Show your user how to work through some end to end examples.">
-  <meta itemprop="dateModified" content="2025-05-23T23:15:37-04:00">
-  <meta itemprop="wordCount" content="7">
+  <meta itemprop="description" content="Some things I have learned and will try to pass on.">
+  <meta itemprop="dateModified" content="2025-05-31T13:15:08-04:00">
+  <meta itemprop="wordCount" content="34">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Tutorials">
-  <meta name="twitter:description" content="Show your user how to work through some end to end examples.">
+  <meta name="twitter:description" content="Some things I have learned and will try to pass on.">
 <link rel="preload" href="/scss/main.min.587cc9ab2e7ed4cd045ee4c6e380598d6f8ad5201ff3aa9345c816a513404b85.css" as="style" integrity="sha256-WHzJqy5&#43;1M0EXuTG44BZjW&#43;K1SAf86qTRcgWpRNAS4U=" crossorigin="anonymous">
 <link href="/scss/main.min.587cc9ab2e7ed4cd045ee4c6e380598d6f8ad5201ff3aa9345c816a513404b85.css" rel="stylesheet" integrity="sha256-WHzJqy5&#43;1M0EXuTG44BZjW&#43;K1SAf86qTRcgWpRNAS4U=" crossorigin="anonymous">
 <script
@@ -72,7 +72,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.0cf24be0e44b406a3ff12df67d7b14b2.json"
+    data-offline-search-index-json-src="/offline-search-index.6ecd292d0ccf004ee484c012d16392e2.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -103,7 +103,7 @@ This is the multi-page printable view of this section.
 
 
 <h1 class="title">Tutorials</h1>
-<div class="lead">Show your user how to work through some end to end examples.</div>
+<div class="lead">Some things I have learned and will try to pass on.</div>
 
 
 
@@ -116,6 +116,49 @@ This is the multi-page printable view of this section.
   
 
   
+    
+    
+	
+<li>1: <a href="#pg-87e86ba06a0c8267cc4e0e407e7a15b6">Run a &#34;Mainframe&#34; on Raspberry Pi.</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>1.1: <a href="#pg-eb508b7e4bcd7ceb74f9c82ee311d01c">Install the MVS Turnkey 5 System</a></li>
+
+
+    
+  
+    
+    
+	
+<li>1.2: <a href="#pg-7302460f641752067114008522da24aa">Setup a x3270 Terminal emulator</a></li>
+
+
+    
+  
+    
+    
+	
+<li>1.3: <a href="#pg-4cf2b00267404b49ba95dd91ff065d18">An example x3270 profile</a></li>
+
+
+    
+  
+
+    </ul>
+    
+  
 
     </ul>
 
@@ -124,7 +167,11 @@ This is the multi-page printable view of this section.
       
 
 <div class="pageinfo pageinfo-primary">
-At some time in the near future
+<p>Unless stated otherwise, all these tutorials will be written to
+be executed on a Pop!_OS system.</p>
+<p>Most of the time, the same commands will run on Debian or Ubuntu but your
+mileage may vary.</p>
+
 </div>
 
 
@@ -140,6 +187,449 @@ At some time in the near future
   
   
 
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-87e86ba06a0c8267cc4e0e407e7a15b6">1 - Run a &#34;Mainframe&#34; on Raspberry Pi.</h1>
+    <div class="lead">Install and run the MVS Turnkey 5 System.</div>
+	<h2 id="this-is-a-way-to-learn-how-to-write-cobol-programs-for-an-ibm-mainframe-system">This is a way to learn how to write COBOL programs for an IBM Mainframe system.<a class="td-heading-self-link" href="#this-is-a-way-to-learn-how-to-write-cobol-programs-for-an-ibm-mainframe-system" aria-label="Heading self-link"></a></h2>
+
+
+<div class="pageinfo pageinfo-primary">
+<p>This will be more of a &ldquo;cheatsheet&rdquo; than an explict guide. It
+is written for someone with some GNU/Linux command line experience. You may have
+to do some additional research to execute this correctly.</p>
+
+</div>
+
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-eb508b7e4bcd7ceb74f9c82ee311d01c">1.1 - Install the MVS Turnkey 5 System</h1>
+    <div class="lead">Get it up and running on a RPi.</div>
+	<h2 id="hardware-used">Hardware used<a class="td-heading-self-link" href="#hardware-used" aria-label="Heading self-link"></a></h2>
+<ul>
+<li>Raspberry Pi 3 B+</li>
+<li>RPi-OS-Lite(64bit)</li>
+<li>TK5 version 4</li>
+</ul>
+<h2 id="initial-setup-and-installation">Initial setup and installation<a class="td-heading-self-link" href="#initial-setup-and-installation" aria-label="Heading self-link"></a></h2>
+<p>Use rpi-imager to create the microsd card</p>
+<p>Insert the SD card into the RPi and turn on.</p>
+<p>I use nmap to determine the IP address of the RPi.</p>
+<p>ssh into the RPi</p>
+<p>run: <code>sudo apt update</code> <code>sudo apt upgrade</code></p>
+<p>and reboot.</p>
+<h2 id="install-some-basics">Install some basics:<a class="td-heading-self-link" href="#install-some-basics" aria-label="Heading self-link"></a></h2>
+<p><code>sudo apt install vim mc bat</code> Note: bat is installed as &ldquo;batcat&rdquo; so cd to
+/usr/bin and <code>sudo ln -s batcat bat</code></p>
+<p>Use nmtui to change to a static IP.</p>
+<h2 id="get-and-install-tk5">Get and install TK5<a class="td-heading-self-link" href="#get-and-install-tk5" aria-label="Heading self-link"></a></h2>
+<p>Visit the <a href="https://www.prince-webdesign.nl/tk5">MVS-TK5 Website</a> for more
+information.</p>
+<h3 id="download-the-zip-file">Download the zip file.<a class="td-heading-self-link" href="#download-the-zip-file" aria-label="Heading self-link"></a></h3>
+<p><code>wget https://www.prince-webdesign.nl/images/downloads/mvs-tk5.zip</code></p>
+<h3 id="unzip-and-set-it-up">Unzip and set it up.<a class="td-heading-self-link" href="#unzip-and-set-it-up" aria-label="Heading self-link"></a></h3>
+<p><code>sudo su -</code> to switch to root user.</p>
+<p><code>cd /</code> to go to the file system root.</p>
+<p><code>unzip &lt;mvs-tk5.zip&gt;</code> from where it was downloaded to.</p>
+<p><code>cd mvs-tk5</code></p>
+<p><code>chmod -R +x *</code> to make all the files executeable. (Note: I&rsquo;m not real happy
+with this, it&rsquo;s too general, but I don&rsquo;t have a list of the specific files that
+<strong>need</strong> to be executeable so this will do.)</p>
+<p><code>./unattached/set_console_mode</code></p>
+<h2 id="create-a-systemd-service">Create a systemd service<a class="td-heading-self-link" href="#create-a-systemd-service" aria-label="Heading self-link"></a></h2>
+<p><code>vim /etc/systemd/system/mvs.service</code></p>
+<p>and paste the text below into that file.</p>
+<pre tabindex="0"><code>[Unit]
+Description=MVS 3.8j
+ConditionPathExists=/mvs-tk5
+
+[Service]
+WorkingDirectory=/mvs-tk5
+ExecStart=/mvs-tk5/mvs
+KillMode=process
+Type=simple
+
+[Install]
+WantedBy=multi-user.target
+</code></pre><h2 id="run-these-to-enable-and-start-it">Run these to enable and start it.<a class="td-heading-self-link" href="#run-these-to-enable-and-start-it" aria-label="Heading self-link"></a></h2>
+<pre tabindex="0"><code>systemctl daemon-reload
+systemctl enable mvs
+systemctl start mvs
+</code></pre>
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-7302460f641752067114008522da24aa">1.2 - Setup a x3270 Terminal emulator</h1>
+    <div class="lead">Connect to the MVS-TK5 system.</div>
+	<h2 id="install-the-software">Install the software<a class="td-heading-self-link" href="#install-the-software" aria-label="Heading self-link"></a></h2>
+<p><code>sudo apt install x3270</code></p>
+<p>This will also install some fonts but if you use a different profile, more will
+need to be installed:</p>
+<h2 id="install-and-setup-the-fonts">Install and setup the fonts<a class="td-heading-self-link" href="#install-and-setup-the-fonts" aria-label="Heading self-link"></a></h2>
+<p><code>sudo apt install xfonts-100dpi xfonts-75dpi</code></p>
+<p>Then add the new fonts to xset:</p>
+<pre tabindex="0"><code>xset fp+ /usr/share/fonts/X11/100dpi/:unscaled
+xset fp+ /usr/share/fonts/X11/75dpi/:unscaled
+xset fp+ /usr/share/fonts/X11/100dpi
+xset fp+ /usr/share/fonts/X11/75dpi
+</code></pre><p>Update the font cache so the x3270 profile font is recognized.</p>
+<p><code>xset fp rehash</code></p>
+<h2 id="setup-the-x3270-profile">Setup the x3270 profile<a class="td-heading-self-link" href="#setup-the-x3270-profile" aria-label="Heading self-link"></a></h2>
+<p>Search the internet for examples of x3270 profiles.</p>
+<p><a href="/docs/tutorials/mvs-tk5/x3270-profile/">This</a> is the x3270 profile I use.</p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-4cf2b00267404b49ba95dd91ff065d18">1.3 - An example x3270 profile</h1>
+    <div class="lead">This is what I use.</div>
+	<h3 id="save-this-file-as-homex3270pro">Save this file as $HOME/.x3270pro<a class="td-heading-self-link" href="#save-this-file-as-homex3270pro" aria-label="Heading self-link"></a></h3>
+<h4 id="fyi-this-uses-the-enter-key-as-newline-and-the-right-ctrl-key-as-enter">FYI: This uses the <code>&lt;Enter&gt;</code> key as <strong>Newline</strong> and the <code>&lt;Right Ctrl&gt;</code> key as <strong>Enter</strong>.<a class="td-heading-self-link" href="#fyi-this-uses-the-enter-key-as-newline-and-the-right-ctrl-key-as-enter" aria-label="Heading self-link"></a></h4>
+<pre tabindex="0"><code>! x3270 profile
+! =============
+
+! Sensible defaults, and Emacs-like keybindings.
+! Chris Poole.
+
+
+! Keyboard config
+! ---------------
+
+! keypad state  (-keypad)
+x3270.keypadOn: false
+! keymap  (-keymap)
+x3270.keymap: @server
+
+! Use the &#39;mine&#39; keymap, defined below
+x3270.keymap: mine
+! Definition of the &#39;mine&#39; keymap
+! More-specific definitions must come before less-specific definitions.
+! The definition for Shift&lt;Key&gt;Backspace must come before the
+! definition for &lt;Key&gt;BackSpace
+x3270.keymap.mine: #override \
+    &lt;Key&gt;Escape           : Attn()\n\
+    &lt;Key&gt;Return           : Newline()\n\
+    &lt;Key&gt;Control_R        : Enter()\n\
+    &lt;Key&gt;Control_L        : Reset()\n\
+    &lt;Key&gt;ISO_Level3_Shift : Enter()\n\
+    Ctrl Alt Mod2&lt;Key&gt;d   : Disconnect()\n\
+    Ctrl&lt;Key&gt;F9           : PF(21)\n\
+    &lt;Key&gt;Prior            : PF(7)\n\
+    &lt;Key&gt;Next             : PF(8)\n\
+    Shift&lt;Key&gt;Return      : Up()\n\
+    Ctrl&lt;Key&gt;c            : Clear()\n\
+    Ctrl&lt;Key&gt;g            : Redraw()\n\
+    Ctrl&lt;Key&gt;h            : Home()\n\
+    Ctrl&lt;Key&gt;i            : ToggleInsert()\n\
+    Ctrl&lt;Key&gt;r            : Reset()\n\
+    Ctrl&lt;Key&gt;1            : PA(1)\n\
+    Ctrl&lt;Key&gt;2            : PA(2)\n\
+    Ctrl&lt;Key&gt;3            : PA(3)\n\
+    Meta&lt;Key&gt;w            : set-select(CLIPBOARD)\n\
+    Ctrl&lt;Key&gt;y            : insert-selection(CLIPBOARD)\n\
+    Ctrl&lt;Key&gt;a            : BackTab()\n\
+    Ctrl&lt;Key&gt;e            : FieldEnd()\n\
+    Ctrl&lt;Key&gt;p            : Up()\n\
+    Ctrl&lt;Key&gt;n            : Down()\n\
+    Ctrl&lt;Key&gt;b            : Left()\n\
+    Ctrl&lt;Key&gt;f            : Right()\n\
+    Meta&lt;Key&gt;b            : PreviousWord()\n\
+    Meta&lt;Key&gt;f            : NextWord()\n\
+    Ctrl&lt;Key&gt;v            : PF(8)\n\
+    Meta&lt;Key&gt;v            : PF(7)\n\
+    Ctrl&lt;Key&gt;d            : Delete()\n\
+    Ctrl&lt;Key&gt;k            : EraseEOF()\n\
+    Meta&lt;Key&gt;w            : DeleteWord()
+
+
+! Miscellaneous
+! -------------
+
+! Use block cursor
+x3270.altCursor: false
+
+x3270.scrollBar: false
+
+! Colors of menus
+x3270.background: black
+x3270.foreground: red
+
+! Silence the bell
+x3270.bellVolume: -100
+x3270.visualBell: true
+
+! Use a larger font
+x3270.emulatorFont: 3270-20
+
+! Window size; 160x62 is maximum in PCOMM
+x3270.oversize: 160x62
+
+x3270.model: 3279-5-E
+
+! Demo mode:
+!x3270.emulatorFont: 3270gt32
+!x3270.oversize: 96x26
+!x3270.model: 3279-2-E
+
+! Crosshair
+x3270.crosshair: true
+
+! Pull-down menus: Ctrl and each of the mouse buttons
+!x3270.menuBar: false
+
+! Don&#39;t reconnect automatically
+x3270.reconnect: false
+
+! Don&#39;t allow windows to be resized
+x3270.allowResize: false
+
+! When pasting text, treat columns to the left of the cursor as a martin to
+! avoid printing into
+x3270.marginedPaste: true
+
+! Complete list of defaults can be found at:
+! http://stuff.mit.edu/afs/athena/astaff/source/src-8.4/third/x3270/X3270.xad
+! File updated Fri Sep 30 21:24:31 2022 by x3270 v4.2ga5 Wed Sep 21 01:33:39 UTC 2022 dastagg
+
+! Color Scheme
+! ------------
+
+x3270.colorScheme.cjp: \
+	black blue red magenta \
+	green turquoise yellow white \
+	black blue3 orange purple \
+	paleGreen cyan grey white \
+	white black dimGray \
+	4 2 1 15
+
+! x3270.colorScheme: cjp
+
+! Default, for reference
+! x3270.colorScheme.default: \
+! 	black deepSkyBlue red pink \
+! 	green turquoise yellow white \
+! 	black blue3 orange purple \
+! 	paleGreen paleTurquoise2 grey white \
+! 	white black dimGray \
+! 	4 2 1 15
+
+
+! --------------------------------------------------
+! .x3270pro file generated using x3270.nice by Soldier of FORTRAN
+! Original Xresource file: &#39;Argonaut&#39;
+! Copy and paste this output to ~/.x3270pro
+! --------------------------------------------------
+! Original Xresource file:
+! --------------------------------------------------
+! Generated with :
+! XRDB2Xreources.py
+! *.foreground:  #fffaf4
+! *.background:  #0e1019
+! Black
+! *.color0:      #232323
+! *.color8:      #444444
+! Red
+! *.color1:      #ff000f
+! *.color9:      #ff2740
+! Green
+! *.color2:      #8ce10b
+! *.color10:     #abe15b
+! Yellow
+! *.color3:      #ffb900
+! *.color11:     #ffd242
+! Blue
+! *.color4:      #008df8
+! *.color12:     #0092ff
+! Magenta
+! *.color5:      #6d43a6
+! *.color13:     #9a5feb
+! Cyan
+! *.color6:      #00d8eb
+! *.color14:     #67fff0
+! White
+! *.color7:      #ffffff
+! *.color15:     #ffffff
+! Bold, Italic, Underline
+! *.colorIT:
+! *.colorUL:
+! --------------------------------------------------
+! Adding theme to Options -&gt; Color Scheme
+! --------------------------------------------------
+x3270.schemeList: Default 3279: default\n\
+                  Bright: bright\n\
+                  Reverse: reverse\n\
+                  Green Screen: greenScreen\n\
+                  Argonaut: Argonaut
+! --------------------------------------------------
+! Generating Argonaut .x3270pro theme
+! --------------------------------------------------
+! Menu Colors: Foreground
+! --------------------------------------------------
+x3270*dialog*confirmButton.foreground     : #fffaf4
+x3270*dialog*foreground                   : #fffaf4
+x3270.aboutPopup*icon.foreground          : #fffaf4
+x3270.keypadForeground                    : #fffaf4
+x3270*menuBarContainer.foreground         : #fffaf4
+x3270*fileMenuButton*foreground           : #fffaf4
+x3270*optionsMenuButton*foreground        : #fffaf4
+x3270*connectMenuButton*foreground        : #fffaf4
+x3270*reconnectButton*foreground          : #fffaf4
+x3270*macrosMenuButton*foreground         : #fffaf4
+x3270*keypadButton*foreground             : #fffaf4
+x3270*fileMenu*foreground                 : #fffaf4
+x3270*exitMenu*foreground                 : #fffaf4
+x3270*optionsMenu*foreground              : #fffaf4
+x3270*hostMenu*foreground                 : #fffaf4
+x3270*reconnect*foreground                : #fffaf4
+x3270*macrosMenu*foreground               : #fffaf4
+x3270*togglesMenu*foreground              : #fffaf4
+x3270*fontsMenu*foreground                : #fffaf4
+x3270*modelsMenu*foreground               : #fffaf4
+x3270*colorsMenu*foreground               : #fffaf4
+x3270*charsetMenu*foreground              : #fffaf4
+x3270*dialog*value*foreground             : #fffaf4
+x3270*dialog*foreground                   : #fffaf4
+x3270*dialog*confirmButton.foreground     : #fffaf4
+x3270*dialog*confirm2Button.foreground    : #fffaf4
+3270*dialog*cancelButton.foreground       : #fffaf4
+x3270.ftProgressPopup*filename.foreground : #fffaf4
+! --------------------------------------------------
+! Menu Colors: Critical
+! --------------------------------------------------
+x3270.errorPopup*label.foreground         : #ff2740
+x3270*dialog*cancelButton.foreground      : #ff2740
+! --------------------------------------------------
+! Menu Colors: Backgrounds
+! --------------------------------------------------
+x3270.keypadBackground                    : #0e1019
+x3270*menuBarContainer.background         : #0e1019
+x3270*fileMenuButton*background           : #0e1019
+x3270*optionsMenuButton*background        : #0e1019
+x3270*connectMenuButton*background        : #0e1019
+x3270*reconnectButton*background          : #0e1019
+x3270*macrosMenuButton*background         : #0e1019
+x3270*keypadButton*background             : #0e1019
+x3270*fileMenu*background                 : #0e1019
+x3270*exitMenu*background                 : #0e1019
+x3270*optionsMenu*background              : #0e1019
+x3270*hostMenu*background                 : #0e1019
+x3270*reconnect*background                : #0e1019
+x3270*macrosMenu*background               : #0e1019
+x3270*togglesMenu*background              : #0e1019
+x3270*fontsMenu*background                : #0e1019
+x3270*modelsMenu*background               : #0e1019
+x3270*colorsMenu*background               : #0e1019
+x3270*charsetMenu*background              : #0e1019
+x3270*dialog*value*background             : #0e1019
+x3270*dialog*background                   : #0e1019
+x3270*dialog*confirmButton.background     : #0e1019
+x3270*dialog*confirm2Button.background    : #0e1019
+3270*dialog*cancelButton.background       : #0e1019
+x3270.ftProgressPopup*filename.background : #0e1019
+! --------------------------------------------------
+! Menu Colors: Borders
+! --------------------------------------------------
+x3270*reconnectButton*borderColor         : #fffaf4
+x3270*macrosMenuButton*borderColor        : #fffaf4
+x3270*fileMenu.borderColor                : #fffaf4
+x3270*exitMenu.borderColor                : #fffaf4
+x3270*optionsMenu.borderColor             : #fffaf4
+x3270*hostMenu.borderColor                : #fffaf4
+x3270*macrosMenu.borderColor              : #fffaf4
+x3270*togglesMenu.borderColor             : #fffaf4
+x3270*fontsMenu.borderColor               : #fffaf4
+x3270*modelsMenu.borderColor              : #fffaf4
+x3270*colorsMenu.borderColor              : #fffaf4
+x3270*charsetMenu.borderColor             : #fffaf4
+x3270*confirmButton.borderColor           : #fffaf4
+x3270*confirmButton.borderColor           : #fffaf4
+x3270*confirm2Button.borderColor          : #fffaf4
+x3270*cancelButton.borderColor            : #fffaf4
+x3270.ftProgressPopup*filename.borderColor: #fffaf4
+x3270*fileMenuButton*borderColor          : #0e1019
+x3270*optionsMenuButton*borderColor       : #0e1019
+x3270*connectMenuButton*borderColor       : #0e1019
+x3270*menuBarContainer.borderColor        : #0e1019
+x3270*menuBarContainer.borderWidth        : 0
+x3270*value.borderColor                   : #fffaf4
+x3270*value.foreground                    : #fffaf4
+! --------------------------------------------------
+! Default Color Scheme
+! --------------------------------------------------
+x3270.colorScheme: Argonaut
+! --------------------------------------------------
+! Color Scheme definition
+! --------------------------------------------------
+x3270.colorScheme.Argonaut: \
+   #232323 #0092ff #ff2740 #9a5feb \
+   #abe15b #67fff0 #ffd242 #fffaf4 \
+   #232323 #008df8 #ffb900 #6d43a6 \
+   #8ce10b #00d8eb #444444 #ffffff \
+   white #0e1019 #444444 4 \
+   2 1 15
+! --------------------------------------------------
+! x3270.nice done
+! --------------------------------------------------
+</code></pre>
+</div>
+
+
+
+    
+	
+  
+
+    
+	
   
 
 

@@ -8,6 +8,13 @@
     <language>en</language>
     <atom:link href="https://dscobol.github.io/blog/news/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Added MVS-TK5 Install to Tutorals.</title>
+      <link>https://dscobol.github.io/blog/2025/05/31/added-mvs-tk5-install-to-tutorals./</link>
+      <pubDate>Sat, 31 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://dscobol.github.io/blog/2025/05/31/added-mvs-tk5-install-to-tutorals./</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://dscobol.github.io/docs/tutorials/mvs-tk5/&#34;&gt;Here is a link&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Verified DB2 repositories work with updated software.</title>
       <link>https://dscobol.github.io/blog/2025/05/27/verified-db2-repositories-work-with-updated-software./</link>
       <pubDate>Tue, 27 May 2025 00:00:00 +0000</pubDate>

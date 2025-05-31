@@ -3,26 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://dscobol.github.io/docs/install/gnucobol/</loc>
-    <lastmod>2025-05-24T09:35:12-04:00</lastmod>
+    <lastmod>2025-05-30T22:47:20-04:00</lastmod>
   </url><url>
     <loc>https://dscobol.github.io/docs/install/ibm-db2/install-db2/</loc>
     <lastmod>2025-05-24T09:35:12-04:00</lastmod>
   </url><url>
     <loc>https://dscobol.github.io/docs/install/postgresql/install-postgresql/</loc>
+    <lastmod>2025-05-30T22:47:20-04:00</lastmod>
+  </url><url>
+    <loc>https://dscobol.github.io/docs/tutorials/mvs-tk5/install-tk5/</loc>
+    <lastmod>2025-05-31T13:15:08-04:00</lastmod>
   </url><url>
     <loc>https://dscobol.github.io/docs/overview/</loc>
     <lastmod>2025-05-24T09:35:12-04:00</lastmod>
+  </url><url>
+    <loc>https://dscobol.github.io/docs/tutorials/mvs-tk5/</loc>
+    <lastmod>2025-05-31T13:15:08-04:00</lastmod>
   </url><url>
     <loc>https://dscobol.github.io/docs/about/</loc>
     <lastmod>2025-05-24T09:35:12-04:00</lastmod>
   </url><url>
     <loc>https://dscobol.github.io/docs/install/postgresql/install-gixsql/</loc>
+    <lastmod>2025-05-30T22:47:20-04:00</lastmod>
   </url><url>
     <loc>https://dscobol.github.io/docs/install/ibm-db2/</loc>
-    <lastmod>2025-05-24T09:35:12-04:00</lastmod>
+    <lastmod>2025-05-30T22:47:20-04:00</lastmod>
   </url><url>
     <loc>https://dscobol.github.io/docs/install/ibm-db2/install-sampledb/</loc>
     <lastmod>2025-05-23T23:15:37-04:00</lastmod>
+  </url><url>
+    <loc>https://dscobol.github.io/docs/tutorials/mvs-tk5/setup-x3270/</loc>
+    <lastmod>2025-05-31T13:15:08-04:00</lastmod>
   </url><url>
     <loc>https://dscobol.github.io/docs/concepts/</loc>
     <lastmod>2025-05-23T23:15:37-04:00</lastmod>
@@ -31,6 +42,7 @@
     <lastmod>2025-05-23T23:15:37-04:00</lastmod>
   </url><url>
     <loc>https://dscobol.github.io/docs/install/postgresql/</loc>
+    <lastmod>2025-05-30T22:47:20-04:00</lastmod>
   </url><url>
     <loc>https://dscobol.github.io/docs/concepts/batch/</loc>
     <lastmod>2025-05-23T23:15:37-04:00</lastmod>
@@ -42,7 +54,7 @@
     <lastmod>2025-05-23T23:15:37-04:00</lastmod>
   </url><url>
     <loc>https://dscobol.github.io/docs/tutorials/</loc>
-    <lastmod>2025-05-23T23:15:37-04:00</lastmod>
+    <lastmod>2025-05-31T13:15:08-04:00</lastmod>
   </url><url>
     <loc>https://dscobol.github.io/blog/news/</loc>
     <lastmod>2025-05-21T21:13:20-04:00</lastmod>
@@ -52,6 +64,9 @@
   </url><url>
     <loc>https://dscobol.github.io/docs/concepts/orig-code/</loc>
     <lastmod>2025-05-24T09:35:12-04:00</lastmod>
+  </url><url>
+    <loc>https://dscobol.github.io/docs/tutorials/mvs-tk5/x3270-profile/</loc>
+    <lastmod>2025-05-31T13:15:08-04:00</lastmod>
   </url><url>
     <loc>https://dscobol.github.io/docs/concepts/v1-changes/</loc>
     <lastmod>2025-05-24T09:35:12-04:00</lastmod>
@@ -73,6 +88,9 @@
   </url><url>
     <loc>https://dscobol.github.io/docs/concepts/version5/</loc>
     <lastmod>2025-05-24T09:35:12-04:00</lastmod>
+  </url><url>
+    <loc>https://dscobol.github.io/blog/2025/05/31/added-mvs-tk5-install-to-tutorals./</loc>
+    <lastmod>2025-05-31T13:15:08-04:00</lastmod>
   </url><url>
     <loc>https://dscobol.github.io/blog/2025/05/27/verified-db2-repositories-work-with-updated-software./</loc>
     <lastmod>2025-05-27T20:18:13-04:00</lastmod>
