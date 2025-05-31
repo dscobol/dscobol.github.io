@@ -17,24 +17,22 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>DB2 Processing | dscobol</title>
-<meta name="description" content="Differences when running DB2 programs.">
-<meta property="og:url" content="https://dscobol.github.io/docs/concepts/db2/">
+<title>Install PostgreSQL | dscobol</title>
+<meta name="description" content="Version v14">
+<meta property="og:url" content="https://dscobol.github.io/docs/install/postgresql/install-postgresql/">
   <meta property="og:site_name" content="dscobol">
-  <meta property="og:title" content="DB2 Processing">
-  <meta property="og:description" content="Differences when running DB2 programs.">
+  <meta property="og:title" content="Install PostgreSQL">
+  <meta property="og:description" content="Version v14">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="docs">
-    <meta property="article:modified_time" content="2025-05-23T23:15:37-04:00">
 
-  <meta itemprop="name" content="DB2 Processing">
-  <meta itemprop="description" content="Differences when running DB2 programs.">
-  <meta itemprop="dateModified" content="2025-05-23T23:15:37-04:00">
-  <meta itemprop="wordCount" content="662">
+  <meta itemprop="name" content="Install PostgreSQL">
+  <meta itemprop="description" content="Version v14">
+  <meta itemprop="wordCount" content="133">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="DB2 Processing">
-  <meta name="twitter:description" content="Differences when running DB2 programs.">
+  <meta name="twitter:title" content="Install PostgreSQL">
+  <meta name="twitter:description" content="Version v14">
 <link rel="preload" href="/scss/main.min.587cc9ab2e7ed4cd045ee4c6e380598d6f8ad5201ff3aa9345c816a513404b85.css" as="style" integrity="sha256-WHzJqy5&#43;1M0EXuTG44BZjW&#43;K1SAf86qTRcgWpRNAS4U=" crossorigin="anonymous">
 <link href="/scss/main.min.587cc9ab2e7ed4cd045ee4c6e380598d6f8ad5201ff3aa9345c816a513404b85.css" rel="stylesheet" integrity="sha256-WHzJqy5&#43;1M0EXuTG44BZjW&#43;K1SAf86qTRcgWpRNAS4U=" crossorigin="anonymous">
 <script
@@ -117,8 +115,8 @@
   <input type="checkbox" id="m-docsabout-check"/>
   <label for="m-docsabout-check"><a href="/docs/about/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsabout"><span class="">About</span></a></label>
   
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docsconcepts-li">
-  <input type="checkbox" id="m-docsconcepts-check" checked/>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsconcepts-li">
+  <input type="checkbox" id="m-docsconcepts-check"/>
   <label for="m-docsconcepts-check"><a href="/docs/concepts/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsconcepts"><span class="">Concepts</span></a></label>
   
   <ul class="ul-2 foldable">
@@ -126,14 +124,14 @@
   <input type="checkbox" id="m-docsconceptsbatch-check"/>
   <label for="m-docsconceptsbatch-check"><a href="/docs/concepts/batch/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsconceptsbatch"><span class="">Batch Processing</span></a></label>
   
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docsconceptsdb2-li">
-  <input type="checkbox" id="m-docsconceptsdb2-check" checked/>
-  <label for="m-docsconceptsdb2-check"><a href="/docs/concepts/db2/" class="align-left ps-0  active td-sidebar-link td-sidebar-link__page" id="m-docsconceptsdb2"><span class="td-sidebar-nav-active-item">DB2 Processing</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsconceptsdb2-li">
+  <input type="checkbox" id="m-docsconceptsdb2-check"/>
+  <label for="m-docsconceptsdb2-check"><a href="/docs/concepts/db2/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsconceptsdb2"><span class="">DB2 Processing</span></a></label>
   
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsinstall-li">
-  <input type="checkbox" id="m-docsinstall-check"/>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docsinstall-li">
+  <input type="checkbox" id="m-docsinstall-check" checked/>
   <label for="m-docsinstall-check"><a href="/docs/install/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsinstall"><span class="">Install Software</span></a></label>
   
   <ul class="ul-2 foldable">
@@ -160,14 +158,14 @@
   
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsinstallpostgresql-li">
-  <input type="checkbox" id="m-docsinstallpostgresql-check"/>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docsinstallpostgresql-li">
+  <input type="checkbox" id="m-docsinstallpostgresql-check" checked/>
   <label for="m-docsinstallpostgresql-check"><a href="/docs/install/postgresql/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsinstallpostgresql"><span class="">Install PostgreSQL</span></a></label>
   
   <ul class="ul-3 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsinstallpostgresqlinstall-postgresql-li">
-  <input type="checkbox" id="m-docsinstallpostgresqlinstall-postgresql-check"/>
-  <label for="m-docsinstallpostgresqlinstall-postgresql-check"><a href="/docs/install/postgresql/install-postgresql/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsinstallpostgresqlinstall-postgresql"><span class="">Install PostgreSQL</span></a></label>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docsinstallpostgresqlinstall-postgresql-li">
+  <input type="checkbox" id="m-docsinstallpostgresqlinstall-postgresql-check" checked/>
+  <label for="m-docsinstallpostgresqlinstall-postgresql-check"><a href="/docs/install/postgresql/install-postgresql/" class="align-left ps-0  active td-sidebar-link td-sidebar-link__page" id="m-docsinstallpostgresqlinstall-postgresql"><span class="td-sidebar-nav-active-item">Install PostgreSQL</span></a></label>
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsinstallpostgresqlinstall-gixsql-li">
   <input type="checkbox" id="m-docsinstallpostgresqlinstall-gixsql-check"/>
@@ -191,23 +189,18 @@
           </aside>
           <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
             <div class="td-page-meta ms-2 pb-1 pt-2 mb-0">
-<a id="print" href="/docs/concepts/_print/"><i class="fa-solid fa-print fa-fw"></i> Print entire section</a>
+<a id="print" href="/docs/install/postgresql/_print/"><i class="fa-solid fa-print fa-fw"></i> Print entire section</a>
 
 </div>
 
             <div class="td-toc">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#zos-coboldb2-vs-gnucoboldb2-luw">zOS COBOL/DB2 vs GnuCOBOL/DB2 LUW</a>
+    <li><a href="#install">Install</a></li>
+    <li><a href="#creating-a-new-role-and-database">Creating a New Role and Database</a>
       <ul>
-        <li><a href="#zos-coboldb2">zOS COBOL/DB2</a></li>
-        <li><a href="#gnucoboldb2-luw">GnuCOBOL/DB2 LUW</a></li>
-        <li><a href="#different-methods-to-supply-parameters">Different methods to <a href="./supply-parameters.md">supply parameters</a></a></li>
-        <li><a href="#version-1">Version 1</a></li>
-        <li><a href="#version-2">Version 2</a></li>
-        <li><a href="#version-3">Version 3</a></li>
-        <li><a href="#version-4">Version 4</a></li>
-        <li><a href="#version-5">Version 5</a></li>
+        <li><a href="#create-a-new-role">Create a new role</a></li>
+        <li><a href="#create-a-base-database-for-the-new-role">Create a base database for the new role</a></li>
       </ul>
     </li>
   </ul>
@@ -226,141 +219,36 @@
   <li class="breadcrumb-item">
     <a href="/docs/">Docs</a></li>
   <li class="breadcrumb-item">
-    <a href="/docs/concepts/">Concepts</a></li>
+    <a href="/docs/install/">Install Software</a></li>
+  <li class="breadcrumb-item">
+    <a href="/docs/install/postgresql/">Install PostgreSQL</a></li>
   <li class="breadcrumb-item active" aria-current="page">
-    DB2 Processing</li>
+    Install PostgreSQL</li>
   </ol>
 </nav>
 <div class="td-content">
-	<h1>DB2 Processing</h1>
-	<div class="lead">Differences when running DB2 programs.</div>
+	<h1>Install PostgreSQL</h1>
+	<div class="lead">Version v14</div>
 	<header class="article-meta">
 		
   </header>
-	<h2 id="zos-coboldb2-vs-gnucoboldb2-luw">zOS COBOL/DB2 vs GnuCOBOL/DB2 LUW<a class="td-heading-self-link" href="#zos-coboldb2-vs-gnucoboldb2-luw" aria-label="Heading self-link"></a></h2>
-<h3 id="zos-coboldb2">zOS COBOL/DB2<a class="td-heading-self-link" href="#zos-coboldb2" aria-label="Heading self-link"></a></h3>
-<ul>
-<li>RACF - the security system</li>
-<li>DCLGEN - Create an INCLUDE copybook member that defines the table and adds
-host variables.</li>
-</ul>
-<h3 id="gnucoboldb2-luw">GnuCOBOL/DB2 LUW<a class="td-heading-self-link" href="#gnucoboldb2-luw" aria-label="Heading self-link"></a></h3>
-<ul>
-<li>No RACF. Since there is no RACF, the DB name, the userid, and the password
-must be supplied to the program for it to connect to the DB.</li>
-<li>There is a db2dclgn command included with IBM DB2 LUW but it does not generate
-the table definition within a &ldquo;EXEC SQL DECLARE&rdquo; statement. It only defines
-the COBOL host variables.</li>
-</ul>
-<p>So, you have to create the EXEC SQL DECLARE &ldquo;xxxxx&rdquo; TABLE statement, the host
-variables, and the DB Connect variables within the program itself.</p>
-<h3 id="different-methods-to-supply-parameters">Different methods to <a href="/docs/concepts/supply-parameters/">supply parameters</a><a class="td-heading-self-link" href="#different-methods-to-supply-parameters" aria-label="Heading self-link"></a></h3>
-<h4 id="a-look-at-the-examples-to-see-the-differences">A look at the examples to see the differences:<a class="td-heading-self-link" href="#a-look-at-the-examples-to-see-the-differences" aria-label="Heading self-link"></a></h4>
-<p>Original Code from Murach book</p>
-<p><strong>This is an example of a <a href="/docs/concepts/orig-code/">Normal ZOS COBOL DB2</a> program.</strong></p>
-<p>In the repository on GitHub, this is cbl/CUSTINQ.cbl</p>
-<p>It will not compile with GnuCOBOL.</p>
-<p>Also, as I&rsquo;m not sure about the copyright and my ability to &ldquo;re-distribute&rdquo; the
-code included in the book, this will the only time I will include the exact
-original code from the book. I will be using it 3 more times (Version 1, 2
-and 3) but those have changes made to them to compile and run using GnuCOBOL.</p>
-<p>As you will see in Versions 4 and 5, I have my own program structure and style
-and while the results will be the same as the original, the code will be quite
-different.</p>
-<h3 id="version-1">Version 1<a class="td-heading-self-link" href="#version-1" aria-label="Heading self-link"></a></h3>
-<p><strong>This is an example of a <a href="/docs/concepts/version1/">Converted from ZOS to GnuCOBOL</a>
-program.</strong></p>
-<p>In the repository on GitHub, this is cbl/CUSTIN1.sqb</p>
-<p>I started with cbl/CUSTINQ.cbl and:</p>
-<ul>
-<li>
-<p>removed the INCLUDE CUSTOMER statement</p>
-</li>
-<li>
-<p>added the EXEC SQL DECLARE TABLE statement</p>
-</li>
-<li>
-<p>added the host variables and the DB Connect variables</p>
-</li>
-<li>
-<p>added Procedure code to use ACCEPT to get the userid and password from the
-user when the program is run.</p>
-</li>
-</ul>
-
-
-<div class="pageinfo pageinfo-primary">
-<p>Version 2 is NOT recommended. Left here for &ldquo;Historical&rdquo;
-purposes.</p>
-
-</div>
-
-<h3 id="version-2">Version 2<a class="td-heading-self-link" href="#version-2" aria-label="Heading self-link"></a></h3>
-<p><strong>This is an example of a <a href="/docs/concepts/version2/">Calling a Module</a> program.</strong></p>
-<p>In the repository on GitHub, this is cbl/CUSTIN2.sqb</p>
-<p>I started with cbl/CUSTIN1.sqb and:</p>
-<ul>
-<li>
-<p>created GETDBID program to &ldquo;hardcode&rdquo; the userid and password.</p>
-</li>
-<li>
-<p>updated to call GETDBID and removed the ACCEPT from User code.</p>
-</li>
-<li>
-<p>updated the Compile script to add GETDBID LLM to the compile step.</p>
-</li>
-</ul>
-<p>Now the program will run without needing to ask the user for that information.</p>
-<h3 id="version-3">Version 3<a class="td-heading-self-link" href="#version-3" aria-label="Heading self-link"></a></h3>
-<p><strong>This is an example of a <a href="/docs/concepts/version3/">Accept from Environment</a> program.</strong></p>
-<p>In the repository on GitHub, this is cbl/CUSTIN3.sqb</p>
-<p>I started with cbl/CUSTIN2.sqb and:</p>
-<ul>
-<li>
-<p>created a .env file with the parameters for the DB.</p>
-</li>
-<li>
-<p>removed GETDBID program.</p>
-</li>
-<li>
-<p>updated to ACCEPT FROM ENVIRONMENT code.</p>
-</li>
-<li>
-<p>updated the Compile script to remove GETDBID LLM from the compile step.</p>
-</li>
-<li>
-<p>updated the Run script to export the parameters from the .env file to the
-Environment Variables.</p>
-</li>
-</ul>
-<p>This program will also run without needing to ask the user for the DB
-parameters.</p>
-
-
-<div class="pageinfo pageinfo-primary">
-<p>Version 4 is NOT recommended. Left here for &ldquo;Historical&rdquo;
-purposes.</p>
-
-</div>
-
-<h3 id="version-4">Version 4<a class="td-heading-self-link" href="#version-4" aria-label="Heading self-link"></a></h3>
-<p><strong>This is an example of <a href="/docs/concepts/version4/">My Version of Calling GETDBID</a>.</strong></p>
-<p>In the repository on GitHub, this is cbl/CUSTIN4.sqb</p>
-<p>As I alluded to in Version 1, this is that completely re-written program.</p>
-<p><strong>Every company has a standard and/or style that all(most?) code adheres to.</strong></p>
-<p>At some shops, it is kind of loose, at others, it is VERY rigid.</p>
-<p>This is an example of getting the same result; just doing it a different way by
-applying a different structure to the program.</p>
-<p>This is the &ldquo;typical&rdquo; structure I use to create new programs.</p>
-<p>As I continue to add programs to the repositories, they will &ldquo;follow along&rdquo; with
-the book or tutorial or website but will be using this structure.</p>
-<h3 id="version-5">Version 5<a class="td-heading-self-link" href="#version-5" aria-label="Heading self-link"></a></h3>
-<p><strong>This is an example of
-<a href="/docs/concepts/version5/">My Version of Accept from Environment</a>.</strong></p>
-<p>In the repository on GitHub, this is cbl/CUSTINQ.sqb</p>
-<p>Just as CUSTIN2 was converted into CUSTIN3 by replacing the &ldquo;CALL to GETDBID&rdquo;
-with &ldquo;ACCEPT FROM ENVIRONMENT&rdquo;, this is CUSTIN4 converted into CUSTINQ the same
-way.</p>
+	<h2 id="install">Install<a class="td-heading-self-link" href="#install" aria-label="Heading self-link"></a></h2>
+<p>Follow the instructions on
+<a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-22-04">Digital Ocean&rsquo;s Website</a>.</p>
+<p>One thing I did notice during the install:</p>
+<p><code>Data page checksums are disabled.</code></p>
+<p>I remember something about &ldquo;the checksums require more processing power but
+insure data integrity&rdquo; or something like that.</p>
+<p>Since this is a dev/test system, I&rsquo;m not going to worry too much about that.</p>
+<h2 id="creating-a-new-role-and-database">Creating a New Role and Database<a class="td-heading-self-link" href="#creating-a-new-role-and-database" aria-label="Heading self-link"></a></h2>
+<h3 id="create-a-new-role">Create a new role<a class="td-heading-self-link" href="#create-a-new-role" aria-label="Heading self-link"></a></h3>
+<p>Follow the Digital Ocean instruction BUT use your &ldquo;normal&rdquo; userid you created
+when you installed the OS and say &ldquo;y&rdquo; to make it a &ldquo;superuser&rdquo;.</p>
+<h3 id="create-a-base-database-for-the-new-role">Create a base database for the new role<a class="td-heading-self-link" href="#create-a-base-database-for-the-new-role" aria-label="Heading self-link"></a></h3>
+<p>At the command line, run: <code>createdb &lt;userid&gt;</code> replacing <code>&lt;userid&gt;</code> with your
+&ldquo;normal&rdquo; userid.</p>
+<p>If you do not create this database, when you try to execute <code>psql</code> as the normal
+user, you will get an error message.</p>
 
 	
 </div>

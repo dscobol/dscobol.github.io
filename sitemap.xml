@@ -2,11 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://dscobol.github.io/docs/install/gnucobol/</loc>
+    <lastmod>2025-05-24T09:35:12-04:00</lastmod>
+  </url><url>
     <loc>https://dscobol.github.io/docs/install/ibm-db2/install-db2/</loc>
     <lastmod>2025-05-24T09:35:12-04:00</lastmod>
   </url><url>
-    <loc>https://dscobol.github.io/docs/install/ibm-db2/</loc>
-    <lastmod>2025-05-24T09:35:12-04:00</lastmod>
+    <loc>https://dscobol.github.io/docs/install/postgresql/install-postgresql/</loc>
   </url><url>
     <loc>https://dscobol.github.io/docs/overview/</loc>
     <lastmod>2025-05-24T09:35:12-04:00</lastmod>
@@ -14,7 +16,9 @@
     <loc>https://dscobol.github.io/docs/about/</loc>
     <lastmod>2025-05-24T09:35:12-04:00</lastmod>
   </url><url>
-    <loc>https://dscobol.github.io/docs/install/gnucobol/</loc>
+    <loc>https://dscobol.github.io/docs/install/postgresql/install-gixsql/</loc>
+  </url><url>
+    <loc>https://dscobol.github.io/docs/install/ibm-db2/</loc>
     <lastmod>2025-05-24T09:35:12-04:00</lastmod>
   </url><url>
     <loc>https://dscobol.github.io/docs/install/ibm-db2/install-sampledb/</loc>
@@ -25,6 +29,8 @@
   </url><url>
     <loc>https://dscobol.github.io/docs/install/ibm-db2/create-db2-db/</loc>
     <lastmod>2025-05-23T23:15:37-04:00</lastmod>
+  </url><url>
+    <loc>https://dscobol.github.io/docs/install/postgresql/</loc>
   </url><url>
     <loc>https://dscobol.github.io/docs/concepts/batch/</loc>
     <lastmod>2025-05-23T23:15:37-04:00</lastmod>

@@ -76,7 +76,7 @@ GnuCOBOL - GNU/Linux (Pop!_OS) - COBOL accessing Text files, Indexed data files,
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.2f3412f0ff9bd6360f295ed4b8aa94a8.json"
+    data-offline-search-index-json-src="/offline-search-index.0cf24be0e44b406a3ff12df67d7b14b2.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -253,7 +253,15 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>4.1: <a href="#pg-2c91bb6bcc7fe536887513fde179b1e8">Install IBM DB2-LUW</a></li>
+<li>4.1: <a href="#pg-8ac668ef71a81e3bea263feef150addc">Install GnuCOBOL.</a></li>
+
+
+    
+  
+    
+    
+	
+<li>4.2: <a href="#pg-2c91bb6bcc7fe536887513fde179b1e8">Install IBM DB2-LUW</a></li>
 
 
     
@@ -268,7 +276,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>4.1.1: <a href="#pg-6d37e553eb1c0b1b8a0bf4684791c8b5">Install IBM DB2 LUW RDBMS</a></li>
+<li>4.2.1: <a href="#pg-6d37e553eb1c0b1b8a0bf4684791c8b5">Install IBM DB2 LUW RDBMS</a></li>
 
 
     
@@ -276,7 +284,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>4.1.2: <a href="#pg-ab20326b2c1cfcfa77bb731bc6fc6b62">Install the Sample DB</a></li>
+<li>4.2.2: <a href="#pg-ab20326b2c1cfcfa77bb731bc6fc6b62">Install the Sample DB</a></li>
 
 
     
@@ -284,7 +292,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>4.1.3: <a href="#pg-f78f28d2a6f979a668b3df7c42a661fd">Create a DB2 DB</a></li>
+<li>4.2.3: <a href="#pg-f78f28d2a6f979a668b3df7c42a661fd">Create a DB2 DB</a></li>
 
 
     
@@ -296,9 +304,36 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>4.2: <a href="#pg-8ac668ef71a81e3bea263feef150addc">Install GnuCOBOL.</a></li>
+<li>4.3: <a href="#pg-2ed01f1741d3c3bf4f8e516a39ec86d2">Install PostgreSQL</a></li>
 
 
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>4.3.1: <a href="#pg-bc09d76b4d9a56e8ee886f4e166a38e6">Install PostgreSQL</a></li>
+
+
+    
+  
+    
+    
+	
+<li>4.3.2: <a href="#pg-0a426637be26b13ea671f105851e20d7">Install GixSQL</a></li>
+
+
+    
+  
+
+    </ul>
     
   
 
@@ -2294,7 +2329,126 @@ the DB2 LUW install would fail.</p>
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-2c91bb6bcc7fe536887513fde179b1e8">4.1 - Install IBM DB2-LUW</h1>
+	<h1 id="pg-8ac668ef71a81e3bea263feef150addc">4.1 - Install GnuCOBOL.</h1>
+    <div class="lead">Version GnuCOBOL 3.2.0</div>
+	<h1 id="install-gnucobol">Install GnuCOBOL<a class="td-heading-self-link" href="#install-gnucobol" aria-label="Heading self-link"></a></h1>
+<h2 id="install-build-essential-first">Install Build-Essential first<a class="td-heading-self-link" href="#install-build-essential-first" aria-label="Heading self-link"></a></h2>
+<p>In Terminal, Run:</p>
+<p><code>sudo apt install build-essential</code></p>
+<p>This might be installed already or there might be some components that are
+missing. Better safe then sorry.</p>
+<h2 id="get-gnucobol">Get GnuCOBOL<a class="td-heading-self-link" href="#get-gnucobol" aria-label="Heading self-link"></a></h2>
+<p>Download the source code from GnuCOBOL</p>
+<p>As of May 2025, the current version is 3.2</p>
+<p>For that version, download: gnucobol-3.2.tar.lz.</p>
+<p>If you haven&rsquo;t made any changes, it will be downloaded to the Downloads
+directory.</p>
+<h2 id="extract-the-downloaded-file">Extract the downloaded file<a class="td-heading-self-link" href="#extract-the-downloaded-file" aria-label="Heading self-link"></a></h2>
+<p>Open Files and go to the Downloads folder.</p>
+<p>Double click on the gnucobol-3.2.tar.lz file.</p>
+<p>This will open Archive Manager.</p>
+<p>You will see &ldquo;gnucobol-3.2&rdquo;. Click on the &ldquo;Extract&rdquo; button in the upper left
+hand corner.</p>
+<p>A dialog box will open to select where to extract the file to. Extract the file
+to the ~/builds directory.</p>
+<p>When it is done, close the dialog box, close Archive Manager, and close Files.</p>
+<h2 id="install-additional-software">Install additional software<a class="td-heading-self-link" href="#install-additional-software" aria-label="Heading self-link"></a></h2>
+<p>Open Terminal to install the following:</p>
+<pre tabindex="0"><code>sudo apt install libgmp-dev
+sudo apt install libdb5.3-dev
+sudo apt install libncurses-dev
+sudo apt install libxml2-dev
+sudo apt install libcjson-dev
+</code></pre><h2 id="configure-make-and-install">Configure, Make and Install<a class="td-heading-self-link" href="#configure-make-and-install" aria-label="Heading self-link"></a></h2>
+<p>Run:</p>
+<pre tabindex="0"><code>cd
+cd builds/gnucobol-3.2
+</code></pre><p>This will take you into the gnucobol-3.2 directory.</p>
+<p>Run:</p>
+<p><code>./configure</code></p>
+<p>A whole bunch of messages will print on the screen</p>
+<p>At the end, there should be some messages that look like:</p>
+<pre tabindex="0"><code>Dynamic loading: System
+configure: Use gettext for international messages: yes
+configure: Use fcntl for file locking: yes
+configure: Use math multiple precision library: gmp
+configure: Use curses library for screen I/O: ncursesw
+configure: Use Berkeley DB for INDEXED I/O: yes
+configure: Used for XML I/O: libxml2
+configure: Used for JSON I/O: cjson
+</code></pre><p>If there are no errors, Run:</p>
+<p><code>make</code></p>
+<p>More messages will display, if there are no errors, Run:</p>
+<p><code>make check</code></p>
+<p>A suite of tests will run, at the end, you should see the results:</p>
+<pre tabindex="0"><code># -------------
+## Test results.
+## -------------
+
+1273 tests behaved as expected.
+9 tests were skipped.
+</code></pre><p>Run:</p>
+<p><code>sudo make install</code></p>
+<p>Then Run:</p>
+<p><code>sudo ldconfig</code></p>
+<p>As a quick test, Run:</p>
+<p><code>cobc</code></p>
+<p>You should get an error message:</p>
+<p>cobc: error: no input files</p>
+<p>For a better test of the install:</p>
+<ul>
+<li>Create a new directory</li>
+<li>Create a simple COBOL program</li>
+<li>Run it.</li>
+</ul>
+<p>1: Create a new directory</p>
+<p>In Terminal, Run:</p>
+<pre tabindex="0"><code>cd
+mkdir -p ~/dev/cobol/test-cobol
+cd ~/dev/cobol/test-cobol
+touch hello.cbl
+</code></pre><p>2: Create a simple COBOL program</p>
+<p>Open Files, go to the dev/cobol/test-cobol folder.</p>
+<p>Double-click on hello.cbl. This will open it in Text Editor.</p>
+<p>Copy the following code and paste it into hello.cbl:</p>
+<pre><code>   IDENTIFICATION DIVISION.
+   PROGRAM-ID. SmallestProgram.
+   DATA DIVISION.
+   FILE SECTION.
+   WORKING-STORAGE SECTION.
+   PROCEDURE DIVISION.
+   MAIN-PROCEDURE.
+        DISPLAY &quot;Hello world&quot;
+        STOP RUN.
+   END PROGRAM SmallestProgram.
+</code></pre>
+<p>and save it.</p>
+<p>Go to Terminal, Run:</p>
+<p><code>pwd</code></p>
+<p>To make sure you are in the ~/dev/cobol/test-cobol directory.</p>
+<p>Run:</p>
+<p><code>cobc -x hello.cbl</code></p>
+<p>If it complies correctly(no messages), Run:</p>
+<p><code>./hello</code></p>
+<p>It should return:</p>
+<p><code>Hello world</code></p>
+<p>If this works, delete the test-cobol directory (or not, your choice).</p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-2c91bb6bcc7fe536887513fde179b1e8">4.2 - Install IBM DB2-LUW</h1>
     <div class="lead">Version v12.1.1</div>
 	<h2 id="this-installation">This installation:<a class="td-heading-self-link" href="#this-installation" aria-label="Heading self-link"></a></h2>
 <p>All the installation instructions were created/ran on a Pop!_OS 22.04 LTS
@@ -2335,7 +2489,7 @@ time corrected programs.</p>
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-6d37e553eb1c0b1b8a0bf4684791c8b5">4.1.1 - Install IBM DB2 LUW RDBMS</h1>
+	<h1 id="pg-6d37e553eb1c0b1b8a0bf4684791c8b5">4.2.1 - Install IBM DB2 LUW RDBMS</h1>
     <div class="lead">Install the Database System</div>
 	<h2 id="get-the-software">Get the software<a class="td-heading-self-link" href="#get-the-software" aria-label="Heading self-link"></a></h2>
 <p>Visit the &ldquo;Download IBM Db2 Software Community Edition&rdquo; at
@@ -2507,7 +2661,7 @@ present.</p>
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-ab20326b2c1cfcfa77bb731bc6fc6b62">4.1.2 - Install the Sample DB</h1>
+	<h1 id="pg-ab20326b2c1cfcfa77bb731bc6fc6b62">4.2.2 - Install the Sample DB</h1>
     <div class="lead">Install the Sample db and db2profile.</div>
 	<h2 id="check-the-installation">Check the installation<a class="td-heading-self-link" href="#check-the-installation" aria-label="Heading self-link"></a></h2>
 <p>In Terminal, Run:</p>
@@ -2593,7 +2747,7 @@ fi
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-f78f28d2a6f979a668b3df7c42a661fd">4.1.3 - Create a DB2 DB</h1>
+	<h1 id="pg-f78f28d2a6f979a668b3df7c42a661fd">4.2.3 - Create a DB2 DB</h1>
     <div class="lead">Create some additional DBs to be used later.</div>
 	<h2 id="become-instance-owner">Become Instance Owner<a class="td-heading-self-link" href="#become-instance-owner" aria-label="Heading self-link"></a></h2>
 <p>During the install of IBM DB2 LUW, if you accepted the defaults, the Instance
@@ -2644,114 +2798,145 @@ created database&rdquo;</p>
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-8ac668ef71a81e3bea263feef150addc">4.2 - Install GnuCOBOL.</h1>
-    <div class="lead">Version GnuCOBOL 3.2.0</div>
-	<h1 id="install-gnucobol">Install GnuCOBOL<a class="td-heading-self-link" href="#install-gnucobol" aria-label="Heading self-link"></a></h1>
-<h2 id="install-build-essential-first">Install Build-Essential first<a class="td-heading-self-link" href="#install-build-essential-first" aria-label="Heading self-link"></a></h2>
-<p>In Terminal, Run:</p>
-<p><code>sudo apt install build-essential</code></p>
-<p>This might be installed already or there might be some components that are
-missing. Better safe then sorry.</p>
-<h2 id="get-gnucobol">Get GnuCOBOL<a class="td-heading-self-link" href="#get-gnucobol" aria-label="Heading self-link"></a></h2>
-<p>Download the source code from GnuCOBOL</p>
-<p>As of May 2025, the current version is 3.2</p>
-<p>For that version, download: gnucobol-3.2.tar.lz.</p>
+	<h1 id="pg-2ed01f1741d3c3bf4f8e516a39ec86d2">4.3 - Install PostgreSQL</h1>
+    <div class="lead">Version v14</div>
+	<h1 id="overview">Overview<a class="td-heading-self-link" href="#overview" aria-label="Heading self-link"></a></h1>
+<p>While the original intension of this exercise was to use GnuCOBOL to connect to
+an IBM-DB2 database, GnuCOBOL can also be used to connect to a PostgreSQL
+database.</p>
+<p>All the installation instructions were created/ran on a Pop!_OS 22.04 LTS
+GNU/Linux distribution.</p>
+<p>The specific version used here was “pop-os_22.04_amd64_intel_53.iso</p>
+<h2 id="install-postgresql-the-worlds-most-advanced-open-source-relational-database">Install PostgreSQL: The World&rsquo;s Most Advanced Open Source Relational Database<a class="td-heading-self-link" href="#install-postgresql-the-worlds-most-advanced-open-source-relational-database" aria-label="Heading self-link"></a></h2>
+<p>Follow the instructions at <a href="/docs/install/postgresql/install-postgresql/">Install PostgreSQL</a>.</p>
+<h2 id="install-gixsql">Install GixSQL<a class="td-heading-self-link" href="#install-gixsql" aria-label="Heading self-link"></a></h2>
+<p>Follow the instructions at <a href="/docs/install/postgresql/install-gixsql/">Install GixSQL</a>.</p>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-bc09d76b4d9a56e8ee886f4e166a38e6">4.3.1 - Install PostgreSQL</h1>
+    <div class="lead">Version v14</div>
+	<h2 id="install">Install<a class="td-heading-self-link" href="#install" aria-label="Heading self-link"></a></h2>
+<p>Follow the instructions on
+<a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-22-04">Digital Ocean&rsquo;s Website</a>.</p>
+<p>One thing I did notice during the install:</p>
+<p><code>Data page checksums are disabled.</code></p>
+<p>I remember something about &ldquo;the checksums require more processing power but
+insure data integrity&rdquo; or something like that.</p>
+<p>Since this is a dev/test system, I&rsquo;m not going to worry too much about that.</p>
+<h2 id="creating-a-new-role-and-database">Creating a New Role and Database<a class="td-heading-self-link" href="#creating-a-new-role-and-database" aria-label="Heading self-link"></a></h2>
+<h3 id="create-a-new-role">Create a new role<a class="td-heading-self-link" href="#create-a-new-role" aria-label="Heading self-link"></a></h3>
+<p>Follow the Digital Ocean instruction BUT use your &ldquo;normal&rdquo; userid you created
+when you installed the OS and say &ldquo;y&rdquo; to make it a &ldquo;superuser&rdquo;.</p>
+<h3 id="create-a-base-database-for-the-new-role">Create a base database for the new role<a class="td-heading-self-link" href="#create-a-base-database-for-the-new-role" aria-label="Heading self-link"></a></h3>
+<p>At the command line, run: <code>createdb &lt;userid&gt;</code> replacing <code>&lt;userid&gt;</code> with your
+&ldquo;normal&rdquo; userid.</p>
+<p>If you do not create this database, when you try to execute <code>psql</code> as the normal
+user, you will get an error message.</p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-0a426637be26b13ea671f105851e20d7">4.3.2 - Install GixSQL</h1>
+    <div class="lead">Version v1.0.20a</div>
+	<p>READ the README on <a href="https://github.com/mridoni/gixsql">GitHub</a> for lots of
+information. It&rsquo;s what I used to create these instructions.</p>
+<h2 id="get-gixsql">Get GixSQL<a class="td-heading-self-link" href="#get-gixsql" aria-label="Heading self-link"></a></h2>
+<p>Download the source code from
+<a href="https://github.com/mridoni/gixsql/releases/tag/v1.0.20a">GixSQL</a>.</p>
+<p>Download: <strong>gixsql-1.0.20a.tar.gz</strong>.</p>
 <p>If you haven&rsquo;t made any changes, it will be downloaded to the Downloads
 directory.</p>
 <h2 id="extract-the-downloaded-file">Extract the downloaded file<a class="td-heading-self-link" href="#extract-the-downloaded-file" aria-label="Heading self-link"></a></h2>
-<p>Open Files and go to the Downloads folder.</p>
-<p>Double click on the gnucobol-3.2.tar.lz file.</p>
-<p>This will open Archive Manager.</p>
-<p>You will see &ldquo;gnucobol-3.2&rdquo;. Click on the &ldquo;Extract&rdquo; button in the upper left
+<p>Open <strong>Files</strong> and go to the Downloads folder.</p>
+<p>Double click on the gixsql-1.0.20a.tar.gz file.</p>
+<p>This will open <strong>Archive Manager</strong>.</p>
+<p>You will see &ldquo;gixsql-1.0.20a&rdquo;. Click on the &ldquo;Extract&rdquo; button in the upper left
 hand corner.</p>
 <p>A dialog box will open to select where to extract the file to. Extract the file
 to the ~/builds directory.</p>
 <p>When it is done, close the dialog box, close Archive Manager, and close Files.</p>
 <h2 id="install-additional-software">Install additional software<a class="td-heading-self-link" href="#install-additional-software" aria-label="Heading self-link"></a></h2>
-<p>Open Terminal to install the following:</p>
-<pre tabindex="0"><code>sudo apt install libgmp-dev
-sudo apt install libdb5.3-dev
-sudo apt install libncurses-dev
-sudo apt install libxml2-dev
-sudo apt install libcjson-dev
+<p>The instructions include this line:</p>
+<p>sudo apt install libmariadb-dev libpq-dev unixodbc-dev flex</p>
+<p>But, at this time, I don&rsquo;t care about Mariadb(MySQL) or odbc. See NOTE below if
+you do.</p>
+<p>Open <strong>Terminal</strong> to install the following:</p>
+<pre tabindex="0"><code>sudo apt install libpq-dev flex
+sudo apt install libspdlog-dev libfmt-dev
+sudo apt install bison
 </code></pre><h2 id="configure-make-and-install">Configure, Make and Install<a class="td-heading-self-link" href="#configure-make-and-install" aria-label="Heading self-link"></a></h2>
 <p>Run:</p>
-<pre tabindex="0"><code>cd
-cd builds/gnucobol-3.2
-</code></pre><p>This will take you into the gnucobol-3.2 directory.</p>
+<p><code>cd builds/gixsql-1.0.20a</code></p>
+<p>This will take you into the gixsql-1.0.20a directory.</p>
 <p>Run:</p>
-<p><code>./configure</code></p>
+<p><code>./configure --prefix=/opt/gixsql --disable-mysql --disable-odbc --enable-pgsql</code></p>
 <p>A whole bunch of messages will print on the screen</p>
-<p>At the end, there should be some messages that look like:</p>
-<pre tabindex="0"><code>Dynamic loading: System
-configure: Use gettext for international messages: yes
-configure: Use fcntl for file locking: yes
-configure: Use math multiple precision library: gmp
-configure: Use curses library for screen I/O: ncursesw
-configure: Use Berkeley DB for INDEXED I/O: yes
-configure: Used for XML I/O: libxml2
-configure: Used for JSON I/O: cjson
-</code></pre><p>If there are no errors, Run:</p>
+<p>If there are no errors, Run:</p>
 <p><code>make</code></p>
-<p>More messages will display, if there are no errors, Run:</p>
-<p><code>make check</code></p>
-<p>A suite of tests will run, at the end, you should see the results:</p>
-<pre tabindex="0"><code># -------------
-## Test results.
-## -------------
-
-1273 tests behaved as expected.
-9 tests were skipped.
-</code></pre><p>Run:</p>
+<p>If there are no errors, Run:</p>
 <p><code>sudo make install</code></p>
 <p>Then Run:</p>
 <p><code>sudo ldconfig</code></p>
-<p>As a quick test, Run:</p>
-<p><code>cobc</code></p>
-<p>You should get an error message:</p>
-<p>cobc: error: no input files</p>
-<p>For a better test of the install:</p>
-<ul>
-<li>Create a new directory</li>
-<li>Create a simple COBOL program</li>
-<li>Run it.</li>
-</ul>
-<p>1: Create a new directory</p>
-<p>In Terminal, Run:</p>
-<pre tabindex="0"><code>cd
-mkdir -p ~/dev/cobol/test-cobol
-cd ~/dev/cobol/test-cobol
-touch hello.cbl
-</code></pre><p>2: Create a simple COBOL program</p>
-<p>Open Files, go to the dev/cobol/test-cobol folder.</p>
-<p>Double-click on hello.cbl. This will open it in Text Editor.</p>
-<p>Copy the following code and paste it into hello.cbl:</p>
-<pre><code>   IDENTIFICATION DIVISION.
-   PROGRAM-ID. SmallestProgram.
-   DATA DIVISION.
-   FILE SECTION.
-   WORKING-STORAGE SECTION.
-   PROCEDURE DIVISION.
-   MAIN-PROCEDURE.
-        DISPLAY &quot;Hello world&quot;
-        STOP RUN.
-   END PROGRAM SmallestProgram.
-</code></pre>
-<p>and save it.</p>
-<p>Go to Terminal, Run:</p>
-<p><code>pwd</code></p>
-<p>To make sure you are in the ~/dev/cobol/test-cobol directory.</p>
-<p>Run:</p>
-<p><code>cobc -x hello.cbl</code></p>
-<p>If it complies correctly(no messages), Run:</p>
-<p><code>./hello</code></p>
-<p>It should return:</p>
-<p><code>Hello world</code></p>
-<p>If this works, delete the test-cobol directory (or not, your choice).</p>
+
+
+<div class="alert alert-warning" role="alert">
+<h4 class="alert-heading">Important Message</h4>
+
+    Please read the GixSQL
+README for more configure parameters.
+
+</div>
+
+<h4 id="as-an-example-install-the-other-dbs">As an Example: Install the other DBs<a class="td-heading-self-link" href="#as-an-example-install-the-other-dbs" aria-label="Heading self-link"></a></h4>
+<p>If you do want to use Mariadb(MySQL) and odbc and PostgreSQL,</p>
+<p>Replace the apt install:</p>
+<p><code>sudo apt install libpq-dev flex</code></p>
+<p>With</p>
+<p><code>sudo apt install libmariadb-dev libpq-dev unixodbc-dev flex</code></p>
+<p>And the ./configure:</p>
+<p><code>./configure --prefix=/opt/gixsql --disable-mysql --disable-odbc --enable-pgsql</code></p>
+<p>With</p>
+<p><code>./configure --prefix=/opt/gixsql --enable-pgsql</code></p>
 
 </div>
 
 
+
+    
+	
+  
 
     
 	
