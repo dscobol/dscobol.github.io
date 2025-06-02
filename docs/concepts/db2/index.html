@@ -31,7 +31,7 @@
   <meta itemprop="name" content="DB2 Processing">
   <meta itemprop="description" content="Differences when running DB2 programs.">
   <meta itemprop="dateModified" content="2025-05-23T23:15:37-04:00">
-  <meta itemprop="wordCount" content="662">
+  <meta itemprop="wordCount" content="700">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="DB2 Processing">
   <meta name="twitter:description" content="Differences when running DB2 programs.">
@@ -72,7 +72,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.6ecd292d0ccf004ee484c012d16392e2.json"
+    data-offline-search-index-json-src="/offline-search-index.1a0e49a1b1e7c8d0ff2f291f3164e082.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -96,7 +96,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.6ecd292d0ccf004ee484c012d16392e2.json"
+    data-offline-search-index-json-src="/offline-search-index.1a0e49a1b1e7c8d0ff2f291f3164e082.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -184,7 +184,7 @@
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docstutorialsmvs-tk5-li">
   <input type="checkbox" id="m-docstutorialsmvs-tk5-check"/>
-  <label for="m-docstutorialsmvs-tk5-check"><a href="/docs/tutorials/mvs-tk5/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docstutorialsmvs-tk5"><span class="">Run a &#34;Mainframe&#34; on Raspberry Pi.</span></a></label>
+  <label for="m-docstutorialsmvs-tk5-check"><a href="/docs/tutorials/mvs-tk5/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docstutorialsmvs-tk5"><span class="">Run a &#34;Mainframe&#34; on a PC</span></a></label>
   
   <ul class="ul-3 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docstutorialsmvs-tk5install-tk5-li">
@@ -221,11 +221,12 @@
         <li><a href="#zos-coboldb2">zOS COBOL/DB2</a></li>
         <li><a href="#gnucoboldb2-luw">GnuCOBOL/DB2 LUW</a></li>
         <li><a href="#different-methods-to-supply-parameters">Different methods to <a href="./supply-parameters.md">supply parameters</a></a></li>
-        <li><a href="#version-1">Version 1</a></li>
-        <li><a href="#version-2">Version 2</a></li>
-        <li><a href="#version-3">Version 3</a></li>
-        <li><a href="#version-4">Version 4</a></li>
-        <li><a href="#version-5">Version 5</a></li>
+        <li><a href="#version-0---original-code-from-murach-book">Version 0 - Original Code from Murach book</a></li>
+        <li><a href="#version-1---only-required-changes">Version 1 - Only required changes</a></li>
+        <li><a href="#version-2---call-a-module-to-supply-the-db-parameters">Version 2 - Call a module to supply the DB parameters</a></li>
+        <li><a href="#version-3---accept-parameters-from-the-environment">Version 3 - Accept parameters from the Environment</a></li>
+        <li><a href="#version-4---an-enhanced-version-of-call-a-module">Version 4 - An enhanced version of &ldquo;Call a module&rdquo;</a></li>
+        <li><a href="#version-5---an-enhanced-version-of-accept-parameters">Version 5 - An enhanced version of &ldquo;Accept parameters&rdquo;</a></li>
       </ul>
     </li>
   </ul>
@@ -274,7 +275,7 @@ the COBOL host variables.</li>
 variables, and the DB Connect variables within the program itself.</p>
 <h3 id="different-methods-to-supply-parameters">Different methods to <a href="/docs/concepts/supply-parameters/">supply parameters</a><a class="td-heading-self-link" href="#different-methods-to-supply-parameters" aria-label="Heading self-link"></a></h3>
 <h4 id="a-look-at-the-examples-to-see-the-differences">A look at the examples to see the differences:<a class="td-heading-self-link" href="#a-look-at-the-examples-to-see-the-differences" aria-label="Heading self-link"></a></h4>
-<p>Original Code from Murach book</p>
+<h3 id="version-0---original-code-from-murach-book">Version 0 - Original Code from Murach book<a class="td-heading-self-link" href="#version-0---original-code-from-murach-book" aria-label="Heading self-link"></a></h3>
 <p><strong>This is an example of a <a href="/docs/concepts/orig-code/">Normal ZOS COBOL DB2</a> program.</strong></p>
 <p>In the repository on GitHub, this is cbl/CUSTINQ.cbl</p>
 <p>It will not compile with GnuCOBOL.</p>
@@ -285,7 +286,7 @@ and 3) but those have changes made to them to compile and run using GnuCOBOL.</p
 <p>As you will see in Versions 4 and 5, I have my own program structure and style
 and while the results will be the same as the original, the code will be quite
 different.</p>
-<h3 id="version-1">Version 1<a class="td-heading-self-link" href="#version-1" aria-label="Heading self-link"></a></h3>
+<h3 id="version-1---only-required-changes">Version 1 - Only required changes<a class="td-heading-self-link" href="#version-1---only-required-changes" aria-label="Heading self-link"></a></h3>
 <p><strong>This is an example of a <a href="/docs/concepts/version1/">Converted from ZOS to GnuCOBOL</a>
 program.</strong></p>
 <p>In the repository on GitHub, this is cbl/CUSTIN1.sqb</p>
@@ -313,7 +314,7 @@ purposes.</p>
 
 </div>
 
-<h3 id="version-2">Version 2<a class="td-heading-self-link" href="#version-2" aria-label="Heading self-link"></a></h3>
+<h3 id="version-2---call-a-module-to-supply-the-db-parameters">Version 2 - Call a module to supply the DB parameters<a class="td-heading-self-link" href="#version-2---call-a-module-to-supply-the-db-parameters" aria-label="Heading self-link"></a></h3>
 <p><strong>This is an example of a <a href="/docs/concepts/version2/">Calling a Module</a> program.</strong></p>
 <p>In the repository on GitHub, this is cbl/CUSTIN2.sqb</p>
 <p>I started with cbl/CUSTIN1.sqb and:</p>
@@ -329,7 +330,7 @@ purposes.</p>
 </li>
 </ul>
 <p>Now the program will run without needing to ask the user for that information.</p>
-<h3 id="version-3">Version 3<a class="td-heading-self-link" href="#version-3" aria-label="Heading self-link"></a></h3>
+<h3 id="version-3---accept-parameters-from-the-environment">Version 3 - Accept parameters from the Environment<a class="td-heading-self-link" href="#version-3---accept-parameters-from-the-environment" aria-label="Heading self-link"></a></h3>
 <p><strong>This is an example of a <a href="/docs/concepts/version3/">Accept from Environment</a> program.</strong></p>
 <p>In the repository on GitHub, this is cbl/CUSTIN3.sqb</p>
 <p>I started with cbl/CUSTIN2.sqb and:</p>
@@ -361,18 +362,18 @@ purposes.</p>
 
 </div>
 
-<h3 id="version-4">Version 4<a class="td-heading-self-link" href="#version-4" aria-label="Heading self-link"></a></h3>
+<h3 id="version-4---an-enhanced-version-of-call-a-module">Version 4 - An enhanced version of &ldquo;Call a module&rdquo;<a class="td-heading-self-link" href="#version-4---an-enhanced-version-of-call-a-module" aria-label="Heading self-link"></a></h3>
 <p><strong>This is an example of <a href="/docs/concepts/version4/">My Version of Calling GETDBID</a>.</strong></p>
 <p>In the repository on GitHub, this is cbl/CUSTIN4.sqb</p>
-<p>As I alluded to in Version 1, this is that completely re-written program.</p>
+<p>As I alluded to in Version 1, this is a completely re-written program.</p>
 <p><strong>Every company has a standard and/or style that all(most?) code adheres to.</strong></p>
 <p>At some shops, it is kind of loose, at others, it is VERY rigid.</p>
 <p>This is an example of getting the same result; just doing it a different way by
-applying a different structure to the program.</p>
-<p>This is the &ldquo;typical&rdquo; structure I use to create new programs.</p>
+applying a different structure/style to the program.</p>
+<p>This is the &ldquo;template&rdquo; I use to create new programs.</p>
 <p>As I continue to add programs to the repositories, they will &ldquo;follow along&rdquo; with
-the book or tutorial or website but will be using this structure.</p>
-<h3 id="version-5">Version 5<a class="td-heading-self-link" href="#version-5" aria-label="Heading self-link"></a></h3>
+the book or tutorial or website but will be using this structure and style.</p>
+<h3 id="version-5---an-enhanced-version-of-accept-parameters">Version 5 - An enhanced version of &ldquo;Accept parameters&rdquo;<a class="td-heading-self-link" href="#version-5---an-enhanced-version-of-accept-parameters" aria-label="Heading self-link"></a></h3>
 <p><strong>This is an example of
 <a href="/docs/concepts/version5/">My Version of Accept from Environment</a>.</strong></p>
 <p>In the repository on GitHub, this is cbl/CUSTINQ.sqb</p>

@@ -76,7 +76,7 @@ GnuCOBOL - GNU/Linux (Pop!_OS) - COBOL accessing Text files, Indexed data files,
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.6ecd292d0ccf004ee484c012d16392e2.json"
+    data-offline-search-index-json-src="/offline-search-index.1a0e49a1b1e7c8d0ff2f291f3164e082.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -358,7 +358,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>5.1: <a href="#pg-87e86ba06a0c8267cc4e0e407e7a15b6">Run a &#34;Mainframe&#34; on Raspberry Pi.</a></li>
+<li>5.1: <a href="#pg-87e86ba06a0c8267cc4e0e407e7a15b6">Run a &#34;Mainframe&#34; on a PC</a></li>
 
 
     
@@ -593,8 +593,9 @@ the README to set it up the way it is described.</p>
 <div class="td-content" style="">
     
 	<h1 id="pg-74a68834c5be71d82ccc1403dec786db">3.1 - Batch Processing</h1>
-    <div class="lead">Differences when running Batch programs.</div>
-	<p>I can&rsquo;t speak about the efficiency or the scalablity or &ldquo;benchmarking
+    <div class="lead">Differences between zOS COBOL and GnuCOBOL</div>
+	<h2 id="coding-differences-that-i-am-aware-of">Coding differences that I am aware of<a class="td-heading-self-link" href="#coding-differences-that-i-am-aware-of" aria-label="Heading self-link"></a></h2>
+<p>I can&rsquo;t speak about the efficiency or the scalablity or &ldquo;benchmarking
 performance&rdquo; between zOS COBOL and GnuCOBOL.</p>
 <p>I just don&rsquo;t know.</p>
 <p>From an application programmer&rsquo;s point of view though, these are the differences
@@ -699,7 +700,7 @@ the COBOL host variables.</li>
 variables, and the DB Connect variables within the program itself.</p>
 <h3 id="different-methods-to-supply-parameters">Different methods to <a href="/docs/concepts/supply-parameters/">supply parameters</a><a class="td-heading-self-link" href="#different-methods-to-supply-parameters" aria-label="Heading self-link"></a></h3>
 <h4 id="a-look-at-the-examples-to-see-the-differences">A look at the examples to see the differences:<a class="td-heading-self-link" href="#a-look-at-the-examples-to-see-the-differences" aria-label="Heading self-link"></a></h4>
-<p>Original Code from Murach book</p>
+<h3 id="version-0---original-code-from-murach-book">Version 0 - Original Code from Murach book<a class="td-heading-self-link" href="#version-0---original-code-from-murach-book" aria-label="Heading self-link"></a></h3>
 <p><strong>This is an example of a <a href="/docs/concepts/orig-code/">Normal ZOS COBOL DB2</a> program.</strong></p>
 <p>In the repository on GitHub, this is cbl/CUSTINQ.cbl</p>
 <p>It will not compile with GnuCOBOL.</p>
@@ -710,7 +711,7 @@ and 3) but those have changes made to them to compile and run using GnuCOBOL.</p
 <p>As you will see in Versions 4 and 5, I have my own program structure and style
 and while the results will be the same as the original, the code will be quite
 different.</p>
-<h3 id="version-1">Version 1<a class="td-heading-self-link" href="#version-1" aria-label="Heading self-link"></a></h3>
+<h3 id="version-1---only-required-changes">Version 1 - Only required changes<a class="td-heading-self-link" href="#version-1---only-required-changes" aria-label="Heading self-link"></a></h3>
 <p><strong>This is an example of a <a href="/docs/concepts/version1/">Converted from ZOS to GnuCOBOL</a>
 program.</strong></p>
 <p>In the repository on GitHub, this is cbl/CUSTIN1.sqb</p>
@@ -738,7 +739,7 @@ purposes.</p>
 
 </div>
 
-<h3 id="version-2">Version 2<a class="td-heading-self-link" href="#version-2" aria-label="Heading self-link"></a></h3>
+<h3 id="version-2---call-a-module-to-supply-the-db-parameters">Version 2 - Call a module to supply the DB parameters<a class="td-heading-self-link" href="#version-2---call-a-module-to-supply-the-db-parameters" aria-label="Heading self-link"></a></h3>
 <p><strong>This is an example of a <a href="/docs/concepts/version2/">Calling a Module</a> program.</strong></p>
 <p>In the repository on GitHub, this is cbl/CUSTIN2.sqb</p>
 <p>I started with cbl/CUSTIN1.sqb and:</p>
@@ -754,7 +755,7 @@ purposes.</p>
 </li>
 </ul>
 <p>Now the program will run without needing to ask the user for that information.</p>
-<h3 id="version-3">Version 3<a class="td-heading-self-link" href="#version-3" aria-label="Heading self-link"></a></h3>
+<h3 id="version-3---accept-parameters-from-the-environment">Version 3 - Accept parameters from the Environment<a class="td-heading-self-link" href="#version-3---accept-parameters-from-the-environment" aria-label="Heading self-link"></a></h3>
 <p><strong>This is an example of a <a href="/docs/concepts/version3/">Accept from Environment</a> program.</strong></p>
 <p>In the repository on GitHub, this is cbl/CUSTIN3.sqb</p>
 <p>I started with cbl/CUSTIN2.sqb and:</p>
@@ -786,18 +787,18 @@ purposes.</p>
 
 </div>
 
-<h3 id="version-4">Version 4<a class="td-heading-self-link" href="#version-4" aria-label="Heading self-link"></a></h3>
+<h3 id="version-4---an-enhanced-version-of-call-a-module">Version 4 - An enhanced version of &ldquo;Call a module&rdquo;<a class="td-heading-self-link" href="#version-4---an-enhanced-version-of-call-a-module" aria-label="Heading self-link"></a></h3>
 <p><strong>This is an example of <a href="/docs/concepts/version4/">My Version of Calling GETDBID</a>.</strong></p>
 <p>In the repository on GitHub, this is cbl/CUSTIN4.sqb</p>
-<p>As I alluded to in Version 1, this is that completely re-written program.</p>
+<p>As I alluded to in Version 1, this is a completely re-written program.</p>
 <p><strong>Every company has a standard and/or style that all(most?) code adheres to.</strong></p>
 <p>At some shops, it is kind of loose, at others, it is VERY rigid.</p>
 <p>This is an example of getting the same result; just doing it a different way by
-applying a different structure to the program.</p>
-<p>This is the &ldquo;typical&rdquo; structure I use to create new programs.</p>
+applying a different structure/style to the program.</p>
+<p>This is the &ldquo;template&rdquo; I use to create new programs.</p>
 <p>As I continue to add programs to the repositories, they will &ldquo;follow along&rdquo; with
-the book or tutorial or website but will be using this structure.</p>
-<h3 id="version-5">Version 5<a class="td-heading-self-link" href="#version-5" aria-label="Heading self-link"></a></h3>
+the book or tutorial or website but will be using this structure and style.</p>
+<h3 id="version-5---an-enhanced-version-of-accept-parameters">Version 5 - An enhanced version of &ldquo;Accept parameters&rdquo;<a class="td-heading-self-link" href="#version-5---an-enhanced-version-of-accept-parameters" aria-label="Heading self-link"></a></h3>
 <p><strong>This is an example of
 <a href="/docs/concepts/version5/">My Version of Accept from Environment</a>.</strong></p>
 <p>In the repository on GitHub, this is cbl/CUSTINQ.sqb</p>
@@ -2374,8 +2375,7 @@ the DB2 LUW install would fail.</p>
     
 	<h1 id="pg-8ac668ef71a81e3bea263feef150addc">4.1 - Install GnuCOBOL.</h1>
     <div class="lead">Version GnuCOBOL 3.2.0</div>
-	<h1 id="install-gnucobol">Install GnuCOBOL<a class="td-heading-self-link" href="#install-gnucobol" aria-label="Heading self-link"></a></h1>
-<h2 id="install-build-essential-first">Install Build-Essential first<a class="td-heading-self-link" href="#install-build-essential-first" aria-label="Heading self-link"></a></h2>
+	<h2 id="install-build-essential-first">Install Build-Essential first<a class="td-heading-self-link" href="#install-build-essential-first" aria-label="Heading self-link"></a></h2>
 <p>In Terminal, Run:</p>
 <p><code>sudo apt install build-essential</code></p>
 <p>This might be installed already or there might be some components that are
@@ -2434,23 +2434,26 @@ configure: Used for JSON I/O: cjson
 <p><code>sudo make install</code></p>
 <p>Then Run:</p>
 <p><code>sudo ldconfig</code></p>
+<h2 id="testing-the-installation">Testing the Installation<a class="td-heading-self-link" href="#testing-the-installation" aria-label="Heading self-link"></a></h2>
+<h3 id="quick-test">Quick test<a class="td-heading-self-link" href="#quick-test" aria-label="Heading self-link"></a></h3>
 <p>As a quick test, Run:</p>
 <p><code>cobc</code></p>
 <p>You should get an error message:</p>
 <p>cobc: error: no input files</p>
+<h3 id="better-test">Better test<a class="td-heading-self-link" href="#better-test" aria-label="Heading self-link"></a></h3>
 <p>For a better test of the install:</p>
 <ul>
 <li>Create a new directory</li>
 <li>Create a simple COBOL program</li>
 <li>Run it.</li>
 </ul>
-<p>1: Create a new directory</p>
+<h4 id="create-a-new-directory">Create a new directory<a class="td-heading-self-link" href="#create-a-new-directory" aria-label="Heading self-link"></a></h4>
 <p>In Terminal, Run:</p>
 <pre tabindex="0"><code>cd
 mkdir -p ~/dev/cobol/test-cobol
 cd ~/dev/cobol/test-cobol
 touch hello.cbl
-</code></pre><p>2: Create a simple COBOL program</p>
+</code></pre><h4 id="create-a-simple-cobol-program">Create a simple COBOL program<a class="td-heading-self-link" href="#create-a-simple-cobol-program" aria-label="Heading self-link"></a></h4>
 <p>Open Files, go to the dev/cobol/test-cobol folder.</p>
 <p>Double-click on hello.cbl. This will open it in Text Editor.</p>
 <p>Copy the following code and paste it into hello.cbl:</p>
@@ -2466,6 +2469,7 @@ touch hello.cbl
    END PROGRAM SmallestProgram.
 </code></pre>
 <p>and save it.</p>
+<h4 id="run-it">Run it.<a class="td-heading-self-link" href="#run-it" aria-label="Heading self-link"></a></h4>
 <p>Go to Terminal, Run:</p>
 <p><code>pwd</code></p>
 <p>To make sure you are in the ~/dev/cobol/test-cobol directory.</p>
@@ -3030,7 +3034,7 @@ mileage may vary.</p>
 
 <div class="td-content" style="">
     
-	<h1 id="pg-87e86ba06a0c8267cc4e0e407e7a15b6">5.1 - Run a &#34;Mainframe&#34; on Raspberry Pi.</h1>
+	<h1 id="pg-87e86ba06a0c8267cc4e0e407e7a15b6">5.1 - Run a &#34;Mainframe&#34; on a PC</h1>
     <div class="lead">Install and run the MVS Turnkey 5 System.</div>
 	<h2 id="this-is-a-way-to-learn-how-to-write-cobol-programs-for-an-ibm-mainframe-system">This is a way to learn how to write COBOL programs for an IBM Mainframe system.<a class="td-heading-self-link" href="#this-is-a-way-to-learn-how-to-write-cobol-programs-for-an-ibm-mainframe-system" aria-label="Heading self-link"></a></h2>
 
@@ -3066,21 +3070,31 @@ to do some additional research to execute this correctly.</p>
 <div class="td-content" style="">
     
 	<h1 id="pg-eb508b7e4bcd7ceb74f9c82ee311d01c">5.1.1 - Install the MVS Turnkey 5 System</h1>
-    <div class="lead">Get it up and running on a RPi.</div>
-	<h2 id="hardware-used">Hardware used<a class="td-heading-self-link" href="#hardware-used" aria-label="Heading self-link"></a></h2>
+    <div class="lead">Welcome back to 1968!</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>This will document installing MVS-TK5 on a Raspberry Pi.</p>
+<p>The instructions in &ldquo;Get and Install MVS-TK5&rdquo; should work on other systems. See
+the MVS-TK5 website for more information.</p>
+
+</div>
+
+<h2 id="setup-the-raspberry-pi">Setup the Raspberry Pi<a class="td-heading-self-link" href="#setup-the-raspberry-pi" aria-label="Heading self-link"></a></h2>
+<h3 id="the-system-used">The System used<a class="td-heading-self-link" href="#the-system-used" aria-label="Heading self-link"></a></h3>
 <ul>
 <li>Raspberry Pi 3 B+</li>
-<li>RPi-OS-Lite(64bit)</li>
+<li>RPi-OS-Lite(64bit) Release date: May 13th 2025</li>
 <li>TK5 version 4</li>
 </ul>
-<h2 id="initial-setup-and-installation">Initial setup and installation<a class="td-heading-self-link" href="#initial-setup-and-installation" aria-label="Heading self-link"></a></h2>
+<h3 id="initial-setup-and-installation">Initial setup and installation<a class="td-heading-self-link" href="#initial-setup-and-installation" aria-label="Heading self-link"></a></h3>
 <p>Use rpi-imager to create the microsd card</p>
 <p>Insert the SD card into the RPi and turn on.</p>
 <p>I use nmap to determine the IP address of the RPi.</p>
 <p>ssh into the RPi</p>
 <p>run: <code>sudo apt update</code> <code>sudo apt upgrade</code></p>
 <p>and reboot.</p>
-<h2 id="install-some-basics">Install some basics:<a class="td-heading-self-link" href="#install-some-basics" aria-label="Heading self-link"></a></h2>
+<h3 id="install-some-basics">Install some basics:<a class="td-heading-self-link" href="#install-some-basics" aria-label="Heading self-link"></a></h3>
 <p><code>sudo apt install vim mc bat</code> Note: bat is installed as &ldquo;batcat&rdquo; so cd to
 /usr/bin and <code>sudo ln -s batcat bat</code></p>
 <p>Use nmtui to change to a static IP.</p>
@@ -3098,7 +3112,7 @@ information.</p>
 with this, it&rsquo;s too general, but I don&rsquo;t have a list of the specific files that
 <strong>need</strong> to be executeable so this will do.)</p>
 <p><code>./unattached/set_console_mode</code></p>
-<h2 id="create-a-systemd-service">Create a systemd service<a class="td-heading-self-link" href="#create-a-systemd-service" aria-label="Heading self-link"></a></h2>
+<h3 id="create-a-systemd-service">Create a systemd service<a class="td-heading-self-link" href="#create-a-systemd-service" aria-label="Heading self-link"></a></h3>
 <p><code>vim /etc/systemd/system/mvs.service</code></p>
 <p>and paste the text below into that file.</p>
 <pre tabindex="0"><code>[Unit]
@@ -3113,11 +3127,14 @@ Type=simple
 
 [Install]
 WantedBy=multi-user.target
-</code></pre><h2 id="run-these-to-enable-and-start-it">Run these to enable and start it.<a class="td-heading-self-link" href="#run-these-to-enable-and-start-it" aria-label="Heading self-link"></a></h2>
+</code></pre><h3 id="run-these-to-enable-and-start-it">Run these to enable and start it.<a class="td-heading-self-link" href="#run-these-to-enable-and-start-it" aria-label="Heading self-link"></a></h3>
 <pre tabindex="0"><code>systemctl daemon-reload
 systemctl enable mvs
 systemctl start mvs
-</code></pre>
+</code></pre><h3 id="note-this-will-not-shutdown-mvs-tk5-properly">Note: This will <strong>NOT</strong> shutdown MVS-TK5 properly.<a class="td-heading-self-link" href="#note-this-will-not-shutdown-mvs-tk5-properly" aria-label="Heading self-link"></a></h3>
+<p>This will only restart MVS-TK5 if the computer is shutdown or rebooted.</p>
+<p>To shutdown normally, follow the instructions in the User Guide.</p>
+
 </div>
 
 

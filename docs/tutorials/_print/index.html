@@ -72,7 +72,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.6ecd292d0ccf004ee484c012d16392e2.json"
+    data-offline-search-index-json-src="/offline-search-index.1a0e49a1b1e7c8d0ff2f291f3164e082.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -119,7 +119,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>1: <a href="#pg-87e86ba06a0c8267cc4e0e407e7a15b6">Run a &#34;Mainframe&#34; on Raspberry Pi.</a></li>
+<li>1: <a href="#pg-87e86ba06a0c8267cc4e0e407e7a15b6">Run a &#34;Mainframe&#34; on a PC</a></li>
 
 
     
@@ -195,7 +195,7 @@ mileage may vary.</p>
 
 <div class="td-content" style="">
     
-	<h1 id="pg-87e86ba06a0c8267cc4e0e407e7a15b6">1 - Run a &#34;Mainframe&#34; on Raspberry Pi.</h1>
+	<h1 id="pg-87e86ba06a0c8267cc4e0e407e7a15b6">1 - Run a &#34;Mainframe&#34; on a PC</h1>
     <div class="lead">Install and run the MVS Turnkey 5 System.</div>
 	<h2 id="this-is-a-way-to-learn-how-to-write-cobol-programs-for-an-ibm-mainframe-system">This is a way to learn how to write COBOL programs for an IBM Mainframe system.<a class="td-heading-self-link" href="#this-is-a-way-to-learn-how-to-write-cobol-programs-for-an-ibm-mainframe-system" aria-label="Heading self-link"></a></h2>
 
@@ -231,21 +231,31 @@ to do some additional research to execute this correctly.</p>
 <div class="td-content" style="">
     
 	<h1 id="pg-eb508b7e4bcd7ceb74f9c82ee311d01c">1.1 - Install the MVS Turnkey 5 System</h1>
-    <div class="lead">Get it up and running on a RPi.</div>
-	<h2 id="hardware-used">Hardware used<a class="td-heading-self-link" href="#hardware-used" aria-label="Heading self-link"></a></h2>
+    <div class="lead">Welcome back to 1968!</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>This will document installing MVS-TK5 on a Raspberry Pi.</p>
+<p>The instructions in &ldquo;Get and Install MVS-TK5&rdquo; should work on other systems. See
+the MVS-TK5 website for more information.</p>
+
+</div>
+
+<h2 id="setup-the-raspberry-pi">Setup the Raspberry Pi<a class="td-heading-self-link" href="#setup-the-raspberry-pi" aria-label="Heading self-link"></a></h2>
+<h3 id="the-system-used">The System used<a class="td-heading-self-link" href="#the-system-used" aria-label="Heading self-link"></a></h3>
 <ul>
 <li>Raspberry Pi 3 B+</li>
-<li>RPi-OS-Lite(64bit)</li>
+<li>RPi-OS-Lite(64bit) Release date: May 13th 2025</li>
 <li>TK5 version 4</li>
 </ul>
-<h2 id="initial-setup-and-installation">Initial setup and installation<a class="td-heading-self-link" href="#initial-setup-and-installation" aria-label="Heading self-link"></a></h2>
+<h3 id="initial-setup-and-installation">Initial setup and installation<a class="td-heading-self-link" href="#initial-setup-and-installation" aria-label="Heading self-link"></a></h3>
 <p>Use rpi-imager to create the microsd card</p>
 <p>Insert the SD card into the RPi and turn on.</p>
 <p>I use nmap to determine the IP address of the RPi.</p>
 <p>ssh into the RPi</p>
 <p>run: <code>sudo apt update</code> <code>sudo apt upgrade</code></p>
 <p>and reboot.</p>
-<h2 id="install-some-basics">Install some basics:<a class="td-heading-self-link" href="#install-some-basics" aria-label="Heading self-link"></a></h2>
+<h3 id="install-some-basics">Install some basics:<a class="td-heading-self-link" href="#install-some-basics" aria-label="Heading self-link"></a></h3>
 <p><code>sudo apt install vim mc bat</code> Note: bat is installed as &ldquo;batcat&rdquo; so cd to
 /usr/bin and <code>sudo ln -s batcat bat</code></p>
 <p>Use nmtui to change to a static IP.</p>
@@ -263,7 +273,7 @@ information.</p>
 with this, it&rsquo;s too general, but I don&rsquo;t have a list of the specific files that
 <strong>need</strong> to be executeable so this will do.)</p>
 <p><code>./unattached/set_console_mode</code></p>
-<h2 id="create-a-systemd-service">Create a systemd service<a class="td-heading-self-link" href="#create-a-systemd-service" aria-label="Heading self-link"></a></h2>
+<h3 id="create-a-systemd-service">Create a systemd service<a class="td-heading-self-link" href="#create-a-systemd-service" aria-label="Heading self-link"></a></h3>
 <p><code>vim /etc/systemd/system/mvs.service</code></p>
 <p>and paste the text below into that file.</p>
 <pre tabindex="0"><code>[Unit]
@@ -278,11 +288,14 @@ Type=simple
 
 [Install]
 WantedBy=multi-user.target
-</code></pre><h2 id="run-these-to-enable-and-start-it">Run these to enable and start it.<a class="td-heading-self-link" href="#run-these-to-enable-and-start-it" aria-label="Heading self-link"></a></h2>
+</code></pre><h3 id="run-these-to-enable-and-start-it">Run these to enable and start it.<a class="td-heading-self-link" href="#run-these-to-enable-and-start-it" aria-label="Heading self-link"></a></h3>
 <pre tabindex="0"><code>systemctl daemon-reload
 systemctl enable mvs
 systemctl start mvs
-</code></pre>
+</code></pre><h3 id="note-this-will-not-shutdown-mvs-tk5-properly">Note: This will <strong>NOT</strong> shutdown MVS-TK5 properly.<a class="td-heading-self-link" href="#note-this-will-not-shutdown-mvs-tk5-properly" aria-label="Heading self-link"></a></h3>
+<p>This will only restart MVS-TK5 if the computer is shutdown or rebooted.</p>
+<p>To shutdown normally, follow the instructions in the User Guide.</p>
+
 </div>
 
 

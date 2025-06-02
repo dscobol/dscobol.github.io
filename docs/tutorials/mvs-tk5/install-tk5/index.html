@@ -18,23 +18,23 @@
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
 <title>Install the MVS Turnkey 5 System | dscobol</title>
-<meta name="description" content="Get it up and running on a RPi.">
+<meta name="description" content="Welcome back to 1968!">
 <meta property="og:url" content="https://dscobol.github.io/docs/tutorials/mvs-tk5/install-tk5/">
   <meta property="og:site_name" content="dscobol">
   <meta property="og:title" content="Install the MVS Turnkey 5 System">
-  <meta property="og:description" content="Get it up and running on a RPi.">
+  <meta property="og:description" content="Welcome back to 1968!">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="docs">
     <meta property="article:modified_time" content="2025-05-31T13:15:08-04:00">
 
   <meta itemprop="name" content="Install the MVS Turnkey 5 System">
-  <meta itemprop="description" content="Get it up and running on a RPi.">
+  <meta itemprop="description" content="Welcome back to 1968!">
   <meta itemprop="dateModified" content="2025-05-31T13:15:08-04:00">
-  <meta itemprop="wordCount" content="217">
+  <meta itemprop="wordCount" content="284">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Install the MVS Turnkey 5 System">
-  <meta name="twitter:description" content="Get it up and running on a RPi.">
+  <meta name="twitter:description" content="Welcome back to 1968!">
 <link rel="preload" href="/scss/main.min.587cc9ab2e7ed4cd045ee4c6e380598d6f8ad5201ff3aa9345c816a513404b85.css" as="style" integrity="sha256-WHzJqy5&#43;1M0EXuTG44BZjW&#43;K1SAf86qTRcgWpRNAS4U=" crossorigin="anonymous">
 <link href="/scss/main.min.587cc9ab2e7ed4cd045ee4c6e380598d6f8ad5201ff3aa9345c816a513404b85.css" rel="stylesheet" integrity="sha256-WHzJqy5&#43;1M0EXuTG44BZjW&#43;K1SAf86qTRcgWpRNAS4U=" crossorigin="anonymous">
 <script
@@ -72,7 +72,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.6ecd292d0ccf004ee484c012d16392e2.json"
+    data-offline-search-index-json-src="/offline-search-index.1a0e49a1b1e7c8d0ff2f291f3164e082.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -96,7 +96,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.6ecd292d0ccf004ee484c012d16392e2.json"
+    data-offline-search-index-json-src="/offline-search-index.1a0e49a1b1e7c8d0ff2f291f3164e082.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -184,7 +184,7 @@
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docstutorialsmvs-tk5-li">
   <input type="checkbox" id="m-docstutorialsmvs-tk5-check" checked/>
-  <label for="m-docstutorialsmvs-tk5-check"><a href="/docs/tutorials/mvs-tk5/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docstutorialsmvs-tk5"><span class="">Run a &#34;Mainframe&#34; on Raspberry Pi.</span></a></label>
+  <label for="m-docstutorialsmvs-tk5-check"><a href="/docs/tutorials/mvs-tk5/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docstutorialsmvs-tk5"><span class="">Run a &#34;Mainframe&#34; on a PC</span></a></label>
   
   <ul class="ul-3 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docstutorialsmvs-tk5install-tk5-li">
@@ -216,17 +216,22 @@
             <div class="td-toc">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#hardware-used">Hardware used</a></li>
-    <li><a href="#initial-setup-and-installation">Initial setup and installation</a></li>
-    <li><a href="#install-some-basics">Install some basics:</a></li>
+    <li><a href="#setup-the-raspberry-pi">Setup the Raspberry Pi</a>
+      <ul>
+        <li><a href="#the-system-used">The System used</a></li>
+        <li><a href="#initial-setup-and-installation">Initial setup and installation</a></li>
+        <li><a href="#install-some-basics">Install some basics:</a></li>
+      </ul>
+    </li>
     <li><a href="#get-and-install-tk5">Get and install TK5</a>
       <ul>
         <li><a href="#download-the-zip-file">Download the zip file.</a></li>
         <li><a href="#unzip-and-set-it-up">Unzip and set it up.</a></li>
+        <li><a href="#create-a-systemd-service">Create a systemd service</a></li>
+        <li><a href="#run-these-to-enable-and-start-it">Run these to enable and start it.</a></li>
+        <li><a href="#note-this-will-not-shutdown-mvs-tk5-properly">Note: This will <strong>NOT</strong> shutdown MVS-TK5 properly.</a></li>
       </ul>
     </li>
-    <li><a href="#create-a-systemd-service">Create a systemd service</a></li>
-    <li><a href="#run-these-to-enable-and-start-it">Run these to enable and start it.</a></li>
   </ul>
 </nav>
       </div>
@@ -245,31 +250,41 @@
   <li class="breadcrumb-item">
     <a href="/docs/tutorials/">Tutorials</a></li>
   <li class="breadcrumb-item">
-    <a href="/docs/tutorials/mvs-tk5/">Run a &#34;Mainframe&#34; on Raspberry Pi.</a></li>
+    <a href="/docs/tutorials/mvs-tk5/">Run a &#34;Mainframe&#34; on a PC</a></li>
   <li class="breadcrumb-item active" aria-current="page">
     Install the MVS Turnkey 5 System</li>
   </ol>
 </nav>
 <div class="td-content">
 	<h1>Install the MVS Turnkey 5 System</h1>
-	<div class="lead">Get it up and running on a RPi.</div>
+	<div class="lead">Welcome back to 1968!</div>
 	<header class="article-meta">
 		
   </header>
-	<h2 id="hardware-used">Hardware used<a class="td-heading-self-link" href="#hardware-used" aria-label="Heading self-link"></a></h2>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>This will document installing MVS-TK5 on a Raspberry Pi.</p>
+<p>The instructions in &ldquo;Get and Install MVS-TK5&rdquo; should work on other systems. See
+the MVS-TK5 website for more information.</p>
+
+</div>
+
+<h2 id="setup-the-raspberry-pi">Setup the Raspberry Pi<a class="td-heading-self-link" href="#setup-the-raspberry-pi" aria-label="Heading self-link"></a></h2>
+<h3 id="the-system-used">The System used<a class="td-heading-self-link" href="#the-system-used" aria-label="Heading self-link"></a></h3>
 <ul>
 <li>Raspberry Pi 3 B+</li>
-<li>RPi-OS-Lite(64bit)</li>
+<li>RPi-OS-Lite(64bit) Release date: May 13th 2025</li>
 <li>TK5 version 4</li>
 </ul>
-<h2 id="initial-setup-and-installation">Initial setup and installation<a class="td-heading-self-link" href="#initial-setup-and-installation" aria-label="Heading self-link"></a></h2>
+<h3 id="initial-setup-and-installation">Initial setup and installation<a class="td-heading-self-link" href="#initial-setup-and-installation" aria-label="Heading self-link"></a></h3>
 <p>Use rpi-imager to create the microsd card</p>
 <p>Insert the SD card into the RPi and turn on.</p>
 <p>I use nmap to determine the IP address of the RPi.</p>
 <p>ssh into the RPi</p>
 <p>run: <code>sudo apt update</code> <code>sudo apt upgrade</code></p>
 <p>and reboot.</p>
-<h2 id="install-some-basics">Install some basics:<a class="td-heading-self-link" href="#install-some-basics" aria-label="Heading self-link"></a></h2>
+<h3 id="install-some-basics">Install some basics:<a class="td-heading-self-link" href="#install-some-basics" aria-label="Heading self-link"></a></h3>
 <p><code>sudo apt install vim mc bat</code> Note: bat is installed as &ldquo;batcat&rdquo; so cd to
 /usr/bin and <code>sudo ln -s batcat bat</code></p>
 <p>Use nmtui to change to a static IP.</p>
@@ -287,7 +302,7 @@ information.</p>
 with this, it&rsquo;s too general, but I don&rsquo;t have a list of the specific files that
 <strong>need</strong> to be executeable so this will do.)</p>
 <p><code>./unattached/set_console_mode</code></p>
-<h2 id="create-a-systemd-service">Create a systemd service<a class="td-heading-self-link" href="#create-a-systemd-service" aria-label="Heading self-link"></a></h2>
+<h3 id="create-a-systemd-service">Create a systemd service<a class="td-heading-self-link" href="#create-a-systemd-service" aria-label="Heading self-link"></a></h3>
 <p><code>vim /etc/systemd/system/mvs.service</code></p>
 <p>and paste the text below into that file.</p>
 <pre tabindex="0"><code>[Unit]
@@ -302,11 +317,14 @@ Type=simple
 
 [Install]
 WantedBy=multi-user.target
-</code></pre><h2 id="run-these-to-enable-and-start-it">Run these to enable and start it.<a class="td-heading-self-link" href="#run-these-to-enable-and-start-it" aria-label="Heading self-link"></a></h2>
+</code></pre><h3 id="run-these-to-enable-and-start-it">Run these to enable and start it.<a class="td-heading-self-link" href="#run-these-to-enable-and-start-it" aria-label="Heading self-link"></a></h3>
 <pre tabindex="0"><code>systemctl daemon-reload
 systemctl enable mvs
 systemctl start mvs
-</code></pre>
+</code></pre><h3 id="note-this-will-not-shutdown-mvs-tk5-properly">Note: This will <strong>NOT</strong> shutdown MVS-TK5 properly.<a class="td-heading-self-link" href="#note-this-will-not-shutdown-mvs-tk5-properly" aria-label="Heading self-link"></a></h3>
+<p>This will only restart MVS-TK5 if the computer is shutdown or rebooted.</p>
+<p>To shutdown normally, follow the instructions in the User Guide.</p>
+
 	
 </div>
 

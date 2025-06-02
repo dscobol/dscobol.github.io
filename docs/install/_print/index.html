@@ -72,7 +72,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.6ecd292d0ccf004ee484c012d16392e2.json"
+    data-offline-search-index-json-src="/offline-search-index.1a0e49a1b1e7c8d0ff2f291f3164e082.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -262,8 +262,7 @@ the DB2 LUW install would fail.</p>
     
 	<h1 id="pg-8ac668ef71a81e3bea263feef150addc">1 - Install GnuCOBOL.</h1>
     <div class="lead">Version GnuCOBOL 3.2.0</div>
-	<h1 id="install-gnucobol">Install GnuCOBOL<a class="td-heading-self-link" href="#install-gnucobol" aria-label="Heading self-link"></a></h1>
-<h2 id="install-build-essential-first">Install Build-Essential first<a class="td-heading-self-link" href="#install-build-essential-first" aria-label="Heading self-link"></a></h2>
+	<h2 id="install-build-essential-first">Install Build-Essential first<a class="td-heading-self-link" href="#install-build-essential-first" aria-label="Heading self-link"></a></h2>
 <p>In Terminal, Run:</p>
 <p><code>sudo apt install build-essential</code></p>
 <p>This might be installed already or there might be some components that are
@@ -322,23 +321,26 @@ configure: Used for JSON I/O: cjson
 <p><code>sudo make install</code></p>
 <p>Then Run:</p>
 <p><code>sudo ldconfig</code></p>
+<h2 id="testing-the-installation">Testing the Installation<a class="td-heading-self-link" href="#testing-the-installation" aria-label="Heading self-link"></a></h2>
+<h3 id="quick-test">Quick test<a class="td-heading-self-link" href="#quick-test" aria-label="Heading self-link"></a></h3>
 <p>As a quick test, Run:</p>
 <p><code>cobc</code></p>
 <p>You should get an error message:</p>
 <p>cobc: error: no input files</p>
+<h3 id="better-test">Better test<a class="td-heading-self-link" href="#better-test" aria-label="Heading self-link"></a></h3>
 <p>For a better test of the install:</p>
 <ul>
 <li>Create a new directory</li>
 <li>Create a simple COBOL program</li>
 <li>Run it.</li>
 </ul>
-<p>1: Create a new directory</p>
+<h4 id="create-a-new-directory">Create a new directory<a class="td-heading-self-link" href="#create-a-new-directory" aria-label="Heading self-link"></a></h4>
 <p>In Terminal, Run:</p>
 <pre tabindex="0"><code>cd
 mkdir -p ~/dev/cobol/test-cobol
 cd ~/dev/cobol/test-cobol
 touch hello.cbl
-</code></pre><p>2: Create a simple COBOL program</p>
+</code></pre><h4 id="create-a-simple-cobol-program">Create a simple COBOL program<a class="td-heading-self-link" href="#create-a-simple-cobol-program" aria-label="Heading self-link"></a></h4>
 <p>Open Files, go to the dev/cobol/test-cobol folder.</p>
 <p>Double-click on hello.cbl. This will open it in Text Editor.</p>
 <p>Copy the following code and paste it into hello.cbl:</p>
@@ -354,6 +356,7 @@ touch hello.cbl
    END PROGRAM SmallestProgram.
 </code></pre>
 <p>and save it.</p>
+<h4 id="run-it">Run it.<a class="td-heading-self-link" href="#run-it" aria-label="Heading self-link"></a></h4>
 <p>Go to Terminal, Run:</p>
 <p><code>pwd</code></p>
 <p>To make sure you are in the ~/dev/cobol/test-cobol directory.</p>
