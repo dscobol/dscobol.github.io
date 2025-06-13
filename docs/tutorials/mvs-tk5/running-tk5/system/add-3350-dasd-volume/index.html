@@ -17,24 +17,22 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Version 2 | dscobol</title>
-<meta name="description" content="An example of an enhanced DB2 GnuCOBOL program using GETDBID.">
-<meta property="og:url" content="https://dscobol.github.io/docs/concepts/version2/">
+<title>Add a 3350 DASD Volume to MVS-TK5 | dscobol</title>
+<meta name="description" content="Create your own storage volume">
+<meta property="og:url" content="https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/add-3350-dasd-volume/">
   <meta property="og:site_name" content="dscobol">
-  <meta property="og:title" content="Version 2">
-  <meta property="og:description" content="An example of an enhanced DB2 GnuCOBOL program using GETDBID.">
+  <meta property="og:title" content="Add a 3350 DASD Volume to MVS-TK5">
+  <meta property="og:description" content="Create your own storage volume">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="docs">
-    <meta property="article:modified_time" content="2025-05-24T09:35:12-04:00">
 
-  <meta itemprop="name" content="Version 2">
-  <meta itemprop="description" content="An example of an enhanced DB2 GnuCOBOL program using GETDBID.">
-  <meta itemprop="dateModified" content="2025-05-24T09:35:12-04:00">
-  <meta itemprop="wordCount" content="441">
+  <meta itemprop="name" content="Add a 3350 DASD Volume to MVS-TK5">
+  <meta itemprop="description" content="Create your own storage volume">
+  <meta itemprop="wordCount" content="382">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Version 2">
-  <meta name="twitter:description" content="An example of an enhanced DB2 GnuCOBOL program using GETDBID.">
+  <meta name="twitter:title" content="Add a 3350 DASD Volume to MVS-TK5">
+  <meta name="twitter:description" content="Create your own storage volume">
 <link rel="preload" href="/scss/main.min.587cc9ab2e7ed4cd045ee4c6e380598d6f8ad5201ff3aa9345c816a513404b85.css" as="style" integrity="sha256-WHzJqy5&#43;1M0EXuTG44BZjW&#43;K1SAf86qTRcgWpRNAS4U=" crossorigin="anonymous">
 <link href="/scss/main.min.587cc9ab2e7ed4cd045ee4c6e380598d6f8ad5201ff3aa9345c816a513404b85.css" rel="stylesheet" integrity="sha256-WHzJqy5&#43;1M0EXuTG44BZjW&#43;K1SAf86qTRcgWpRNAS4U=" crossorigin="anonymous">
 <script
@@ -117,8 +115,8 @@
   <input type="checkbox" id="m-docsabout-check"/>
   <label for="m-docsabout-check"><a href="/docs/about/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsabout"><span class="">About</span></a></label>
   
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docsconcepts-li">
-  <input type="checkbox" id="m-docsconcepts-check" checked/>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsconcepts-li">
+  <input type="checkbox" id="m-docsconcepts-check"/>
   <label for="m-docsconcepts-check"><a href="/docs/concepts/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsconcepts"><span class="">Concepts</span></a></label>
   
   <ul class="ul-2 foldable">
@@ -177,13 +175,13 @@
   </ul>
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docstutorials-li">
-  <input type="checkbox" id="m-docstutorials-check"/>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docstutorials-li">
+  <input type="checkbox" id="m-docstutorials-check" checked/>
   <label for="m-docstutorials-check"><a href="/docs/tutorials/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docstutorials"><span class="">Tutorials</span></a></label>
   
   <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docstutorialsmvs-tk5-li">
-  <input type="checkbox" id="m-docstutorialsmvs-tk5-check"/>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docstutorialsmvs-tk5-li">
+  <input type="checkbox" id="m-docstutorialsmvs-tk5-check" checked/>
   <label for="m-docstutorialsmvs-tk5-check"><a href="/docs/tutorials/mvs-tk5/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docstutorialsmvs-tk5"><span class="">Run a &#34;Mainframe&#34; on a PC</span></a></label>
   
   <ul class="ul-3 foldable">
@@ -195,19 +193,19 @@
   <input type="checkbox" id="m-docstutorialsmvs-tk5setup-x3270-check"/>
   <label for="m-docstutorialsmvs-tk5setup-x3270-check"><a href="/docs/tutorials/mvs-tk5/setup-x3270/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docstutorialsmvs-tk5setup-x3270"><span class="">Setup a x3270 Terminal emulator</span></a></label>
   
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docstutorialsmvs-tk5running-tk5-li">
-  <input type="checkbox" id="m-docstutorialsmvs-tk5running-tk5-check"/>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docstutorialsmvs-tk5running-tk5-li">
+  <input type="checkbox" id="m-docstutorialsmvs-tk5running-tk5-check" checked/>
   <label for="m-docstutorialsmvs-tk5running-tk5-check"><a href="/docs/tutorials/mvs-tk5/running-tk5/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docstutorialsmvs-tk5running-tk5"><span class="">The MVS-TK5 system</span></a></label>
   
   <ul class="ul-4 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docstutorialsmvs-tk5running-tk5system-li">
-  <input type="checkbox" id="m-docstutorialsmvs-tk5running-tk5system-check"/>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docstutorialsmvs-tk5running-tk5system-li">
+  <input type="checkbox" id="m-docstutorialsmvs-tk5running-tk5system-check" checked/>
   <label for="m-docstutorialsmvs-tk5running-tk5system-check"><a href="/docs/tutorials/mvs-tk5/running-tk5/system/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docstutorialsmvs-tk5running-tk5system"><span class="">Systems Programming</span></a></label>
   
   <ul class="ul-5 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docstutorialsmvs-tk5running-tk5systemadd-3350-dasd-volume-li">
-  <input type="checkbox" id="m-docstutorialsmvs-tk5running-tk5systemadd-3350-dasd-volume-check"/>
-  <label for="m-docstutorialsmvs-tk5running-tk5systemadd-3350-dasd-volume-check"><a href="/docs/tutorials/mvs-tk5/running-tk5/system/add-3350-dasd-volume/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docstutorialsmvs-tk5running-tk5systemadd-3350-dasd-volume"><span class="">Add a 3350 DASD Volume to MVS-TK5</span></a></label>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docstutorialsmvs-tk5running-tk5systemadd-3350-dasd-volume-li">
+  <input type="checkbox" id="m-docstutorialsmvs-tk5running-tk5systemadd-3350-dasd-volume-check" checked/>
+  <label for="m-docstutorialsmvs-tk5running-tk5systemadd-3350-dasd-volume-check"><a href="/docs/tutorials/mvs-tk5/running-tk5/system/add-3350-dasd-volume/" class="align-left ps-0  active td-sidebar-link td-sidebar-link__page" id="m-docstutorialsmvs-tk5running-tk5systemadd-3350-dasd-volume"><span class="td-sidebar-nav-active-item">Add a 3350 DASD Volume to MVS-TK5</span></a></label>
   
 </li>
   </ul>
@@ -231,21 +229,29 @@
           </aside>
           <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
             <div class="td-page-meta ms-2 pb-1 pt-2 mb-0">
-<a id="print" href="/docs/concepts/_print/"><i class="fa-solid fa-print fa-fw"></i> Print entire section</a>
+<a id="print" href="/docs/tutorials/mvs-tk5/running-tk5/system/_print/"><i class="fa-solid fa-print fa-fw"></i> Print entire section</a>
 
 </div>
 
             <div class="td-toc">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#code-getdbidcbl">Code: GETDBID.cbl</a></li>
-    <li><a href="#change-to-custinq">Change to CUSTINQ</a></li>
-    <li><a href="#change-to-compile-script">Change to Compile script</a>
+    <li><a href="#with-system-not-running"><strong>With System NOT Running</strong></a>
       <ul>
-        <li><a href="#previous-version">Previous version:</a></li>
-        <li><a href="#new-version">New version</a></li>
+        <li><a href="#pick-a-device-size-and-name">Pick a device size and name</a></li>
+        <li><a href="#create-the-entry-in-conftk5cnf">Create the entry in conf/tk5.cnf</a></li>
+        <li><a href="#use-dasdinit64-to-create-the-files-in-dasd">Use dasdinit64 to create the files in /dasd/</a></li>
       </ul>
     </li>
+    <li><a href="#ipl-the-system"><strong>IPL the system</strong></a>
+      <ul>
+        <li><a href="#create-the-jcl-to-run-ickdsf-to-format-the-dasd">Create the JCL to run ICKDSF to format the DASD</a></li>
+        <li><a href="#make-sure-the-volume-is-offline-and-deallocated">Make sure the volume is offline and deallocated</a></li>
+        <li><a href="#run-the-ickdsf-job">Run the ICKDSF JOB</a></li>
+        <li><a href="#add-the-volume-to-sys1parmlibvatlst01">Add the Volume to SYS1.PARMLIB(VATLST01)</a></li>
+      </ul>
+    </li>
+    <li><a href="#shutdown-and-ipl-the-system">Shutdown and IPL the System</a></li>
   </ul>
 </nav>
       </div>
@@ -262,157 +268,98 @@
   <li class="breadcrumb-item">
     <a href="/docs/">Docs</a></li>
   <li class="breadcrumb-item">
-    <a href="/docs/concepts/">Concepts</a></li>
+    <a href="/docs/tutorials/">Tutorials</a></li>
+  <li class="breadcrumb-item">
+    <a href="/docs/tutorials/mvs-tk5/">Run a &#34;Mainframe&#34; on a PC</a></li>
+  <li class="breadcrumb-item">
+    <a href="/docs/tutorials/mvs-tk5/running-tk5/">The MVS-TK5 system</a></li>
+  <li class="breadcrumb-item">
+    <a href="/docs/tutorials/mvs-tk5/running-tk5/system/">Systems Programming</a></li>
   <li class="breadcrumb-item active" aria-current="page">
-    Version 2</li>
+    Add a 3350 DASD Volume to MVS-TK5</li>
   </ol>
 </nav>
 <div class="td-content">
-	<h1>Version 2</h1>
-	<div class="lead">An example of an enhanced DB2 GnuCOBOL program using GETDBID.</div>
+	<h1>Add a 3350 DASD Volume to MVS-TK5</h1>
+	<div class="lead">Create your own storage volume</div>
 	<header class="article-meta">
 		
   </header>
-	<h1 id="this-is-the-updated-custinq-program-from-the-murach-book">This is the updated CUSTINQ program from the Murach book<a class="td-heading-self-link" href="#this-is-the-updated-custinq-program-from-the-murach-book" aria-label="Heading self-link"></a></h1>
-<h2 id="code-getdbidcbl">Code: GETDBID.cbl<a class="td-heading-self-link" href="#code-getdbidcbl" aria-label="Heading self-link"></a></h2>
-<p>This is a simple COBOL pgm that can be called by GnuCOBOL programs.</p>
-<p>It has the userid and password embedded within it.</p>
-<p>Calling this bypasses the ACCEPT of the userid and password.</p>
-<p>Copy the text to tcbl/GETDBID.cbl</p>
-<p>Change the userid and password to the ones on your system.</p>
-<p>NOTE: Just replace the text, make sure the &rsquo; surrounding the text is present.</p>
-<pre><code>  **********************************************************
-  * Program name:    GETDBID
-  * Original author: David Stagowski
-  *
-  *    Description: This is a called module to supply the
-  *       the userid and password for the database.
-  *    This was written because I got tired of typing them in
-  *    everytime I ran the program.
-  *
-  * Maintenence Log
-  * Date       Author        Maintenance Requirement
-  * ---------  ------------  -------------------------------
-  * 2020-08-18 dastagg
-  *
-  *
-  **********************************************************
-   IDENTIFICATION DIVISION.
-   PROGRAM-ID. GETDBID.
-   DATA DIVISION.
-   WORKING-STORAGE SECTION.
-   LINKAGE SECTION.
-   01 DB-User-ID              PIC X(10).
-   01 DB-Passwd-Name          PIC X(18).
+	
 
-   PROCEDURE DIVISION USING DB-User-ID, DB-Passwd-Name.
+<div class="pageinfo pageinfo-primary">
+<p>If you installed MVS-TK5 per the instructions, you should
+disable the systemctl service as you will need to manually start MVS-TK5 and use
+the Hercules console.</p>
+
+</div>
+
+<p>To use the Hercules utilities:</p>
+<p>Run <code>uname -m</code> to determine the architecture of your computer.</p>
+<p>On this Raspberry Pi, it is aarch64.</p>
+<p>In .bashrc (or .zshrc or whatever you are using) add the line:</p>
+<p><code>export LD_LIBRARY_PATH=&quot;/lib:/usr/lib:/usr/local/lib:/mvs-tk5/hercules/linux/aarch64/lib&quot;</code></p>
+<p>and then source the .bashrc file.</p>
+<h2 id="with-system-not-running"><strong>With System NOT Running</strong><a class="td-heading-self-link" href="#with-system-not-running" aria-label="Heading self-link"></a></h2>
+<h3 id="pick-a-device-size-and-name">Pick a device size and name<a class="td-heading-self-link" href="#pick-a-device-size-and-name" aria-label="Heading self-link"></a></h3>
+<p>NOTE: VOLID must be 6 chars or less.</p>
+<p>For this example: 3350 DASD with a file name of dscob1.340 and Volume id of
+DSCOB1.</p>
+<h3 id="create-the-entry-in-conftk5cnf">Create the entry in conf/tk5.cnf<a class="td-heading-self-link" href="#create-the-entry-in-conftk5cnf" aria-label="Heading self-link"></a></h3>
+<p>Since you are modifying the configuration, here is an Extra:</p>
+<h4 id="upgrade-the-system-by">&ldquo;Upgrade&rdquo; the system by:<a class="td-heading-self-link" href="#upgrade-the-system-by" aria-label="Heading self-link"></a></h4>
+<ul>
+<li>Change CPUMODEL from 3033 to 3084</li>
+<li>Change NUMCPU from 1 to 2</li>
+<li>Change MAXCPU from: 1 to 2</li>
+</ul>
+<h4 id="add-the-new-device">Add the new device<a class="td-heading-self-link" href="#add-the-new-device" aria-label="Heading self-link"></a></h4>
+<p>At the end of the <strong># TK5 DASD</strong> section:</p>
+<p><code>0340 3350 dasd/dscob1.340</code></p>
+<h3 id="use-dasdinit64-to-create-the-files-in-dasd">Use dasdinit64 to create the files in /dasd/<a class="td-heading-self-link" href="#use-dasdinit64-to-create-the-files-in-dasd" aria-label="Heading self-link"></a></h3>
+<p><code>../hercules/linux/aarch64/bin/dasdinit64 -a dscob1.340 3350 dscob1</code></p>
+<h2 id="ipl-the-system"><strong>IPL the system</strong><a class="td-heading-self-link" href="#ipl-the-system" aria-label="Heading self-link"></a></h2>
+<h3 id="create-the-jcl-to-run-ickdsf-to-format-the-dasd">Create the JCL to run ICKDSF to format the DASD<a class="td-heading-self-link" href="#create-the-jcl-to-run-ickdsf-to-format-the-dasd" aria-label="Heading self-link"></a></h3>
+<p>Create a new member in HERC01.TEST.CNTL(ICKDSF) and type in the following JCL:</p>
+<pre tabindex="0"><code>//HERC01A JOB (1),ICKDSF,CLASS=A,MSGCLASS=H
+//ICKDSF EXEC PGM=ICKDSF,REGION=4096K
+//SYSPRINT DD SYSOUT=*
+//SYSIN DD *
+  INIT UNITADDRESS(340) -
+       NOVERIFY -
+       VOLID(DSCOB1) -
+       OWNER(HERCULES) -
+       VTOC(0,1,15)
+//
+</code></pre><h3 id="make-sure-the-volume-is-offline-and-deallocated">Make sure the volume is offline and deallocated<a class="td-heading-self-link" href="#make-sure-the-volume-is-offline-and-deallocated" aria-label="Heading self-link"></a></h3>
+<p>In the Hercules/MVS console:</p>
+<p><code>/v 340,offline</code></p>
+<p><code>/s dealloc</code></p>
+<h3 id="run-the-ickdsf-job">Run the ICKDSF JOB<a class="td-heading-self-link" href="#run-the-ickdsf-job" aria-label="Heading self-link"></a></h3>
+<p>Submit the JCL to format the DASD Volume.</p>
+<p>This will be held-up so go the Hercules/MVS console and you should see something
+like:</p>
+<p><code>*00 ICK003D REPLY U TO ALTER VOLUME 340 CONTENTS, ELSE T</code></p>
+<p>At the prompt <code>/r 00,u</code> to allow the job to continue.</p>
+<p>Note: replace the <strong>00</strong> with the number that is after the * in the message
+from the system.</p>
+<p>The JOB must have a RC=0000 to be successful.</p>
+<h3 id="add-the-volume-to-sys1parmlibvatlst01">Add the Volume to SYS1.PARMLIB(VATLST01)<a class="td-heading-self-link" href="#add-the-volume-to-sys1parmlibvatlst01" aria-label="Heading self-link"></a></h3>
+<p>Copy an existing 3350 entry to bottom of list and update.</p>
+<p><strong>IMPORTANT</strong> Make sure to keep the same spacing and formatting.</p>
+<p><code>DSCOB1,1,2,3350    ,N                DSCOBOL Workspace</code></p>
+<h2 id="shutdown-and-ipl-the-system">Shutdown and IPL the System<a class="td-heading-self-link" href="#shutdown-and-ipl-the-system" aria-label="Heading self-link"></a></h2>
+<p>Login and use Utilities/VTOC (3.7) to make sure the Volume is available.</p>
 
 
-       MOVE 'userid' TO DB-User-ID.
-       MOVE 'password' TO DB-Passwd-Name.
+<div class="pageinfo pageinfo-primary">
+<p>If you installed MVS-TK5 per the instructions, you should
+enable the systemctl mvs service so it will startup again if the system goes
+down for some reason.</p>
 
-       GOBACK.
-</code></pre>
-<h2 id="change-to-custinq">Change to CUSTINQ<a class="td-heading-self-link" href="#change-to-custinq" aria-label="Heading self-link"></a></h2>
-<p>Then replace this code:</p>
-<pre><code>   9811-Get-Credentials.
-       DISPLAY &quot;CUSTINQ: Need userid and password&quot;.
+</div>
 
-       DISPLAY &quot;Enter your user id (default none): &quot;
-            WITH NO ADVANCING.
-       ACCEPT DB-User-ID.
 
-       DISPLAY &quot;Enter your password : &quot; WITH NO ADVANCING
-       ACCEPT DB-Passwd-Name.
-</code></pre>
-<p>With this code:</p>
-<pre><code>   9811-Get-Credentials.
-       CALL 'GETDBID' USING DB-User-ID, DB-Passwd-Name.
-</code></pre>
-<h2 id="change-to-compile-script">Change to Compile script<a class="td-heading-self-link" href="#change-to-compile-script" aria-label="Heading self-link"></a></h2>
-<p>In order to use this, the Compile script has to be changed to add GETDBID to the
-compile step.</p>
-<h3 id="previous-version">Previous version:<a class="td-heading-self-link" href="#previous-version" aria-label="Heading self-link"></a></h3>
-<pre tabindex="0"><code>#!/bin/bash
-
-# Program parms
-PGM=CUSTINQ
-
-# DB2 Load Libraries
-export LOADLIB=&#34;$DB2_HOME/lib64&#34;
-
-# COBOL and SQL Copy Libraries
-export COBCOPY=&#34;../cpy&#34;
-export SQLCOPY=&#34;$DB2_HOME/include/cobol_mf&#34;
-
-# Clean up
-rm ../cbl/$PGM.bnd
-rm ../tcbl/$PGM.cbl
-rm ../bin/$PGM
-
-# DB2 Prep and Bind
-db2 -tvf ../sql/$PGM.sql
-
-read -p &#34;Press any key to resume&#34;
-
-# Compile
-cobc -std=default -x -o ../bin/$PGM ../tcbl/$PGM.cbl \
-     -static \
-     -I $SQLCOPY \
-     -I $COBCOPY \
-     -L $LOADLIB \
-     -l db2 \
-     -Wall \
-     -O
-
-# Check return code
-if [ &#34;$?&#34; -eq 0 ]; then
-    echo &#34;Complier Return code was ZERO.&#34;
-else
-    echo &#34;Complier Return code not ZERO.&#34;
-fi
-</code></pre><h3 id="new-version">New version<a class="td-heading-self-link" href="#new-version" aria-label="Heading self-link"></a></h3>
-<pre tabindex="0"><code>#!/bin/bash
-
-# Program parms
-RPGM=CUSTINQ
-PGM=CUSTINQ
-LLM=GETDBID
-
-# DB2 Load Libraries
-export LOADLIB=&#34;$DB2_HOME/lib64&#34;
-
-# COBOL and SQL Copy Libraries
-export COBCOPY=&#34;../cpy&#34;
-export SQLCOPY=&#34;$DB2_HOME/include/cobol_mf&#34;
-
-# Clean up
-rm ../cbl/$PGM.bnd
-rm ../tcbl/$PGM.cbl
-rm ../bin/$RPGM
-
-# DB2 Prep and Bind
-db2 -tvf ../sql/$PGM.sql
-
-read -p &#34;Press any key to resume&#34;
-
-# Compile
-cobc -std=default -x -o ../bin/$RPGM ../tcbl/$PGM.cbl ../tcbl/$LLM.cbl \
-     -static \
-     -I $SQLCOPY \
-     -I $COBCOPY \
-     -L $LOADLIB \
-     -l db2 \
-     -Wall \
-     -O
-
-# Check return code
-if [ &#34;$?&#34; -eq 0 ]; then
-    echo &#34;Complier Return code was ZERO.&#34;
-else
-    echo &#34;Complier Return code not ZERO.&#34;
-fi
-</code></pre>
 	
 </div>
 

@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="canonical" type="text/html" href="https://dscobol.github.io/blog/releases/">
-<link rel="alternate" type="application/rss&#43;xml" href="https://dscobol.github.io/blog/releases/index.xml">
+<link rel="canonical" type="text/html" href="https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/">
+<link rel="alternate" type="application/rss&#43;xml" href="https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/index.xml">
 <meta name="robots" content="noindex, nofollow">
 
 
@@ -19,21 +19,21 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Releases | dscobol</title>
-<meta name="description" content="dscobol Website and Blog">
-<meta property="og:url" content="https://dscobol.github.io/blog/releases/">
+<title>Systems Programming | dscobol</title>
+<meta name="description" content="How to change/revise/delete things in the system.">
+<meta property="og:url" content="https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/">
   <meta property="og:site_name" content="dscobol">
-  <meta property="og:title" content="Releases">
-  <meta property="og:description" content="dscobol Website and Blog">
+  <meta property="og:title" content="Systems Programming">
+  <meta property="og:description" content="How to change/revise/delete things in the system.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 
-  <meta itemprop="name" content="Releases">
-  <meta itemprop="description" content="dscobol Website and Blog">
-  <meta itemprop="dateModified" content="2025-05-21T21:13:20-04:00">
+  <meta itemprop="name" content="Systems Programming">
+  <meta itemprop="description" content="How to change/revise/delete things in the system.">
+  <meta itemprop="wordCount" content="9">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Releases">
-  <meta name="twitter:description" content="dscobol Website and Blog">
+  <meta name="twitter:title" content="Systems Programming">
+  <meta name="twitter:description" content="How to change/revise/delete things in the system.">
 <link rel="preload" href="/scss/main.min.587cc9ab2e7ed4cd045ee4c6e380598d6f8ad5201ff3aa9345c816a513404b85.css" as="style" integrity="sha256-WHzJqy5&#43;1M0EXuTG44BZjW&#43;K1SAf86qTRcgWpRNAS4U=" crossorigin="anonymous">
 <link href="/scss/main.min.587cc9ab2e7ed4cd045ee4c6e380598d6f8ad5201ff3aa9345c816a513404b85.css" rel="stylesheet" integrity="sha256-WHzJqy5&#43;1M0EXuTG44BZjW&#43;K1SAf86qTRcgWpRNAS4U=" crossorigin="anonymous">
 <script
@@ -46,7 +46,7 @@
   crossorigin="anonymous"></script>
 
   </head>
-  <body class="td-section td-blog">
+  <body class="td-section">
     <header>
       <nav class="td-navbar js-navbar-scroll" data-bs-theme="dark">
 <div class="container-fluid flex-column flex-md-row">
@@ -54,10 +54,10 @@
   <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="/docs/"><span>Docs</span></a>
+        <a class="nav-link active" href="/docs/"><span>Docs</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" href="/blog/"><span>Blog</span></a>
+        <a class="nav-link" href="/blog/"><span>Blog</span></a>
       </li>
       </ul>
   </div>
@@ -83,11 +83,7 @@
     <div class="container-fluid td-outer">
       <div class="td-main">
         <div class="row flex-xl-nowrap">
-          <div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
-          </div>
-          <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
-          </div>
-          <main class="col-12 col-md-9 col-xl-8 ps-md-5 pe-md-4" role="main">
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
             
 
 
@@ -99,14 +95,14 @@
 This is the multi-page printable view of this section.
 <a href="#" onclick="print();return false;">Click here to print</a>.
 </p><p>
-<a href="/blog/releases/">Return to the regular view of this page</a>.
+<a href="/docs/tutorials/mvs-tk5/running-tk5/system/">Return to the regular view of this page</a>.
 </p>
 </div>
 
 
 
-<h1 class="title">Releases</h1>
-
+<h1 class="title">Systems Programming</h1>
+<div class="lead">How to change/revise/delete things in the system.</div>
 
 
 
@@ -122,9 +118,7 @@ This is the multi-page printable view of this section.
     
     
 	
-
-    <li><a href="#pg-b5164763a8023fb21d67ff468a65020b">Version 2 of dscobol website</a></li>
-
+<li>1: <a href="#pg-f9551b2c102777c09c4dc7908d3e44c5">Add a 3350 DASD Volume to MVS-TK5</a></li>
 
 
     
@@ -134,7 +128,8 @@ This is the multi-page printable view of this section.
 
 
 <div class="content">
-      
+      <h2 id="running-a-simple-program-to-make-sure-it-works">Running a simple program to make sure it works.<a class="td-heading-self-link" href="#running-a-simple-program-to-make-sure-it-works" aria-label="Heading self-link"></a></h2>
+
 </div>
 </div>
 
@@ -153,87 +148,86 @@ This is the multi-page printable view of this section.
 	
     
 
-
-  
-
 <div class="td-content" style="">
-    <h1 id="pg-b5164763a8023fb21d67ff468a65020b">Version 2 of dscobol website</h1>
-	<div class="lead">A new version of the dscobol.github.io website.</div>
-	<div class="td-byline mb-4">
-		
-        
-		<time datetime="2025-05-24" class="text-body-secondary">Saturday, May 24, 2025</time>
-        
-	</div>
-	<p>This is the new version of dscobol.github.io.</p>
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-<img class="card-img-top" src="/blog/2025/05/24/version-2-of-dscobol-website/new-landing-page_hu_c87cbe0bb6e18abd.png" width="600" height="300">
-<figcaption class="card-body px-0 pt-2 pb-0">
-<p class="card-text">
+    
+	<h1 id="pg-f9551b2c102777c09c4dc7908d3e44c5">1 - Add a 3350 DASD Volume to MVS-TK5</h1>
+    <div class="lead">Create your own storage volume</div>
+	
 
- The new Landing page 
-</p>
-</figcaption>
-</figure>
+<div class="pageinfo pageinfo-primary">
+<p>If you installed MVS-TK5 per the instructions, you should
+disable the systemctl service as you will need to manually start MVS-TK5 and use
+the Hercules console.</p>
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-<img class="card-img-top" src="/blog/2025/05/24/version-2-of-dscobol-website/new-docs-page_hu_29abda852e7d2206.png" width="600" height="300">
-<figcaption class="card-body px-0 pt-2 pb-0">
-<p class="card-text">
+</div>
 
- The new Docs page 
-</p>
-</figcaption>
-</figure>
+<p>To use the Hercules utilities:</p>
+<p>Run <code>uname -m</code> to determine the architecture of your computer.</p>
+<p>On this Raspberry Pi, it is aarch64.</p>
+<p>In .bashrc (or .zshrc or whatever you are using) add the line:</p>
+<p><code>export LD_LIBRARY_PATH=&quot;/lib:/usr/lib:/usr/local/lib:/mvs-tk5/hercules/linux/aarch64/lib&quot;</code></p>
+<p>and then source the .bashrc file.</p>
+<h2 id="with-system-not-running"><strong>With System NOT Running</strong><a class="td-heading-self-link" href="#with-system-not-running" aria-label="Heading self-link"></a></h2>
+<h3 id="pick-a-device-size-and-name">Pick a device size and name<a class="td-heading-self-link" href="#pick-a-device-size-and-name" aria-label="Heading self-link"></a></h3>
+<p>NOTE: VOLID must be 6 chars or less.</p>
+<p>For this example: 3350 DASD with a file name of dscob1.340 and Volume id of
+DSCOB1.</p>
+<h3 id="create-the-entry-in-conftk5cnf">Create the entry in conf/tk5.cnf<a class="td-heading-self-link" href="#create-the-entry-in-conftk5cnf" aria-label="Heading self-link"></a></h3>
+<p>Since you are modifying the configuration, here is an Extra:</p>
+<h4 id="upgrade-the-system-by">&ldquo;Upgrade&rdquo; the system by:<a class="td-heading-self-link" href="#upgrade-the-system-by" aria-label="Heading self-link"></a></h4>
+<ul>
+<li>Change CPUMODEL from 3033 to 3084</li>
+<li>Change NUMCPU from 1 to 2</li>
+<li>Change MAXCPU from: 1 to 2</li>
+</ul>
+<h4 id="add-the-new-device">Add the new device<a class="td-heading-self-link" href="#add-the-new-device" aria-label="Heading self-link"></a></h4>
+<p>At the end of the <strong># TK5 DASD</strong> section:</p>
+<p><code>0340 3350 dasd/dscob1.340</code></p>
+<h3 id="use-dasdinit64-to-create-the-files-in-dasd">Use dasdinit64 to create the files in /dasd/<a class="td-heading-self-link" href="#use-dasdinit64-to-create-the-files-in-dasd" aria-label="Heading self-link"></a></h3>
+<p><code>../hercules/linux/aarch64/bin/dasdinit64 -a dscob1.340 3350 dscob1</code></p>
+<h2 id="ipl-the-system"><strong>IPL the system</strong><a class="td-heading-self-link" href="#ipl-the-system" aria-label="Heading self-link"></a></h2>
+<h3 id="create-the-jcl-to-run-ickdsf-to-format-the-dasd">Create the JCL to run ICKDSF to format the DASD<a class="td-heading-self-link" href="#create-the-jcl-to-run-ickdsf-to-format-the-dasd" aria-label="Heading self-link"></a></h3>
+<p>Create a new member in HERC01.TEST.CNTL(ICKDSF) and type in the following JCL:</p>
+<pre tabindex="0"><code>//HERC01A JOB (1),ICKDSF,CLASS=A,MSGCLASS=H
+//ICKDSF EXEC PGM=ICKDSF,REGION=4096K
+//SYSPRINT DD SYSOUT=*
+//SYSIN DD *
+  INIT UNITADDRESS(340) -
+       NOVERIFY -
+       VOLID(DSCOB1) -
+       OWNER(HERCULES) -
+       VTOC(0,1,15)
+//
+</code></pre><h3 id="make-sure-the-volume-is-offline-and-deallocated">Make sure the volume is offline and deallocated<a class="td-heading-self-link" href="#make-sure-the-volume-is-offline-and-deallocated" aria-label="Heading self-link"></a></h3>
+<p>In the Hercules/MVS console:</p>
+<p><code>/v 340,offline</code></p>
+<p><code>/s dealloc</code></p>
+<h3 id="run-the-ickdsf-job">Run the ICKDSF JOB<a class="td-heading-self-link" href="#run-the-ickdsf-job" aria-label="Heading self-link"></a></h3>
+<p>Submit the JCL to format the DASD Volume.</p>
+<p>This will be held-up so go the Hercules/MVS console and you should see something
+like:</p>
+<p><code>*00 ICK003D REPLY U TO ALTER VOLUME 340 CONTENTS, ELSE T</code></p>
+<p>At the prompt <code>/r 00,u</code> to allow the job to continue.</p>
+<p>Note: replace the <strong>00</strong> with the number that is after the * in the message
+from the system.</p>
+<p>The JOB must have a RC=0000 to be successful.</p>
+<h3 id="add-the-volume-to-sys1parmlibvatlst01">Add the Volume to SYS1.PARMLIB(VATLST01)<a class="td-heading-self-link" href="#add-the-volume-to-sys1parmlibvatlst01" aria-label="Heading self-link"></a></h3>
+<p>Copy an existing 3350 entry to bottom of list and update.</p>
+<p><strong>IMPORTANT</strong> Make sure to keep the same spacing and formatting.</p>
+<p><code>DSCOB1,1,2,3350    ,N                DSCOBOL Workspace</code></p>
+<h2 id="shutdown-and-ipl-the-system">Shutdown and IPL the System<a class="td-heading-self-link" href="#shutdown-and-ipl-the-system" aria-label="Heading self-link"></a></h2>
+<p>Login and use Utilities/VTOC (3.7) to make sure the Volume is available.</p>
 
-<p>I decided to use <a href="https://gohugo.io/">Hugo</a> and <a href="https://www.docsy.dev/">Docsy</a>
-as the static-site generator and theme.</p>
-<h3 id="major-changes-to-the-website">Major changes to the website:<a class="td-heading-self-link" href="#major-changes-to-the-website" aria-label="Heading self-link"></a></h3>
-<ul>
-<li>
-<p>It now has a &ldquo;landing page&rdquo;.</p>
-</li>
-<li>
-<p>It now includes this Blog area.</p>
-</li>
-<li>
-<p>Deletions</p>
-<ul>
-<li>Removed the &ldquo;Install VM&rdquo; section.</li>
-<li>Removed all &ldquo;if using a VM&rdquo; comments. Not really necessary.</li>
-<li>Removed the &ldquo;Install Basic Dev Env&rdquo; section.</li>
-</ul>
-</li>
-<li>
-<p>Updates</p>
-<ul>
-<li>Updated for IBM DB2 LUW v12.1.1.</li>
-<li>Updated for GnuCOBOL v3.2.</li>
-</ul>
-</li>
-</ul>
-<p>Not included in this version but will be added in near future:</p>
-<ul>
-<li>
-<p>Under the old Dev Tools section:</p>
-<ul>
-<li>Install GixSQL</li>
-<li>Install DBeaver</li>
-</ul>
-</li>
-<li>
-<p>The PostgreSQL section</p>
-</li>
-<li>
-<p>The Zowe section</p>
-</li>
-</ul>
-<h3 id="there-is-also-a-new-tutorial-section">There is also a new <strong>Tutorial</strong> section.<a class="td-heading-self-link" href="#there-is-also-a-new-tutorial-section" aria-label="Heading self-link"></a></h3>
-<p>Hopefully, in the future, I will be able to add some useful tutorials.</p>
+
+<div class="pageinfo pageinfo-primary">
+<p>If you installed MVS-TK5 per the instructions, you should
+enable the systemctl mvs service so it will startup again if the system goes
+down for some reason.</p>
 
 </div>
 
 
+</div>
 
 
 
