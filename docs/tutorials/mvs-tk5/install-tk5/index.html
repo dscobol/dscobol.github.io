@@ -31,7 +31,7 @@
   <meta itemprop="name" content="Install the MVS Turnkey 5 System">
   <meta itemprop="description" content="Welcome back to 1968!">
   <meta itemprop="dateModified" content="2025-06-01T21:03:12-04:00">
-  <meta itemprop="wordCount" content="284">
+  <meta itemprop="wordCount" content="384">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Install the MVS Turnkey 5 System">
   <meta name="twitter:description" content="Welcome back to 1968!">
@@ -72,7 +72,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.6c548b1fe178d09bfb301e4ffbebec0c.json"
+    data-offline-search-index-json-src="/offline-search-index.13370d893a38b10d9fee58d7dc1abc25.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -96,7 +96,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.6c548b1fe178d09bfb301e4ffbebec0c.json"
+    data-offline-search-index-json-src="/offline-search-index.13370d893a38b10d9fee58d7dc1abc25.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -249,9 +249,10 @@
       <ul>
         <li><a href="#download-the-zip-file">Download the zip file.</a></li>
         <li><a href="#unzip-and-set-it-up">Unzip and set it up.</a></li>
+        <li><a href="#set-console-mode">Set Console Mode</a></li>
         <li><a href="#create-a-systemd-service">Create a systemd service</a></li>
         <li><a href="#run-these-to-enable-and-start-it">Run these to enable and start it.</a></li>
-        <li><a href="#note-this-will-not-shutdown-mvs-tk5-properly">Note: This will <strong>NOT</strong> shutdown MVS-TK5 properly.</a></li>
+        <li><a href="#note-about-systemctl-stop-mvs-andor-shutdown-the-server">Note: About &ldquo;systemctl stop mvs&rdquo; and/or shutdown the server</a></li>
       </ul>
     </li>
   </ul>
@@ -307,8 +308,9 @@ the MVS-TK5 website for more information.</p>
 <p>run: <code>sudo apt update</code> <code>sudo apt upgrade</code></p>
 <p>and reboot.</p>
 <h3 id="install-some-basics">Install some basics:<a class="td-heading-self-link" href="#install-some-basics" aria-label="Heading self-link"></a></h3>
-<p><code>sudo apt install vim mc bat</code> Note: bat is installed as &ldquo;batcat&rdquo; so cd to
-/usr/bin and <code>sudo ln -s batcat bat</code></p>
+<p><code>sudo apt install vim mc bat</code></p>
+<p>Note: bat is installed as &ldquo;batcat&rdquo;.</p>
+<p>cd to /usr/bin and <code>sudo ln -s batcat bat</code></p>
 <p>Use nmtui to change to a static IP.</p>
 <h2 id="get-and-install-tk5">Get and install TK5<a class="td-heading-self-link" href="#get-and-install-tk5" aria-label="Heading self-link"></a></h2>
 <p>Visit the <a href="https://www.prince-webdesign.nl/tk5">MVS-TK5 Website</a> for more
@@ -320,9 +322,24 @@ information.</p>
 <p><code>cd /</code> to go to the file system root.</p>
 <p><code>unzip &lt;mvs-tk5.zip&gt;</code> from where it was downloaded to.</p>
 <p><code>cd mvs-tk5</code></p>
-<p><code>chmod -R +x *</code> to make all the files executeable. (Note: I&rsquo;m not real happy
-with this, it&rsquo;s too general, but I don&rsquo;t have a list of the specific files that
-<strong>need</strong> to be executeable so this will do.)</p>
+<p><del><code>chmod -R +x *</code> to make all the files executable. (Note: I&rsquo;m not real happy
+with this, it&rsquo;s too general)</del></p>
+<p><strong>Update:</strong></p>
+<p>Instead of the &ldquo;global +x&rdquo;:</p>
+<p>All these instructions are for a Linux based OS.</p>
+<p>Use <code>uname -m</code> to determine the OS you are using. For this RPi; it is aarch64.
+For Pop!_OS and Debian; it is 64.</p>
+<p>Starting at /mvs-tk5, run these instead:</p>
+<p><code>chmod -R +x unattended/</code></p>
+<p><code>chmod +x mvs</code></p>
+<p><code>chmod +x mvs_ipl</code></p>
+<p><code>cd hercules/linux</code></p>
+<p>Then based on the OS you are using:</p>
+<p>i.e. if aarch64:</p>
+<p><code>cd aarch64</code></p>
+<p><code>chmod +x -R bin/</code></p>
+<h3 id="set-console-mode">Set Console Mode<a class="td-heading-self-link" href="#set-console-mode" aria-label="Heading self-link"></a></h3>
+<p>CD back to the mvs-tk5 directory and run:</p>
 <p><code>./unattached/set_console_mode</code></p>
 <h3 id="create-a-systemd-service">Create a systemd service<a class="td-heading-self-link" href="#create-a-systemd-service" aria-label="Heading self-link"></a></h3>
 <p><code>vim /etc/systemd/system/mvs.service</code></p>
@@ -343,9 +360,14 @@ WantedBy=multi-user.target
 <pre tabindex="0"><code>systemctl daemon-reload
 systemctl enable mvs
 systemctl start mvs
-</code></pre><h3 id="note-this-will-not-shutdown-mvs-tk5-properly">Note: This will <strong>NOT</strong> shutdown MVS-TK5 properly.<a class="td-heading-self-link" href="#note-this-will-not-shutdown-mvs-tk5-properly" aria-label="Heading self-link"></a></h3>
-<p>This will only restart MVS-TK5 if the computer is shutdown or rebooted.</p>
-<p>To shutdown normally, follow the instructions in the User Guide.</p>
+</code></pre><h3 id="note-about-systemctl-stop-mvs-andor-shutdown-the-server">Note: About &ldquo;systemctl stop mvs&rdquo; and/or shutdown the server<a class="td-heading-self-link" href="#note-about-systemctl-stop-mvs-andor-shutdown-the-server" aria-label="Heading self-link"></a></h3>
+<p>I don&rsquo;t know if this will properly shutdown MVS-TK5.</p>
+<p>I do know the time to <code>shutdown -h now</code> the server takes a lot longer than
+normal.</p>
+<p>I would recommend to shutdown normally, follow the MVS-TK5 shutdown instructions
+in the User Guide.</p>
+<p>Only use the mvs.service to start MVS-TK5 if the computer is abnormally shutdown
+or rebooted.</p>
 
 	
 </div>
