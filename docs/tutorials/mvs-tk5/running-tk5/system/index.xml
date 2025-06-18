@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Systems Programming on dscobol</title>
+    <title>Systems Administration on dscobol</title>
     <link>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/</link>
-    <description>Recent content in Systems Programming on dscobol</description>
+    <description>Recent content in Systems Administration on dscobol</description>
     <generator>Hugo</generator>
     <language>en</language>
     <atom:link href="https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/index.xml" rel="self" type="application/rss+xml" />
@@ -12,7 +12,7 @@
       <link>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/add-3350-dasd-volume/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/add-3350-dasd-volume/</guid>
-      <description>&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;&#xA;&lt;p&gt;If you installed MVS-TK5 per the instructions, you should&#xA;disable the systemctl service as you will need to manually start MVS-TK5 and use&#xA;the Hercules console.&lt;/p&gt;&#xA;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;p&gt;To use the Hercules utilities:&lt;/p&gt;&#xA;&lt;p&gt;Run &lt;code&gt;uname -m&lt;/code&gt; to determine the architecture of your computer.&lt;/p&gt;&#xA;&lt;p&gt;On this Raspberry Pi, it is aarch64.&lt;/p&gt;&#xA;&lt;p&gt;In .bashrc (or .zshrc or whatever you are using) add the line:&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;export LD_LIBRARY_PATH=&amp;quot;/lib:/usr/lib:/usr/local/lib:/mvs-tk5/hercules/linux/aarch64/lib&amp;quot;&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;and then source the .bashrc file.&lt;/p&gt;&#xA;&lt;h2 id=&#34;with-system-not-running&#34;&gt;&lt;strong&gt;With System NOT Running&lt;/strong&gt;&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#with-system-not-running&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;h3 id=&#34;pick-a-device-size-and-name&#34;&gt;Pick a device size and name&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#pick-a-device-size-and-name&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;p&gt;NOTE: VOLID must be 6 chars or less.&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;&#xA;&lt;p&gt;If you installed MVS-TK5 per the instructions, you should run&#xA;set_console_mode as you will need to manually start MVS-TK5 and use the Hercules&#xA;console.&lt;/p&gt;&#xA;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;p&gt;To use the Hercules utilities:&lt;/p&gt;&#xA;&lt;p&gt;Run &lt;code&gt;uname -m&lt;/code&gt; to determine the architecture of your computer.&lt;/p&gt;&#xA;&lt;p&gt;On this Raspberry Pi, it is aarch64.&lt;/p&gt;&#xA;&lt;p&gt;In .bashrc (or .zshrc or whatever you are using) add the line:&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;export LD_LIBRARY_PATH=&amp;quot;/lib:/usr/lib:/usr/local/lib:/mvs-tk5/hercules/linux/aarch64/lib&amp;quot;&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;and then source the .bashrc file.&lt;/p&gt;&#xA;&lt;h2 id=&#34;with-system-not-running&#34;&gt;&lt;strong&gt;With System NOT Running&lt;/strong&gt;&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#with-system-not-running&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;h3 id=&#34;pick-a-device-size-and-name&#34;&gt;Pick a device size and name&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#pick-a-device-size-and-name&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;p&gt;NOTE: VOLID must be 6 chars or less.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

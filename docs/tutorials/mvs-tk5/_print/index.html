@@ -72,7 +72,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.13370d893a38b10d9fee58d7dc1abc25.json"
+    data-offline-search-index-json-src="/offline-search-index.3e5c784733071cae0d7b9a09d8a38342.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -150,7 +150,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>3.1: <a href="#pg-28a36f62835fcff30d967c9b89fc10ff">Systems Programming</a></li>
+<li>3.1: <a href="#pg-28a36f62835fcff30d967c9b89fc10ff">Systems Administration</a></li>
 
 
     
@@ -267,7 +267,7 @@ the MVS-TK5 website for more information.</p>
 <p>run: <code>sudo apt update</code> <code>sudo apt upgrade</code></p>
 <p>and reboot.</p>
 <h3 id="install-some-basics">Install some basics:<a class="td-heading-self-link" href="#install-some-basics" aria-label="Heading self-link"></a></h3>
-<p><code>sudo apt install vim mc bat</code></p>
+<p><code>sudo apt install vim mc bat tree</code></p>
 <p>Note: bat is installed as &ldquo;batcat&rdquo;.</p>
 <p>cd to /usr/bin and <code>sudo ln -s batcat bat</code></p>
 <p>Use nmtui to change to a static IP.</p>
@@ -277,30 +277,16 @@ information.</p>
 <h3 id="download-the-zip-file">Download the zip file.<a class="td-heading-self-link" href="#download-the-zip-file" aria-label="Heading self-link"></a></h3>
 <p><code>wget https://www.prince-webdesign.nl/images/downloads/mvs-tk5.zip</code></p>
 <h3 id="unzip-and-set-it-up">Unzip and set it up.<a class="td-heading-self-link" href="#unzip-and-set-it-up" aria-label="Heading self-link"></a></h3>
-<p><code>sudo su -</code> to switch to root user.</p>
+<p><code>sudo su</code> to switch to root user.</p>
 <p><code>cd /</code> to go to the file system root.</p>
 <p><code>unzip &lt;mvs-tk5.zip&gt;</code> from where it was downloaded to.</p>
 <p><code>cd mvs-tk5</code></p>
-<p><del><code>chmod -R +x *</code> to make all the files executable. (Note: I&rsquo;m not real happy
-with this, it&rsquo;s too general)</del></p>
-<p><strong>Update:</strong></p>
-<p>Instead of the &ldquo;global +x&rdquo;:</p>
-<p>All these instructions are for a Linux based OS.</p>
-<p>Use <code>uname -m</code> to determine the OS you are using. For this RPi; it is aarch64.
-For Pop!_OS and Debian; it is 64.</p>
-<p>Starting at /mvs-tk5, run these instead:</p>
-<p><code>chmod -R +x unattended/</code></p>
-<p><code>chmod +x mvs</code></p>
-<p><code>chmod +x mvs_ipl</code></p>
-<p><code>cd hercules/linux</code></p>
-<p>Then based on the OS you are using:</p>
-<p>i.e. if aarch64:</p>
-<p><code>cd aarch64</code></p>
-<p><code>chmod +x -R bin/</code></p>
-<h3 id="set-console-mode">Set Console Mode<a class="td-heading-self-link" href="#set-console-mode" aria-label="Heading self-link"></a></h3>
-<p>CD back to the mvs-tk5 directory and run:</p>
-<p><code>./unattached/set_console_mode</code></p>
-<h3 id="create-a-systemd-service">Create a systemd service<a class="td-heading-self-link" href="#create-a-systemd-service" aria-label="Heading self-link"></a></h3>
+<p>Starting at /mvs-tk5, run these:</p>
+<p><code>chmod 744 mvs</code></p>
+<p>Use <code>uname -m</code> to determine the OS you are using. For this RPi; it is aarch64.</p>
+<p><code>cd hercules/linux/aarch64/bin</code></p>
+<p><code>chmod 744 *</code></p>
+<h3 id="create-a-systemd-mvsservice-file">Create a systemd mvs.service file<a class="td-heading-self-link" href="#create-a-systemd-mvsservice-file" aria-label="Heading self-link"></a></h3>
 <p><code>vim /etc/systemd/system/mvs.service</code></p>
 <p>and paste the text below into that file.</p>
 <pre tabindex="0"><code>[Unit]
@@ -315,11 +301,15 @@ Type=simple
 
 [Install]
 WantedBy=multi-user.target
-</code></pre><h3 id="run-these-to-enable-and-start-it">Run these to enable and start it.<a class="td-heading-self-link" href="#run-these-to-enable-and-start-it" aria-label="Heading self-link"></a></h3>
+</code></pre><h3 id="set-mode">Set Mode<a class="td-heading-self-link" href="#set-mode" aria-label="Heading self-link"></a></h3>
+<p>CD back to the /mvs-tk5 directory and run:</p>
+<p><code>cd unattached/</code></p>
+<p><code>sh set_daemon_mode</code></p>
+<h3 id="run-these-to-enable-the-mvsservice">Run these to enable the mvs.service<a class="td-heading-self-link" href="#run-these-to-enable-the-mvsservice" aria-label="Heading self-link"></a></h3>
 <pre tabindex="0"><code>systemctl daemon-reload
 systemctl enable mvs
-systemctl start mvs
-</code></pre><h3 id="note-about-systemctl-stop-mvs-andor-shutdown-the-server">Note: About &ldquo;systemctl stop mvs&rdquo; and/or shutdown the server<a class="td-heading-self-link" href="#note-about-systemctl-stop-mvs-andor-shutdown-the-server" aria-label="Heading self-link"></a></h3>
+</code></pre><h3 id="reboot-the-rpi">Reboot the RPi.<a class="td-heading-self-link" href="#reboot-the-rpi" aria-label="Heading self-link"></a></h3>
+<h3 id="note-about-systemctl-stop-mvs-andor-shutdown-the-server">Note: About &ldquo;systemctl stop mvs&rdquo; and/or shutdown the server<a class="td-heading-self-link" href="#note-about-systemctl-stop-mvs-andor-shutdown-the-server" aria-label="Heading self-link"></a></h3>
 <p>I don&rsquo;t know if this will properly shutdown MVS-TK5.</p>
 <p>I do know the time to <code>shutdown -h now</code> the server takes a lot longer than
 normal.</p>
@@ -377,13 +367,13 @@ xset fp+ /usr/share/fonts/X11/75dpi
     
 	<h1 id="pg-0e8be597f86cdb15ce184a47c24373b7">3 - The MVS-TK5 system</h1>
     <div class="lead">How to use, compile and run programs.</div>
-	<h2 id="this-is-divided-into-2-areas-system-and-programming">This is divided into 2 areas: System and Programming<a class="td-heading-self-link" href="#this-is-divided-into-2-areas-system-and-programming" aria-label="Heading self-link"></a></h2>
+	<h2 id="this-is-divided-into-2-areas-system-and-applications">This is divided into 2 areas: System and Applications<a class="td-heading-self-link" href="#this-is-divided-into-2-areas-system-and-applications" aria-label="Heading self-link"></a></h2>
 <p>In the mainframe world, there are a few &ldquo;areas&rdquo; which have various titles and
 responsibilties.</p>
 <p>Search on-line for all the titles.</p>
-<p>The two important ones for this environment are &ldquo;Systems Programmer&rdquo; and
-&ldquo;Applications Programmer&rdquo;.</p>
-<h3 id="the-systems-programmer-will">The Systems Programmer will:<a class="td-heading-self-link" href="#the-systems-programmer-will" aria-label="Heading self-link"></a></h3>
+<p>The two important ones for this environment are &ldquo;System Administrator&rdquo; and
+&ldquo;Application Programmer&rdquo;.</p>
+<h3 id="the-system-administrator-will">The System Administrator will:<a class="td-heading-self-link" href="#the-system-administrator-will" aria-label="Heading self-link"></a></h3>
 <ul>
 <li>Update the System</li>
 <li>Add new/update Software</li>
@@ -392,18 +382,18 @@ responsibilties.</p>
 <li>Create new userids</li>
 <li>Check the system to see if there are any issues/problems</li>
 </ul>
-<h3 id="the-applications-programmer-will">The Applications Programmer will:<a class="td-heading-self-link" href="#the-applications-programmer-will" aria-label="Heading self-link"></a></h3>
+<h3 id="the-application-programmer-will">The Application Programmer will:<a class="td-heading-self-link" href="#the-application-programmer-will" aria-label="Heading self-link"></a></h3>
 <ul>
-<li>Create/Write/Refactor/Delete the code within programs</li>
+<li>Create/Write/Refactor/Delete applications (aka: programs)</li>
 <li>Run JCL jobs to compile/run the programs</li>
 <li>Test and debug the programs</li>
 </ul>
 <p>The majority of the tutorials will be about Applications.</p>
-<p>But, it will start out with System Programming, namely:</p>
+<p>But, it will start out with System Administration, namely:</p>
 <ul>
 <li>Create a new DASD</li>
 <li>Create a new userid</li>
-<li>Create a collection of PDSs and datasets to be used by the Applications
+<li>Create a collection of PDSs and datasets to be used by the Application
 Programmer</li>
 <li>Create a JCL job to compile and link a COBOL program</li>
 <li>Include that job in each new Collection for each new Programmer</li>
@@ -431,10 +421,9 @@ Programmer</li>
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-28a36f62835fcff30d967c9b89fc10ff">3.1 - Systems Programming</h1>
+	<h1 id="pg-28a36f62835fcff30d967c9b89fc10ff">3.1 - Systems Administration</h1>
     <div class="lead">How to change/revise/delete things in the system.</div>
-	<h2 id="running-a-simple-program-to-make-sure-it-works">Running a simple program to make sure it works.<a class="td-heading-self-link" href="#running-a-simple-program-to-make-sure-it-works" aria-label="Heading self-link"></a></h2>
-
+	
 </div>
 
 
@@ -462,9 +451,9 @@ Programmer</li>
 	
 
 <div class="pageinfo pageinfo-primary">
-<p>If you installed MVS-TK5 per the instructions, you should
-disable the systemctl service as you will need to manually start MVS-TK5 and use
-the Hercules console.</p>
+<p>If you installed MVS-TK5 per the instructions, you should run
+set_console_mode as you will need to manually start MVS-TK5 and use the Hercules
+console.</p>
 
 </div>
 
@@ -511,8 +500,8 @@ DSCOB1.</p>
 <p><code>/s dealloc</code></p>
 <h3 id="run-the-ickdsf-job">Run the ICKDSF JOB<a class="td-heading-self-link" href="#run-the-ickdsf-job" aria-label="Heading self-link"></a></h3>
 <p>Submit the JCL to format the DASD Volume.</p>
-<p>This will be held-up so go the Hercules/MVS console and you should see something
-like:</p>
+<p>This will be held-up by the system, so go the Hercules/MVS console and you
+should see something like:</p>
 <p><code>*00 ICK003D REPLY U TO ALTER VOLUME 340 CONTENTS, ELSE T</code></p>
 <p>At the prompt <code>/r 00,u</code> to allow the job to continue.</p>
 <p>Note: replace the <strong>00</strong> with the number that is after the * in the message
@@ -520,16 +509,17 @@ from the system.</p>
 <p>The JOB must have a RC=0000 to be successful.</p>
 <h3 id="add-the-volume-to-sys1parmlibvatlst01">Add the Volume to SYS1.PARMLIB(VATLST01)<a class="td-heading-self-link" href="#add-the-volume-to-sys1parmlibvatlst01" aria-label="Heading self-link"></a></h3>
 <p>Copy an existing 3350 entry to bottom of list and update.</p>
-<p><strong>IMPORTANT</strong> Make sure to keep the same spacing and formatting.</p>
+<p><strong>IMPORTANT</strong> Make sure to keep the same spacing and formatting as the original
+entry. Also, this member is mixed-case. Be sure to Uppercase the VOLID.</p>
 <p><code>DSCOB1,1,2,3350    ,N                DSCOBOL Workspace</code></p>
 <h2 id="shutdown-and-ipl-the-system">Shutdown and IPL the System<a class="td-heading-self-link" href="#shutdown-and-ipl-the-system" aria-label="Heading self-link"></a></h2>
 <p>Login and use Utilities/VTOC (3.7) to make sure the Volume is available.</p>
 
 
 <div class="pageinfo pageinfo-primary">
-<p>If you installed MVS-TK5 per the instructions, you should
-enable the systemctl mvs service so it will startup again if the system goes
-down for some reason.</p>
+<p>If you installed MVS-TK5 per the instructions, you should run
+&ldquo;set_daemon_mode&rdquo; so if the system goes down for some reason, it will restart in
+the proper mode.</p>
 
 </div>
 
