@@ -1,10 +1,10 @@
 <!doctype html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="canonical" type="text/html" href="https://dscobol.github.io/docs/tutorials/">
-<link rel="alternate" type="application/rss&#43;xml" href="https://dscobol.github.io/docs/tutorials/index.xml">
+<link rel="canonical" type="text/html" href="http://localhost:1313/docs/tutorials/">
+<link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/docs/tutorials/index.xml">
 <meta name="robots" content="noindex, nofollow">
 
 
@@ -21,7 +21,7 @@
 
 <title>Tutorials | dscobol</title>
 <meta name="description" content="Some things I have learned and will try to pass on.">
-<meta property="og:url" content="https://dscobol.github.io/docs/tutorials/">
+<meta property="og:url" content="http://localhost:1313/docs/tutorials/">
   <meta property="og:site_name" content="dscobol">
   <meta property="og:title" content="Tutorials">
   <meta property="og:description" content="Some things I have learned and will try to pass on.">
@@ -35,8 +35,7 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Tutorials">
   <meta name="twitter:description" content="Some things I have learned and will try to pass on.">
-<link rel="preload" href="/scss/main.min.587cc9ab2e7ed4cd045ee4c6e380598d6f8ad5201ff3aa9345c816a513404b85.css" as="style" integrity="sha256-WHzJqy5&#43;1M0EXuTG44BZjW&#43;K1SAf86qTRcgWpRNAS4U=" crossorigin="anonymous">
-<link href="/scss/main.min.587cc9ab2e7ed4cd045ee4c6e380598d6f8ad5201ff3aa9345c816a513404b85.css" rel="stylesheet" integrity="sha256-WHzJqy5&#43;1M0EXuTG44BZjW&#43;K1SAf86qTRcgWpRNAS4U=" crossorigin="anonymous">
+<link href="/scss/main.css" rel="stylesheet">
 <script
   src="https://code.jquery.com/jquery-3.7.1.min.js"
   integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -72,7 +71,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.3e5c784733071cae0d7b9a09d8a38342.json"
+    data-offline-search-index-json-src="/offline-search-index.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -165,7 +164,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>1.3.1: <a href="#pg-28a36f62835fcff30d967c9b89fc10ff">Systems Administration</a></li>
+<li>1.3.1: <a href="#pg-28a36f62835fcff30d967c9b89fc10ff">System Administration</a></li>
 
 
     
@@ -180,9 +179,52 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>1.3.1.1: <a href="#pg-f9551b2c102777c09c4dc7908d3e44c5">Add a 3350 DASD Volume to MVS-TK5</a></li>
+<li>1.3.1.1: <a href="#pg-9b6a2ab2292bc2ebe1357dff32bcdfc7">Update the RPi and the MVS-TK5 System</a></li>
 
 
+    
+  
+    
+    
+	
+<li>1.3.1.2: <a href="#pg-2c3a724fbabe1f58b3e0c2b88e4b485a">Install DASD devices</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>1.3.1.2.1: <a href="#pg-982e44be2c194e77dac07827752f4acd">Add the CBT, SRC and SYSCPK volumes</a></li>
+
+
+    
+  
+    
+    
+	
+<li>1.3.1.2.2: <a href="#pg-9661d15b8730783b81317e44f81d31bb">Add a 3350 DASD Volume to MVS-TK5</a></li>
+
+
+    
+  
+    
+    
+	
+<li>1.3.1.2.3: <a href="#pg-ecd616954f9d56b5f54631d344c9daf7">JCL to catalog the volumes</a></li>
+
+
+    
+  
+
+    </ul>
     
   
 
@@ -262,7 +304,7 @@ mileage may vary.</p>
     
 	<h1 id="pg-87e86ba06a0c8267cc4e0e407e7a15b6">1 - Run a &#34;Mainframe&#34; on a PC</h1>
     <div class="lead">Install and run the MVS Turnkey 5 System.</div>
-	<h2 id="this-is-a-way-to-learn-how-to-write-cobol-programs-for-an-ibm-mainframe-system">This is a way to learn how to write COBOL programs for an IBM Mainframe system.<a class="td-heading-self-link" href="#this-is-a-way-to-learn-how-to-write-cobol-programs-for-an-ibm-mainframe-system" aria-label="Heading self-link"></a></h2>
+	<h2 id="this-is-one-way-to-learn-how-to-write-cobol-programs-for-an-ibm-mainframe-system">This is one way to learn how to write COBOL programs for an IBM Mainframe system.<a class="td-heading-self-link" href="#this-is-one-way-to-learn-how-to-write-cobol-programs-for-an-ibm-mainframe-system" aria-label="Heading self-link"></a></h2>
 
 
 <div class="pageinfo pageinfo-primary">
@@ -314,17 +356,17 @@ the MVS-TK5 website for more information.</p>
 <li>TK5 version 4</li>
 </ul>
 <h3 id="initial-setup-and-installation">Initial setup and installation<a class="td-heading-self-link" href="#initial-setup-and-installation" aria-label="Heading self-link"></a></h3>
-<p>Use rpi-imager to create the microsd card</p>
+<p>Use rpi-imager to create the microSD card</p>
 <p>Insert the SD card into the RPi and turn on.</p>
 <p>I use nmap to determine the IP address of the RPi.</p>
 <p>ssh into the RPi</p>
 <p>run: <code>sudo apt update</code> <code>sudo apt upgrade</code></p>
 <p>and reboot.</p>
-<h3 id="install-some-basics">Install some basics:<a class="td-heading-self-link" href="#install-some-basics" aria-label="Heading self-link"></a></h3>
+<h3 id="install-some-basic-applications">Install some basic applications<a class="td-heading-self-link" href="#install-some-basic-applications" aria-label="Heading self-link"></a></h3>
 <p><code>sudo apt install vim mc bat tree</code></p>
 <p>Note: bat is installed as &ldquo;batcat&rdquo;.</p>
 <p>cd to /usr/bin and <code>sudo ln -s batcat bat</code></p>
-<p>Use nmtui to change to a static IP.</p>
+<p>Use <code>sudo nmtui</code> to change to a static IP.</p>
 <h2 id="get-and-install-tk5">Get and install TK5<a class="td-heading-self-link" href="#get-and-install-tk5" aria-label="Heading self-link"></a></h2>
 <p>Visit the <a href="https://www.prince-webdesign.nl/tk5">MVS-TK5 Website</a> for more
 information.</p>
@@ -357,20 +399,20 @@ Type=simple
 WantedBy=multi-user.target
 </code></pre><h3 id="set-mode">Set Mode<a class="td-heading-self-link" href="#set-mode" aria-label="Heading self-link"></a></h3>
 <p>CD back to the /mvs-tk5 directory and run:</p>
-<p><code>cd unattached/</code></p>
-<p><code>sh set_daemon_mode</code></p>
+<p><code>cd unattended/</code></p>
+<p><code>bash set_daemon_mode</code></p>
 <h3 id="run-these-to-enable-the-mvsservice">Run these to enable the mvs.service<a class="td-heading-self-link" href="#run-these-to-enable-the-mvsservice" aria-label="Heading self-link"></a></h3>
 <pre tabindex="0"><code>systemctl daemon-reload
 systemctl enable mvs
 </code></pre><h3 id="reboot-the-rpi">Reboot the RPi.<a class="td-heading-self-link" href="#reboot-the-rpi" aria-label="Heading self-link"></a></h3>
 <h3 id="note-about-systemctl-stop-mvs-andor-shutdown-the-server">Note: About &ldquo;systemctl stop mvs&rdquo; and/or shutdown the server<a class="td-heading-self-link" href="#note-about-systemctl-stop-mvs-andor-shutdown-the-server" aria-label="Heading self-link"></a></h3>
-<p>I don&rsquo;t know if this will properly shutdown MVS-TK5.</p>
+<p>I don&rsquo;t know if this will &ldquo;properly&rdquo; shutdown MVS-TK5.</p>
 <p>I do know the time to <code>shutdown -h now</code> the server takes a lot longer than
 normal.</p>
 <p>I would recommend to shutdown normally, follow the MVS-TK5 shutdown instructions
 in the User Guide.</p>
-<p>Only use the mvs.service to start MVS-TK5 if the computer is abnormally shutdown
-or rebooted.</p>
+<p>Use the mvs.service to start MVS-TK5 if the RPi is abnormally shutdown or needs
+to be rebooted.</p>
 
 </div>
 
@@ -430,8 +472,8 @@ responsibilties.</p>
 <h3 id="the-system-administrator-will">The System Administrator will:<a class="td-heading-self-link" href="#the-system-administrator-will" aria-label="Heading self-link"></a></h3>
 <ul>
 <li>Update the System</li>
-<li>Add new/update Software</li>
-<li>Create new DASD volumes</li>
+<li>Add/update/delete Software</li>
+<li>Add/remove devices(DASD, TAPE, etc.)</li>
 <li>Create new JCL/Proclib jobs to do things</li>
 <li>Create new userids</li>
 <li>Check the system to see if there are any issues/problems</li>
@@ -443,15 +485,14 @@ responsibilties.</p>
 <li>Test and debug the programs</li>
 </ul>
 <p>The majority of the tutorials will be about Applications.</p>
-<p>But, it will start out with System Administration, namely:</p>
-<ul>
-<li>Create a new DASD</li>
-<li>Create a new userid</li>
-<li>Create a collection of PDSs and datasets to be used by the Application
-Programmer</li>
-<li>Create a JCL job to compile and link a COBOL program</li>
-<li>Include that job in each new Collection for each new Programmer</li>
-</ul>
+<p>However, it will start out with System Administration.</p>
+<p>Most posts or videos demonstrate installing MVS-TK5(or the previous TK4- system)
+and then run one of the pre-installed COBOL programs, which is actually a JCL
+jobstream with the COBOL program embedded as SYSIN, and say, &ldquo;Look, you can run
+COBOL programs!&rdquo;.</p>
+<p><strong>But, that is not the typical environment an Application Programmer works in.</strong></p>
+<p>So, <strong>System Administration</strong> will create an environment that is closer to the
+&ldquo;real world&rdquo;.</p>
 
 </div>
 
@@ -475,9 +516,54 @@ Programmer</li>
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-28a36f62835fcff30d967c9b89fc10ff">1.3.1 - Systems Administration</h1>
+	<h1 id="pg-28a36f62835fcff30d967c9b89fc10ff">1.3.1 - System Administration</h1>
     <div class="lead">How to change/revise/delete things in the system.</div>
 	
+
+<div class="alert alert-warning" role="alert">
+<h4 class="alert-heading">Caution</h4>
+
+    <p>A lot of the tasks done by the System Administrator will need to use the
+Hercules console.</p>
+<p>If you installed MVS-TK5 per the instructions, The System should be up and
+running in daemon_mode.</p>
+<p>To perform these tasks:</p>
+<ul>
+<li>
+<p>Read the entire task to see if:</p>
+<ul>
+<li>The console is not required and/or</li>
+<li>changes need to/can be made while the System is running.</li>
+</ul>
+<p>If so,</p>
+<ul>
+<li>Need to login to MVS-TK5 as HERC01 as this userid has permissions to do
+anything.</li>
+<li>Make the changes.</li>
+</ul>
+<p>Else:</p>
+<ul>
+<li>Shutdown the MVS-TK5 system.</li>
+<li>Run the set_console_mode script.</li>
+<li>Read ahead to see if changes need to/can be made while the system is not
+running.</li>
+<li>Manually IPL the system.</li>
+<li>Need to login to MVS-TK5 as HERC01 as this userid has permissions to do
+anything.</li>
+</ul>
+</li>
+</ul>
+<p>Also remember: When done updating and changing things:</p>
+<ul>
+<li>Shutdown the MVS-TK5 system.</li>
+<li>Run the set_daemon_mode script.</li>
+<li>Re-boot the RPi so the systemctl mvs.service starts up the MVS-TK5 system.</li>
+</ul>
+
+
+</div>
+
+
 </div>
 
 
@@ -498,51 +584,271 @@ Programmer</li>
 	
     
 
-<div class="td-content" style="">
+<div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-f9551b2c102777c09c4dc7908d3e44c5">1.3.1.1 - Add a 3350 DASD Volume to MVS-TK5</h1>
-    <div class="lead">Create your own storage volume</div>
+	<h1 id="pg-9b6a2ab2292bc2ebe1357dff32bcdfc7">1.3.1.1 - Update the RPi and the MVS-TK5 System</h1>
+    
 	
 
 <div class="pageinfo pageinfo-primary">
-<p>If you installed MVS-TK5 per the instructions, you should run
-set_console_mode as you will need to manually start MVS-TK5 and use the Hercules
-console.</p>
+<p>If you installed MVS-TK5 per the instructions:</p>
+<ul>
+<li>Shutdown MVS-TK5.</li>
+<li>The Hercules console is <strong>not</strong> required for this task.</li>
+</ul>
 
 </div>
 
+<p>The RPi 3 Model B+ is a Quad Core so it has &ldquo;4 CPUs&rdquo;.</p>
+<p>In this installation, the MVS-TK5 system is the only thing that is running on
+the RPi, so let&rsquo;s update it.</p>
+<h2 id="with-mvs-tk5-system-not-running"><strong>With MVS-TK5 System NOT Running</strong><a class="td-heading-self-link" href="#with-mvs-tk5-system-not-running" aria-label="Heading self-link"></a></h2>
 <p>To use the Hercules utilities:</p>
 <p>Run <code>uname -m</code> to determine the architecture of your computer.</p>
 <p>On this Raspberry Pi, it is aarch64.</p>
-<p>In .bashrc (or .zshrc or whatever you are using) add the line:</p>
+<h3 id="update-the-bashrc-file">Update the .bashrc file<a class="td-heading-self-link" href="#update-the-bashrc-file" aria-label="Heading self-link"></a></h3>
+<p>Because MVS-TK5 was installed as a root service:</p>
+<p><code>sudo su</code> to become root.</p>
+<p><code>cd</code> to go &ldquo;HOME&rdquo; which would be <code>/root/</code></p>
+<p>In .bashrc, add these lines:</p>
+<p><code>export PATH=&quot;$PATH:/mvs-tk5/hercules/linux/aarch64/bin&quot;</code></p>
 <p><code>export LD_LIBRARY_PATH=&quot;/lib:/usr/lib:/usr/local/lib:/mvs-tk5/hercules/linux/aarch64/lib&quot;</code></p>
-<p>and then source the .bashrc file.</p>
-<h2 id="with-system-not-running"><strong>With System NOT Running</strong><a class="td-heading-self-link" href="#with-system-not-running" aria-label="Heading self-link"></a></h2>
-<h3 id="pick-a-device-size-and-name">Pick a device size and name<a class="td-heading-self-link" href="#pick-a-device-size-and-name" aria-label="Heading self-link"></a></h3>
-<p>NOTE: VOLID must be 6 chars or less.</p>
-<p>For this example: 3350 DASD with a file name of dscob1.340 and Volume id of
-DSCOB1.</p>
-<h3 id="create-the-entry-in-conftk5cnf">Create the entry in conf/tk5.cnf<a class="td-heading-self-link" href="#create-the-entry-in-conftk5cnf" aria-label="Heading self-link"></a></h3>
-<p>Since you are modifying the configuration, here is an Extra:</p>
+<p>and source the .bashrc file.</p>
+<h3 id="update-the-conftk5cnf-file">Update the conf/tk5.cnf file<a class="td-heading-self-link" href="#update-the-conftk5cnf-file" aria-label="Heading self-link"></a></h3>
+<p>Go to the mvs-tk5/conf directory:</p>
+<p><code>cd /mvs-tk5/conf/</code></p>
 <h4 id="upgrade-the-system-by">&ldquo;Upgrade&rdquo; the system by:<a class="td-heading-self-link" href="#upgrade-the-system-by" aria-label="Heading self-link"></a></h4>
+<p>Edit the tk5.cnf file using editor of choice:</p>
 <ul>
 <li>Change CPUMODEL from 3033 to 3084</li>
 <li>Change NUMCPU from 1 to 2</li>
 <li>Change MAXCPU from: 1 to 2</li>
 </ul>
+<p>When the system is IPL&rsquo;ed, the updated configuration will be used.</p>
+
+
+<div class="pageinfo pageinfo-primary">
+<p>If you installed MVS-TK5 per the instructions:</p>
+<ul>
+<li>Reboot the RPi.</li>
+</ul>
+
+</div>
+
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-2c3a724fbabe1f58b3e0c2b88e4b485a">1.3.1.2 - Install DASD devices</h1>
+    <div class="lead">Get some extra storage space.</div>
+	<p>Over the years, IBM has developed various DASD devices (aka: Hard Drives(in the
+PC world)).</p>
+<p>Hercules has emulated those DASD devices and MVS-TK5 uses them for storage.</p>
+<p>This will focus on two of those: the <strong>3350</strong> and the newer, bigger <strong>3390</strong>.</p>
+<p>One enhancement in the update from TK4- to TK5 was consolidating the System from
+multiple DASD devices onto a few 3390 devices.</p>
+<p>But, depending on the purpose, a 3350 could be all that is needed and there is a
+difference in the way the two different devices are created and added to the
+System so it is worth looking at both.</p>
+<h4 id="the-available-3350-and-3390-dasd-devices-as-defined-in-sys1sysgencntliogen">The available <strong>3350</strong> and <strong>3390</strong> DASD devices as defined in SYS1.SYSGEN.CNTL(IOGEN):<a class="td-heading-self-link" href="#the-available-3350-and-3390-dasd-devices-as-defined-in-sys1sysgencntliogen" aria-label="Heading self-link"></a></h4>
+<p>There are other devices but they are removed from this list.</p>
+<pre tabindex="0"><code>//*  DASD devices
+//*
+//*  ! Devt ! Cua - Cua ! Cua - Cua ! Cua - Cua ! Cua - Cua ! Cua - Cua !
+//*  !------+-----------+-----------+-----------+-----------!-----------!
+//*  ! 3350 !           ! 140 - 14F ! 240 - 24F ! 340 - 34F !           !
+//*  !      !           !           !           !           !           !
+//*  !      !           !  Shared   !  Shared   !           !           !
+//*  !      !           !  DASD     !  DASD     !           !           !
+//*  !------+-----------+-----------+-----------+-----------!-----------!
+//*  !      !           !           !           !           !           !
+//*  ! 3390 ! 190-19F   ! 290 - 29F ! 1F0 - 1FF ! 2F0 - 2FF ! 390 - 39F !
+//*  !      !           !           !           !           !           !
+//*  !      ! Shared    !  Shared   !           !           !           !
+//*  !      ! DASD      !  DASD     !           !           !           !
+//*  !      !           !           !           !           !           !
+//*
+</code></pre><p>This is the list of currently defined and used DASD devices in the MVS-TK5
+System:</p>
+<pre tabindex="0"><code>//*  DASD devices
+//*
+//*  ! Devt ! Cua - Cua ! Cua - Cua ! Cua - Cua ! Cua - Cua ! Cua - Cua !
+//*  !------+-----------+-----------+-----------+-----------!-----------!
+//*  ! 3350 !           ! 140 - 14F ! 240 - 24F ! 340 - 34F !           !
+//*  !      !           !           !           !           !           !
+//*  !      !           !           !page00.248 !           !           !
+//*  !      !           !           !spool0.249 !           !           !
+//*  !      !           !           !           !           !           !
+//*  !------+-----------+-----------+-----------+-----------!-----------!
+//*  ! 3380 ! 180 - 18F ! 280 - 28F ! 1E0 - 1EF ! 2E0 - 2EF ! 380 - 38F !
+//*  !      !           !           !           !           !           !
+//*  !      !           !           !           !           !int001.380 !
+//*  !      !           !           !           !           !           !
+//*  !------+-----------+-----------+-----------+-----------!-----------!
+//*  !      !           !           !           !           !           !
+//*  ! 3390 ! 190-19F   ! 290 - 29F ! 1F0 - 1FF ! 2F0 - 2FF ! 390 - 39F !
+//*  !      !           !           !           !           !           !
+//*  !      !tso001.190 !work01.290 !           !           !tk5res.390 !
+//*  !      !tso002.191 !work02.291 !           !           !tk5cat.391 !
+//*  !      !tso003.192 !work03.292 !           !           !tk5dlb.392 !
+//*  !      !           !work04.293 !           !           !           !
+//*  !      !           !tk5001.298 !           !           !           !
+//*  !      !           !tk5002.299 !           !           !           !
+//*  !      !           !           !           !           !           !
+//*  !------+-----------+-----------+-----------+-----------!-----------!
+//*
+</code></pre><h3 id="if-you-install-the-cbt-src-and-syscpk-volumes-they-will-be">If you install the CBT, SRC and SYSCPK volumes they will be:<a class="td-heading-self-link" href="#if-you-install-the-cbt-src-and-syscpk-volumes-they-will-be" aria-label="Heading self-link"></a></h3>
+<pre tabindex="0"><code>//*  DASD devices
+//*
+//*  ! Devt ! Cua - Cua ! Cua - Cua ! Cua - Cua ! Cua - Cua ! Cua - Cua !
+//*  !------+-----------+-----------+-----------+-----------!-----------!
+//*  ! 3350 !           ! 140 - 14F ! 240 - 24F ! 340 - 34F !           !
+//*  !      !           !           !           !           !           !
+//*  !      !           !           !syscpk.247 !cbt000.340 !           !
+//*  !      !           !           !           !cbt001.341 !           !
+//*  !      !           !           !           !cbt002.342 !           !
+//*  !      !           !           !           !cbtcat.343 !           !
+//*  !      !           !           !           !src000.348 !           !
+//*  !      !           !           !           !src001.349 !           !
+//*  !      !           !           !           !src002.34a !           !
+//*  !      !           !           !           !srccat.34b !           !
+//*  !      !           !           !           !           !           !
+//*  !------+-----------+-----------+-----------+-----------!-----------!
+</code></pre><p>The file you create cannot have the same &ldquo;extension&rdquo; as an existing file and
+depending on the volume you want to create, must be in the ranges specified for
+that DASD type.</p>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-982e44be2c194e77dac07827752f4acd">1.3.1.2.1 - Add the CBT, SRC and SYSCPK volumes</h1>
+    <div class="lead">Lots of good stuff to learn here.</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>If you installed MVS-TK5 per the instructions:</p>
+<ul>
+<li>Shutdown MVS-TK5</li>
+<li>The Hercules console <strong>is not required</strong> for this task.
+<ul>
+<li>Don&rsquo;t IPL the system until needed.</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+<h2 id="with-system-not-running"><strong>With System NOT Running</strong><a class="td-heading-self-link" href="#with-system-not-running" aria-label="Heading self-link"></a></h2>
+<h2 id="get-the-srccbtzip-file-onto-the-rpi">Get the srccbt.zip file onto the RPi.<a class="td-heading-self-link" href="#get-the-srccbtzip-file-onto-the-rpi" aria-label="Heading self-link"></a></h2>
+<p>Use mc, wget, curl or your prefered method of obtaining the zip file.</p>
+<h2 id="install-the-zip-file">Install the zip file<a class="td-heading-self-link" href="#install-the-zip-file" aria-label="Heading self-link"></a></h2>
+<p><code>sudo su</code></p>
+<p><code>cd /mvs-tk5/</code></p>
+<p><code>unzip &lt;srccbt.zip&gt;</code> from wherever it was copied to.</p>
+<p>When prompted to &ldquo;replace files&rdquo;, say yes.</p>
+<h2 id="ipl-mvs-tk5">IPL MVS-TK5<a class="td-heading-self-link" href="#ipl-mvs-tk5" aria-label="Heading self-link"></a></h2>
+<h2 id="catalog-the-datasets">Catalog the datasets<a class="td-heading-self-link" href="#catalog-the-datasets" aria-label="Heading self-link"></a></h2>
+<p>Run <a href="/docs/tutorials/mvs-tk5/running-tk5/system/install-dasd/import_user_cat/">this job</a> to catalog the datasets on the CBT, SRC and
+SYSCPK volumes.</p>
+
+
+<div class="pageinfo pageinfo-primary">
+<p>If you installed MVS-TK5 per the instructions:</p>
+<ul>
+<li>Shutdown MVS-TK5</li>
+<li>Reboot the RPi.</li>
+</ul>
+
+</div>
+
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-9661d15b8730783b81317e44f81d31bb">1.3.1.2.2 - Add a 3350 DASD Volume to MVS-TK5</h1>
+    
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>If you installed MVS-TK5 per the instructions:</p>
+<ul>
+<li>Shutdown MVS-TK5</li>
+<li>The Hercules console <strong>is required</strong> for this task.
+<ul>
+<li>Run the set_console_mode script</li>
+<li>Don&rsquo;t IPL the system until needed.</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+<h2 id="with-system-not-running"><strong>With System NOT Running</strong><a class="td-heading-self-link" href="#with-system-not-running" aria-label="Heading self-link"></a></h2>
+<h3 id="pick-a-device-size-and-name">Pick a device size and name<a class="td-heading-self-link" href="#pick-a-device-size-and-name" aria-label="Heading self-link"></a></h3>
+<ul>
+<li>VOLID must be 6 chars or less</li>
+<li>The &ldquo;extension&rdquo; must not already be assigned to another file</li>
+<li>The &ldquo;extension&rdquo; must be in the allowed ranges for that type of volume</li>
+</ul>
+<p>See the list on &ldquo;Install DASD devices&rdquo; page for available/taken device numbers.</p>
+<p><strong>For this example: 3350 DASD with a file name of dscob1.140 and Volume id of
+DSCOB1.</strong></p>
+<h3 id="create-the-entry-in-conftk5cnf">Create the entry in conf/tk5.cnf<a class="td-heading-self-link" href="#create-the-entry-in-conftk5cnf" aria-label="Heading self-link"></a></h3>
 <h4 id="add-the-new-device">Add the new device<a class="td-heading-self-link" href="#add-the-new-device" aria-label="Heading self-link"></a></h4>
 <p>At the end of the <strong># TK5 DASD</strong> section:</p>
-<p><code>0340 3350 dasd/dscob1.340</code></p>
+<p><code>0140 3350 dasd/dscob1.140</code></p>
 <h3 id="use-dasdinit64-to-create-the-files-in-dasd">Use dasdinit64 to create the files in /dasd/<a class="td-heading-self-link" href="#use-dasdinit64-to-create-the-files-in-dasd" aria-label="Heading self-link"></a></h3>
-<p><code>../hercules/linux/aarch64/bin/dasdinit64 -a dscob1.340 3350 dscob1</code></p>
-<h2 id="ipl-the-system"><strong>IPL the system</strong><a class="td-heading-self-link" href="#ipl-the-system" aria-label="Heading self-link"></a></h2>
+<p><code>cd /MVS-TK5/dasd/</code></p>
+<p><code>dasdinit -a dscob1.140 3350 dscob1</code></p>
+<h2 id="ipl-mvs-tk5"><strong>IPL MVS-TK5</strong><a class="td-heading-self-link" href="#ipl-mvs-tk5" aria-label="Heading self-link"></a></h2>
 <h3 id="create-the-jcl-to-run-ickdsf-to-format-the-dasd">Create the JCL to run ICKDSF to format the DASD<a class="td-heading-self-link" href="#create-the-jcl-to-run-ickdsf-to-format-the-dasd" aria-label="Heading self-link"></a></h3>
 <p>Create a new member in HERC01.TEST.CNTL(ICKDSF) and type in the following JCL:</p>
 <pre tabindex="0"><code>//HERC01A JOB (1),ICKDSF,CLASS=A,MSGCLASS=H
 //ICKDSF EXEC PGM=ICKDSF,REGION=4096K
 //SYSPRINT DD SYSOUT=*
 //SYSIN DD *
-  INIT UNITADDRESS(340) -
+  INIT UNITADDRESS(140) -
        NOVERIFY -
        VOLID(DSCOB1) -
        OWNER(HERCULES) -
@@ -550,13 +856,13 @@ DSCOB1.</p>
 //
 </code></pre><h3 id="make-sure-the-volume-is-offline-and-deallocated">Make sure the volume is offline and deallocated<a class="td-heading-self-link" href="#make-sure-the-volume-is-offline-and-deallocated" aria-label="Heading self-link"></a></h3>
 <p>In the Hercules/MVS console:</p>
-<p><code>/v 340,offline</code></p>
+<p><code>/v 140,offline</code></p>
 <p><code>/s dealloc</code></p>
 <h3 id="run-the-ickdsf-job">Run the ICKDSF JOB<a class="td-heading-self-link" href="#run-the-ickdsf-job" aria-label="Heading self-link"></a></h3>
 <p>Submit the JCL to format the DASD Volume.</p>
 <p>This will be held-up by the system, so go the Hercules/MVS console and you
 should see something like:</p>
-<p><code>*00 ICK003D REPLY U TO ALTER VOLUME 340 CONTENTS, ELSE T</code></p>
+<p><code>*00 ICK003D REPLY U TO ALTER VOLUME 140 CONTENTS, ELSE T</code></p>
 <p>At the prompt <code>/r 00,u</code> to allow the job to continue.</p>
 <p>Note: replace the <strong>00</strong> with the number that is after the * in the message
 from the system.</p>
@@ -566,14 +872,17 @@ from the system.</p>
 <p><strong>IMPORTANT</strong> Make sure to keep the same spacing and formatting as the original
 entry. Also, this member is mixed-case. Be sure to Uppercase the VOLID.</p>
 <p><code>DSCOB1,1,2,3350    ,N                DSCOBOL Workspace</code></p>
-<h2 id="shutdown-and-ipl-the-system">Shutdown and IPL the System<a class="td-heading-self-link" href="#shutdown-and-ipl-the-system" aria-label="Heading self-link"></a></h2>
+<h2 id="manually-shutdown-and-re-ipl-the-system">Manually Shutdown and re-IPL the System<a class="td-heading-self-link" href="#manually-shutdown-and-re-ipl-the-system" aria-label="Heading self-link"></a></h2>
 <p>Login and use Utilities/VTOC (3.7) to make sure the Volume is available.</p>
 
 
 <div class="pageinfo pageinfo-primary">
-<p>If you installed MVS-TK5 per the instructions, you should run
-&ldquo;set_daemon_mode&rdquo; so if the system goes down for some reason, it will restart in
-the proper mode.</p>
+<p>If you installed MVS-TK5 per the instructions:</p>
+<ul>
+<li>Shutdown MVS-TK5</li>
+<li>Run the set_daemon_mode script</li>
+<li>Reboot the RPi.</li>
+</ul>
 
 </div>
 
@@ -581,6 +890,52 @@ the proper mode.</p>
 </div>
 
 
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-ecd616954f9d56b5f54631d344c9daf7">1.3.1.2.3 - JCL to catalog the volumes</h1>
+    <div class="lead">Catalog the CBT, SRC-, and the SYSCPK datasets.</div>
+	<pre tabindex="0"><code>//HERC01A JOB (SYS),&#39;IMPORT USER CAT&#39;,CLASS=A,MSGCLASS=H,
+// MSGLEVEL=(1,1),USER=HERC01,PASSWORD=CUL8TR
+//*
+//*
+//IDCAMS01 EXEC PGM=IDCAMS,REGION=4096K
+//SYSPRINT DD SYSOUT=*
+//SYSCPK DD UNIT=3350,DISP=OLD,VOL=SER=SYSCPK
+//CBTCAT DD UNIT=3350,DISP=OLD,VOL=SER=CBTCAT
+//SRCCAT DD UNIT=3350,DISP=OLD,VOL=SER=SRCCAT
+//SYSIN DD *
+  IMPORT CONNECT OBJECTS (UCSYSCPK DEVICETYPE(3350) -
+         VOLUMES(SYSCPK))
+  IMPORT CONNECT OBJECTS (SYS1.UCAT.CBT DEVICETYPE(3350) -
+         VOLUMES(CBTCAT))
+  IMPORT CONNECT OBJECTS (SYS1.UCAT.SRC DEVICETYPE(3350) -
+         VOLUMES(SRCCAT))
+  DEFINE ALIAS (NAME(SYSC) RELATE(UCSYSCPK))
+  DEFINE ALIAS (NAME(CBT249) RELATE(SYS1.UCAT.CBT))
+  DEFINE ALIAS (NAME(CBT429) RELATE(SYS1.UCAT.CBT))
+  DEFINE ALIAS (NAME(CBT129) RELATE(SYS1.UCAT.CBT))
+  DEFINE ALIAS (NAME(CBT072) RELATE(SYS1.UCAT.CBT))
+  DEFINE ALIAS (NAME(CBTCOV) RELATE(SYS1.UCAT.CBT))
+  DEFINE ALIAS (NAME(CBT) RELATE(SYS1.UCAT.CBT))
+  DEFINE ALIAS (NAME(MVSSRC) RELATE(SYS1.UCAT.SRC))
+//
+</code></pre>
+</div>
+
+
+
+    
+	
+  
 
     
 	
@@ -963,8 +1318,8 @@ x3270.colorScheme.Argonaut: \
 </footer>
 
     </div>
-    <script src="/js/main.min.032ba2ecbd3ce89b96bffcfec71c5da352125ee752e9873c3e0098f7c32a6497.js" integrity="sha256-Ayui7L086JuWv/z&#43;xxxdo1ISXudS6Yc8PgCY98MqZJc=" crossorigin="anonymous"></script>
-<script defer src="/js/click-to-copy.min.73478a7d4807698aed7e355eb23f9890ca18fea3158604c8471746d046702bad.js" integrity="sha256-c0eKfUgHaYrtfjVesj&#43;YkMoY/qMVhgTIRxdG0EZwK60=" crossorigin="anonymous"></script>
+    <script src="/js/main.js"></script>
+<script defer src="/js/click-to-copy.js" crossorigin="anonymous"></script>
 <script src='/js/tabpane-persist.js'></script>
 
   </body>

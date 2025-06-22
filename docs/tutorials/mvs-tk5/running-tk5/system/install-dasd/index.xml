@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Install DASD devices on dscobol</title>
+    <link>http://localhost:1313/docs/tutorials/mvs-tk5/running-tk5/system/install-dasd/</link>
+    <description>Recent content in Install DASD devices on dscobol</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="http://localhost:1313/docs/tutorials/mvs-tk5/running-tk5/system/install-dasd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Add the CBT, SRC and SYSCPK volumes</title>
+      <link>http://localhost:1313/docs/tutorials/mvs-tk5/running-tk5/system/install-dasd/add-cbt-src-syscpk-dasd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/tutorials/mvs-tk5/running-tk5/system/install-dasd/add-cbt-src-syscpk-dasd/</guid>
+      <description>&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;&#xA;&lt;p&gt;If you installed MVS-TK5 per the instructions:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Shutdown MVS-TK5&lt;/li&gt;&#xA;&lt;li&gt;The Hercules console &lt;strong&gt;is not required&lt;/strong&gt; for this task.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Don&amp;rsquo;t IPL the system until needed.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;h2 id=&#34;with-system-not-running&#34;&gt;&lt;strong&gt;With System NOT Running&lt;/strong&gt;&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#with-system-not-running&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;h2 id=&#34;get-the-srccbtzip-file-onto-the-rpi&#34;&gt;Get the srccbt.zip file onto the RPi.&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#get-the-srccbtzip-file-onto-the-rpi&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;Use mc, wget, curl or your prefered method of obtaining the zip file.&lt;/p&gt;&#xA;&lt;h2 id=&#34;install-the-zip-file&#34;&gt;Install the zip file&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#install-the-zip-file&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;code&gt;sudo su&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;cd /mvs-tk5/&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;unzip &amp;lt;srccbt.zip&amp;gt;&lt;/code&gt; from wherever it was copied to.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Add a 3350 DASD Volume to MVS-TK5</title>
+      <link>http://localhost:1313/docs/tutorials/mvs-tk5/running-tk5/system/install-dasd/add-3350-dasd-volume/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/tutorials/mvs-tk5/running-tk5/system/install-dasd/add-3350-dasd-volume/</guid>
+      <description>&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;&#xA;&lt;p&gt;If you installed MVS-TK5 per the instructions:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Shutdown MVS-TK5&lt;/li&gt;&#xA;&lt;li&gt;The Hercules console &lt;strong&gt;is required&lt;/strong&gt; for this task.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Run the set_console_mode script&lt;/li&gt;&#xA;&lt;li&gt;Don&amp;rsquo;t IPL the system until needed.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;h2 id=&#34;with-system-not-running&#34;&gt;&lt;strong&gt;With System NOT Running&lt;/strong&gt;&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#with-system-not-running&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;h3 id=&#34;pick-a-device-size-and-name&#34;&gt;Pick a device size and name&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#pick-a-device-size-and-name&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;VOLID must be 6 chars or less&lt;/li&gt;&#xA;&lt;li&gt;The &amp;ldquo;extension&amp;rdquo; must not already be assigned to another file&lt;/li&gt;&#xA;&lt;li&gt;The &amp;ldquo;extension&amp;rdquo; must be in the allowed ranges for that type of volume&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;See the list on &amp;ldquo;Install DASD devices&amp;rdquo; page for available/taken device numbers.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>JCL to catalog the volumes</title>
+      <link>http://localhost:1313/docs/tutorials/mvs-tk5/running-tk5/system/install-dasd/import_user_cat/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/tutorials/mvs-tk5/running-tk5/system/install-dasd/import_user_cat/</guid>
+      <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;//HERC01A JOB (SYS),&amp;#39;IMPORT USER CAT&amp;#39;,CLASS=A,MSGCLASS=H,&#xA;// MSGLEVEL=(1,1),USER=HERC01,PASSWORD=CUL8TR&#xA;//*&#xA;//*&#xA;//IDCAMS01 EXEC PGM=IDCAMS,REGION=4096K&#xA;//SYSPRINT DD SYSOUT=*&#xA;//SYSCPK DD UNIT=3350,DISP=OLD,VOL=SER=SYSCPK&#xA;//CBTCAT DD UNIT=3350,DISP=OLD,VOL=SER=CBTCAT&#xA;//SRCCAT DD UNIT=3350,DISP=OLD,VOL=SER=SRCCAT&#xA;//SYSIN DD *&#xA;  IMPORT CONNECT OBJECTS (UCSYSCPK DEVICETYPE(3350) -&#xA;         VOLUMES(SYSCPK))&#xA;  IMPORT CONNECT OBJECTS (SYS1.UCAT.CBT DEVICETYPE(3350) -&#xA;         VOLUMES(CBTCAT))&#xA;  IMPORT CONNECT OBJECTS (SYS1.UCAT.SRC DEVICETYPE(3350) -&#xA;         VOLUMES(SRCCAT))&#xA;  DEFINE ALIAS (NAME(SYSC) RELATE(UCSYSCPK))&#xA;  DEFINE ALIAS (NAME(CBT249) RELATE(SYS1.UCAT.CBT))&#xA;  DEFINE ALIAS (NAME(CBT429) RELATE(SYS1.UCAT.CBT))&#xA;  DEFINE ALIAS (NAME(CBT129) RELATE(SYS1.UCAT.CBT))&#xA;  DEFINE ALIAS (NAME(CBT072) RELATE(SYS1.UCAT.CBT))&#xA;  DEFINE ALIAS (NAME(CBTCOV) RELATE(SYS1.UCAT.CBT))&#xA;  DEFINE ALIAS (NAME(CBT) RELATE(SYS1.UCAT.CBT))&#xA;  DEFINE ALIAS (NAME(MVSSRC) RELATE(SYS1.UCAT.SRC))&#xA;//&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Install IBM DB2-LUW on dscobol</title>
-    <link>https://dscobol.github.io/docs/install/ibm-db2/</link>
+    <link>http://localhost:1313/docs/install/ibm-db2/</link>
     <description>Recent content in Install IBM DB2-LUW on dscobol</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="https://dscobol.github.io/docs/install/ibm-db2/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/docs/install/ibm-db2/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Install IBM DB2 LUW RDBMS</title>
-      <link>https://dscobol.github.io/docs/install/ibm-db2/install-db2/</link>
+      <link>http://localhost:1313/docs/install/ibm-db2/install-db2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://dscobol.github.io/docs/install/ibm-db2/install-db2/</guid>
+      <guid>http://localhost:1313/docs/install/ibm-db2/install-db2/</guid>
       <description>&lt;h2 id=&#34;get-the-software&#34;&gt;Get the software&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#get-the-software&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;Visit the &amp;ldquo;Download IBM Db2 Software Community Edition&amp;rdquo; at&#xA;&lt;a href=&#34;https://www.ibm.com/account/reg/signup?formid=urx-33669&#34;&gt;Download DB2&lt;/a&gt; link.&lt;/p&gt;&#xA;&lt;p&gt;You will need an IBM account to download the software. There is no cost to&#xA;create an account and there is no cost to download and run the Db2 Community&#xA;Edition.&lt;/p&gt;&#xA;&lt;p&gt;Enter all the information it needs.&lt;/p&gt;&#xA;&lt;p&gt;You might have to log back in with your new IBM ID or it may take you to the&#xA;next page.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Install the Sample DB</title>
-      <link>https://dscobol.github.io/docs/install/ibm-db2/install-sampledb/</link>
+      <link>http://localhost:1313/docs/install/ibm-db2/install-sampledb/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://dscobol.github.io/docs/install/ibm-db2/install-sampledb/</guid>
+      <guid>http://localhost:1313/docs/install/ibm-db2/install-sampledb/</guid>
       <description>&lt;h2 id=&#34;check-the-installation&#34;&gt;Check the installation&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#check-the-installation&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;In Terminal, Run:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;su - db2inst1&#xA;ksh&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;You will need to enter the password for db2inst1 after the su command.&lt;/p&gt;&#xA;&lt;p&gt;Use ksh for a &amp;ldquo;more useable&amp;rdquo; command line.&lt;/p&gt;&#xA;&lt;p&gt;A quick check, Run:&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;db2 list database directory&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;returns no DBs.&lt;/p&gt;&#xA;&lt;h2 id=&#34;validate-the-install&#34;&gt;Validate the install&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#validate-the-install&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;Run:&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;cd sqllib/bin&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;Run:&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;./db2val&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;This should return: &amp;ldquo;The instance validation for the instance db2inst1 was&#xA;successful.&amp;rdquo;&lt;/p&gt;&#xA;&lt;h2 id=&#34;install-sample-db&#34;&gt;Install Sample DB&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#install-sample-db&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;While still in the sqllib/bin directory, Run:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Create a DB2 DB</title>
-      <link>https://dscobol.github.io/docs/install/ibm-db2/create-db2-db/</link>
+      <link>http://localhost:1313/docs/install/ibm-db2/create-db2-db/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://dscobol.github.io/docs/install/ibm-db2/create-db2-db/</guid>
+      <guid>http://localhost:1313/docs/install/ibm-db2/create-db2-db/</guid>
       <description>&lt;h2 id=&#34;become-instance-owner&#34;&gt;Become Instance Owner&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#become-instance-owner&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;During the install of IBM DB2 LUW, if you accepted the defaults, the Instance&#xA;Owner&amp;rsquo;s userid is &amp;ldquo;db2inst1&amp;rdquo;. If you changed that, use that userid instead.&lt;/p&gt;&#xA;&lt;p&gt;To create new databases, you have to become the Instance Owner and get into the&#xA;DB2 system.&lt;/p&gt;&#xA;&lt;p&gt;Run:&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;su - db2inst1&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;Enter the password.&lt;/p&gt;&#xA;&lt;p&gt;This will make you &amp;ldquo;db2inst1&amp;rdquo; and display a very bare prompt&lt;/p&gt;&#xA;&lt;p&gt;Run:&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;ksh&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;to get a more useable environment.&lt;/p&gt;</description>
     </item>
   </channel>
