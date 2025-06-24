@@ -2,141 +2,172 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/docs/tutorials/mvs-tk5/running-tk5/system/install-dasd/add-cbt-src-syscpk-dasd/</loc>
+    <loc>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/install-dasd/add-cbt-src-syscpk-dasd/</loc>
+    <lastmod>2025-06-22T05:37:43-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/install/gnucobol/</loc>
+    <loc>https://dscobol.github.io/docs/install/gnucobol/</loc>
     <lastmod>2025-06-01T21:03:12-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/install/ibm-db2/install-db2/</loc>
+    <loc>https://dscobol.github.io/docs/install/ibm-db2/install-db2/</loc>
     <lastmod>2025-05-24T09:35:12-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/install/postgresql/install-postgresql/</loc>
+    <loc>https://dscobol.github.io/docs/install/postgresql/install-postgresql/</loc>
     <lastmod>2025-05-30T22:47:20-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/tutorials/mvs-tk5/install-tk5/</loc>
-    <lastmod>2025-06-17T20:35:05-04:00</lastmod>
+    <loc>https://dscobol.github.io/docs/tutorials/mvs-tk5/install-tk5/</loc>
+    <lastmod>2025-06-22T05:37:43-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/overview/</loc>
+    <loc>https://dscobol.github.io/docs/overview/</loc>
     <lastmod>2025-05-24T09:35:12-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/tutorials/mvs-tk5/</loc>
-    <lastmod>2025-06-01T21:03:12-04:00</lastmod>
+    <loc>https://dscobol.github.io/docs/tutorials/mvs-tk5/</loc>
+    <lastmod>2025-06-23T05:33:35-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/tutorials/mvs-tk5/running-tk5/system/</loc>
-    <lastmod>2025-06-17T20:35:05-04:00</lastmod>
+    <loc>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/</loc>
+    <lastmod>2025-06-23T05:33:35-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/tutorials/mvs-tk5/running-tk5/system/system-update/</loc>
+    <loc>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/tasks/</loc>
+    <lastmod>2025-06-23T05:33:35-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/about/</loc>
+    <loc>https://dscobol.github.io/docs/about/</loc>
     <lastmod>2025-05-24T09:35:12-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/tutorials/mvs-tk5/running-tk5/system/install-dasd/add-3350-dasd-volume/</loc>
+    <loc>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/install-dasd/add-3350-dasd-volume/</loc>
+    <lastmod>2025-06-22T05:37:43-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/tutorials/mvs-tk5/running-tk5/applications/</loc>
+    <loc>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/applications/</loc>
     <lastmod>2025-06-13T19:31:58-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/tutorials/mvs-tk5/running-tk5/system/install-dasd/</loc>
-  </url><url>
-    <loc>http://localhost:1313/docs/install/postgresql/install-gixsql/</loc>
+    <loc>https://dscobol.github.io/docs/install/postgresql/install-gixsql/</loc>
     <lastmod>2025-05-30T22:47:20-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/install/ibm-db2/</loc>
+    <loc>https://dscobol.github.io/docs/install/ibm-db2/</loc>
     <lastmod>2025-05-30T22:47:20-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/install/ibm-db2/install-sampledb/</loc>
+    <loc>https://dscobol.github.io/docs/install/ibm-db2/install-sampledb/</loc>
     <lastmod>2025-05-23T23:15:37-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/tutorials/mvs-tk5/setup-x3270/</loc>
+    <loc>https://dscobol.github.io/docs/tutorials/mvs-tk5/setup-x3270/</loc>
     <lastmod>2025-05-31T13:15:08-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/concepts/</loc>
+    <loc>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/applications/simple/</loc>
+  </url><url>
+    <loc>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/system-update/</loc>
+    <lastmod>2025-06-23T05:33:35-04:00</lastmod>
+  </url><url>
+    <loc>https://dscobol.github.io/docs/concepts/</loc>
     <lastmod>2025-05-23T23:15:37-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/install/ibm-db2/create-db2-db/</loc>
+    <loc>https://dscobol.github.io/docs/install/ibm-db2/create-db2-db/</loc>
     <lastmod>2025-05-23T23:15:37-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/install/postgresql/</loc>
+    <loc>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/install-dasd/</loc>
+    <lastmod>2025-06-23T05:33:35-04:00</lastmod>
+  </url><url>
+    <loc>https://dscobol.github.io/docs/install/postgresql/</loc>
     <lastmod>2025-05-30T22:47:20-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/tutorials/mvs-tk5/running-tk5/</loc>
-    <lastmod>2025-06-17T20:35:05-04:00</lastmod>
+    <loc>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/</loc>
+    <lastmod>2025-06-23T05:33:35-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/concepts/batch/</loc>
+    <loc>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/add-user/</loc>
+    <lastmod>2025-06-23T05:33:35-04:00</lastmod>
+  </url><url>
+    <loc>https://dscobol.github.io/docs/concepts/batch/</loc>
     <lastmod>2025-06-01T21:03:12-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/install/</loc>
-    <lastmod>2025-05-24T09:35:12-04:00</lastmod>
+    <loc>https://dscobol.github.io/docs/install/</loc>
+    <lastmod>2025-06-23T05:33:35-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/concepts/db2/</loc>
+    <loc>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/create-structure/</loc>
+    <lastmod>2025-06-23T05:33:35-04:00</lastmod>
+  </url><url>
+    <loc>https://dscobol.github.io/docs/concepts/db2/</loc>
     <lastmod>2025-06-01T21:03:12-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/tutorials/</loc>
-    <lastmod>2025-05-31T13:15:08-04:00</lastmod>
+    <loc>https://dscobol.github.io/docs/tutorials/</loc>
+    <lastmod>2025-06-23T05:33:35-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/news/</loc>
+    <loc>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/create-base-jcl/</loc>
+    <lastmod>2025-06-23T05:33:35-04:00</lastmod>
+  </url><url>
+    <loc>https://dscobol.github.io/blog/news/</loc>
     <lastmod>2025-05-21T21:13:20-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/releases/</loc>
+    <loc>https://dscobol.github.io/blog/releases/</loc>
     <lastmod>2025-05-21T21:13:20-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/concepts/orig-code/</loc>
+    <loc>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/allocate/</loc>
+  </url><url>
+    <loc>https://dscobol.github.io/docs/concepts/orig-code/</loc>
     <lastmod>2025-05-24T09:35:12-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/tutorials/mvs-tk5/x3270-profile/</loc>
+    <loc>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/adduser/</loc>
+  </url><url>
+    <loc>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/users/</loc>
+  </url><url>
+    <loc>https://dscobol.github.io/docs/tutorials/mvs-tk5/x3270-profile/</loc>
     <lastmod>2025-05-31T13:15:08-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/concepts/v1-changes/</loc>
+    <loc>https://dscobol.github.io/docs/concepts/v1-changes/</loc>
     <lastmod>2025-05-24T09:35:12-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/concepts/supply-parameters/</loc>
+    <loc>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/applications/simple/simple-cob/</loc>
+  </url><url>
+    <loc>https://dscobol.github.io/docs/concepts/supply-parameters/</loc>
     <lastmod>2025-05-24T09:35:12-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/tutorials/mvs-tk5/running-tk5/system/install-dasd/import_user_cat/</loc>
+    <loc>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/applications/simple/simple-jcl/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/concepts/version1/</loc>
+    <loc>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/simple-jcl/</loc>
+  </url><url>
+    <loc>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/install-dasd/import_user_cat/</loc>
+    <lastmod>2025-06-22T05:37:43-04:00</lastmod>
+  </url><url>
+    <loc>https://dscobol.github.io/docs/concepts/version1/</loc>
     <lastmod>2025-05-24T09:35:12-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/concepts/version2/</loc>
+    <loc>https://dscobol.github.io/docs/concepts/version2/</loc>
     <lastmod>2025-05-24T09:35:12-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/concepts/version3/</loc>
+    <loc>https://dscobol.github.io/docs/concepts/version3/</loc>
     <lastmod>2025-05-24T09:35:12-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/concepts/version4/</loc>
+    <loc>https://dscobol.github.io/docs/concepts/version4/</loc>
     <lastmod>2025-05-24T09:35:12-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/concepts/version5/</loc>
+    <loc>https://dscobol.github.io/docs/concepts/version5/</loc>
     <lastmod>2025-05-24T09:35:12-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2025/05/31/added-mvs-tk5-install-to-tutorals./</loc>
+    <loc>https://dscobol.github.io/blog/2025/05/31/added-mvs-tk5-install-to-tutorals./</loc>
     <lastmod>2025-05-31T13:15:08-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2025/05/27/verified-db2-repositories-work-with-updated-software./</loc>
+    <loc>https://dscobol.github.io/blog/2025/05/27/verified-db2-repositories-work-with-updated-software./</loc>
     <lastmod>2025-05-27T20:18:13-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2025/05/24/new-version-of-dscobol-website/</loc>
+    <loc>https://dscobol.github.io/blog/2025/05/24/new-version-of-dscobol-website/</loc>
     <lastmod>2025-05-24T16:43:07-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2025/05/24/version-2-of-dscobol-website/</loc>
+    <loc>https://dscobol.github.io/blog/2025/05/24/version-2-of-dscobol-website/</loc>
     <lastmod>2025-05-24T16:43:07-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2025/05/23/original-dscobol-website-replaced./</loc>
+    <loc>https://dscobol.github.io/blog/2025/05/23/original-dscobol-website-replaced./</loc>
     <lastmod>2025-05-24T16:43:07-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/</loc>
+    <loc>https://dscobol.github.io/blog/</loc>
     <lastmod>2025-05-21T21:13:20-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://dscobol.github.io/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/</loc>
-    <lastmod>2025-05-24T09:35:12-04:00</lastmod>
+    <loc>https://dscobol.github.io/docs/</loc>
+    <lastmod>2025-06-23T05:33:35-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://dscobol.github.io/</loc>
     <lastmod>2025-05-23T23:15:37-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/search/</loc>
+    <loc>https://dscobol.github.io/search/</loc>
     <lastmod>2025-05-21T21:13:20-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://dscobol.github.io/tags/</loc>
   </url>
 </urlset>

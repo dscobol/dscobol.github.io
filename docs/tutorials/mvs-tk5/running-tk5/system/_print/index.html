@@ -1,10 +1,10 @@
 <!doctype html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="canonical" type="text/html" href="http://localhost:1313/docs/tutorials/mvs-tk5/running-tk5/system/">
-<link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/docs/tutorials/mvs-tk5/running-tk5/system/index.xml">
+<link rel="canonical" type="text/html" href="https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/">
+<link rel="alternate" type="application/rss&#43;xml" href="https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/index.xml">
 <meta name="robots" content="noindex, nofollow">
 
 
@@ -21,7 +21,7 @@
 
 <title>System Administration | dscobol</title>
 <meta name="description" content="How to change/revise/delete things in the system.">
-<meta property="og:url" content="http://localhost:1313/docs/tutorials/mvs-tk5/running-tk5/system/">
+<meta property="og:url" content="https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/">
   <meta property="og:site_name" content="dscobol">
   <meta property="og:title" content="System Administration">
   <meta property="og:description" content="How to change/revise/delete things in the system.">
@@ -30,12 +30,13 @@
 
   <meta itemprop="name" content="System Administration">
   <meta itemprop="description" content="How to change/revise/delete things in the system.">
-  <meta itemprop="dateModified" content="2025-06-17T20:35:05-04:00">
-  <meta itemprop="wordCount" content="153">
+  <meta itemprop="dateModified" content="2025-06-23T05:33:35-04:00">
+  <meta itemprop="wordCount" content="238">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="System Administration">
   <meta name="twitter:description" content="How to change/revise/delete things in the system.">
-<link href="/scss/main.css" rel="stylesheet">
+<link rel="preload" href="/scss/main.min.587cc9ab2e7ed4cd045ee4c6e380598d6f8ad5201ff3aa9345c816a513404b85.css" as="style" integrity="sha256-WHzJqy5&#43;1M0EXuTG44BZjW&#43;K1SAf86qTRcgWpRNAS4U=" crossorigin="anonymous">
+<link href="/scss/main.min.587cc9ab2e7ed4cd045ee4c6e380598d6f8ad5201ff3aa9345c816a513404b85.css" rel="stylesheet" integrity="sha256-WHzJqy5&#43;1M0EXuTG44BZjW&#43;K1SAf86qTRcgWpRNAS4U=" crossorigin="anonymous">
 <script
   src="https://code.jquery.com/jquery-3.7.1.min.js"
   integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -71,7 +72,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.json"
+    data-offline-search-index-json-src="/offline-search-index.e29b1e192013f56186e4b99346a8a1c3.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -118,7 +119,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>1: <a href="#pg-9b6a2ab2292bc2ebe1357dff32bcdfc7">Update the RPi and the MVS-TK5 System</a></li>
+<li>1: <a href="#pg-6966c63faaf1719ec2de669055875917">Task List</a></li>
 
 
     
@@ -126,7 +127,15 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>2: <a href="#pg-2c3a724fbabe1f58b3e0c2b88e4b485a">Install DASD devices</a></li>
+<li>2: <a href="#pg-9b6a2ab2292bc2ebe1357dff32bcdfc7">Update the RPi and the MVS-TK5 System</a></li>
+
+
+    
+  
+    
+    
+	
+<li>3: <a href="#pg-2c3a724fbabe1f58b3e0c2b88e4b485a">Install DASD devices</a></li>
 
 
     
@@ -141,7 +150,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>2.1: <a href="#pg-982e44be2c194e77dac07827752f4acd">Add the CBT, SRC and SYSCPK volumes</a></li>
+<li>3.1: <a href="#pg-982e44be2c194e77dac07827752f4acd">Add the CBT, SRC and SYSCPK volumes</a></li>
 
 
     
@@ -149,7 +158,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>2.2: <a href="#pg-9661d15b8730783b81317e44f81d31bb">Add a 3350 DASD Volume to MVS-TK5</a></li>
+<li>3.2: <a href="#pg-9661d15b8730783b81317e44f81d31bb">Add a 3350 DASD Volume to MVS-TK5</a></li>
 
 
     
@@ -157,13 +166,69 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>2.3: <a href="#pg-ecd616954f9d56b5f54631d344c9daf7">JCL to catalog the volumes</a></li>
+<li>3.3: <a href="#pg-ecd616954f9d56b5f54631d344c9daf7">JCL to catalog the volumes</a></li>
 
 
     
   
 
     </ul>
+    
+  
+    
+    
+	
+<li>4: <a href="#pg-c31887f5998ea6b30ceabc134fa0e8e1">Add a new USER</a></li>
+
+
+    
+  
+    
+    
+	
+<li>5: <a href="#pg-24670c55ee4ee2c9329fbedb8b6512a0">Create a starting structure</a></li>
+
+
+    
+  
+    
+    
+	
+<li>6: <a href="#pg-7b25f5770cc3aa591be3231a7bda8655">Create some base JCL</a></li>
+
+
+    
+  
+    
+    
+	
+<li>7: <a href="#pg-b7c0fc35acb2d795e0fe6526922dd78c">Allocate the Base Structure</a></li>
+
+
+    
+  
+    
+    
+	
+<li>8: <a href="#pg-0333b924aa1be1845debde4151227a03">An example of ADDUSER</a></li>
+
+
+    
+  
+    
+    
+	
+<li>9: <a href="#pg-6f3cf1726874a2799f4fce45176df1de">An example of USERS</a></li>
+
+
+    
+  
+    
+    
+	
+<li>10: <a href="#pg-47385131c7cd15d055bc13398a532bc2">JCL - Simple</a></li>
+
+
     
   
 
@@ -173,13 +238,14 @@ This is the multi-page printable view of this section.
 <div class="content">
       
 
-<div class="alert alert-warning" role="alert">
+<div class="alert alert-primary" role="alert">
 <h4 class="alert-heading">Caution</h4>
 
-    <p>A lot of the tasks done by the System Administrator will need to use the
-Hercules console.</p>
-<p>If you installed MVS-TK5 per the instructions, The System should be up and
+    <p>If you installed MVS-TK5 per the instructions, The System should be up and
 running in daemon_mode.</p>
+<p>A lot of the tasks done by the System Administrator will need to use the
+Hercules/MVS console which is not available in daemon_mode.</p>
+<p>This presents <strong>a problem</strong>.</p>
 <p>To perform these tasks:</p>
 <ul>
 <li>
@@ -198,8 +264,7 @@ anything.</li>
 <ul>
 <li>Shutdown the MVS-TK5 system.</li>
 <li>Run the set_console_mode script.</li>
-<li>Read ahead to see if changes need to/can be made while the system is not
-running.</li>
+<li>Make any changes that need to/can be made while the system is not running.</li>
 <li>Manually IPL the system.</li>
 <li>Need to login to MVS-TK5 as HERC01 as this userid has permissions to do
 anything.</li>
@@ -212,6 +277,13 @@ anything.</li>
 <li>Run the set_daemon_mode script.</li>
 <li>Re-boot the RPi so the systemctl mvs.service starts up the MVS-TK5 system.</li>
 </ul>
+<p>I have no doubt that there are real System Administrators and/or System
+Programmers who will read this and think, &ldquo;What&hellip; Why do you keep shutting down
+and re-IPLing the system?&rdquo;</p>
+<p>The idea here is to get the System running in a &ldquo;state more similar&rdquo; to a &ldquo;real
+world system&rdquo; for an &ldquo;Application Programmer&rdquo;.</p>
+<p>An &ldquo;Application Programmer&rdquo; doesn&rsquo;t need access to the console.</p>
+<p>Once all the tasks are done, running the System in daemon_mode will be the norm.</p>
 
 
 </div>
@@ -237,7 +309,41 @@ anything.</li>
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-9b6a2ab2292bc2ebe1357dff32bcdfc7">1 - Update the RPi and the MVS-TK5 System</h1>
+	<h1 id="pg-6966c63faaf1719ec2de669055875917">1 - Task List</h1>
+    
+	<p>To make the MVS-TK5 System a little bit closer to a &ldquo;real world&rdquo; environment for
+an &ldquo;Application Programmer&rdquo;:</p>
+<p>The Application Programmer User Id will be &ldquo;DSCOBOL&rdquo;.</p>
+<h3 id="tasks">Tasks<a class="td-heading-self-link" href="#tasks" aria-label="Heading self-link"></a></h3>
+<ul>
+<li>Update the host environment and the MVS-TK5 System</li>
+<li>Create a DASD device just for that Programmer (why? why not!)</li>
+<li>Add a new USER</li>
+<li>Create a starting structure of PDS&rsquo;s for the Programmer</li>
+<li>Create some base JCL to:
+<ul>
+<li>compile COBOL programs</li>
+<li>run programs</li>
+<li>do some basic functions</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-9b6a2ab2292bc2ebe1357dff32bcdfc7">2 - Update the RPi and the MVS-TK5 System</h1>
     
 	
 
@@ -301,8 +407,8 @@ the RPi, so let&rsquo;s update it.</p>
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-2c3a724fbabe1f58b3e0c2b88e4b485a">2 - Install DASD devices</h1>
-    <div class="lead">Get some extra storage space.</div>
+	<h1 id="pg-2c3a724fbabe1f58b3e0c2b88e4b485a">3 - Install DASD devices</h1>
+    
 	<p>Over the years, IBM has developed various DASD devices (aka: Hard Drives(in the
 PC world)).</p>
 <p>Hercules has emulated those DASD devices and MVS-TK5 uses them for storage.</p>
@@ -402,7 +508,7 @@ that DASD type.</p>
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-982e44be2c194e77dac07827752f4acd">2.1 - Add the CBT, SRC and SYSCPK volumes</h1>
+	<h1 id="pg-982e44be2c194e77dac07827752f4acd">3.1 - Add the CBT, SRC and SYSCPK volumes</h1>
     <div class="lead">Lots of good stuff to learn here.</div>
 	
 
@@ -457,7 +563,7 @@ SYSCPK volumes.</p>
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-9661d15b8730783b81317e44f81d31bb">2.2 - Add a 3350 DASD Volume to MVS-TK5</h1>
+	<h1 id="pg-9661d15b8730783b81317e44f81d31bb">3.2 - Add a 3350 DASD Volume to MVS-TK5</h1>
     
 	
 
@@ -552,7 +658,7 @@ entry. Also, this member is mixed-case. Be sure to Uppercase the VOLID.</p>
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-ecd616954f9d56b5f54631d344c9daf7">2.3 - JCL to catalog the volumes</h1>
+	<h1 id="pg-ecd616954f9d56b5f54631d344c9daf7">3.3 - JCL to catalog the volumes</h1>
     <div class="lead">Catalog the CBT, SRC-, and the SYSCPK datasets.</div>
 	<pre tabindex="0"><code>//HERC01A JOB (SYS),&#39;IMPORT USER CAT&#39;,CLASS=A,MSGCLASS=H,
 // MSGLEVEL=(1,1),USER=HERC01,PASSWORD=CUL8TR
@@ -591,6 +697,307 @@ entry. Also, this member is mixed-case. Be sure to Uppercase the VOLID.</p>
     
 	
   
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-c31887f5998ea6b30ceabc134fa0e8e1">4 - Add a new USER</h1>
+    
+	<p>In this task, add a new User &ldquo;DSCOBOL&rdquo; with the Password &ldquo;DCOB&rdquo; as a regular
+User (not a System Programmer).</p>
+<h3 id="step-1">Step 1<a class="td-heading-self-link" href="#step-1" aria-label="Heading self-link"></a></h3>
+<p>Add the new User to <strong>SYS1.SECURE.CNTL(USERS)</strong></p>
+<p>Per the User Manual, the USERIDs must be in alphabetical order.</p>
+<p><a href="/docs/tutorials/mvs-tk5/running-tk5/system/users/">This</a> is an example of adding <strong>DSCOBOL</strong> to USERS.</p>
+<h3 id="step-2">Step 2<a class="td-heading-self-link" href="#step-2" aria-label="Heading self-link"></a></h3>
+<p>IF</p>
+<pre><code>the MVS-TK5 System is already running in console_mode and you have access to the console:
+
+    At the console prompt, enter
+        `/stop RAKF`
+        `/start RAKF`
+
+You should see a message that the User Table has been reloaded.
+</code></pre>
+<p>ELSE</p>
+<pre><code>the MVS-TK5 System is already running in daemon_mode:
+
+    Shutdown the MVS-TK5 System
+    Reboot the RPi.
+</code></pre>
+<p>The User Table with the new USER will be loaded during the IPL.</p>
+<h3 id="step-3">Step 3<a class="td-heading-self-link" href="#step-3" aria-label="Heading self-link"></a></h3>
+<p>With the System running AND being logged on as HERC01:</p>
+<p>Modify <strong>SYS2.JCLLIB(ADDUSER)</strong> and submit:</p>
+<p><a href="/docs/tutorials/mvs-tk5/running-tk5/system/adduser/">This</a> is an example of adding <strong>DSCOBOL</strong> to ADDUSER.</p>
+<p>Check that the job ran successfully and then logoff HERC01 and logon using the
+new USERID and PASSWORD.</p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-24670c55ee4ee2c9329fbedb8b6512a0">5 - Create a starting structure</h1>
+    
+	<p>When a new User is added with ADDUSER, the Job creates some PDSs for the new
+User.</p>
+<p>They are: (using DSCOBOL as an example)</p>
+<pre tabindex="0"><code>├── DSCOBOL.CMDPROC
+├── DSCOBOL.EXEC
+├── DSCOBOL.TEST.ASM
+├── DSCOBOL.TEST.CNTL
+├── DSCOBOL.TEST.LOADLIB
+</code></pre><p>These are created on the TSO Volumes.</p>
+<h3 id="this-mvs-tk5-system">This MVS-TK5 System<a class="td-heading-self-link" href="#this-mvs-tk5-system" aria-label="Heading self-link"></a></h3>
+<p>Different systems have different structures; this is what this will be:</p>
+<pre tabindex="0"><code>├── DSCOBOL.BASE.COBOL
+├── DSCOBOL.BASE.COPYLIB
+├── DSCOBOL.BASE.JCL
+├── DSCOBOL.BASE.LOADLIB
+├── DSCOBOL.BASE.PROCLIB
+</code></pre><p><a href="/docs/tutorials/mvs-tk5/running-tk5/system/allocate/">ALLOCATE</a> will create these PDSs on the DSCOB1 Volume.</p>
+<p>Upload or type this JCL into a new Member in DSCOBOL.TEST.CNTL. (or you could
+upload it to HERC01.TEST.CNTL and use it to create the structure for other USERs
+as well).</p>
+<p>These PDSs will be the <em>Base</em> of the Development Environment for the new User.</p>
+<p>These PDSs will be used in the &ldquo;Application Programming&rdquo; section of this
+tutorial,</p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-7b25f5770cc3aa591be3231a7bda8655">6 - Create some base JCL</h1>
+    
+	<p><a href="/docs/tutorials/mvs-tk5/running-tk5/system/simple-jcl/">SIMPLE</a> is an example of a very simple Job to compile and run
+a simple COBOL program.</p>
+<p>Upload or type this JCL into a new Member in DSCOBOL.BASE.JCL.</p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-b7c0fc35acb2d795e0fe6526922dd78c">7 - Allocate the Base Structure</h1>
+    
+	<pre tabindex="0"><code>//DSCOBOLB JOB (1), &#39;ALLOCATE LIBRARIES&#39;,
+//         CLASS=A,MSGCLASS=H,MSGLEVEL=(1,1)
+//****************************************************************
+//*
+//*************************
+//* CLEAN UP DATASETS
+//*************************
+//DELETE   EXEC PGM=IEFBR14
+//SYSPRINT DD SYSOUT=*
+//SYSOUT   DD SYSOUT=*
+//SYSUDUMP DD SYSOUT=*
+//DD1      DD DSN=DSCOBOL.BASE.COBOL,
+//            DISP=(MOD,DELETE,DELETE),
+//            SPACE=(CYL,(0)),
+//            UNIT=3350,VOL=SER=DSCOB1
+//DD2      DD DSN=DSCOBOL.BASE.COPYLIB,
+//            DISP=(MOD,DELETE,DELETE),
+//            SPACE=(CYL,(0)),
+//            UNIT=3350,VOL=SER=DSCOB1
+//DD3      DD DSN=DSCOBOL.BASE.JCL,
+//            DISP=(MOD,DELETE,DELETE),
+//            SPACE=(CYL,(0)),
+//            UNIT=3350,VOL=SER=DSCOB1
+//DD4      DD DSN=DSCOBOL.BASE.LOADLIB,
+//            DISP=(MOD,DELETE,DELETE),
+//            SPACE=(CYL,(0)),
+//            UNIT=3350,VOL=SER=DSCOB1
+//DD5      DD DSN=DSCOBOL.BASE.PROCLIB,
+//            DISP=(MOD,DELETE,DELETE),
+//            SPACE=(CYL,(0)),
+//            UNIT=3350,VOL=SER=DSCOB1
+//*
+//*************************
+//* ALLOCATE DATASETS
+//*************************
+//ALLOCAT EXEC PGM=IEFBR14,COND=(8,LT)
+//SYSOUT   DD SYSOUT=*
+//SYSPRINT DD SYSOUT=*
+//SYSUDUMP DD SYSOUT=*
+/*
+//DD1      DD DSN=DSCOBOL.BASE.COBOL,
+//            DISP=(,CATLG),
+//            UNIT=3350,VOL=SER=DSCOB1,
+//            SPACE=(CYL,(1,1,20)),
+//            DCB=(RECFM=FB,LRECL=80,BLKSIZE=19040)
+/*
+//DD2      DD DSN=DSCOBOL.BASE.COPYLIB,
+//            DISP=(,CATLG),
+//            UNIT=3350,VOL=SER=DSCOB1,
+//            SPACE=(CYL,(1,1,20)),
+//            DCB=(RECFM=FB,LRECL=80,BLKSIZE=19040)
+/*
+//DD3      DD DSN=DSCOBOL.BASE.JCL,
+//            DISP=(,CATLG),
+//            UNIT=3350,VOL=SER=DSCOB1,
+//            SPACE=(CYL,(1,1,20)),
+//            DCB=(RECFM=FB,LRECL=80,BLKSIZE=19040)
+/*
+//DD4      DD DSN=DSCOBOL.BASE.LOADLIB,
+//            DISP=(,CATLG),
+//            UNIT=3350,VOL=SER=DSCOB1,
+//            SPACE=(CYL,(1,1,20)),
+//            DCB=(RECFM=U,BLKSIZE=19069)
+/*
+//DD5      DD DSN=DSCOBOL.BASE.PROCLIB,
+//            DISP=(,CATLG),
+//            UNIT=3350,VOL=SER=DSCOB1,
+//            SPACE=(CYL,(1,1,20)),
+//            DCB=(RECFM=FB,LRECL=80,BLKSIZE=19040)
+/*
+//*
+</code></pre>
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-0333b924aa1be1845debde4151227a03">8 - An example of ADDUSER</h1>
+    <div class="lead">Add DSCOBOL as a new User</div>
+	<pre tabindex="0"><code>//HERC01A JOB  (TSO),
+//             &#39;Add TSO users&#39;,
+//             CLASS=A,
+//             MSGCLASS=H,
+//             COND=(0,NE),
+//             MSGLEVEL=(1,1)
+//*********************************************************************
+//*
+//* Name: SYS2.JCLLIB(ADDUSER)
+//*
+//* Desc: Add new TSO users
+//*
+//* Note: The newly created userids do not have a password set
+//*       This jobs deletes the existing datasets with &amp;HLQ !!!!
+//*
+//*********************************************************************
+//*
+//ADDUSER EXEC ADDUSER,HLQ=DSCOBOL,UTYPE=USER
+</code></pre>
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-6f3cf1726874a2799f4fce45176df1de">9 - An example of USERS</h1>
+    <div class="lead">Add DSCOBOL as a new User</div>
+	<pre tabindex="0"><code>************************************************
+*                                              *
+* RAKF user definitions for TK5                *
+*                                              *
+************************************************
+DSCOBOL  USER     DCOB     N
+*
+FTPD     FTPD     FTPPW    N
+* HERC01 is authorized for everything including RAKF update
+*
+HERC01   ADMIN   *CUL8TR   Y
+HERC01   RAKFADM  CUL8TR   Y
+*
+* HERC02 is authorized for everything except RAKF update
+*
+HERC02   ADMIN    CUL8TR   Y
+*
+* herc03 and HERC04 are regular users
+*
+HERC03   USER     PASS4U   N
+HERC04   USER     PASS4U   N
+*
+* IBMUSER is authorized for everything except RAKF update
+*
+IBMUSER  ADMIN    IBMPASS  Y
+*
+</code></pre>
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-47385131c7cd15d055bc13398a532bc2">10 - JCL - Simple</h1>
+    
+	<pre tabindex="0"><code>//DSCOBOL1 JOB 1,
+//         CLASS=A,
+//         MSGCLASS=H,
+//         REGION=8M,TIME=1440,
+//         MSGLEVEL=(1,1)
+//*
+//SIMPLE   EXEC COBUCG,
+//         PARM.COB=&#39;FLAGW,LOAD,SUPMAP,SIZE=2048K,BUF=1024K&#39;
+//COB.SYSPUNCH DD DUMMY
+//COB.SYSIN    DD DISP=SHR,DSN=&amp;SYSUID..BASE.COBOL(SIMPLE)
+//COB.SYSLIB   DD DISP=SHR,DSN=SYS1.COBLIB
+//GO.SYSOUT    DD SYSOUT=*
+</code></pre>
+</div>
+
+
+
+    
+	
+  
 
 
 
@@ -623,8 +1030,8 @@ entry. Also, this member is mixed-case. Be sure to Uppercase the VOLID.</p>
 </footer>
 
     </div>
-    <script src="/js/main.js"></script>
-<script defer src="/js/click-to-copy.js" crossorigin="anonymous"></script>
+    <script src="/js/main.min.032ba2ecbd3ce89b96bffcfec71c5da352125ee752e9873c3e0098f7c32a6497.js" integrity="sha256-Ayui7L086JuWv/z&#43;xxxdo1ISXudS6Yc8PgCY98MqZJc=" crossorigin="anonymous"></script>
+<script defer src="/js/click-to-copy.min.73478a7d4807698aed7e355eb23f9890ca18fea3158604c8471746d046702bad.js" integrity="sha256-c0eKfUgHaYrtfjVesj&#43;YkMoY/qMVhgTIRxdG0EZwK60=" crossorigin="anonymous"></script>
 <script src='/js/tabpane-persist.js'></script>
 
   </body>

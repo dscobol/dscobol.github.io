@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Simple - a very simple, basic COBOL program on dscobol</title>
+    <link>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/applications/simple/</link>
+    <description>Recent content in Simple - a very simple, basic COBOL program on dscobol</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/applications/simple/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>COBOL - SIMPLE</title>
+      <link>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/applications/simple/simple-cob/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/applications/simple/simple-cob/</guid>
+      <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;       IDENTIFICATION DIVISION.&#xA;       PROGRAM-ID. SMALLESTPROGRAM.&#xA;       ENVIRONMENT DIVISION.&#xA;       DATA DIVISION.&#xA;       FILE SECTION.&#xA;       WORKING-STORAGE SECTION.&#xA;       PROCEDURE DIVISION.&#xA;       MAIN-PROCEDURE.&#xA;           DISPLAY &amp;#39;THIS IS DSCOBOL ON MVS-TK5&amp;#39;.&#xA;           STOP RUN.&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>JCL - Simple</title>
+      <link>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/applications/simple/simple-jcl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/applications/simple/simple-jcl/</guid>
+      <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;//DSCOBOL1 JOB 1,&#xA;//         CLASS=A,&#xA;//         MSGCLASS=H,&#xA;//         REGION=8M,TIME=1440,&#xA;//         MSGLEVEL=(1,1)&#xA;//*&#xA;//SIMPLE   EXEC COBUCG,&#xA;//         PARM.COB=&amp;#39;FLAGW,LOAD,SUPMAP,SIZE=2048K,BUF=1024K&amp;#39;&#xA;//COB.SYSPUNCH DD DUMMY&#xA;//COB.SYSIN    DD DISP=SHR,DSN=&amp;amp;SYSUID..BASE.COBOL(SIMPLE)&#xA;//COB.SYSLIB   DD DISP=SHR,DSN=SYS1.COBLIB&#xA;//GO.SYSOUT    DD SYSOUT=*&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -2,17 +2,73 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>System Administration on dscobol</title>
-    <link>http://localhost:1313/docs/tutorials/mvs-tk5/running-tk5/system/</link>
+    <link>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/</link>
     <description>Recent content in System Administration on dscobol</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="http://localhost:1313/docs/tutorials/mvs-tk5/running-tk5/system/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Task List</title>
+      <link>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/tasks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/tasks/</guid>
+      <description>&lt;p&gt;To make the MVS-TK5 System a little bit closer to a &amp;ldquo;real world&amp;rdquo; environment for&#xA;an &amp;ldquo;Application Programmer&amp;rdquo;:&lt;/p&gt;&#xA;&lt;p&gt;The Application Programmer User Id will be &amp;ldquo;DSCOBOL&amp;rdquo;.&lt;/p&gt;&#xA;&lt;h3 id=&#34;tasks&#34;&gt;Tasks&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#tasks&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Update the host environment and the MVS-TK5 System&lt;/li&gt;&#xA;&lt;li&gt;Create a DASD device just for that Programmer (why? why not!)&lt;/li&gt;&#xA;&lt;li&gt;Add a new USER&lt;/li&gt;&#xA;&lt;li&gt;Create a starting structure of PDS&amp;rsquo;s for the Programmer&lt;/li&gt;&#xA;&lt;li&gt;Create some base JCL to:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;compile COBOL programs&lt;/li&gt;&#xA;&lt;li&gt;run programs&lt;/li&gt;&#xA;&lt;li&gt;do some basic functions&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
     <item>
       <title>Update the RPi and the MVS-TK5 System</title>
-      <link>http://localhost:1313/docs/tutorials/mvs-tk5/running-tk5/system/system-update/</link>
+      <link>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/system-update/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/tutorials/mvs-tk5/running-tk5/system/system-update/</guid>
+      <guid>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/system-update/</guid>
       <description>&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;&#xA;&lt;p&gt;If you installed MVS-TK5 per the instructions:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Shutdown MVS-TK5.&lt;/li&gt;&#xA;&lt;li&gt;The Hercules console is &lt;strong&gt;not&lt;/strong&gt; required for this task.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;p&gt;The RPi 3 Model B+ is a Quad Core so it has &amp;ldquo;4 CPUs&amp;rdquo;.&lt;/p&gt;&#xA;&lt;p&gt;In this installation, the MVS-TK5 system is the only thing that is running on&#xA;the RPi, so let&amp;rsquo;s update it.&lt;/p&gt;&#xA;&lt;h2 id=&#34;with-mvs-tk5-system-not-running&#34;&gt;&lt;strong&gt;With MVS-TK5 System NOT Running&lt;/strong&gt;&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#with-mvs-tk5-system-not-running&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;To use the Hercules utilities:&lt;/p&gt;&#xA;&lt;p&gt;Run &lt;code&gt;uname -m&lt;/code&gt; to determine the architecture of your computer.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Add a new USER</title>
+      <link>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/add-user/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/add-user/</guid>
+      <description>&lt;p&gt;In this task, add a new User &amp;ldquo;DSCOBOL&amp;rdquo; with the Password &amp;ldquo;DCOB&amp;rdquo; as a regular&#xA;User (not a System Programmer).&lt;/p&gt;&#xA;&lt;h3 id=&#34;step-1&#34;&gt;Step 1&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#step-1&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;p&gt;Add the new User to &lt;strong&gt;SYS1.SECURE.CNTL(USERS)&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Per the User Manual, the USERIDs must be in alphabetical order.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/users/&#34;&gt;This&lt;/a&gt; is an example of adding &lt;strong&gt;DSCOBOL&lt;/strong&gt; to USERS.&lt;/p&gt;&#xA;&lt;h3 id=&#34;step-2&#34;&gt;Step 2&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#step-2&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;p&gt;IF&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;the MVS-TK5 System is already running in console_mode and you have access to the console:&#xA;&#xA;    At the console prompt, enter&#xA;        `/stop RAKF`&#xA;        `/start RAKF`&#xA;&#xA;You should see a message that the User Table has been reloaded.&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;ELSE&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Create a starting structure</title>
+      <link>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/create-structure/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/create-structure/</guid>
+      <description>&lt;p&gt;When a new User is added with ADDUSER, the Job creates some PDSs for the new&#xA;User.&lt;/p&gt;&#xA;&lt;p&gt;They are: (using DSCOBOL as an example)&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;├── DSCOBOL.CMDPROC&#xA;├── DSCOBOL.EXEC&#xA;├── DSCOBOL.TEST.ASM&#xA;├── DSCOBOL.TEST.CNTL&#xA;├── DSCOBOL.TEST.LOADLIB&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;These are created on the TSO Volumes.&lt;/p&gt;&#xA;&lt;h3 id=&#34;this-mvs-tk5-system&#34;&gt;This MVS-TK5 System&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#this-mvs-tk5-system&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;p&gt;Different systems have different structures; this is what this will be:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;├── DSCOBOL.BASE.COBOL&#xA;├── DSCOBOL.BASE.COPYLIB&#xA;├── DSCOBOL.BASE.JCL&#xA;├── DSCOBOL.BASE.LOADLIB&#xA;├── DSCOBOL.BASE.PROCLIB&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;a href=&#34;https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/allocate/&#34;&gt;ALLOCATE&lt;/a&gt; will create these PDSs on the DSCOB1 Volume.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Create some base JCL</title>
+      <link>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/create-base-jcl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/create-base-jcl/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/simple-jcl/&#34;&gt;SIMPLE&lt;/a&gt; is an example of a very simple Job to compile and run&#xA;a simple COBOL program.&lt;/p&gt;&#xA;&lt;p&gt;Upload or type this JCL into a new Member in DSCOBOL.BASE.JCL.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Allocate the Base Structure</title>
+      <link>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/allocate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/allocate/</guid>
+      <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;//DSCOBOLB JOB (1), &amp;#39;ALLOCATE LIBRARIES&amp;#39;,&#xA;//         CLASS=A,MSGCLASS=H,MSGLEVEL=(1,1)&#xA;//****************************************************************&#xA;//*&#xA;//*************************&#xA;//* CLEAN UP DATASETS&#xA;//*************************&#xA;//DELETE   EXEC PGM=IEFBR14&#xA;//SYSPRINT DD SYSOUT=*&#xA;//SYSOUT   DD SYSOUT=*&#xA;//SYSUDUMP DD SYSOUT=*&#xA;//DD1      DD DSN=DSCOBOL.BASE.COBOL,&#xA;//            DISP=(MOD,DELETE,DELETE),&#xA;//            SPACE=(CYL,(0)),&#xA;//            UNIT=3350,VOL=SER=DSCOB1&#xA;//DD2      DD DSN=DSCOBOL.BASE.COPYLIB,&#xA;//            DISP=(MOD,DELETE,DELETE),&#xA;//            SPACE=(CYL,(0)),&#xA;//            UNIT=3350,VOL=SER=DSCOB1&#xA;//DD3      DD DSN=DSCOBOL.BASE.JCL,&#xA;//            DISP=(MOD,DELETE,DELETE),&#xA;//            SPACE=(CYL,(0)),&#xA;//            UNIT=3350,VOL=SER=DSCOB1&#xA;//DD4      DD DSN=DSCOBOL.BASE.LOADLIB,&#xA;//            DISP=(MOD,DELETE,DELETE),&#xA;//            SPACE=(CYL,(0)),&#xA;//            UNIT=3350,VOL=SER=DSCOB1&#xA;//DD5      DD DSN=DSCOBOL.BASE.PROCLIB,&#xA;//            DISP=(MOD,DELETE,DELETE),&#xA;//            SPACE=(CYL,(0)),&#xA;//            UNIT=3350,VOL=SER=DSCOB1&#xA;//*&#xA;//*************************&#xA;//* ALLOCATE DATASETS&#xA;//*************************&#xA;//ALLOCAT EXEC PGM=IEFBR14,COND=(8,LT)&#xA;//SYSOUT   DD SYSOUT=*&#xA;//SYSPRINT DD SYSOUT=*&#xA;//SYSUDUMP DD SYSOUT=*&#xA;/*&#xA;//DD1      DD DSN=DSCOBOL.BASE.COBOL,&#xA;//            DISP=(,CATLG),&#xA;//            UNIT=3350,VOL=SER=DSCOB1,&#xA;//            SPACE=(CYL,(1,1,20)),&#xA;//            DCB=(RECFM=FB,LRECL=80,BLKSIZE=19040)&#xA;/*&#xA;//DD2      DD DSN=DSCOBOL.BASE.COPYLIB,&#xA;//            DISP=(,CATLG),&#xA;//            UNIT=3350,VOL=SER=DSCOB1,&#xA;//            SPACE=(CYL,(1,1,20)),&#xA;//            DCB=(RECFM=FB,LRECL=80,BLKSIZE=19040)&#xA;/*&#xA;//DD3      DD DSN=DSCOBOL.BASE.JCL,&#xA;//            DISP=(,CATLG),&#xA;//            UNIT=3350,VOL=SER=DSCOB1,&#xA;//            SPACE=(CYL,(1,1,20)),&#xA;//            DCB=(RECFM=FB,LRECL=80,BLKSIZE=19040)&#xA;/*&#xA;//DD4      DD DSN=DSCOBOL.BASE.LOADLIB,&#xA;//            DISP=(,CATLG),&#xA;//            UNIT=3350,VOL=SER=DSCOB1,&#xA;//            SPACE=(CYL,(1,1,20)),&#xA;//            DCB=(RECFM=U,BLKSIZE=19069)&#xA;/*&#xA;//DD5      DD DSN=DSCOBOL.BASE.PROCLIB,&#xA;//            DISP=(,CATLG),&#xA;//            UNIT=3350,VOL=SER=DSCOB1,&#xA;//            SPACE=(CYL,(1,1,20)),&#xA;//            DCB=(RECFM=FB,LRECL=80,BLKSIZE=19040)&#xA;/*&#xA;//*&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>An example of ADDUSER</title>
+      <link>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/adduser/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/adduser/</guid>
+      <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;//HERC01A JOB  (TSO),&#xA;//             &amp;#39;Add TSO users&amp;#39;,&#xA;//             CLASS=A,&#xA;//             MSGCLASS=H,&#xA;//             COND=(0,NE),&#xA;//             MSGLEVEL=(1,1)&#xA;//*********************************************************************&#xA;//*&#xA;//* Name: SYS2.JCLLIB(ADDUSER)&#xA;//*&#xA;//* Desc: Add new TSO users&#xA;//*&#xA;//* Note: The newly created userids do not have a password set&#xA;//*       This jobs deletes the existing datasets with &amp;amp;HLQ !!!!&#xA;//*&#xA;//*********************************************************************&#xA;//*&#xA;//ADDUSER EXEC ADDUSER,HLQ=DSCOBOL,UTYPE=USER&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>An example of USERS</title>
+      <link>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/users/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/users/</guid>
+      <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;************************************************&#xA;*                                              *&#xA;* RAKF user definitions for TK5                *&#xA;*                                              *&#xA;************************************************&#xA;DSCOBOL  USER     DCOB     N&#xA;*&#xA;FTPD     FTPD     FTPPW    N&#xA;* HERC01 is authorized for everything including RAKF update&#xA;*&#xA;HERC01   ADMIN   *CUL8TR   Y&#xA;HERC01   RAKFADM  CUL8TR   Y&#xA;*&#xA;* HERC02 is authorized for everything except RAKF update&#xA;*&#xA;HERC02   ADMIN    CUL8TR   Y&#xA;*&#xA;* herc03 and HERC04 are regular users&#xA;*&#xA;HERC03   USER     PASS4U   N&#xA;HERC04   USER     PASS4U   N&#xA;*&#xA;* IBMUSER is authorized for everything except RAKF update&#xA;*&#xA;IBMUSER  ADMIN    IBMPASS  Y&#xA;*&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>JCL - Simple</title>
+      <link>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/simple-jcl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/simple-jcl/</guid>
+      <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;//DSCOBOL1 JOB 1,&#xA;//         CLASS=A,&#xA;//         MSGCLASS=H,&#xA;//         REGION=8M,TIME=1440,&#xA;//         MSGLEVEL=(1,1)&#xA;//*&#xA;//SIMPLE   EXEC COBUCG,&#xA;//         PARM.COB=&amp;#39;FLAGW,LOAD,SUPMAP,SIZE=2048K,BUF=1024K&amp;#39;&#xA;//COB.SYSPUNCH DD DUMMY&#xA;//COB.SYSIN    DD DISP=SHR,DSN=&amp;amp;SYSUID..BASE.COBOL(SIMPLE)&#xA;//COB.SYSLIB   DD DISP=SHR,DSN=SYS1.COBLIB&#xA;//GO.SYSOUT    DD SYSOUT=*&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
   </channel>
 </rss>

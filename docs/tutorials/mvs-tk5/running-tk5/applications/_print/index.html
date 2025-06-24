@@ -1,10 +1,10 @@
 <!doctype html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="canonical" type="text/html" href="http://localhost:1313/docs/tutorials/mvs-tk5/running-tk5/applications/">
-<link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/docs/tutorials/mvs-tk5/running-tk5/applications/index.xml">
+<link rel="canonical" type="text/html" href="https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/applications/">
+<link rel="alternate" type="application/rss&#43;xml" href="https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/applications/index.xml">
 <meta name="robots" content="noindex, nofollow">
 
 
@@ -21,7 +21,7 @@
 
 <title>Application Programming | dscobol</title>
 <meta name="description" content="How to use, compile and run programs.">
-<meta property="og:url" content="http://localhost:1313/docs/tutorials/mvs-tk5/running-tk5/applications/">
+<meta property="og:url" content="https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/applications/">
   <meta property="og:site_name" content="dscobol">
   <meta property="og:title" content="Application Programming">
   <meta property="og:description" content="How to use, compile and run programs.">
@@ -31,11 +31,11 @@
   <meta itemprop="name" content="Application Programming">
   <meta itemprop="description" content="How to use, compile and run programs.">
   <meta itemprop="dateModified" content="2025-06-13T19:31:58-04:00">
-  <meta itemprop="wordCount" content="1">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Application Programming">
   <meta name="twitter:description" content="How to use, compile and run programs.">
-<link href="/scss/main.css" rel="stylesheet">
+<link rel="preload" href="/scss/main.min.587cc9ab2e7ed4cd045ee4c6e380598d6f8ad5201ff3aa9345c816a513404b85.css" as="style" integrity="sha256-WHzJqy5&#43;1M0EXuTG44BZjW&#43;K1SAf86qTRcgWpRNAS4U=" crossorigin="anonymous">
+<link href="/scss/main.min.587cc9ab2e7ed4cd045ee4c6e380598d6f8ad5201ff3aa9345c816a513404b85.css" rel="stylesheet" integrity="sha256-WHzJqy5&#43;1M0EXuTG44BZjW&#43;K1SAf86qTRcgWpRNAS4U=" crossorigin="anonymous">
 <script
   src="https://code.jquery.com/jquery-3.7.1.min.js"
   integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -71,7 +71,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.json"
+    data-offline-search-index-json-src="/offline-search-index.e29b1e192013f56186e4b99346a8a1c3.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -115,13 +115,47 @@ This is the multi-page printable view of this section.
   
 
   
+    
+    
+	
+<li>1: <a href="#pg-39c17105fc1f3f2dba9b5936216d4fb3">Simple - a very simple, basic COBOL program</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>1.1: <a href="#pg-4c204720ae02f82c01371599dcdfa8b1">COBOL - SIMPLE</a></li>
+
+
+    
+  
+    
+    
+	
+<li>1.2: <a href="#pg-3e3d63d8eb25195213d650e6f83e8b72">JCL - Simple</a></li>
+
+
+    
+  
+
+    </ul>
+    
+  
 
     </ul>
 
 
 <div class="content">
-      <h2 id="tbd">TBD<a class="td-heading-self-link" href="#tbd" aria-label="Heading self-link"></a></h2>
-
+      
 </div>
 </div>
 
@@ -134,6 +168,103 @@ This is the multi-page printable view of this section.
   
   
 
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-39c17105fc1f3f2dba9b5936216d4fb3">1 - Simple - a very simple, basic COBOL program</h1>
+    
+	<p>Using DSCOBOL as an example.</p>
+<p>Using the structure created in &ldquo;System Administration&rdquo;, upload or type this
+<a href="/docs/tutorials/mvs-tk5/running-tk5/applications/simple/simple-cob/">COBOL</a> program into <strong>DSCOBOL.BASE.COBOL(SIMPLE)</strong>.</p>
+<p>The JCL to run this should be in <strong>DSCOBOL.BASE.JCL(SIMPLE)</strong> but if not
+<a href="/docs/tutorials/mvs-tk5/running-tk5/applications/simple/simple-jcl/">SIMPLE</a> is the Job to upload or type.</p>
+<p><strong>Submit</strong> the DSCOBOL.BASE.JCL(SIMPLE) job.</p>
+<p>Look at the output:</p>
+<ul>
+<li>Should see a Return Code of 0000.</li>
+<li>At the bottom, should see &ldquo;THIS IS DSCOBOL ON MVS-TK5&rdquo; (unless you changed it
+to something else).</li>
+</ul>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-4c204720ae02f82c01371599dcdfa8b1">1.1 - COBOL - SIMPLE</h1>
+    
+	<pre tabindex="0"><code>       IDENTIFICATION DIVISION.
+       PROGRAM-ID. SMALLESTPROGRAM.
+       ENVIRONMENT DIVISION.
+       DATA DIVISION.
+       FILE SECTION.
+       WORKING-STORAGE SECTION.
+       PROCEDURE DIVISION.
+       MAIN-PROCEDURE.
+           DISPLAY &#39;THIS IS DSCOBOL ON MVS-TK5&#39;.
+           STOP RUN.
+</code></pre>
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-3e3d63d8eb25195213d650e6f83e8b72">1.2 - JCL - Simple</h1>
+    
+	<pre tabindex="0"><code>//DSCOBOL1 JOB 1,
+//         CLASS=A,
+//         MSGCLASS=H,
+//         REGION=8M,TIME=1440,
+//         MSGLEVEL=(1,1)
+//*
+//SIMPLE   EXEC COBUCG,
+//         PARM.COB=&#39;FLAGW,LOAD,SUPMAP,SIZE=2048K,BUF=1024K&#39;
+//COB.SYSPUNCH DD DUMMY
+//COB.SYSIN    DD DISP=SHR,DSN=&amp;SYSUID..BASE.COBOL(SIMPLE)
+//COB.SYSLIB   DD DISP=SHR,DSN=SYS1.COBLIB
+//GO.SYSOUT    DD SYSOUT=*
+</code></pre>
+</div>
+
+
+
+    
+	
+  
+
+    
+	
   
 
 
@@ -167,8 +298,8 @@ This is the multi-page printable view of this section.
 </footer>
 
     </div>
-    <script src="/js/main.js"></script>
-<script defer src="/js/click-to-copy.js" crossorigin="anonymous"></script>
+    <script src="/js/main.min.032ba2ecbd3ce89b96bffcfec71c5da352125ee752e9873c3e0098f7c32a6497.js" integrity="sha256-Ayui7L086JuWv/z&#43;xxxdo1ISXudS6Yc8PgCY98MqZJc=" crossorigin="anonymous"></script>
+<script defer src="/js/click-to-copy.min.73478a7d4807698aed7e355eb23f9890ca18fea3158604c8471746d046702bad.js" integrity="sha256-c0eKfUgHaYrtfjVesj&#43;YkMoY/qMVhgTIRxdG0EZwK60=" crossorigin="anonymous"></script>
 <script src='/js/tabpane-persist.js'></script>
 
   </body>
