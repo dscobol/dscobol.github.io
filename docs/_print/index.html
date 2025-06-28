@@ -76,7 +76,7 @@ GnuCOBOL - GNU/Linux (Pop!_OS) - COBOL accessing Text files, Indexed data files,
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.e29b1e192013f56186e4b99346a8a1c3.json"
+    data-offline-search-index-json-src="/offline-search-index.27656242cedaf25330c66be20e0a7f5c.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -3480,7 +3480,17 @@ COBOL programs!&rdquo;.</p>
 running in daemon_mode.</p>
 <p>A lot of the tasks done by the System Administrator will need to use the
 Hercules/MVS console which is not available in daemon_mode.</p>
-<p>This presents <strong>a problem</strong>.</p>
+<p>I have no doubt that there are real System Administrators and/or System
+Programmers who will read through this tutorial and think, &ldquo;What&hellip; Why do you
+keep shutting down and re-IPLing the system?&rdquo;</p>
+<p>My goal is to get a System running in a &ldquo;state more similar&rdquo; to a &ldquo;real world
+system&rdquo; for an &ldquo;Application Programmer&rdquo;.</p>
+<p>An &ldquo;Application Programmer&rdquo; doesn&rsquo;t need access to the Hercules/MVS console.</p>
+<p>They just use a 3270 Terminal or one of the newer methods of creating and
+running programs (VSCode + Zowe, use ncat or rje80 or IND$FILE, etc.) to access
+the System.</p>
+<p>Once all the tasks are done, running the System in daemon_mode will be the norm.</p>
+<p>So, this presents <strong>a problem</strong>.</p>
 <p>To perform these tasks:</p>
 <ul>
 <li>
@@ -3512,13 +3522,6 @@ anything.</li>
 <li>Run the set_daemon_mode script.</li>
 <li>Re-boot the RPi so the systemctl mvs.service starts up the MVS-TK5 system.</li>
 </ul>
-<p>I have no doubt that there are real System Administrators and/or System
-Programmers who will read this and think, &ldquo;What&hellip; Why do you keep shutting down
-and re-IPLing the system?&rdquo;</p>
-<p>The idea here is to get the System running in a &ldquo;state more similar&rdquo; to a &ldquo;real
-world system&rdquo; for an &ldquo;Application Programmer&rdquo;.</p>
-<p>An &ldquo;Application Programmer&rdquo; doesn&rsquo;t need access to the console.</p>
-<p>Once all the tasks are done, running the System in daemon_mode will be the norm.</p>
 
 
 </div>

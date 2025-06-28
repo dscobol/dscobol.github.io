@@ -26,9 +26,11 @@
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="docs">
+    <meta property="article:modified_time" content="2025-06-24T07:12:24-04:00">
 
   <meta itemprop="name" content="Allocate the Base Structure">
   <meta itemprop="description" content="//DSCOBOLB JOB (1), &#39;ALLOCATE LIBRARIES&#39;, // CLASS=A,MSGCLASS=H,MSGLEVEL=(1,1) //**************************************************************** //* //************************* //* CLEAN UP DATASETS //************************* //DELETE EXEC PGM=IEFBR14 //SYSPRINT DD SYSOUT=* //SYSOUT DD SYSOUT=* //SYSUDUMP DD SYSOUT=* //DD1 DD DSN=DSCOBOL.BASE.COBOL, // DISP=(MOD,DELETE,DELETE), // SPACE=(CYL,(0)), // UNIT=3350,VOL=SER=DSCOB1 //DD2 DD DSN=DSCOBOL.BASE.COPYLIB, // DISP=(MOD,DELETE,DELETE), // SPACE=(CYL,(0)), // UNIT=3350,VOL=SER=DSCOB1 //DD3 DD DSN=DSCOBOL.BASE.JCL, // DISP=(MOD,DELETE,DELETE), // SPACE=(CYL,(0)), // UNIT=3350,VOL=SER=DSCOB1 //DD4 DD DSN=DSCOBOL.BASE.LOADLIB, // DISP=(MOD,DELETE,DELETE), // SPACE=(CYL,(0)), // UNIT=3350,VOL=SER=DSCOB1 //DD5 DD DSN=DSCOBOL.BASE.PROCLIB, // DISP=(MOD,DELETE,DELETE), // SPACE=(CYL,(0)), // UNIT=3350,VOL=SER=DSCOB1 //* //************************* //* ALLOCATE DATASETS //************************* //ALLOCAT EXEC PGM=IEFBR14,COND=(8,LT) //SYSOUT DD SYSOUT=* //SYSPRINT DD SYSOUT=* //SYSUDUMP DD SYSOUT=* /* //DD1 DD DSN=DSCOBOL.BASE.COBOL, // DISP=(,CATLG), // UNIT=3350,VOL=SER=DSCOB1, // SPACE=(CYL,(1,1,20)), // DCB=(RECFM=FB,LRECL=80,BLKSIZE=19040) /* //DD2 DD DSN=DSCOBOL.BASE.COPYLIB, // DISP=(,CATLG), // UNIT=3350,VOL=SER=DSCOB1, // SPACE=(CYL,(1,1,20)), // DCB=(RECFM=FB,LRECL=80,BLKSIZE=19040) /* //DD3 DD DSN=DSCOBOL.BASE.JCL, // DISP=(,CATLG), // UNIT=3350,VOL=SER=DSCOB1, // SPACE=(CYL,(1,1,20)), // DCB=(RECFM=FB,LRECL=80,BLKSIZE=19040) /* //DD4 DD DSN=DSCOBOL.BASE.LOADLIB, // DISP=(,CATLG), // UNIT=3350,VOL=SER=DSCOB1, // SPACE=(CYL,(1,1,20)), // DCB=(RECFM=U,BLKSIZE=19069) /* //DD5 DD DSN=DSCOBOL.BASE.PROCLIB, // DISP=(,CATLG), // UNIT=3350,VOL=SER=DSCOB1, // SPACE=(CYL,(1,1,20)), // DCB=(RECFM=FB,LRECL=80,BLKSIZE=19040) /* //*">
+  <meta itemprop="dateModified" content="2025-06-24T07:12:24-04:00">
   <meta itemprop="wordCount" content="152">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Allocate the Base Structure">
@@ -70,7 +72,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.e29b1e192013f56186e4b99346a8a1c3.json"
+    data-offline-search-index-json-src="/offline-search-index.27656242cedaf25330c66be20e0a7f5c.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -94,7 +96,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.e29b1e192013f56186e4b99346a8a1c3.json"
+    data-offline-search-index-json-src="/offline-search-index.27656242cedaf25330c66be20e0a7f5c.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
