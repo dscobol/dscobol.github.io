@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Install locally on your computer on dscobol</title>
+    <link>http://localhost:1313/docs/tutorials/mvs-tk5/install-system/pc/</link>
+    <description>Recent content in Install locally on your computer on dscobol</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="http://localhost:1313/docs/tutorials/mvs-tk5/install-system/pc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Install the MVS Turnkey 5 System</title>
+      <link>http://localhost:1313/docs/tutorials/mvs-tk5/install-system/pc/install-tk5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/tutorials/mvs-tk5/install-system/pc/install-tk5/</guid>
+      <description>&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;&#xA;&lt;p&gt;This will document installing MVS Turnkey 5 on a PC running&#xA;Debian.&lt;/p&gt;&#xA;&lt;p&gt;The instructions should work on other systems with minor modifications. See the&#xA;&lt;a href=&#34;https://www.prince-webdesign.nl/tk5&#34;&gt;MVS-TK5 Website&lt;/a&gt; for more information.&lt;/p&gt;&#xA;&lt;p&gt;This is a good place to start:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;You can run the system with or without the console&lt;/li&gt;&#xA;&lt;li&gt;Set it up to run all the time or only when you want/need&lt;/li&gt;&#xA;&lt;li&gt;Play around with the system&lt;/li&gt;&#xA;&lt;li&gt;You can add or delete or rename stuff to learn how it works&lt;/li&gt;&#xA;&lt;li&gt;If you mess it up, it&amp;rsquo;s easier to just delete it and start over from scratch&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;h3 id=&#34;download-the-zip-file&#34;&gt;Download the zip file.&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#download-the-zip-file&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;p&gt;&lt;code&gt;wget https://www.prince-webdesign.nl/images/downloads/mvs-tk5.zip&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

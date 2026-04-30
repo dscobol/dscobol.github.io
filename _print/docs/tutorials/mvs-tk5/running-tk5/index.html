@@ -1,10 +1,10 @@
 <!doctype html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="canonical" type="text/html" href="https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/">
-<link rel="alternate" type="application/rss&#43;xml" href="https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/index.xml">
+<link rel="canonical" type="text/html" href="http://localhost:1313/docs/tutorials/mvs-tk5/running-tk5/">
+<link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/docs/tutorials/mvs-tk5/running-tk5/index.xml">
 <meta name="robots" content="noindex, nofollow">
 
 
@@ -21,7 +21,7 @@
 
 <title>The MVS-TK5 system | dscobol</title>
 <meta name="description" content="Overview">
-<meta property="og:url" content="https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/">
+<meta property="og:url" content="http://localhost:1313/docs/tutorials/mvs-tk5/running-tk5/">
   <meta property="og:site_name" content="dscobol">
   <meta property="og:title" content="The MVS-TK5 system">
   <meta property="og:description" content="Overview">
@@ -31,12 +31,11 @@
   <meta itemprop="name" content="The MVS-TK5 system">
   <meta itemprop="description" content="Overview">
   <meta itemprop="dateModified" content="2025-06-23T05:33:35-04:00">
-  <meta itemprop="wordCount" content="185">
+  <meta itemprop="wordCount" content="168">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="The MVS-TK5 system">
   <meta name="twitter:description" content="Overview">
-<link rel="preload" href="/scss/main.min.72a8387e39948e4c909bcc7456f7c30e6f127aba11ce2bed71f59421f7bc1106.css" as="style" integrity="sha256-cqg4fjmUjkyQm8x0VvfDDm8SeroRzivtcfWUIfe8EQY=" crossorigin="anonymous">
-<link href="/scss/main.min.72a8387e39948e4c909bcc7456f7c30e6f127aba11ce2bed71f59421f7bc1106.css" rel="stylesheet" integrity="sha256-cqg4fjmUjkyQm8x0VvfDDm8SeroRzivtcfWUIfe8EQY=" crossorigin="anonymous">
+<link href="/scss/main.css" rel="stylesheet">
 <script
   src="https://code.jquery.com/jquery-3.7.1.min.js"
   integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -72,7 +71,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.a91920ebe2e9085df49d9f5b55d161db.json"
+    data-offline-search-index-json-src="/offline-search-index.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -310,17 +309,14 @@ This is the multi-page printable view of this section.
 
 <div class="content">
       <h2 id="this-is-divided-into-2-areas-system-and-applications">This is divided into 2 areas: System and Applications<a class="td-heading-self-link" href="#this-is-divided-into-2-areas-system-and-applications" aria-label="Heading self-link"></a></h2>
-<p>In the mainframe world, there are a few &ldquo;areas&rdquo; which have various titles and
-responsibilties.</p>
-<p>Search on-line for all the titles.</p>
-<p>The two important ones for this environment are &ldquo;System Administrator&rdquo; and
-&ldquo;Application Programmer&rdquo;.</p>
-<p>The majority of the tutorials will be about Applications.</p>
-<p>However, it will start out with System Administration.</p>
-<p>Most posts or videos demonstrate installing MVS-TK5(or the previous TK4- system)
-and then run one of the pre-installed COBOL programs, which is actually a JCL
-jobstream with the COBOL program embedded as SYSIN, and say, &ldquo;Look, you can run
-COBOL programs!&rdquo;.</p>
+<p>In the mainframe world, there are a few areas which have various titles and
+responsibilities. The two important ones for this environment are <strong>System
+Administrator</strong> and <strong>Application Programmer</strong>.</p>
+<p>This will start out with <strong>System Administration</strong>.</p>
+<p>Most posts or videos demonstrate installing MVS-TK5 (or the previous TK4-
+system) and then run one of the pre-installed COBOL programs, which is actually
+a JCL jobstream with the COBOL program embedded as SYSIN, and say, &ldquo;Look, you
+can run COBOL programs!&rdquo;.</p>
 <p><strong>But, that is not the typical environment an Application Programmer works in.</strong></p>
 <p>So, <strong>System Administration</strong> will create an environment that is closer to what
 I have experienced in the &ldquo;real world&rdquo;.</p>
@@ -335,9 +331,9 @@ I have experienced in the &ldquo;real world&rdquo;.</p>
 </ul>
 <h3 id="the-application-programmer-will">The Application Programmer will:<a class="td-heading-self-link" href="#the-application-programmer-will" aria-label="Heading self-link"></a></h3>
 <ul>
-<li>Create/Write/Refactor/Delete applications (aka: programs)</li>
-<li>Run JCL jobs to compile/run the programs</li>
-<li>Test and debug the programs</li>
+<li>Create/Write/Refactor/Delete Applications</li>
+<li>Run JCL jobs to compile/run the Applications</li>
+<li>Test and debug the Applications</li>
 </ul>
 
 </div>
@@ -1291,8 +1287,8 @@ to something else).</li>
 </footer>
 
     </div>
-    <script src="/js/main.min.925669bdd1b8e02ca70f9f469f35430c174f3da1eca3d03c97373760b57e1470.js" integrity="sha256-klZpvdG44CynD59GnzVDDBdPPaHso9A8lzc3YLV&#43;FHA=" crossorigin="anonymous"></script>
-<script defer src="/js/click-to-copy.min.73478a7d4807698aed7e355eb23f9890ca18fea3158604c8471746d046702bad.js" integrity="sha256-c0eKfUgHaYrtfjVesj&#43;YkMoY/qMVhgTIRxdG0EZwK60=" crossorigin="anonymous"></script>
+    <script src="/js/main.js"></script>
+<script defer src="/js/click-to-copy.js" crossorigin="anonymous"></script>
 <script src='/js/tabpane-persist.js'></script>
 
   </body>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Install on a remote server on dscobol</title>
+    <link>http://localhost:1313/docs/tutorials/mvs-tk5/install-system/rpi/</link>
+    <description>Recent content in Install on a remote server on dscobol</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="http://localhost:1313/docs/tutorials/mvs-tk5/install-system/rpi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Install the MVS Turnkey 5 System</title>
+      <link>http://localhost:1313/docs/tutorials/mvs-tk5/install-system/rpi/install-tk5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/tutorials/mvs-tk5/install-system/rpi/install-tk5/</guid>
+      <description>&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;&#xA;&lt;p&gt;This will document installing MVS Turnkey 5 on a Raspberry Pi.&lt;/p&gt;&#xA;&lt;p&gt;The instructions should work on other systems with minor modifications. See the&#xA;&lt;a href=&#34;https://www.prince-webdesign.nl/tk5&#34;&gt;MVS-TK5 Website&lt;/a&gt; for more information.&lt;/p&gt;&#xA;&lt;p&gt;This documents setting the system to run in &amp;ldquo;daemon mode&amp;rdquo; which would be the&#xA;typical way to run MVS-TK5 on a remote server.&lt;/p&gt;&#xA;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;h2 id=&#34;setup-the-raspberry-pi&#34;&gt;Setup the Raspberry Pi&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#setup-the-raspberry-pi&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;h3 id=&#34;the-system-used&#34;&gt;The System used&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#the-system-used&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Raspberry Pi 3 B+&lt;/li&gt;&#xA;&lt;li&gt;RPi-OS-Lite(64bit) Release date: May 13th 2025&lt;/li&gt;&#xA;&lt;li&gt;TK5 version 5&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;initial-setup-and-installation&#34;&gt;Initial setup and installation&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#initial-setup-and-installation&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;p&gt;Use rpi-imager to create the microSD card&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
