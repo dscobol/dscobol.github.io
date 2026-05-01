@@ -19,18 +19,18 @@
 
 <title>Update the RPi and the MVS-TK5 System | dscobol</title>
 <meta name="description" content="If you installed MVS-TK5 per the instructions:
-Shutdown MVS-TK5. The Hercules console is not required for this task. The RPi 3 Model B&#43; is a Quad Core so it has “4 CPUs”.
-In this installation, the MVS-TK5 system is the only thing that is running on the RPi, so let’s update it.
-With MVS-TK5 System NOT Running To use the Hercules utilities:
-Run uname -m to determine the architecture of your computer.">
+Shutdown MVS-TK5. The Hercules console is not required for this task. With MVS-TK5 System NOT Running To use the Hercules utilities:
+Run uname -m to determine the architecture of your computer.
+Update the .bashrc file If a remote install: On this Raspberry Pi, it is aarch64.
+The RPi 3 Model B&#43; is a Quad Core so it has &#34;4 CPUs&#34;. In this installation, the MVS-TK5 system is the only thing that is running on the RPi, so let&#39;s update it. Because MVS-TK5 was installed as a root service: `sudo su` to become root. `cd` to go &#34;HOME&#34; which would be `/root/` In .bashrc, add these lines: `export PATH=&#34;$PATH:&lt;&lt;mvs-home&gt;&gt;/hercules/linux/aarch64/bin&#34;` `export LD_LIBRARY_PATH=&#34;/lib:/usr/lib:/usr/local/lib:&lt;&lt;mvs-home&gt;&gt;/hercules/linux/aarch64/lib&#34;` and source the .bashrc file. If a local install: it will depend on the OS and the shell you are running.">
 <meta property="og:url" content="https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/system-update/">
   <meta property="og:site_name" content="dscobol">
   <meta property="og:title" content="Update the RPi and the MVS-TK5 System">
   <meta property="og:description" content="If you installed MVS-TK5 per the instructions:
-Shutdown MVS-TK5. The Hercules console is not required for this task. The RPi 3 Model B&#43; is a Quad Core so it has “4 CPUs”.
-In this installation, the MVS-TK5 system is the only thing that is running on the RPi, so let’s update it.
-With MVS-TK5 System NOT Running To use the Hercules utilities:
-Run uname -m to determine the architecture of your computer.">
+Shutdown MVS-TK5. The Hercules console is not required for this task. With MVS-TK5 System NOT Running To use the Hercules utilities:
+Run uname -m to determine the architecture of your computer.
+Update the .bashrc file If a remote install: On this Raspberry Pi, it is aarch64.
+The RPi 3 Model B&#43; is a Quad Core so it has &#34;4 CPUs&#34;. In this installation, the MVS-TK5 system is the only thing that is running on the RPi, so let&#39;s update it. Because MVS-TK5 was installed as a root service: `sudo su` to become root. `cd` to go &#34;HOME&#34; which would be `/root/` In .bashrc, add these lines: `export PATH=&#34;$PATH:&lt;&lt;mvs-home&gt;&gt;/hercules/linux/aarch64/bin&#34;` `export LD_LIBRARY_PATH=&#34;/lib:/usr/lib:/usr/local/lib:&lt;&lt;mvs-home&gt;&gt;/hercules/linux/aarch64/lib&#34;` and source the .bashrc file. If a local install: it will depend on the OS and the shell you are running.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="docs">
@@ -38,19 +38,19 @@ Run uname -m to determine the architecture of your computer.">
 
   <meta itemprop="name" content="Update the RPi and the MVS-TK5 System">
   <meta itemprop="description" content="If you installed MVS-TK5 per the instructions:
-Shutdown MVS-TK5. The Hercules console is not required for this task. The RPi 3 Model B&#43; is a Quad Core so it has “4 CPUs”.
-In this installation, the MVS-TK5 system is the only thing that is running on the RPi, so let’s update it.
-With MVS-TK5 System NOT Running To use the Hercules utilities:
-Run uname -m to determine the architecture of your computer.">
+Shutdown MVS-TK5. The Hercules console is not required for this task. With MVS-TK5 System NOT Running To use the Hercules utilities:
+Run uname -m to determine the architecture of your computer.
+Update the .bashrc file If a remote install: On this Raspberry Pi, it is aarch64.
+The RPi 3 Model B&#43; is a Quad Core so it has &#34;4 CPUs&#34;. In this installation, the MVS-TK5 system is the only thing that is running on the RPi, so let&#39;s update it. Because MVS-TK5 was installed as a root service: `sudo su` to become root. `cd` to go &#34;HOME&#34; which would be `/root/` In .bashrc, add these lines: `export PATH=&#34;$PATH:&lt;&lt;mvs-home&gt;&gt;/hercules/linux/aarch64/bin&#34;` `export LD_LIBRARY_PATH=&#34;/lib:/usr/lib:/usr/local/lib:&lt;&lt;mvs-home&gt;&gt;/hercules/linux/aarch64/lib&#34;` and source the .bashrc file. If a local install: it will depend on the OS and the shell you are running.">
   <meta itemprop="dateModified" content="2025-06-23T05:33:35-04:00">
-  <meta itemprop="wordCount" content="180">
+  <meta itemprop="wordCount" content="241">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Update the RPi and the MVS-TK5 System">
   <meta name="twitter:description" content="If you installed MVS-TK5 per the instructions:
-Shutdown MVS-TK5. The Hercules console is not required for this task. The RPi 3 Model B&#43; is a Quad Core so it has “4 CPUs”.
-In this installation, the MVS-TK5 system is the only thing that is running on the RPi, so let’s update it.
-With MVS-TK5 System NOT Running To use the Hercules utilities:
-Run uname -m to determine the architecture of your computer.">
+Shutdown MVS-TK5. The Hercules console is not required for this task. With MVS-TK5 System NOT Running To use the Hercules utilities:
+Run uname -m to determine the architecture of your computer.
+Update the .bashrc file If a remote install: On this Raspberry Pi, it is aarch64.
+The RPi 3 Model B&#43; is a Quad Core so it has &#34;4 CPUs&#34;. In this installation, the MVS-TK5 system is the only thing that is running on the RPi, so let&#39;s update it. Because MVS-TK5 was installed as a root service: `sudo su` to become root. `cd` to go &#34;HOME&#34; which would be `/root/` In .bashrc, add these lines: `export PATH=&#34;$PATH:&lt;&lt;mvs-home&gt;&gt;/hercules/linux/aarch64/bin&#34;` `export LD_LIBRARY_PATH=&#34;/lib:/usr/lib:/usr/local/lib:&lt;&lt;mvs-home&gt;&gt;/hercules/linux/aarch64/lib&#34;` and source the .bashrc file. If a local install: it will depend on the OS and the shell you are running.">
 <link rel="preload" href="/scss/main.min.72a8387e39948e4c909bcc7456f7c30e6f127aba11ce2bed71f59421f7bc1106.css" as="style" integrity="sha256-cqg4fjmUjkyQm8x0VvfDDm8SeroRzivtcfWUIfe8EQY=" crossorigin="anonymous">
 <link href="/scss/main.min.72a8387e39948e4c909bcc7456f7c30e6f127aba11ce2bed71f59421f7bc1106.css" rel="stylesheet" integrity="sha256-cqg4fjmUjkyQm8x0VvfDDm8SeroRzivtcfWUIfe8EQY=" crossorigin="anonymous">
 <script
@@ -88,7 +88,7 @@ Run uname -m to determine the architecture of your computer.">
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.be2a55e3f89235d0982dfa2026aeefb4.json"
+    data-offline-search-index-json-src="/offline-search-index.5d8c072c4fad3b1705a725eb09e51b55.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -112,7 +112,7 @@ Run uname -m to determine the architecture of your computer.">
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.be2a55e3f89235d0982dfa2026aeefb4.json"
+    data-offline-search-index-json-src="/offline-search-index.5d8c072c4fad3b1705a725eb09e51b55.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -246,11 +246,7 @@ Run uname -m to determine the architecture of your computer.">
   <label for="m-docstutorialsmvs-tk5running-tk5system-check"><a href="/docs/tutorials/mvs-tk5/running-tk5/system/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docstutorialsmvs-tk5running-tk5system"><span class="">System Administration</span></a></label>
   
   <ul class="ul-5 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docstutorialsmvs-tk5running-tk5systemtasks-li">
-  <input type="checkbox" id="m-docstutorialsmvs-tk5running-tk5systemtasks-check"/>
-  <label for="m-docstutorialsmvs-tk5running-tk5systemtasks-check"><a href="/docs/tutorials/mvs-tk5/running-tk5/system/tasks/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docstutorialsmvs-tk5running-tk5systemtasks"><span class="">Task List</span></a></label>
-  
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docstutorialsmvs-tk5running-tk5systemsystem-update-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docstutorialsmvs-tk5running-tk5systemsystem-update-li">
   <input type="checkbox" id="m-docstutorialsmvs-tk5running-tk5systemsystem-update-check" checked/>
   <label for="m-docstutorialsmvs-tk5running-tk5systemsystem-update-check"><a href="/docs/tutorials/mvs-tk5/running-tk5/system/system-update/" class="align-left ps-0  active td-sidebar-link td-sidebar-link__page" id="m-docstutorialsmvs-tk5running-tk5systemsystem-update"><span class="td-sidebar-nav-active-item">Update the RPi and the MVS-TK5 System</span></a></label>
   
@@ -367,24 +363,48 @@ Run uname -m to determine the architecture of your computer.">
 
 </div>
 
-<p>The RPi 3 Model B+ is a Quad Core so it has &ldquo;4 CPUs&rdquo;.</p>
-<p>In this installation, the MVS-TK5 system is the only thing that is running on
-the RPi, so let&rsquo;s update it.</p>
 <h2 id="with-mvs-tk5-system-not-running"><strong>With MVS-TK5 System NOT Running</strong><a class="td-heading-self-link" href="#with-mvs-tk5-system-not-running" aria-label="Heading self-link"></a></h2>
 <p>To use the Hercules utilities:</p>
 <p>Run <code>uname -m</code> to determine the architecture of your computer.</p>
-<p>On this Raspberry Pi, it is aarch64.</p>
 <h3 id="update-the-bashrc-file">Update the .bashrc file<a class="td-heading-self-link" href="#update-the-bashrc-file" aria-label="Heading self-link"></a></h3>
-<p>Because MVS-TK5 was installed as a root service:</p>
-<p><code>sudo su</code> to become root.</p>
-<p><code>cd</code> to go &ldquo;HOME&rdquo; which would be <code>/root/</code></p>
-<p>In .bashrc, add these lines:</p>
-<p><code>export PATH=&quot;$PATH:/mvs-tk5/hercules/linux/aarch64/bin&quot;</code></p>
-<p><code>export LD_LIBRARY_PATH=&quot;/lib:/usr/lib:/usr/local/lib:/mvs-tk5/hercules/linux/aarch64/lib&quot;</code></p>
-<p>and source the .bashrc file.</p>
+<p>If a remote install: On this Raspberry Pi, it is aarch64.</p>
+<pre><code>The RPi 3 Model B+ is a Quad Core so it has &quot;4 CPUs&quot;.
+
+In this installation, the MVS-TK5 system is the only thing that is running on
+the RPi, so let's update it.
+
+Because MVS-TK5 was installed as a root service:
+
+`sudo su` to become root.
+
+`cd` to go &quot;HOME&quot; which would be `/root/`
+
+In .bashrc, add these lines:
+
+`export PATH=&quot;$PATH:&lt;&lt;mvs-home&gt;&gt;/hercules/linux/aarch64/bin&quot;`
+
+`export LD_LIBRARY_PATH=&quot;/lib:/usr/lib:/usr/local/lib:&lt;&lt;mvs-home&gt;&gt;/hercules/linux/aarch64/lib&quot;`
+
+and source the .bashrc file.
+</code></pre>
+<p>If a local install: it will depend on the OS and the shell you are running.</p>
+<pre><code>Adjust the following to match your system:
+
+This would be an example for a Debian OS/zsh shell system:
+
+uname -m would return &quot;X86_64&quot; which would be &quot;/hercules/64&quot;.
+
+In .zshrc, add these lines:
+
+`export PATH=&quot;$PATH&quot;:&lt;&lt;mvs-home&gt;&gt;/hercules/linux/64/bin`
+
+`export LD_LIBRARY_PATH=&quot;/lib:/usr/lib:/usr/local/lib:&lt;&lt;mvs-home&gt;&gt;/hercules/linux/64/lib`
+
+and source the .zshrc file.
+</code></pre>
 <h3 id="update-the-conftk5cnf-file">Update the conf/tk5.cnf file<a class="td-heading-self-link" href="#update-the-conftk5cnf-file" aria-label="Heading self-link"></a></h3>
 <p>Go to the mvs-tk5/conf directory:</p>
-<p><code>cd /mvs-tk5/conf/</code></p>
+<p><code>cd &lt;&lt;mvs-home&gt;&gt;/conf/</code></p>
 <h4 id="upgrade-the-system-by">&ldquo;Upgrade&rdquo; the system by:<a class="td-heading-self-link" href="#upgrade-the-system-by" aria-label="Heading self-link"></a></h4>
 <p>Edit the tk5.cnf file using editor of choice:</p>
 <ul>

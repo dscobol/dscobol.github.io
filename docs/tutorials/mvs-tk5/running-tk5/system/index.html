@@ -31,7 +31,7 @@
   <meta itemprop="name" content="System Administration">
   <meta itemprop="description" content="How to change/revise/delete things in the system.">
   <meta itemprop="dateModified" content="2025-06-28T07:46:45-04:00">
-  <meta itemprop="wordCount" content="272">
+  <meta itemprop="wordCount" content="510">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="System Administration">
   <meta name="twitter:description" content="How to change/revise/delete things in the system.">
@@ -72,7 +72,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.be2a55e3f89235d0982dfa2026aeefb4.json"
+    data-offline-search-index-json-src="/offline-search-index.5d8c072c4fad3b1705a725eb09e51b55.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -96,7 +96,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.be2a55e3f89235d0982dfa2026aeefb4.json"
+    data-offline-search-index-json-src="/offline-search-index.5d8c072c4fad3b1705a725eb09e51b55.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -230,11 +230,7 @@
   <label for="m-docstutorialsmvs-tk5running-tk5system-check"><a href="/docs/tutorials/mvs-tk5/running-tk5/system/" class="align-left ps-0  active td-sidebar-link td-sidebar-link__section" id="m-docstutorialsmvs-tk5running-tk5system"><span class="td-sidebar-nav-active-item">System Administration</span></a></label>
   
   <ul class="ul-5 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docstutorialsmvs-tk5running-tk5systemtasks-li">
-  <input type="checkbox" id="m-docstutorialsmvs-tk5running-tk5systemtasks-check"/>
-  <label for="m-docstutorialsmvs-tk5running-tk5systemtasks-check"><a href="/docs/tutorials/mvs-tk5/running-tk5/system/tasks/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docstutorialsmvs-tk5running-tk5systemtasks"><span class="">Task List</span></a></label>
-  
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docstutorialsmvs-tk5running-tk5systemsystem-update-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docstutorialsmvs-tk5running-tk5systemsystem-update-li">
   <input type="checkbox" id="m-docstutorialsmvs-tk5running-tk5systemsystem-update-check"/>
   <label for="m-docstutorialsmvs-tk5running-tk5systemsystem-update-check"><a href="/docs/tutorials/mvs-tk5/running-tk5/system/system-update/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docstutorialsmvs-tk5running-tk5systemsystem-update"><span class="">Update the RPi and the MVS-TK5 System</span></a></label>
   
@@ -298,7 +294,18 @@
 
 </div>
 
-            
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#tasks">Tasks</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    
             
 	
           </aside>
@@ -331,15 +338,23 @@
 <div class="alert alert-primary" role="alert">
 <h4 class="alert-heading">Caution</h4>
 
-    <p>If you installed MVS-TK5 per the instructions, The System should be up and
-running in daemon_mode.</p>
+    <p>Depending on how you are using the
+MVS-TK5 system, you may be running it on a local installation or may be running
+it on a remote installation.</p>
+<p>Once you are familiar with the system, you will probably run it in daemon_mode
+most of the time.</p>
+<p>If you installed MVS-TK5 per the instructions for a remote server installation,
+the System will be running in daemon_mode.</p>
 <p>A lot of the tasks done by the System Administrator will need to use the
 Hercules/MVS console which is not available in daemon_mode.</p>
 <p>I have no doubt that there are real System Administrators and/or System
 Programmers who will read through this tutorial and think, &ldquo;What&hellip; Why do you
 keep shutting down and re-IPLing the system?&rdquo;</p>
 <p>My goal is to get a System running in a &ldquo;state more similar&rdquo; to a &ldquo;real world
-system&rdquo; for an &ldquo;Application Programmer&rdquo;.</p>
+system&rdquo; for an &ldquo;Application Programmer&rdquo; without learning all the things that
+System Administrators know about updating the system while it is still running.</p>
+<p>In most situations, there is only one person using this system so it is
+quicker/easier/less to learn to get to the final result.</p>
 <p>An &ldquo;Application Programmer&rdquo; doesn&rsquo;t need access to the Hercules/MVS console.</p>
 <p>They just use a 3270 Terminal or one of the newer methods of creating and
 running programs (VSCode + Zowe, use ncat or rje80 or IND$FILE, etc.) to access
@@ -373,25 +388,65 @@ anything.</li>
 </ul>
 <p>Also remember: When done updating and changing things:</p>
 <ul>
-<li>Shutdown the MVS-TK5 system.</li>
-<li>Run the set_daemon_mode script.</li>
-<li>Re-boot the RPi so the systemctl mvs.service starts up the MVS-TK5 system.</li>
+<li>
+<p>Shutdown the MVS-TK5 system.</p>
+</li>
+<li>
+<p>Run the set_daemon_mode script.</p>
+</li>
+<li>
+<p>IPL the system by:</p>
+<p>If remote: re-booting the RPi so the systemctl mvs.service starts up the
+MVS-TK5 system.</p>
+<p>If local: run the mvs startup script.</p>
+</li>
 </ul>
 
 
 </div>
 
 
+
+<div class="alert alert-success" role="alert">
+<h4 class="alert-heading">Note</h4>
+
+    <p>To make the tutorials more &ldquo;generic&rdquo;, the instructions will use the term
+&ldquo;&laquo;mvs-home&raquo;&rdquo; to refer to the base of the mvs-tk5 system.</p>
+<p>For the remote installation, as root, that would be &ldquo;/mvs-tk5/&rdquo;</p>
+<p>For a local installation, it will be where you extracted the zip file.</p>
+<p>i.e.</p>
+<ul>
+<li>&ldquo;~/Turnkey/mvs-tk5-v5/&rdquo; or</li>
+<li>&ldquo;~/mvs-tk5&rdquo;</li>
+</ul>
+<p>Make sure you replace &ldquo;&laquo;mvs-home&raquo;&rdquo; with the correct location before running
+the commands.</p>
+
+
+</div>
+
+<p>To make the MVS-TK5 System a little bit closer to a &ldquo;real world&rdquo; environment for
+an &ldquo;Application Programmer&rdquo;:</p>
+<p>The Application Programmer User Id will be &ldquo;DSCOBOL&rdquo;.</p>
+<h3 id="tasks">Tasks<a class="td-heading-self-link" href="#tasks" aria-label="Heading self-link"></a></h3>
+<ul>
+<li>Update the host environment and the MVS-TK5 System</li>
+<li>Create a DASD device just for that Programmer (why? why not!)</li>
+<li>Add a new USER</li>
+<li>Create a starting structure of PDS&rsquo;s for the Programmer</li>
+<li>Create some base JCL to:
+<ul>
+<li>compile COBOL programs</li>
+<li>run programs</li>
+<li>do some basic functions</li>
+</ul>
+</li>
+</ul>
+
 	<div class="section-index">
     
     
     <hr class="panel-line">
-        <div class="entry">
-                <h5>
-                    <a href="/docs/tutorials/mvs-tk5/running-tk5/system/tasks/">Task List</a>
-                </h5>
-                <p></p>
-            </div>
         <div class="entry">
                 <h5>
                     <a href="/docs/tutorials/mvs-tk5/running-tk5/system/system-update/">Update the RPi and the MVS-TK5 System</a>

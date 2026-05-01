@@ -31,7 +31,7 @@
   <meta itemprop="name" content="Add the CBT, SRC and SYSCPK volumes">
   <meta itemprop="description" content="Lots of good stuff to learn here.">
   <meta itemprop="dateModified" content="2025-06-22T05:37:43-04:00">
-  <meta itemprop="wordCount" content="102">
+  <meta itemprop="wordCount" content="116">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Add the CBT, SRC and SYSCPK volumes">
   <meta name="twitter:description" content="Lots of good stuff to learn here.">
@@ -72,7 +72,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.be2a55e3f89235d0982dfa2026aeefb4.json"
+    data-offline-search-index-json-src="/offline-search-index.5d8c072c4fad3b1705a725eb09e51b55.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -96,7 +96,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.be2a55e3f89235d0982dfa2026aeefb4.json"
+    data-offline-search-index-json-src="/offline-search-index.5d8c072c4fad3b1705a725eb09e51b55.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -230,11 +230,7 @@
   <label for="m-docstutorialsmvs-tk5running-tk5system-check"><a href="/docs/tutorials/mvs-tk5/running-tk5/system/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docstutorialsmvs-tk5running-tk5system"><span class="">System Administration</span></a></label>
   
   <ul class="ul-5 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docstutorialsmvs-tk5running-tk5systemtasks-li">
-  <input type="checkbox" id="m-docstutorialsmvs-tk5running-tk5systemtasks-check"/>
-  <label for="m-docstutorialsmvs-tk5running-tk5systemtasks-check"><a href="/docs/tutorials/mvs-tk5/running-tk5/system/tasks/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docstutorialsmvs-tk5running-tk5systemtasks"><span class="">Task List</span></a></label>
-  
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docstutorialsmvs-tk5running-tk5systemsystem-update-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docstutorialsmvs-tk5running-tk5systemsystem-update-li">
   <input type="checkbox" id="m-docstutorialsmvs-tk5running-tk5systemsystem-update-check"/>
   <label for="m-docstutorialsmvs-tk5running-tk5systemsystem-update-check"><a href="/docs/tutorials/mvs-tk5/running-tk5/system/system-update/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docstutorialsmvs-tk5running-tk5systemsystem-update"><span class="">Update the RPi and the MVS-TK5 System</span></a></label>
   
@@ -301,11 +297,12 @@
             <div class="td-toc">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#with-system-not-running"><strong>With System NOT Running</strong></a></li>
+    <li><a href="#with-mvs-tk5-not-running"><strong>With MVS-TK5 NOT Running</strong></a></li>
     <li><a href="#get-the-srccbtzip-file-onto-the-rpi">Get the srccbt.zip file onto the RPi.</a></li>
     <li><a href="#install-the-zip-file">Install the zip file</a></li>
-    <li><a href="#ipl-mvs-tk5">IPL MVS-TK5</a></li>
+    <li><a href="#ipl-mvs-tk5"><strong>IPL MVS-TK5</strong></a></li>
     <li><a href="#catalog-the-datasets">Catalog the datasets</a></li>
+    <li><a href="#verify-the-volumes-are-available">Verify the volumes are available</a></li>
   </ul>
 </nav>
       </div>
@@ -356,29 +353,23 @@
 
 </div>
 
-<h2 id="with-system-not-running"><strong>With System NOT Running</strong><a class="td-heading-self-link" href="#with-system-not-running" aria-label="Heading self-link"></a></h2>
+<h2 id="with-mvs-tk5-not-running"><strong>With MVS-TK5 NOT Running</strong><a class="td-heading-self-link" href="#with-mvs-tk5-not-running" aria-label="Heading self-link"></a></h2>
 <h2 id="get-the-srccbtzip-file-onto-the-rpi">Get the srccbt.zip file onto the RPi.<a class="td-heading-self-link" href="#get-the-srccbtzip-file-onto-the-rpi" aria-label="Heading self-link"></a></h2>
 <p>Use mc, wget, curl or your prefered method of obtaining the zip file.</p>
 <h2 id="install-the-zip-file">Install the zip file<a class="td-heading-self-link" href="#install-the-zip-file" aria-label="Heading self-link"></a></h2>
-<p><code>sudo su</code></p>
-<p><code>cd /mvs-tk5/</code></p>
+<p>If remote install: <code>sudo su</code></p>
+<p><code>cd &lt;&lt;mvs-tk5&gt;&gt;/</code></p>
 <p><code>unzip &lt;srccbt.zip&gt;</code> from wherever it was copied to.</p>
 <p>When prompted to &ldquo;replace files&rdquo;, say yes.</p>
-<h2 id="ipl-mvs-tk5">IPL MVS-TK5<a class="td-heading-self-link" href="#ipl-mvs-tk5" aria-label="Heading self-link"></a></h2>
+<h2 id="ipl-mvs-tk5"><strong>IPL MVS-TK5</strong><a class="td-heading-self-link" href="#ipl-mvs-tk5" aria-label="Heading self-link"></a></h2>
 <h2 id="catalog-the-datasets">Catalog the datasets<a class="td-heading-self-link" href="#catalog-the-datasets" aria-label="Heading self-link"></a></h2>
 <p>Run <a href="/docs/tutorials/mvs-tk5/running-tk5/system/install-dasd/import_user_cat/">this job</a> to catalog the datasets on the CBT, SRC and
 SYSCPK volumes.</p>
-
-
-<div class="pageinfo pageinfo-primary">
-<p>If you installed MVS-TK5 per the instructions:</p>
-<ul>
-<li>Shutdown MVS-TK5</li>
-<li>Reboot the RPi.</li>
-</ul>
-
-</div>
-
+<h2 id="verify-the-volumes-are-available">Verify the volumes are available<a class="td-heading-self-link" href="#verify-the-volumes-are-available" aria-label="Heading self-link"></a></h2>
+<p>Using ISPF, go to 3.7(VTOC Utility)</p>
+<pre><code>Check if Vol CBT001 is present.
+Check if Vol SYSCPK is present.
+</code></pre>
 
 	
 </div>

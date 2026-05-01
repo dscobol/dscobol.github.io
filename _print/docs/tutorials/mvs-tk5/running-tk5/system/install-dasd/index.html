@@ -88,7 +88,7 @@ But, depending on the purpose, a 3350 could be all that is needed and there is a
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.be2a55e3f89235d0982dfa2026aeefb4.json"
+    data-offline-search-index-json-src="/offline-search-index.5d8c072c4fad3b1705a725eb09e51b55.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -275,29 +275,23 @@ that DASD type.</p>
 
 </div>
 
-<h2 id="with-system-not-running"><strong>With System NOT Running</strong><a class="td-heading-self-link" href="#with-system-not-running" aria-label="Heading self-link"></a></h2>
+<h2 id="with-mvs-tk5-not-running"><strong>With MVS-TK5 NOT Running</strong><a class="td-heading-self-link" href="#with-mvs-tk5-not-running" aria-label="Heading self-link"></a></h2>
 <h2 id="get-the-srccbtzip-file-onto-the-rpi">Get the srccbt.zip file onto the RPi.<a class="td-heading-self-link" href="#get-the-srccbtzip-file-onto-the-rpi" aria-label="Heading self-link"></a></h2>
 <p>Use mc, wget, curl or your prefered method of obtaining the zip file.</p>
 <h2 id="install-the-zip-file">Install the zip file<a class="td-heading-self-link" href="#install-the-zip-file" aria-label="Heading self-link"></a></h2>
-<p><code>sudo su</code></p>
-<p><code>cd /mvs-tk5/</code></p>
+<p>If remote install: <code>sudo su</code></p>
+<p><code>cd &lt;&lt;mvs-tk5&gt;&gt;/</code></p>
 <p><code>unzip &lt;srccbt.zip&gt;</code> from wherever it was copied to.</p>
 <p>When prompted to &ldquo;replace files&rdquo;, say yes.</p>
-<h2 id="ipl-mvs-tk5">IPL MVS-TK5<a class="td-heading-self-link" href="#ipl-mvs-tk5" aria-label="Heading self-link"></a></h2>
+<h2 id="ipl-mvs-tk5"><strong>IPL MVS-TK5</strong><a class="td-heading-self-link" href="#ipl-mvs-tk5" aria-label="Heading self-link"></a></h2>
 <h2 id="catalog-the-datasets">Catalog the datasets<a class="td-heading-self-link" href="#catalog-the-datasets" aria-label="Heading self-link"></a></h2>
 <p>Run <a href="/docs/tutorials/mvs-tk5/running-tk5/system/install-dasd/import_user_cat/">this job</a> to catalog the datasets on the CBT, SRC and
 SYSCPK volumes.</p>
-
-
-<div class="pageinfo pageinfo-primary">
-<p>If you installed MVS-TK5 per the instructions:</p>
-<ul>
-<li>Shutdown MVS-TK5</li>
-<li>Reboot the RPi.</li>
-</ul>
-
-</div>
-
+<h2 id="verify-the-volumes-are-available">Verify the volumes are available<a class="td-heading-self-link" href="#verify-the-volumes-are-available" aria-label="Heading self-link"></a></h2>
+<p>Using ISPF, go to 3.7(VTOC Utility)</p>
+<pre><code>Check if Vol CBT001 is present.
+Check if Vol SYSCPK is present.
+</code></pre>
 
 </div>
 
@@ -334,12 +328,12 @@ SYSCPK volumes.</p>
 <h2 id="with-system-not-running"><strong>With System NOT Running</strong><a class="td-heading-self-link" href="#with-system-not-running" aria-label="Heading self-link"></a></h2>
 <h3 id="pick-a-device-size-and-name">Pick a device size and name<a class="td-heading-self-link" href="#pick-a-device-size-and-name" aria-label="Heading self-link"></a></h3>
 <ul>
-<li>VOLID must be 6 chars or less</li>
+<li>VOLID(Volume Id) must be 6 chars or less</li>
 <li>The &ldquo;extension&rdquo; must not already be assigned to another file</li>
 <li>The &ldquo;extension&rdquo; must be in the allowed ranges for that type of volume</li>
 </ul>
 <p>See the list on &ldquo;Install DASD devices&rdquo; page for available/taken device numbers.</p>
-<p><strong>For this example: 3350 DASD with a file name of dscob1.140 and Volume id of
+<p><strong>For this example: 3350 DASD with a file name of dscob1.140 and VOLID of
 DSCOB1.</strong></p>
 <h3 id="create-the-entry-in-conftk5cnf">Create the entry in conf/tk5.cnf<a class="td-heading-self-link" href="#create-the-entry-in-conftk5cnf" aria-label="Heading self-link"></a></h3>
 <h4 id="add-the-new-device">Add the new device<a class="td-heading-self-link" href="#add-the-new-device" aria-label="Heading self-link"></a></h4>
@@ -347,7 +341,7 @@ DSCOB1.</strong></p>
 <p><code>0140 3350 dasd/dscob1.140</code></p>
 <h3 id="use-dasdinit64-to-create-the-files-in-dasd">Use dasdinit64 to create the files in /dasd/<a class="td-heading-self-link" href="#use-dasdinit64-to-create-the-files-in-dasd" aria-label="Heading self-link"></a></h3>
 <p><code>cd /MVS-TK5/dasd/</code></p>
-<p><code>dasdinit -a dscob1.140 3350 dscob1</code></p>
+<p><code>dasdinit64 -a dscob1.140 3350-1 dscob1</code></p>
 <h2 id="ipl-mvs-tk5"><strong>IPL MVS-TK5</strong><a class="td-heading-self-link" href="#ipl-mvs-tk5" aria-label="Heading self-link"></a></h2>
 <h3 id="create-the-jcl-to-run-ickdsf-to-format-the-dasd">Create the JCL to run ICKDSF to format the DASD<a class="td-heading-self-link" href="#create-the-jcl-to-run-ickdsf-to-format-the-dasd" aria-label="Heading self-link"></a></h3>
 <p>Create a new member in HERC01.TEST.CNTL(ICKDSF) and type in the following JCL:</p>
@@ -377,22 +371,29 @@ from the system.</p>
 <h3 id="add-the-volume-to-sys1parmlibvatlst01">Add the Volume to SYS1.PARMLIB(VATLST01)<a class="td-heading-self-link" href="#add-the-volume-to-sys1parmlibvatlst01" aria-label="Heading self-link"></a></h3>
 <p>Copy an existing 3350 entry to bottom of list and update.</p>
 <p><strong>IMPORTANT</strong> Make sure to keep the same spacing and formatting as the original
-entry. Also, this member is mixed-case. Be sure to Uppercase the VOLID.</p>
+entry. Also, this member is mixed-case. Make sure the VOLID, in this example:
+DSCOB1 is uppercase.</p>
 <p><code>DSCOB1,1,2,3350    ,N                DSCOBOL Workspace</code></p>
-<h2 id="manually-shutdown-and-re-ipl-the-system">Manually Shutdown and re-IPL the System<a class="td-heading-self-link" href="#manually-shutdown-and-re-ipl-the-system" aria-label="Heading self-link"></a></h2>
-<p>Login and use Utilities/VTOC (3.7) to make sure the Volume is available.</p>
+<h2 id="manually-shutdown-and-ipl-the-system">Manually Shutdown and IPL the System<a class="td-heading-self-link" href="#manually-shutdown-and-ipl-the-system" aria-label="Heading self-link"></a></h2>
 
 
 <div class="pageinfo pageinfo-primary">
-<p>If you installed MVS-TK5 per the instructions:</p>
 <ul>
 <li>Shutdown MVS-TK5</li>
+</ul>
+<p>If this is a remote installation:</p>
+<ul>
 <li>Run the set_daemon_mode script</li>
-<li>Reboot the RPi.</li>
+<li>Reboot the RPi</li>
+</ul>
+<p>Else:</p>
+<ul>
+<li>IPL the system</li>
 </ul>
 
 </div>
 
+<p>Login and use Utilities/VTOC (3.7) to make sure the Volume is available.</p>
 
 </div>
 

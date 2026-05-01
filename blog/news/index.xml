@@ -8,6 +8,13 @@
     <language>en</language>
     <atom:link href="https://dscobol.github.io/blog/news/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Updated The MVS-TK5 system area.</title>
+      <link>https://dscobol.github.io/blog/2026/05/01/updated-the-mvs-tk5-system-area./</link>
+      <pubDate>Fri, 01 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://dscobol.github.io/blog/2026/05/01/updated-the-mvs-tk5-system-area./</guid>
+      <description>&lt;p&gt;This is mostly a clean-up of the System Administration area.&lt;/p&gt;&#xA;&lt;p&gt;The text was updated to use a more generic term for the &amp;ldquo;HOME&amp;rdquo; of the base of&#xA;mvs-tk5 system.&lt;/p&gt;&#xA;&lt;p&gt;This should make it easier to convert the commands to the end users OS and file&#xA;system.&lt;/p&gt;&#xA;&lt;p&gt;Other text was updated or changed to provide better instructions.&lt;/p&gt;&#xA;&lt;p&gt;It is my intention to add more tutorials to the Application Programming area in&#xA;the near future.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Added MVS-TK5 Install to Tutorals.</title>
       <link>https://dscobol.github.io/blog/2025/05/31/added-mvs-tk5-install-to-tutorals./</link>
       <pubDate>Sat, 31 May 2025 00:00:00 +0000</pubDate>
