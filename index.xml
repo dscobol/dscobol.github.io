@@ -141,6 +141,13 @@
       <description>&lt;p&gt;&lt;a href=&#34;https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/simple-jcl/&#34;&gt;SIMPLE&lt;/a&gt; is an example of a very simple Job to compile and run&#xA;a simple COBOL program.&lt;/p&gt;&#xA;&lt;p&gt;Upload or type this JCL into a new Member in DSCOBOL.BASE.JCL.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Install KICKS; the CICS emulator</title>
+      <link>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/install-kicks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/install-kicks/</guid>
+      <description>&lt;p&gt;Per the &lt;a href=&#34;https://www.kicksfortso.com/&#34;&gt;KICKS&lt;/a&gt; website:&lt;/p&gt;&#xA;&lt;p&gt;&amp;ldquo;KICKS is an enhancement for CMS &amp;amp; TSO on IBM mainframes (or emulators) that&#xA;lets you run your CICS applications directly instead of having to &amp;lsquo;install&amp;rsquo;&#xA;those apps in CICS. You don&amp;rsquo;t even need CICS itself installed on your&#xA;mainframe.&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;There are 3 (very good, but slightly different) installation instructions&#xA;locations:&lt;/p&gt;&#xA;&lt;p&gt;The &lt;a href=&#34;https://www.kicksfortso.com/&#34;&gt;KICKS&lt;/a&gt; website. The&#xA;&lt;a href=&#34;https://www.jaymoseley.com/hercules/kicks/index.htm&#34;&gt;Jay Mosley&lt;/a&gt; website. A&#xA;&lt;a href=&#34;https://www.youtube.com/watch?v=u_ZSH9OagTM&#34;&gt;moshix YouTube&lt;/a&gt; video.&lt;/p&gt;&#xA;&lt;p&gt;I highly recommend you peruse those 3 sites and keep them open while you are&#xA;installing KICKS.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Allocate the Base Structure</title>
       <link>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/allocate/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

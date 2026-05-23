@@ -34,7 +34,7 @@ The RPi 3 Model B&#43; is a Quad Core so it has &#34;4 CPUs&#34;. In this instal
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="docs">
-    <meta property="article:modified_time" content="2025-06-23T05:33:35-04:00">
+    <meta property="article:modified_time" content="2026-05-01T09:18:27-04:00">
 
   <meta itemprop="name" content="Update the RPi and the MVS-TK5 System">
   <meta itemprop="description" content="If you installed MVS-TK5 per the instructions:
@@ -42,7 +42,7 @@ Shutdown MVS-TK5. The Hercules console is not required for this task. With MVS-T
 Run uname -m to determine the architecture of your computer.
 Update the .bashrc file If a remote install: On this Raspberry Pi, it is aarch64.
 The RPi 3 Model B&#43; is a Quad Core so it has &#34;4 CPUs&#34;. In this installation, the MVS-TK5 system is the only thing that is running on the RPi, so let&#39;s update it. Because MVS-TK5 was installed as a root service: `sudo su` to become root. `cd` to go &#34;HOME&#34; which would be `/root/` In .bashrc, add these lines: `export PATH=&#34;$PATH:&lt;&lt;mvs-home&gt;&gt;/hercules/linux/aarch64/bin&#34;` `export LD_LIBRARY_PATH=&#34;/lib:/usr/lib:/usr/local/lib:&lt;&lt;mvs-home&gt;&gt;/hercules/linux/aarch64/lib&#34;` and source the .bashrc file. If a local install: it will depend on the OS and the shell you are running.">
-  <meta itemprop="dateModified" content="2025-06-23T05:33:35-04:00">
+  <meta itemprop="dateModified" content="2026-05-01T09:18:27-04:00">
   <meta itemprop="wordCount" content="241">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Update the RPi and the MVS-TK5 System">
@@ -88,7 +88,7 @@ The RPi 3 Model B&#43; is a Quad Core so it has &#34;4 CPUs&#34;. In this instal
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.5d8c072c4fad3b1705a725eb09e51b55.json"
+    data-offline-search-index-json-src="/offline-search-index.2c6321b2f152b0fc6524e2a3170dbc5d.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -112,7 +112,7 @@ The RPi 3 Model B&#43; is a Quad Core so it has &#34;4 CPUs&#34;. In this instal
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.5d8c072c4fad3b1705a725eb09e51b55.json"
+    data-offline-search-index-json-src="/offline-search-index.2c6321b2f152b0fc6524e2a3170dbc5d.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -276,6 +276,10 @@ The RPi 3 Model B&#43; is a Quad Core so it has &#34;4 CPUs&#34;. In this instal
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docstutorialsmvs-tk5running-tk5systemcreate-base-jcl-li">
   <input type="checkbox" id="m-docstutorialsmvs-tk5running-tk5systemcreate-base-jcl-check"/>
   <label for="m-docstutorialsmvs-tk5running-tk5systemcreate-base-jcl-check"><a href="/docs/tutorials/mvs-tk5/running-tk5/system/create-base-jcl/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docstutorialsmvs-tk5running-tk5systemcreate-base-jcl"><span class="">Create some base JCL</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docstutorialsmvs-tk5running-tk5systeminstall-kicks-li">
+  <input type="checkbox" id="m-docstutorialsmvs-tk5running-tk5systeminstall-kicks-check"/>
+  <label for="m-docstutorialsmvs-tk5running-tk5systeminstall-kicks-check"><a href="/docs/tutorials/mvs-tk5/running-tk5/system/install-kicks/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docstutorialsmvs-tk5running-tk5systeminstall-kicks"><span class="">Install KICKS; the CICS emulator</span></a></label>
   
 </li>
   </ul>

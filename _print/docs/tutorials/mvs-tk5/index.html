@@ -72,7 +72,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.5d8c072c4fad3b1705a725eb09e51b55.json"
+    data-offline-search-index-json-src="/offline-search-index.2c6321b2f152b0fc6524e2a3170dbc5d.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -305,7 +305,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>3.1.6: <a href="#pg-b7c0fc35acb2d795e0fe6526922dd78c">Allocate the Base Structure</a></li>
+<li>3.1.6: <a href="#pg-d7d80c9b01ad6aa13b2bcb51ddc87492">Install KICKS; the CICS emulator</a></li>
 
 
     
@@ -313,7 +313,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>3.1.7: <a href="#pg-0333b924aa1be1845debde4151227a03">An example of ADDUSER</a></li>
+<li>3.1.7: <a href="#pg-b7c0fc35acb2d795e0fe6526922dd78c">Allocate the Base Structure</a></li>
 
 
     
@@ -321,7 +321,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>3.1.8: <a href="#pg-6f3cf1726874a2799f4fce45176df1de">An example of USERS</a></li>
+<li>3.1.8: <a href="#pg-0333b924aa1be1845debde4151227a03">An example of ADDUSER</a></li>
 
 
     
@@ -329,7 +329,15 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>3.1.9: <a href="#pg-47385131c7cd15d055bc13398a532bc2">JCL - Simple</a></li>
+<li>3.1.9: <a href="#pg-6f3cf1726874a2799f4fce45176df1de">An example of USERS</a></li>
+
+
+    
+  
+    
+    
+	
+<li>3.1.10: <a href="#pg-47385131c7cd15d055bc13398a532bc2">JCL - Simple</a></li>
 
 
     
@@ -1401,7 +1409,119 @@ a simple COBOL program.</p>
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-b7c0fc35acb2d795e0fe6526922dd78c">3.1.6 - Allocate the Base Structure</h1>
+	<h1 id="pg-d7d80c9b01ad6aa13b2bcb51ddc87492">3.1.6 - Install KICKS; the CICS emulator</h1>
+    
+	<p>Per the <a href="https://www.kicksfortso.com/">KICKS</a> website:</p>
+<p>&ldquo;KICKS is an enhancement for CMS &amp; TSO on IBM mainframes (or emulators) that
+lets you run your CICS applications directly instead of having to &lsquo;install&rsquo;
+those apps in CICS. You don&rsquo;t even need CICS itself installed on your
+mainframe.&rdquo;</p>
+<p>There are 3 (very good, but slightly different) installation instructions
+locations:</p>
+<p>The <a href="https://www.kicksfortso.com/">KICKS</a> website. The
+<a href="https://www.jaymoseley.com/hercules/kicks/index.htm">Jay Mosley</a> website. A
+<a href="https://www.youtube.com/watch?v=u_ZSH9OagTM">moshix YouTube</a> video.</p>
+<p>I highly recommend you peruse those 3 sites and keep them open while you are
+installing KICKS.</p>
+<p>I will provide an overview and describe the differences between those and what I
+encountered using a MVS-TK5 system on a Debian (GNU/Linux) OS.</p>
+<ol>
+<li>It will be installed using the HERC01 user.</li>
+<li>The JCL jobcards for each job will need to be modified.</li>
+<li>The JCL included in the installation points to a VOL:SER:PUB002. This doesn&rsquo;t
+exist on the TK5 system.</li>
+<li>I am using the X3270 terminal emulator.</li>
+</ol>
+<p>Download the KICKS for TSO software from the
+<a href="https://www.kicksfortso.com/">KICKS</a> website.</p>
+<p>Unzip the file. Make sure you have &ldquo;kicks-tso-v1r5m0.xmi&rdquo; file.</p>
+<p>To start the process, you will need three files:</p>
+<ol>
+<li>the xmi file mentioned above.</li>
+<li>a JCL member (GETFILE)</li>
+<li>a JCL member (RECEIVE)</li>
+</ol>
+<p><a href="../getfile.jcl">This</a> is an example of GETFILE.</p>
+<p><a href="../receive.jcl">This</a> is an example of RECEIVE.</p>
+<p>To make things a little more simpler, I copy the kicks-tso-v1r5m0.xmi file to my
+&ldquo;/tmp&rdquo; directory. This makes it easier when typing in the devinit command in the
+console.</p>
+<p>IPL the system with the Hercules console available and have a 3270 terminal
+emulator running and logged into the system as HERC01.</p>
+<p>Use whatever method you like to get GETFILE and RECEIVE uploaded into the
+<strong>HERC01.TEST.CNTL</strong> PDS.</p>
+<p>Then follow the instructions for the first 3 steps:</p>
+<ol>
+<li>In the Hercules console: type <strong>devinit 10C /tmp/kicks-tso-v1r5m0.xmi
+ebcdic</strong> and press Enter.</li>
+<li>Switch to the &ldquo;HERC01.TEST.CNTL&rdquo; PDS and submit &ldquo;GETFILE&rdquo; and check the cond
+codes.</li>
+<li>Switch to the &ldquo;HERC01.TEST.CNTL&rdquo; PDS and submit &ldquo;RECEIVE&rdquo; and check the cond
+codes.</li>
+</ol>
+<p>Step 04:</p>
+<p>If that went well, edit <strong>HERC01.KICKS.V1R5M0.BIGPDS(V1R5M0)</strong></p>
+<pre><code>- Update the jobcard: USER: HERC01K3, make the CLASS=A, make the MSGCLASS=H.
+- Add VOL=SER=TSO002, in SYSUT2 section. (don't forget the ending comma).
+- SAVE and SUBMIT; check the cond codes
+</code></pre>
+<p>If that went well, keep pressing the F3 key until you are all the way out and
+you see the &ldquo;READY&rdquo; prompt.</p>
+<p>type: <strong>EXEC KICKSSYS.V1R5M0.CLIST(KFIX)</strong> and press Enter.</p>
+<p>You will be asked if you want to use HERC01 as the userid, say YES.</p>
+<p>There will be a bit more then you should see a &ldquo;Done&rdquo; message.</p>
+<p>Steps 05-07: (Steps 10-12 in the KICKS install guide)</p>
+<p>EDIT, SAVE, and SUBMIT(and check the cond codes) the 3
+<strong>HERC01.KICKS.V1R5M0.INSTLIB</strong> members in this order:</p>
+<p>(LOADMUR), (LOADTAC) then (LOADSDB)</p>
+<p>For each member:</p>
+<pre><code>Update the jobcard:
+
+    - I went with HERC01K4, HERC01K5, and HERC01K6.
+    - Update CLASS=A, and MSGCLASS=H.
+
+and replace all &quot;PUB002&quot; with &quot;TSO002&quot;
+</code></pre>
+<p>Steps 08-09: (Steps 13-14 in the KICKS install guide)</p>
+<p>EDIT, SAVE, and SUBMIT(and check the cond codes) the 2
+<strong>HERC01.KICKSSYS.V1R5M0.INSTLIB</strong> members in this order:</p>
+<p>(LODINTRA), then (LODTEMP)</p>
+<p>For each member:</p>
+<pre><code>Update the jobcard:
+
+    - I went with HERC01K7, and HERC01K8.
+    - Update CLASS=A, and MSGCLASS=H.
+
+and replace all &quot;PUB002&quot; with &quot;TSO002&quot;
+</code></pre>
+<p>If that went well, keep pressing the F3 key until you are all the way out and
+you see the &ldquo;READY&rdquo; prompt.</p>
+<p>type: <strong>EXEC KICKSSYS.V1R5M0.CLIST(KICKS)</strong> and press Enter.</p>
+<p>You should see the KICKS banner page.</p>
+<p>NOTE: I had an issue with this and it wouldn&rsquo;t start up correctly and would
+display an &ldquo;invalid transid&rdquo; or something like that.</p>
+<p>To fix that: One last update:</p>
+<p>EDIT and SAVE: <strong>HERC01.KICKSSYS.V1R5M0.CLIST(KICKS)</strong>:</p>
+<pre><code>- Line 5: change TCP(2$) to TCP(1$)
+- Delete Line 146: &quot;&amp;KIKID..KICKS.&amp;VER..SKIDLOAD +&quot;
+</code></pre>
+<p>Then I was able to see the KICKS banner page and execute the sample TRANSIDs</p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-b7c0fc35acb2d795e0fe6526922dd78c">3.1.7 - Allocate the Base Structure</h1>
     
 	<pre tabindex="0"><code>//DSCOBOLB JOB (1), &#39;ALLOCATE LIBRARIES&#39;,
 //         CLASS=A,MSGCLASS=H,MSGLEVEL=(1,1)
@@ -1489,7 +1609,7 @@ a simple COBOL program.</p>
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-0333b924aa1be1845debde4151227a03">3.1.7 - An example of ADDUSER</h1>
+	<h1 id="pg-0333b924aa1be1845debde4151227a03">3.1.8 - An example of ADDUSER</h1>
     <div class="lead">Add DSCOBOL as a new User</div>
 	<pre tabindex="0"><code>//HERC01A JOB  (TSO),
 //             &#39;Add TSO users&#39;,
@@ -1524,7 +1644,7 @@ a simple COBOL program.</p>
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-6f3cf1726874a2799f4fce45176df1de">3.1.8 - An example of USERS</h1>
+	<h1 id="pg-6f3cf1726874a2799f4fce45176df1de">3.1.9 - An example of USERS</h1>
     <div class="lead">Add DSCOBOL as a new User</div>
 	<pre tabindex="0"><code>************************************************
 *                                              *
@@ -1567,7 +1687,7 @@ IBMUSER  ADMIN    IBMPASS  Y
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-47385131c7cd15d055bc13398a532bc2">3.1.9 - JCL - Simple</h1>
+	<h1 id="pg-47385131c7cd15d055bc13398a532bc2">3.1.10 - JCL - Simple</h1>
     
 	<pre tabindex="0"><code>//DSCOBOL1 JOB 1,
 //         CLASS=A,

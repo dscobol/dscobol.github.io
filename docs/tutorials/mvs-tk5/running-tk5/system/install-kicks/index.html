@@ -1,9 +1,9 @@
 <!doctype html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
@@ -17,27 +17,42 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Add a 3390 DASD Volume to MVS-TK5 | dscobol</title>
-<meta name="description" content="If you installed MVS-TK5 per the instructions:
-Shutdown MVS-TK5 The Hercules console is required for this task. Run the set_console_mode script Don’t IPL the system until needed. With System NOT Running Pick a device size and name VOLID(Volume Id) must be 6 chars or less The “extension” must not already be assigned to another file The “extension” must be in the allowed ranges for that type of volume See the list on “Install DASD devices” page for available/taken device numbers.">
-<meta property="og:url" content="http://localhost:1313/docs/tutorials/mvs-tk5/running-tk5/system/install-dasd/add-3390-dasd-volume/">
+<title>Install KICKS; the CICS emulator | dscobol</title>
+<meta name="description" content="Per the KICKS website:
+“KICKS is an enhancement for CMS &amp; TSO on IBM mainframes (or emulators) that lets you run your CICS applications directly instead of having to ‘install’ those apps in CICS. You don’t even need CICS itself installed on your mainframe.”
+There are 3 (very good, but slightly different) installation instructions locations:
+The KICKS website. The Jay Mosley website. A moshix YouTube video.
+I highly recommend you peruse those 3 sites and keep them open while you are installing KICKS.">
+<meta property="og:url" content="https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/install-kicks/">
   <meta property="og:site_name" content="dscobol">
-  <meta property="og:title" content="Add a 3390 DASD Volume to MVS-TK5">
-  <meta property="og:description" content="If you installed MVS-TK5 per the instructions:
-Shutdown MVS-TK5 The Hercules console is required for this task. Run the set_console_mode script Don’t IPL the system until needed. With System NOT Running Pick a device size and name VOLID(Volume Id) must be 6 chars or less The “extension” must not already be assigned to another file The “extension” must be in the allowed ranges for that type of volume See the list on “Install DASD devices” page for available/taken device numbers.">
+  <meta property="og:title" content="Install KICKS; the CICS emulator">
+  <meta property="og:description" content="Per the KICKS website:
+“KICKS is an enhancement for CMS &amp; TSO on IBM mainframes (or emulators) that lets you run your CICS applications directly instead of having to ‘install’ those apps in CICS. You don’t even need CICS itself installed on your mainframe.”
+There are 3 (very good, but slightly different) installation instructions locations:
+The KICKS website. The Jay Mosley website. A moshix YouTube video.
+I highly recommend you peruse those 3 sites and keep them open while you are installing KICKS.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="docs">
+    <meta property="article:modified_time" content="2026-05-23T16:33:04-04:00">
 
-  <meta itemprop="name" content="Add a 3390 DASD Volume to MVS-TK5">
-  <meta itemprop="description" content="If you installed MVS-TK5 per the instructions:
-Shutdown MVS-TK5 The Hercules console is required for this task. Run the set_console_mode script Don’t IPL the system until needed. With System NOT Running Pick a device size and name VOLID(Volume Id) must be 6 chars or less The “extension” must not already be assigned to another file The “extension” must be in the allowed ranges for that type of volume See the list on “Install DASD devices” page for available/taken device numbers.">
-  <meta itemprop="wordCount" content="382">
+  <meta itemprop="name" content="Install KICKS; the CICS emulator">
+  <meta itemprop="description" content="Per the KICKS website:
+“KICKS is an enhancement for CMS &amp; TSO on IBM mainframes (or emulators) that lets you run your CICS applications directly instead of having to ‘install’ those apps in CICS. You don’t even need CICS itself installed on your mainframe.”
+There are 3 (very good, but slightly different) installation instructions locations:
+The KICKS website. The Jay Mosley website. A moshix YouTube video.
+I highly recommend you peruse those 3 sites and keep them open while you are installing KICKS.">
+  <meta itemprop="dateModified" content="2026-05-23T16:33:04-04:00">
+  <meta itemprop="wordCount" content="611">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Add a 3390 DASD Volume to MVS-TK5">
-  <meta name="twitter:description" content="If you installed MVS-TK5 per the instructions:
-Shutdown MVS-TK5 The Hercules console is required for this task. Run the set_console_mode script Don’t IPL the system until needed. With System NOT Running Pick a device size and name VOLID(Volume Id) must be 6 chars or less The “extension” must not already be assigned to another file The “extension” must be in the allowed ranges for that type of volume See the list on “Install DASD devices” page for available/taken device numbers.">
-<link href="/scss/main.css" rel="stylesheet">
+  <meta name="twitter:title" content="Install KICKS; the CICS emulator">
+  <meta name="twitter:description" content="Per the KICKS website:
+“KICKS is an enhancement for CMS &amp; TSO on IBM mainframes (or emulators) that lets you run your CICS applications directly instead of having to ‘install’ those apps in CICS. You don’t even need CICS itself installed on your mainframe.”
+There are 3 (very good, but slightly different) installation instructions locations:
+The KICKS website. The Jay Mosley website. A moshix YouTube video.
+I highly recommend you peruse those 3 sites and keep them open while you are installing KICKS.">
+<link rel="preload" href="/scss/main.min.72a8387e39948e4c909bcc7456f7c30e6f127aba11ce2bed71f59421f7bc1106.css" as="style" integrity="sha256-cqg4fjmUjkyQm8x0VvfDDm8SeroRzivtcfWUIfe8EQY=" crossorigin="anonymous">
+<link href="/scss/main.min.72a8387e39948e4c909bcc7456f7c30e6f127aba11ce2bed71f59421f7bc1106.css" rel="stylesheet" integrity="sha256-cqg4fjmUjkyQm8x0VvfDDm8SeroRzivtcfWUIfe8EQY=" crossorigin="anonymous">
 <script
   src="https://code.jquery.com/jquery-3.7.1.min.js"
   integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -73,7 +88,7 @@ Shutdown MVS-TK5 The Hercules console is required for this task. Run the set_con
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.json"
+    data-offline-search-index-json-src="/offline-search-index.2c6321b2f152b0fc6524e2a3170dbc5d.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -97,7 +112,7 @@ Shutdown MVS-TK5 The Hercules console is required for this task. Run the set_con
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.json"
+    data-offline-search-index-json-src="/offline-search-index.2c6321b2f152b0fc6524e2a3170dbc5d.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -231,16 +246,12 @@ Shutdown MVS-TK5 The Hercules console is required for this task. Run the set_con
   <label for="m-docstutorialsmvs-tk5running-tk5system-check"><a href="/docs/tutorials/mvs-tk5/running-tk5/system/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docstutorialsmvs-tk5running-tk5system"><span class="">System Administration</span></a></label>
   
   <ul class="ul-5 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docstutorialsmvs-tk5running-tk5systemtasks-li">
-  <input type="checkbox" id="m-docstutorialsmvs-tk5running-tk5systemtasks-check"/>
-  <label for="m-docstutorialsmvs-tk5running-tk5systemtasks-check"><a href="/docs/tutorials/mvs-tk5/running-tk5/system/tasks/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docstutorialsmvs-tk5running-tk5systemtasks"><span class="">Task List</span></a></label>
-  
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docstutorialsmvs-tk5running-tk5systemsystem-update-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docstutorialsmvs-tk5running-tk5systemsystem-update-li">
   <input type="checkbox" id="m-docstutorialsmvs-tk5running-tk5systemsystem-update-check"/>
   <label for="m-docstutorialsmvs-tk5running-tk5systemsystem-update-check"><a href="/docs/tutorials/mvs-tk5/running-tk5/system/system-update/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docstutorialsmvs-tk5running-tk5systemsystem-update"><span class="">Update the RPi and the MVS-TK5 System</span></a></label>
   
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docstutorialsmvs-tk5running-tk5systeminstall-dasd-li">
-  <input type="checkbox" id="m-docstutorialsmvs-tk5running-tk5systeminstall-dasd-check" checked/>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docstutorialsmvs-tk5running-tk5systeminstall-dasd-li">
+  <input type="checkbox" id="m-docstutorialsmvs-tk5running-tk5systeminstall-dasd-check"/>
   <label for="m-docstutorialsmvs-tk5running-tk5systeminstall-dasd-check"><a href="/docs/tutorials/mvs-tk5/running-tk5/system/install-dasd/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docstutorialsmvs-tk5running-tk5systeminstall-dasd"><span class="">Install DASD devices</span></a></label>
   
   <ul class="ul-6 foldable">
@@ -251,10 +262,6 @@ Shutdown MVS-TK5 The Hercules console is required for this task. Run the set_con
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docstutorialsmvs-tk5running-tk5systeminstall-dasdadd-3350-dasd-volume-li">
   <input type="checkbox" id="m-docstutorialsmvs-tk5running-tk5systeminstall-dasdadd-3350-dasd-volume-check"/>
   <label for="m-docstutorialsmvs-tk5running-tk5systeminstall-dasdadd-3350-dasd-volume-check"><a href="/docs/tutorials/mvs-tk5/running-tk5/system/install-dasd/add-3350-dasd-volume/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docstutorialsmvs-tk5running-tk5systeminstall-dasdadd-3350-dasd-volume"><span class="">Add a 3350 DASD Volume to MVS-TK5</span></a></label>
-  
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docstutorialsmvs-tk5running-tk5systeminstall-dasdadd-3390-dasd-volume-li">
-  <input type="checkbox" id="m-docstutorialsmvs-tk5running-tk5systeminstall-dasdadd-3390-dasd-volume-check" checked/>
-  <label for="m-docstutorialsmvs-tk5running-tk5systeminstall-dasdadd-3390-dasd-volume-check"><a href="/docs/tutorials/mvs-tk5/running-tk5/system/install-dasd/add-3390-dasd-volume/" class="align-left ps-0  active td-sidebar-link td-sidebar-link__page" id="m-docstutorialsmvs-tk5running-tk5systeminstall-dasdadd-3390-dasd-volume"><span class="td-sidebar-nav-active-item">Add a 3390 DASD Volume to MVS-TK5</span></a></label>
   
 </li>
   </ul>
@@ -269,6 +276,10 @@ Shutdown MVS-TK5 The Hercules console is required for this task. Run the set_con
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docstutorialsmvs-tk5running-tk5systemcreate-base-jcl-li">
   <input type="checkbox" id="m-docstutorialsmvs-tk5running-tk5systemcreate-base-jcl-check"/>
   <label for="m-docstutorialsmvs-tk5running-tk5systemcreate-base-jcl-check"><a href="/docs/tutorials/mvs-tk5/running-tk5/system/create-base-jcl/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docstutorialsmvs-tk5running-tk5systemcreate-base-jcl"><span class="">Create some base JCL</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docstutorialsmvs-tk5running-tk5systeminstall-kicks-li">
+  <input type="checkbox" id="m-docstutorialsmvs-tk5running-tk5systeminstall-kicks-check" checked/>
+  <label for="m-docstutorialsmvs-tk5running-tk5systeminstall-kicks-check"><a href="/docs/tutorials/mvs-tk5/running-tk5/system/install-kicks/" class="align-left ps-0  active td-sidebar-link td-sidebar-link__page" id="m-docstutorialsmvs-tk5running-tk5systeminstall-kicks"><span class="td-sidebar-nav-active-item">Install KICKS; the CICS emulator</span></a></label>
   
 </li>
   </ul>
@@ -299,33 +310,11 @@ Shutdown MVS-TK5 The Hercules console is required for this task. Run the set_con
           </aside>
           <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
             <div class="td-page-meta ms-2 pb-1 pt-2 mb-0">
-<a id="print" href="/_print/docs/tutorials/mvs-tk5/running-tk5/system/install-dasd/"><i class="fa-solid fa-print fa-fw"></i> Print entire section</a>
+<a id="print" href="/_print/docs/tutorials/mvs-tk5/running-tk5/system/"><i class="fa-solid fa-print fa-fw"></i> Print entire section</a>
 
 </div>
 
-            <div class="td-toc">
-        <nav id="TableOfContents">
-  <ul>
-    <li><a href="#with-system-not-running"><strong>With System NOT Running</strong></a>
-      <ul>
-        <li><a href="#pick-a-device-size-and-name">Pick a device size and name</a></li>
-        <li><a href="#create-the-entry-in-conftk5cnf">Create the entry in conf/tk5.cnf</a></li>
-        <li><a href="#use-dasdinit64-to-create-the-files-in-dasd">Use dasdinit64 to create the files in /dasd/</a></li>
-      </ul>
-    </li>
-    <li><a href="#ipl-mvs-tk5"><strong>IPL MVS-TK5</strong></a>
-      <ul>
-        <li><a href="#create-the-jcl-to-run-ickdsf-to-format-the-dasd">Create the JCL to run ICKDSF to format the DASD</a></li>
-        <li><a href="#make-sure-the-volume-is-offline-and-deallocated">Make sure the volume is offline and deallocated</a></li>
-        <li><a href="#run-the-ickdsf-job">Run the ICKDSF JOB</a></li>
-        <li><a href="#add-the-volume-to-sys1parmlibvatlst01">Add the Volume to SYS1.PARMLIB(VATLST01)</a></li>
-      </ul>
-    </li>
-    <li><a href="#manually-shutdown-and-ipl-the-system">Manually Shutdown and IPL the System</a></li>
-  </ul>
-</nav>
-      </div>
-    
+            
             
 	
           </aside>
@@ -345,108 +334,111 @@ Shutdown MVS-TK5 The Hercules console is required for this task. Run the set_con
     <a href="/docs/tutorials/mvs-tk5/running-tk5/">The MVS-TK5 system</a></li>
   <li class="breadcrumb-item">
     <a href="/docs/tutorials/mvs-tk5/running-tk5/system/">System Administration</a></li>
-  <li class="breadcrumb-item">
-    <a href="/docs/tutorials/mvs-tk5/running-tk5/system/install-dasd/">Install DASD devices</a></li>
   <li class="breadcrumb-item active" aria-current="page">
-    Add a 3390 DASD Volume to MVS-TK5</li>
+    Install KICKS; the CICS emulator</li>
   </ol>
 </nav>
 <div class="td-content">
-	<h1>Add a 3390 DASD Volume to MVS-TK5</h1>
+	<h1>Install KICKS; the CICS emulator</h1>
 	
 	<header class="article-meta">
 		
   </header>
-	
-
-<div class="pageinfo pageinfo-primary">
-<p>If you installed MVS-TK5 per the instructions:</p>
-<ul>
-<li>Shutdown MVS-TK5</li>
-<li>The Hercules console <strong>is required</strong> for this task.
-<ul>
-<li>Run the set_console_mode script</li>
-<li>Don&rsquo;t IPL the system until needed.</li>
-</ul>
-</li>
-</ul>
-
-</div>
-
-<h2 id="with-system-not-running"><strong>With System NOT Running</strong><a class="td-heading-self-link" href="#with-system-not-running" aria-label="Heading self-link"></a></h2>
-<h3 id="pick-a-device-size-and-name">Pick a device size and name<a class="td-heading-self-link" href="#pick-a-device-size-and-name" aria-label="Heading self-link"></a></h3>
-<ul>
-<li>VOLID(Volume Id) must be 6 chars or less</li>
-<li>The &ldquo;extension&rdquo; must not already be assigned to another file</li>
-<li>The &ldquo;extension&rdquo; must be in the allowed ranges for that type of volume</li>
-</ul>
-<p>See the list on &ldquo;Install DASD devices&rdquo; page for available/taken device numbers.</p>
-<p><strong>For this example: 3390 DASD with a file name of dscob2.393 and VOLID of
-DSCOB2.</strong></p>
-<h3 id="create-the-entry-in-conftk5cnf">Create the entry in conf/tk5.cnf<a class="td-heading-self-link" href="#create-the-entry-in-conftk5cnf" aria-label="Heading self-link"></a></h3>
-<h4 id="add-the-new-device">Add the new device<a class="td-heading-self-link" href="#add-the-new-device" aria-label="Heading self-link"></a></h4>
-<p>At the end of the <strong># TK5 DASD</strong> section:</p>
-<p><code>0393 3390 dasd/dscob2.393</code></p>
-<h3 id="use-dasdinit64-to-create-the-files-in-dasd">Use dasdinit64 to create the files in /dasd/<a class="td-heading-self-link" href="#use-dasdinit64-to-create-the-files-in-dasd" aria-label="Heading self-link"></a></h3>
-<p><code>cd /MVS-TK5/dasd/</code></p>
-<p><code>dasdinit64 -a dscob2.393 3390-1 dscob2</code></p>
-<pre><code>NOTE: There are other sizes of 3390 DASD but 3390-1 is about twice the capacity
-    of a 3350-1.
-
-It's big enough for now.
+	<p>Per the <a href="https://www.kicksfortso.com/">KICKS</a> website:</p>
+<p>&ldquo;KICKS is an enhancement for CMS &amp; TSO on IBM mainframes (or emulators) that
+lets you run your CICS applications directly instead of having to &lsquo;install&rsquo;
+those apps in CICS. You don&rsquo;t even need CICS itself installed on your
+mainframe.&rdquo;</p>
+<p>There are 3 (very good, but slightly different) installation instructions
+locations:</p>
+<p>The <a href="https://www.kicksfortso.com/">KICKS</a> website. The
+<a href="https://www.jaymoseley.com/hercules/kicks/index.htm">Jay Mosley</a> website. A
+<a href="https://www.youtube.com/watch?v=u_ZSH9OagTM">moshix YouTube</a> video.</p>
+<p>I highly recommend you peruse those 3 sites and keep them open while you are
+installing KICKS.</p>
+<p>I will provide an overview and describe the differences between those and what I
+encountered using a MVS-TK5 system on a Debian (GNU/Linux) OS.</p>
+<ol>
+<li>It will be installed using the HERC01 user.</li>
+<li>The JCL jobcards for each job will need to be modified.</li>
+<li>The JCL included in the installation points to a VOL:SER:PUB002. This doesn&rsquo;t
+exist on the TK5 system.</li>
+<li>I am using the X3270 terminal emulator.</li>
+</ol>
+<p>Download the KICKS for TSO software from the
+<a href="https://www.kicksfortso.com/">KICKS</a> website.</p>
+<p>Unzip the file. Make sure you have &ldquo;kicks-tso-v1r5m0.xmi&rdquo; file.</p>
+<p>To start the process, you will need three files:</p>
+<ol>
+<li>the xmi file mentioned above.</li>
+<li>a JCL member (GETFILE)</li>
+<li>a JCL member (RECEIVE)</li>
+</ol>
+<p><a href="../getfile.jcl">This</a> is an example of GETFILE.</p>
+<p><a href="../receive.jcl">This</a> is an example of RECEIVE.</p>
+<p>To make things a little more simpler, I copy the kicks-tso-v1r5m0.xmi file to my
+&ldquo;/tmp&rdquo; directory. This makes it easier when typing in the devinit command in the
+console.</p>
+<p>IPL the system with the Hercules console available and have a 3270 terminal
+emulator running and logged into the system as HERC01.</p>
+<p>Use whatever method you like to get GETFILE and RECEIVE uploaded into the
+<strong>HERC01.TEST.CNTL</strong> PDS.</p>
+<p>Then follow the instructions for the first 3 steps:</p>
+<ol>
+<li>In the Hercules console: type <strong>devinit 10C /tmp/kicks-tso-v1r5m0.xmi
+ebcdic</strong> and press Enter.</li>
+<li>Switch to the &ldquo;HERC01.TEST.CNTL&rdquo; PDS and submit &ldquo;GETFILE&rdquo; and check the cond
+codes.</li>
+<li>Switch to the &ldquo;HERC01.TEST.CNTL&rdquo; PDS and submit &ldquo;RECEIVE&rdquo; and check the cond
+codes.</li>
+</ol>
+<p>Step 04:</p>
+<p>If that went well, edit <strong>HERC01.KICKS.V1R5M0.BIGPDS(V1R5M0)</strong></p>
+<pre><code>- Update the jobcard: USER: HERC01K3, make the CLASS=A, make the MSGCLASS=H.
+- Add VOL=SER=TSO002, in SYSUT2 section. (don't forget the ending comma).
+- SAVE and SUBMIT; check the cond codes
 </code></pre>
-<h2 id="ipl-mvs-tk5"><strong>IPL MVS-TK5</strong><a class="td-heading-self-link" href="#ipl-mvs-tk5" aria-label="Heading self-link"></a></h2>
-<h3 id="create-the-jcl-to-run-ickdsf-to-format-the-dasd">Create the JCL to run ICKDSF to format the DASD<a class="td-heading-self-link" href="#create-the-jcl-to-run-ickdsf-to-format-the-dasd" aria-label="Heading self-link"></a></h3>
-<p>Create a new member in HERC01.TEST.CNTL(ICKDSF) and type in the following JCL:</p>
-<pre tabindex="0"><code>//HERC019 JOB (1),ICKDSF,CLASS=A,MSGCLASS=H
-//ICKDSF EXEC PGM=ICKDSF,REGION=4096K
-//SYSPRINT DD SYSOUT=*
-//SYSIN DD *
-  INIT UNITADDRESS(393) -
-       NOVERIFY -
-       VOLID(DSCOB2) -
-       OWNER(HERCULES) -
-       VTOC(0,1,15)
-//
-</code></pre><h3 id="make-sure-the-volume-is-offline-and-deallocated">Make sure the volume is offline and deallocated<a class="td-heading-self-link" href="#make-sure-the-volume-is-offline-and-deallocated" aria-label="Heading self-link"></a></h3>
-<p>In the Hercules/MVS console:</p>
-<p><code>/v 393,offline</code></p>
-<p><code>/s dealloc</code></p>
-<h3 id="run-the-ickdsf-job">Run the ICKDSF JOB<a class="td-heading-self-link" href="#run-the-ickdsf-job" aria-label="Heading self-link"></a></h3>
-<p>Submit the JCL to format the DASD Volume.</p>
-<p>This will be held-up by the system, so go the Hercules/MVS console and you
-should see something like:</p>
-<p><code>*00 ICK003D REPLY U TO ALTER VOLUME 140 CONTENTS, ELSE T</code></p>
-<p>At the prompt <code>/r 00,u</code> to allow the job to continue.</p>
-<p>Note: replace the <strong>00</strong> with the number that is after the * in the message
-from the system.</p>
-<p>The JOB must have a RC=0000 to be successful.</p>
-<h3 id="add-the-volume-to-sys1parmlibvatlst01">Add the Volume to SYS1.PARMLIB(VATLST01)<a class="td-heading-self-link" href="#add-the-volume-to-sys1parmlibvatlst01" aria-label="Heading self-link"></a></h3>
-<p>Copy an existing 3350 entry to bottom of list and update.</p>
-<p><strong>IMPORTANT</strong> Make sure to keep the same spacing and formatting as the original
-entry. Also, this member is mixed-case. Make sure the VOLID, in this example:
-DSCOB1 is uppercase.</p>
-<p><code>DSCOB1,1,2,3350    ,N                DSCOBOL Workspace</code></p>
-<h2 id="manually-shutdown-and-ipl-the-system">Manually Shutdown and IPL the System<a class="td-heading-self-link" href="#manually-shutdown-and-ipl-the-system" aria-label="Heading self-link"></a></h2>
+<p>If that went well, keep pressing the F3 key until you are all the way out and
+you see the &ldquo;READY&rdquo; prompt.</p>
+<p>type: <strong>EXEC KICKSSYS.V1R5M0.CLIST(KFIX)</strong> and press Enter.</p>
+<p>You will be asked if you want to use HERC01 as the userid, say YES.</p>
+<p>There will be a bit more then you should see a &ldquo;Done&rdquo; message.</p>
+<p>Steps 05-07: (Steps 10-12 in the KICKS install guide)</p>
+<p>EDIT, SAVE, and SUBMIT(and check the cond codes) the 3
+<strong>HERC01.KICKS.V1R5M0.INSTLIB</strong> members in this order:</p>
+<p>(LOADMUR), (LOADTAC) then (LOADSDB)</p>
+<p>For each member:</p>
+<pre><code>Update the jobcard:
 
+    - I went with HERC01K4, HERC01K5, and HERC01K6.
+    - Update CLASS=A, and MSGCLASS=H.
 
-<div class="pageinfo pageinfo-primary">
-<ul>
-<li>Shutdown MVS-TK5</li>
-</ul>
-<p>If this is a remote installation:</p>
-<ul>
-<li>Run the set_daemon_mode script</li>
-<li>Reboot the RPi</li>
-</ul>
-<p>Else:</p>
-<ul>
-<li>IPL the system</li>
-</ul>
+and replace all &quot;PUB002&quot; with &quot;TSO002&quot;
+</code></pre>
+<p>Steps 08-09: (Steps 13-14 in the KICKS install guide)</p>
+<p>EDIT, SAVE, and SUBMIT(and check the cond codes) the 2
+<strong>HERC01.KICKSSYS.V1R5M0.INSTLIB</strong> members in this order:</p>
+<p>(LODINTRA), then (LODTEMP)</p>
+<p>For each member:</p>
+<pre><code>Update the jobcard:
 
-</div>
+    - I went with HERC01K7, and HERC01K8.
+    - Update CLASS=A, and MSGCLASS=H.
 
-<p>Login and use Utilities/VTOC (3.7) to make sure the Volume is available.</p>
+and replace all &quot;PUB002&quot; with &quot;TSO002&quot;
+</code></pre>
+<p>If that went well, keep pressing the F3 key until you are all the way out and
+you see the &ldquo;READY&rdquo; prompt.</p>
+<p>type: <strong>EXEC KICKSSYS.V1R5M0.CLIST(KICKS)</strong> and press Enter.</p>
+<p>You should see the KICKS banner page.</p>
+<p>NOTE: I had an issue with this and it wouldn&rsquo;t start up correctly and would
+display an &ldquo;invalid transid&rdquo; or something like that.</p>
+<p>To fix that: One last update:</p>
+<p>EDIT and SAVE: <strong>HERC01.KICKSSYS.V1R5M0.CLIST(KICKS)</strong>:</p>
+<pre><code>- Line 5: change TCP(2$) to TCP(1$)
+- Delete Line 146: &quot;&amp;KIKID..KICKS.&amp;VER..SKIDLOAD +&quot;
+</code></pre>
+<p>Then I was able to see the KICKS banner page and execute the sample TRANSIDs</p>
 
 	
 </div>
@@ -481,8 +473,8 @@ DSCOB1 is uppercase.</p>
 </footer>
 
     </div>
-    <script src="/js/main.js"></script>
-<script defer src="/js/click-to-copy.js" crossorigin="anonymous"></script>
+    <script src="/js/main.min.925669bdd1b8e02ca70f9f469f35430c174f3da1eca3d03c97373760b57e1470.js" integrity="sha256-klZpvdG44CynD59GnzVDDBdPPaHso9A8lzc3YLV&#43;FHA=" crossorigin="anonymous"></script>
+<script defer src="/js/click-to-copy.min.73478a7d4807698aed7e355eb23f9890ca18fea3158604c8471746d046702bad.js" integrity="sha256-c0eKfUgHaYrtfjVesj&#43;YkMoY/qMVhgTIRxdG0EZwK60=" crossorigin="anonymous"></script>
 <script src='/js/tabpane-persist.js'></script>
 
   </body>

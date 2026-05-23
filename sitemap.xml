@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/install-dasd/add-cbt-src-syscpk-dasd/</loc>
-    <lastmod>2025-06-22T05:37:43-04:00</lastmod>
+    <lastmod>2026-05-01T09:18:27-04:00</lastmod>
   </url><url>
     <loc>https://dscobol.github.io/docs/install/gnucobol/</loc>
     <lastmod>2025-06-01T21:03:12-04:00</lastmod>
@@ -18,7 +18,7 @@
     <lastmod>2026-04-30T10:31:50-04:00</lastmod>
   </url><url>
     <loc>https://dscobol.github.io/docs/tutorials/mvs-tk5/install-system/rpi/install-tk5/</loc>
-    <lastmod>2026-04-30T10:31:50-04:00</lastmod>
+    <lastmod>2026-05-01T09:18:27-04:00</lastmod>
   </url><url>
     <loc>https://dscobol.github.io/docs/overview/</loc>
     <lastmod>2025-05-24T09:35:12-04:00</lastmod>
@@ -27,13 +27,13 @@
     <lastmod>2025-06-23T05:33:35-04:00</lastmod>
   </url><url>
     <loc>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/</loc>
-    <lastmod>2025-06-28T07:46:45-04:00</lastmod>
+    <lastmod>2026-05-01T09:18:27-04:00</lastmod>
   </url><url>
     <loc>https://dscobol.github.io/docs/about/</loc>
     <lastmod>2025-05-24T09:35:12-04:00</lastmod>
   </url><url>
     <loc>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/install-dasd/add-3350-dasd-volume/</loc>
-    <lastmod>2025-06-22T05:37:43-04:00</lastmod>
+    <lastmod>2026-05-01T09:18:27-04:00</lastmod>
   </url><url>
     <loc>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/applications/</loc>
     <lastmod>2025-06-24T07:12:24-04:00</lastmod>
@@ -57,10 +57,10 @@
     <lastmod>2025-05-31T13:15:08-04:00</lastmod>
   </url><url>
     <loc>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/applications/simple/</loc>
-    <lastmod>2025-06-24T07:12:24-04:00</lastmod>
+    <lastmod>2026-05-01T09:18:27-04:00</lastmod>
   </url><url>
     <loc>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/system-update/</loc>
-    <lastmod>2025-06-23T05:33:35-04:00</lastmod>
+    <lastmod>2026-05-01T09:18:27-04:00</lastmod>
   </url><url>
     <loc>https://dscobol.github.io/docs/concepts/</loc>
     <lastmod>2025-05-23T23:15:37-04:00</lastmod>
@@ -100,6 +100,9 @@
   </url><url>
     <loc>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/create-base-jcl/</loc>
     <lastmod>2025-06-24T07:12:24-04:00</lastmod>
+  </url><url>
+    <loc>https://dscobol.github.io/docs/tutorials/mvs-tk5/running-tk5/system/install-kicks/</loc>
+    <lastmod>2026-05-23T16:33:04-04:00</lastmod>
   </url><url>
     <loc>https://dscobol.github.io/blog/news/</loc>
     <lastmod>2025-05-21T21:13:20-04:00</lastmod>
@@ -156,7 +159,7 @@
     <lastmod>2025-05-24T09:35:12-04:00</lastmod>
   </url><url>
     <loc>https://dscobol.github.io/blog/2026/05/01/updated-the-mvs-tk5-system-area./</loc>
-    <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+    <lastmod>2026-05-01T09:18:27-04:00</lastmod>
   </url><url>
     <loc>https://dscobol.github.io/blog/2025/05/31/added-mvs-tk5-install-to-tutorals./</loc>
     <lastmod>2025-05-31T13:15:08-04:00</lastmod>
